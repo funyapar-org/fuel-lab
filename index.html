@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ガソリン車の燃費研究所</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2em; }
+    h1 { color: #1a73e8; }
+    a { color: #1a73e8; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>ガソリン車の燃費研究所</h1>
+  <p>このサイトでは、ガソリン車の燃費を改善するための知識・ツール・実測データを紹介します。</p>
+
+  <h2>最新記事</h2>
+  <ul>
+    <li><a href="articles/fuel-tips.html">燃費改善の基礎知識</a></li>
+  </ul>
+
+  <h2>燃費計算ツール</h2>
+  <form onsubmit="calc(event)">
+    <label>走行距離(km): <input type="number" id="km"></label><br>
+    <label>給油量(L): <input type="number" id="liter"></label><br>
+    <button type="submit">計算する</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    function calc(e){
+      e.preventDefault();
+      const km = parseFloat(document.getElementById('km').value);
+      const liter = parseFloat(document.getElementById('liter').value);
+      const result = (km / liter).toFixed(2);
+      document.getElementById('result').textContent = `燃費は ${result} km/L です。`;
+    }
+  </script>
+
+  <footer>
+    <hr>
+    <p>© 2025 ガソリン車の燃費研究所</p>
+  </footer>
+</body>
+</html>
