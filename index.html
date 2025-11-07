@@ -41,16 +41,45 @@
     <hr>
     <p>© 2025 ガソリン車の燃費研究所</p>
   </footer>
-  <div id="google_translate_element"></div>
-  <script type="text/javascript">
+
+<!-- ▼ Google翻訳ウィジェット（右上固定） ▼ -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
   function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-      {pageLanguage: 'ja', includedLanguages: 'en,zh-CN,zh-TW,ko,fr,de,es'},
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'ja',
+        includedLanguages: 'en,zh-CN,zh-TW,ko,fr,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
       'google_translate_element'
-      );
+    );
   }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+  /* 右上固定表示のスタイル */
+  #google_translate_element {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  }
+  /* PC・スマホ共通でスッキリ表示 */
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0px !important;
+  }
+</style>
+<!-- ▲ Google翻訳ウィジェットここまで ▲ -->
 
 </body>
 </html>
