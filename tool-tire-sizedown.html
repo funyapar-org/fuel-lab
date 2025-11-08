@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>インチダウン燃費影響シミュレーター | Fuel Lab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      padding-top: 60px;
-    }
-    .result-box {
-      background-color: white;
-      border-radius: 0.75rem;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-  </style>
+  <title>インチダウン燃費影響ツール | Fuel-Lab</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <script src="assets/js/include.js" defer></script>
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-  <div class="container">
+  <div data-include="assets/common/header.html"></div>
+
+  <!-- メインコンテンツ -->
+  <main class="container py-4">
     <h1 class="mb-4 text-center">インチダウン燃費影響シミュレーター</h1>
     <div class="card shadow-sm">
       <div class="card-body">
@@ -111,5 +104,7 @@
       document.getElementById("result").classList.remove("d-none");
     }
   </script>
+
+  <div data-include="assets/common/footer.html"></div>
 </body>
 </html>
