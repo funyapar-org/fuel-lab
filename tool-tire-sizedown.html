@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>インチダウン燃費影響シミュレーター | Fuel Lab</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 60px;
+    }
+    .result-box {
+      background-color: white;
+      border-radius: 0.75rem;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4 text-center">インチダウン燃費影響シミュレーター</h1>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <p>タイヤサイズや重量差から、インチダウンによる理論的な燃費変化を概算します。</p>
+        <form id="tireForm">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">現在のタイヤサイズ</label>
+              <input type="text" id="currentSize" class="form-control" placeholder="例: 165/70R14" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">変更後のタイヤサイズ</label>
+              <input type="text" id="newSize" class="form-control" placeholder="例: 155/80R13" required>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">現在の実燃費 (km/L)</label>
+              <input type="number" id="currentFuel" class="form-control" step="0.1" placeholder="例: 16.5" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">タイヤ1本あたりの重量差 (kg)</label>
+              <input type="number" id="weightDiff" class="form-control" step="0.1" placeholder="例: -1.2">
+              <small class="text-muted">マイナスは軽量化、プラスは重くなる場合</small>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="calculate()">計算する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="result" class="result-box mt-4 d-none">
+      <h4 class="mb-3">計算結果</h4>
+      <p><strong>現在タイヤ外径:</strong> <span id="currentDiameter"></span> mm</p>
+      <p><strong>変更後タイヤ外径:</strong> <span id="newDiameter"></span> mm</p>
+      <p><strong>外径変化率:</strong> <span id="diameterRate"></span> %</p>
+      <p><strong>重量影響率:</strong> <span id="weightRate"></span> %</p>
+      <p><strong>推定燃費:</strong> <span id="estimatedFuel"></span> km/L</p>
+    </div>
+  </div>
+
+  <script>
+    function parseTireSize(size) {
+      const match = size.match(/(\d{3})\/(\d{2,3})R(\d{2})/i);
+      if (!match) return null;
+      const width = parseFloat(match[1]);
+      const aspect = parseFloat(match[2]);
+      const rim = parseFloat(match[3]);
+      const diameter = 2 * width * (aspect / 100) + 25.4 * rim;
+      return diameter;
+    }
+
+    function calculate() {
+      const currentSize = document.getElementById("currentSize").value.trim();
+      const newSize = document.getElementById("newSize").value.trim();
+      const currentFuel = parseFloat(document.getElementById("currentFuel").value);
+      const weightDiff = parseFloat(document.getElementById("weightDiff").value || 0);
+
+      const currentDia = parseTireSize(currentSize);
+      const newDia = parseTireSize(newSize);
+
+      if (!currentDia || !newDia) {
+        alert("タイヤサイズの形式が正しくありません。例: 165/70R14");
+        return;
+      }
+
+      // 外径変化率
+      const diameterRate = (newDia / currentDia);
+      const diameterRatePct = ((diameterRate - 1) * 100).toFixed(2);
+
+      // 重量影響率
+      const weightRate = 1 - 0.002 * weightDiff;
+      const weightRatePct = ((weightRate - 1) * 100).toFixed(2);
+
+      // 推定燃費
+      const estimatedFuel = (currentFuel * diameterRate * weightRate).toFixed(2);
+
+      // 出力
+      document.getElementById("currentDiameter").textContent = currentDia.toFixed(1);
+      document.getElementById("newDiameter").textContent = newDia.toFixed(1);
+      document.getElementById("diameterRate").textContent = diameterRatePct;
+      document.getElementById("weightRate").textContent = weightRatePct;
+      document.getElementById("estimatedFuel").textContent = estimatedFuel;
+
+      document.getElementById("result").classList.remove("d-none");
+    }
+  </script>
+</body>
+</html>
