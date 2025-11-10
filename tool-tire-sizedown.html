@@ -3,7 +3,7 @@
 <head>
   <!-- 共通 head を非同期で読み込み -->
   <script>
-    fetch("assets/common/head.html")
+    fetch("/fuel-lab/assets/common/head.html")
       .then(res => res.text())
       .then(html => {
         const headFragment = document.createRange().createContextualFragment(html);
@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <div data-include="assets/common/header.html"></div>
+  <div data-include="/fuel-lab/assets/common/header.html"></div>
 
   <!-- Main -->
   <main class="container">
