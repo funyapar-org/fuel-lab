@@ -1,0 +1,176 @@
+---
+layout: default
+title: タイヤサイズ変更の燃費影響シミュレーター
+description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃費に与える影響を外径と転がり抵抗から簡易推定します。
+---
+
+<style>
+  body { background:#f8f9fa; padding-top:70px; }
+  .result-box { background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+  .small-muted { font-size:0.9rem; color:#6c757d; }
+  .calc-note { font-size:0.9rem; color:#495057; }
+</style>
+
+<div class="text-center mb-4">
+  <h1 class="h3">タイヤサイズ変更の燃費影響シミュレーター</h1>
+  <p class="small-muted">
+    タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃費にどう影響するか、外径と転がり抵抗の観点から簡易推定します。
+  </p>
+</div>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <form id="form">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">現在のタイヤサイズ</label>
+          <input type="text" id="currentSize" class="form-control" placeholder="例: 165/70R14" required>
+          <div class="form-text">幅/扁平率Rリム径 の形式で入力してください（例：165/70R14）。</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">変更後のタイヤサイズ</label>
+          <input type="text" id="newSize" class="form-control" placeholder="例: 155/80R13" required>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">車両重量（kg）</label>
+          <input type="number" id="vehicleWeight" class="form-control" placeholder="例: 1200" step="1" required>
+          <div class="form-text">車検証の車両重量（概算可）。</div>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">現在の実燃費（km/L）</label>
+          <input type="number" id="currentFuel" class="form-control" placeholder="例: 16.5" step="0.1" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">タイヤ1本あたりの重量差（kg） <small class="text-muted">(任意)</small></label>
+          <input type="number" id="weightDiff" class="form-control" placeholder="例: -1.2（軽くなるときはマイナス）" step="0.1">
+          <div class="form-text">未入力なら0。マイナスは軽量化、プラスは重くなる。</div>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">主な走行パターン</label>
+          <select id="drivePattern" class="form-select">
+            <option value="city">市街地（信号多め）</option>
+            <option value="suburb" selected>郊外（混合）</option>
+            <option value="highway">高速（巡航多め）</option>
+          </select>
+          <div class="form-text">走行パターンで「転がり抵抗寄与率」を調整します。</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary btn-lg">計算する</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Results -->
+<div id="resultArea" class="d-none">
+  <div class="result-box">
+    <h5>計算結果</h5>
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>現在タイヤ外径：</strong> <span id="curDia"></span> mm</p>
+        <p><strong>変更後タイヤ外径：</strong> <span id="newDia"></span> mm</p>
+        <p><strong>外径変化率：</strong> <span id="diaRatioPct"></span> %</p>
+        <p><strong>幅（mm）変化：</strong> <span id="widthRatioPct"></span> %</p>
+        <p><strong>転がり抵抗推定比：</strong> <span id="rrRatioPct"></span> %</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>現在燃費：</strong> <span id="curFuelDisp"></span> km/L</p>
+        <p><strong>推定新燃費：</strong> <span id="estFuelDisp" style="font-size:1.25rem;"></span> km/L</p>
+        <p><strong>推定変化：</strong> <span id="fuelChangePct"></span> %</p>
+        <p><strong>速度計について：</strong> 表示速度 × <code id="speedFactor"></code> ＝ 実速度</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="interpretation" class="mb-2 calc-note"></div>
+
+    <div>
+      <h6 class="mt-3">注意事項・補足</h6>
+      <ul>
+        <li>タイヤの銘柄差や偏摩耗、空気圧など現場要因で結果は変わります。</li>
+        <li>最も信頼できる検証は「満タン法（実測燃費の比較）」です。</li>
+        <li>外径が変わると速度表示やオドメーター表示に誤差が生じます。車検範囲を確認してください。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  function parseTireSize(size) {
+    const s = size.replace(/\s+/g,'').replace('-', '/');
+    const m = s.match(/^(\d{3})\/(\d{2,3})R(\d{2})$/i);
+    if (!m) return null;
+    const width = parseFloat(m[1]);
+    const aspect = parseFloat(m[2]);
+    const rim = parseFloat(m[3]);
+    const diameter = 2 * width * (aspect / 100) + 25.4 * rim;
+    return { width, aspect, rim, diameter };
+  }
+
+  function patternToP(pattern) {
+    if (pattern === 'city') return 0.50;
+    if (pattern === 'suburb') return 0.40;
+    if (pattern === 'highway') return 0.30;
+    return 0.4;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const curSizeStr = document.getElementById('currentSize').value.trim();
+      const newSizeStr = document.getElementById('newSize').value.trim();
+      const vehicleWeight = parseFloat(document.getElementById('vehicleWeight').value) || 0;
+      const currentFuel = parseFloat(document.getElementById('currentFuel').value);
+      const weightDiff = parseFloat(document.getElementById('weightDiff').value) || 0;
+      const pattern = document.getElementById('drivePattern').value;
+
+      const cur = parseTireSize(curSizeStr);
+      const n = parseTireSize(newSizeStr);
+      if (!cur) return alert('現在のタイヤサイズの形式が正しくありません。例: 165/70R14');
+      if (!n) return alert('変更後のタイヤサイズの形式が正しくありません。例: 165/70R14');
+      if (!(currentFuel > 0)) return alert('現在の実燃費を正しく入力してください。');
+
+      const curDia = cur.diameter;
+      const newDia = n.diameter;
+      const diaRatio = newDia / curDia;
+      const diaRatioPct = ((diaRatio - 1) * 100).toFixed(2);
+      const widthRatio = n.width / cur.width;
+      const widthRatioPct = ((widthRatio - 1) * 100).toFixed(2);
+      const weightImpactFactor = 1 + 0.002 * weightDiff;
+      const rrRatio = widthRatio * weightImpactFactor;
+      const rrRatioPct = ((rrRatio - 1) * 100).toFixed(2);
+      const p = patternToP(pattern);
+      const S = p * rrRatio + (1 - p);
+      const fuelMultiplier = diaRatio / S;
+      const estFuel = (currentFuel * fuelMultiplier);
+      const fuelChangePct = ((fuelMultiplier - 1) * 100).toFixed(2);
+      const speedFactor = diaRatio.toFixed(4);
+
+      document.getElementById('curDia').textContent = curDia.toFixed(1);
+      document.getElementById('newDia').textContent = newDia.toFixed(1);
+      document.getElementById('diaRatioPct').textContent = (diaRatioPct>0? '+' : '') + diaRatioPct;
+      document.getElementById('widthRatioPct').textContent = (widthRatioPct>0? '+' : '') + widthRatioPct;
+      document.getElementById('rrRatioPct').textContent = (rrRatioPct>0? '+' : '') + rrRatioPct;
+      document.getElementById('curFuelDisp').textContent = currentFuel.toFixed(2);
+      document.getElementById('estFuelDisp').textContent = estFuel.toFixed(2);
+      document.getElementById('fuelChangePct').textContent = (fuelChangePct>0? '+' : '') + fuelChangePct;
+      document.getElementById('speedFactor').textContent = speedFactor;
+
+      let interpret = '';
+      interpret += `外径が ${(diaRatio-1)>=0 ? '大きく' : '小さく'}なったことで、理論的影響は ${(diaRatio-1)*100 >=0 ? '+' : ''}${((diaRatio-1)*100).toFixed(2)}% です。<br>`;
+      interpret += `幅変化と重量差から推定した転がり抵抗の変化は ${( (rrRatio-1)*100 >=0 ? '+' : '' ) + ((rrRatio-1)*100).toFixed(2)}% です。<br>`;
+      interpret += `走行パターンは「${pattern === 'city' ? '市街地' : pattern === 'suburb' ? '郊外' : '高速'}」（p=${p}）。<br>`;
+      interpret += `<strong>総合推定：</strong> 燃費は ${fuelChangePct}% ${ fuelChangePct >= 0 ? '改善' : '悪化' }（${currentFuel} → ${estFuel.toFixed(2)} km/L）。<br><br>`;
+      interpret += '※簡易推定モデルです。実測でご確認ください。';
+
+      document.getElementById('interpretation').innerHTML = interpret;
+      document.getElementById('resultArea').classList.remove('d-none');
+      document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
