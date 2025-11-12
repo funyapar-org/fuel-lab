@@ -162,7 +162,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       document.getElementById('speedFactor').textContent = speedFactor;
 
       let interpret = '';
-      interpret += `外径が ${(diaRatio-1)>=0 ? '大きく' : '小さく'}なったことで、、回転数ベースの理論的影響は ${(diaRatio-1)*100 >=0 ? '+' : ''}${((diaRatio-1)*100).toFixed(2)}% です。<br>`;
+      interpret += `外径が ${(diaRatio-1)>=0 ? '大きく' : '小さく'}なったことで、回転数ベースの理論的影響は ${(diaRatio-1)*100 >=0 ? '+' : ''}${((diaRatio-1)*100).toFixed(2)}% です。<br>`;
       interpret += `幅変化と重量差から推定した転がり抵抗の変化は ${( (rrRatio-1)*100 >=0 ? '+' : '' ) + ((rrRatio-1)*100).toFixed(2)}% です。<br>`;
       interpret += `走行パターンは「${pattern === 'city' ? '市街地' : pattern === 'suburb' ? '郊外' : '高速'}」を想定しています（転がり抵抗寄与率 p = ${p}）。<br>`;
       interpret += `<strong>総合推定：</strong> 燃費は ${fuelChangePct}% ${ fuelChangePct >= 0 ? '改善' : '悪化' }の見込みです（${currentFuel} → ${estFuel.toFixed(2)} km/L）。<br><br>`;
