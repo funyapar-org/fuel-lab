@@ -46,31 +46,43 @@ description: 空気圧や溝の減りから、燃費がどの程度悪化して�
 document.getElementById("form").addEventListener("submit", e => {
   e.preventDefault();
 
-  const fuel = parseFloat(currentFuel.value);
-  const curP = parseFloat(currentPressure.value);
-  const nomP = parseFloat(nominalPressure.value);
-  const curT = parseFloat(currentTread.value);
-  const newT = parseFloat(newTread.value);
+  // 入力値取得
+  const fuel = parseFloat(document.getElementById("currentFuel").value);
+  const curP = parseFloat(document.getElementById("currentPressure").value);
+  const nomP = parseFloat(document.getElementById("nominalPressure").value);
+  const curT = parseFloat(document.getElementById("currentTread").value);
+  const newT = parseFloat(document.getElementById("newTread").value);
 
-  // 空気圧比（低下で悪化）
+  // 出力先要素取得（←これが無かったのが原因）
+  const improvePctEl = document.getElementById("improvePct");
+  const estFuelEl = document.getElementById("estFuel");
+  const commentEl = document.getElementById("comment");
+
+  // 低空気圧による悪化：10%低下で約1%悪化の簡易モデル
   const pressRatio = curP / nomP;
-  const pressEffect = 1 + (1 - pressRatio) * 0.1; // 10%低下で1%悪化
+  const pressEffect = 1 + (1 - pressRatio) * 0.1;
 
-  // 溝深さ比（新品戻しで悪化）
+  // 溝の摩耗による影響：50%摩耗で2.5%悪化の簡易モデル
   const treadRatio = curT / newT;
-  const treadEffect = 1 - (1 - treadRatio) * 0.05; // 50%摩耗で2.5%改善（新品に戻すと逆に悪化）
+  const treadEffect = 1 - (1 - treadRatio) * 0.05;
 
-  // 総抵抗比（1より大きいと悪化）
+  // 総合抵抗（>1なら悪化）
   const totalResist = (pressEffect + (2 - treadEffect)) / 2;
 
+  // 改善率
   const improveFactor = 1 / totalResist;
   const improvePct = ((improveFactor - 1) * 100).toFixed(2);
   const estFuel = (fuel * improveFactor).toFixed(2);
 
+  // 表示へ反映
   improvePctEl.textContent = improvePct;
   estFuelEl.textContent = estFuel;
-  resultArea.classList.remove("d-none");
 
-  comment.textContent = `空気圧 ${curP}kPa（規定${nomP}kPa）、残り溝 ${curT}mm のため、転がり抵抗が約 ${(totalResist*100-100).toFixed(1)}% 増加していると推定します。新品タイヤ＋適正空気圧で ${improvePct}% 程度の燃費改善が見込まれます。`;
+  document.getElementById("resultArea").classList.remove("d-none");
+
+  commentEl.textContent =
+    `空気圧 ${curP}kPa（規定 ${nomP}kPa）、残り溝 ${curT}mm のため、` +
+    `転がり抵抗が約 ${(totalResist * 100 - 100).toFixed(1)}% 増加していると推定します。` +
+    `新品タイヤ＋適正空気圧で ${improvePct}% 程度の燃費改善が見込まれます。`;
 });
 </script>
