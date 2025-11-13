@@ -5,7 +5,6 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
 ---
 
 <style>
-  body { background:#f8f9fa; padding-top:70px; }
   .result-box { background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
   .small-muted { font-size:0.9rem; color:#6c757d; }
   .calc-note { font-size:0.9rem; color:#495057; }
