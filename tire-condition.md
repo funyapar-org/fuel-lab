@@ -1,7 +1,7 @@
 ---
 layout: default
-title: タイヤ状態と燃費改善シミュレーター
-description: 空気圧や溝の減りから、燃費がどの程度悪化しているかを推定し、新品状態に戻したときの改善率を計算します。
+title: タイヤ溝と空気圧の燃費改善シミュレーター
+description: タイヤ溝や空気圧の減りから、燃費がどの程度悪化しているかを推定し、新品状態に戻したときの改善率を計算します。
 ---
 
 # タイヤ状態と燃費改善シミュレーター
@@ -53,36 +53,69 @@ document.getElementById("form").addEventListener("submit", e => {
   const curT = parseFloat(document.getElementById("currentTread").value);
   const newT = parseFloat(document.getElementById("newTread").value);
 
-  // 出力先要素取得（←これが無かったのが原因）
+  // 出力要素
   const improvePctEl = document.getElementById("improvePct");
   const estFuelEl = document.getElementById("estFuel");
   const commentEl = document.getElementById("comment");
 
-  // 低空気圧による悪化：10%低下で約1%悪化の簡易モデル
-  const pressRatio = curP / nomP;
-  const pressEffect = 1 + (1 - pressRatio) * 0.1;
+  // 入力チェック
+  if (!(fuel > 0) || !(curP > 0) || !(nomP > 0) || !(curT > 0) || !(newT > 0)) {
+    alert("すべての入力欄に正しい値を入れてください（0より大きい値）。");
+    return;
+  }
 
-  // 溝の摩耗による影響：50%摩耗で2.5%悪化の簡易モデル
-  const treadRatio = curT / newT;
-  const treadEffect = 1 - (1 - treadRatio) * 0.05;
+  // === パラメータ（必要なら調整） ===
+  const k_t = 0.05;  // 溝深さ差による抵抗増分の係数
+  const k_p = 0.10;  // 空気圧低下による抵抗増分の係数
 
-  // 総合抵抗（>1なら悪化）
-  const totalResist = (pressEffect + (2 - treadEffect)) / 2;
+  // === 溝深さによる抵抗（新品基準 rr_new = 1） ===
+  // 差分比 = (新品 - 現状) / 新品
+  const treadDiffRatio = Math.max(0, (newT - curT) / newT); // 0以上にクリップ
+  const rr_from_tread = 1 + k_t * treadDiffRatio;
 
-  // 改善率
-  const improveFactor = 1 / totalResist;
-  const improvePct = ((improveFactor - 1) * 100).toFixed(2);
-  const estFuel = (fuel * improveFactor).toFixed(2);
+  // === 空気圧による抵抗 ===
+  // 圧力差比 = (規定 - 現状) / 規定
+  const pressureDiffRatio = Math.max(0, (nomP - curP) / nomP); // 0以上に
+  const rr_from_pressure = 1 + k_p * pressureDiffRatio;
 
-  // 表示へ反映
+  // === 合成（現在タイヤの抵抗係数） ===
+  const rr_current = rr_from_tread * rr_from_pressure;
+
+  // 新品＋規定圧の抵抗係数（基準）を 1 とする
+  const rr_new = 1;
+
+  // === 推定燃費（新品にしたとき） ===
+  // 現在は rr_current で観測された燃費 fuel。
+  // 新品時の燃費は fuel * (rr_current / rr_new)
+  const estFuel = fuel * (rr_current / rr_new);
+
+  // 改善率（%）： (estFuel / fuel - 1) *100 で求められるが、
+  // 上の式だと estFuel >= fuel になる想定（rr_current >= 1）
+  const improvePct = ((estFuel / fuel - 1) * 100).toFixed(2);
+
+  // 表示
   improvePctEl.textContent = improvePct;
-  estFuelEl.textContent = estFuel;
-
+  estFuelEl.textContent = estFuel.toFixed(2);
   document.getElementById("resultArea").classList.remove("d-none");
 
+  // コメント生成（分かりやすく）
+  const parts = [];
+  if (treadDiffRatio > 0) {
+    parts.push(`溝が新品に比べて ${(treadDiffRatio * 100).toFixed(1)}% 減っています（影響係数 k_t=${k_t}）。`);
+  } else {
+    parts.push("溝は新品と同等です。");
+  }
+  if (pressureDiffRatio > 0) {
+    parts.push(`空気圧は規定から ${(pressureDiffRatio * 100).toFixed(1)}% 低下しています（係数 k_p=${k_p}）。`);
+  } else {
+    parts.push("空気圧は規定どおりです。");
+  }
+
   commentEl.textContent =
-    `空気圧 ${curP}kPa（規定 ${nomP}kPa）、残り溝 ${curT}mm のため、` +
-    `転がり抵抗が約 ${(totalResist * 100 - 100).toFixed(1)}% 増加していると推定します。` +
-    `新品タイヤ＋適正空気圧で ${improvePct}% 程度の燃費改善が見込まれます。`;
+    `${parts.join(" ")} 推定では転がり抵抗係数（現状）=${rr_current.toFixed(4)}。` +
+    `新品＋規定空気圧に戻すと燃費が約 ${improvePct}% 改善し、` +
+    `推定燃費は ${estFuel.toFixed(2)} km/L です。`;
+
 });
 </script>
+
