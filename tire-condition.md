@@ -50,12 +50,12 @@ description: タイヤの溝や空気圧から、燃費改善量を推定する�
 document.getElementById("tireForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const currentFE = parseFloat(currentFE.value);
-  const curP = parseFloat(currentPressure.value);
-  const recP = parseFloat(recommendedPressure.value);
-  const curT = parseFloat(currentTread.value);
-  const newT = parseFloat(newTread.value);
-
+  const currentFE = parseFloat(document.getElementById("currentFE").value);
+  const curP = parseFloat(document.getElementById("currentPressure").value);
+  const recP = parseFloat(document.getElementById("recommendedPressure").value);
+  const curT = parseFloat(document.getElementById("currentTread").value);
+  const newT = parseFloat(document.getElementById("newTread").value);
+  
   const result = document.getElementById("resultArea");
   result.classList.remove("d-none");
   result.innerHTML = ""; // clear
