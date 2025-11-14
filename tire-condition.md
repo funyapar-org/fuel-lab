@@ -36,7 +36,7 @@ description: タイヤ溝や空気圧の減りから、燃費がどの程度悪�
 </form>
 
 <div id="resultArea" class="d-none">
-  <h5>結果</h5>
+  <h5>現在のタイヤの状態から新品のタイヤを規定空気圧にしたときのシミュレーション結果</h5>
   <p><strong>燃費改善見込み：</strong> <span id="improvePct"></span>%</p>
   <p><strong>推定新燃費：</strong> <span id="estFuel"></span> km/L</p>
   <p id="comment" class="text-muted"></p>
@@ -101,20 +101,20 @@ document.getElementById("form").addEventListener("submit", e => {
   // コメント生成（分かりやすく）
   const parts = [];
   if (treadDiffRatio > 0) {
-    parts.push(`溝が新品に比べて ${(treadDiffRatio * 100).toFixed(1)}% 減っています（影響係数 k_t=${k_t}）。`);
+    parts.push(`<p>溝が新品に比べて ${(treadDiffRatio * 100).toFixed(1)}% 減っています（影響係数 k_t=${k_t}）。</p>`);
   } else {
-    parts.push("溝は新品と同等です。");
+    parts.push("<p>溝は新品と同等です。</p>");
   }
   if (pressureDiffRatio > 0) {
-    parts.push(`空気圧は規定から ${(pressureDiffRatio * 100).toFixed(1)}% 低下しています（係数 k_p=${k_p}）。`);
+    parts.push(`<p>空気圧は規定から ${(pressureDiffRatio * 100).toFixed(1)}% 低下しています（係数 k_p=${k_p}）。</p>`);
   } else {
-    parts.push("空気圧は規定どおりです。");
+    parts.push("<p>空気圧は規定どおりです。</p>");
   }
 
   commentEl.textContent =
-    `${parts.join(" ")} 推定では転がり抵抗係数（現状）=${rr_current.toFixed(4)}。` +
+    `<p>${parts.join(" ")} 推定では転がり抵抗係数（現状）=${rr_current.toFixed(4)}。` +
     `新品＋規定空気圧に戻すと燃費が約 ${improvePct}% 改善し、` +
-    `推定燃費は ${estFuel.toFixed(2)} km/L です。`;
+    `推定燃費は ${estFuel.toFixed(2)} km/L です。</p>`;
 
 });
 </script>
