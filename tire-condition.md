@@ -1,10 +1,10 @@
 ---
 layout: default
-title: タイヤ交換による燃費改善シミュレーション
+title: タイヤ交換による燃費改善シミュレーター
 description: タイヤの溝や空気圧から、燃費改善量を推定するシミュレーター
 ---
 
-# タイヤ交換による燃費改善シミュレーション
+# タイヤ交換による燃費改善シミュレーター
 
 <form id="tireForm" class="mb-4">
   <div class="row g-3">
@@ -55,7 +55,7 @@ document.getElementById("tireForm").addEventListener("submit", function (e) {
   const recP = parseFloat(document.getElementById("recommendedPressure").value);
   const curT = parseFloat(document.getElementById("currentTread").value);
   const newT = parseFloat(document.getElementById("newTread").value);
-  
+
   const result = document.getElementById("resultArea");
   result.classList.remove("d-none");
   result.innerHTML = ""; // clear
