@@ -1,2 +1,53 @@
-body { background:#f8f9fa; font-family: 'Noto Sans JP', sans-serif; }
+/* --- 全体のダークテーマ設定 --- */
+body {
+  background-color: #121212;
+  color: #e6e6e6;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ヘッダー・フッター・コンテナ背景 */
+header, footer, .navbar, .container {
+  background-color: #1c1c1c !important;
+  color: #e6e6e6 !important;
+}
+
+/* Bootstrapカード類 */
+.card {
+  background-color: #1d1d1d !important;
+  border-color: #333 !important;
+  color: #e6e6e6 !important;
+}
+
+/* 入力フォームやボタン */
+input, select, textarea {
+  background-color: #1c1c1c !important;
+  color: #e6e6e6 !important;
+  border-color: #444 !important;
+}
+
+.btn-primary {
+  background-color: #375a7f !important;
+  border-color: #375a7f !important;
+}
+
+.btn-primary:hover {
+  background-color: #2b4763 !important;
+}
+
+/* アラート（計算結果エリアの背景） */
+.alert-light {
+  background-color: #2d2d2d !important;
+  color: #e6e6e6 !important;
+  border-color: #333 !important;
+}
+
+/* aタグ */
+a {
+  color: #4da3ff;
+}
+
+a:hover {
+  color: #82c3ff;
+}
+
 h1, h2, h3 { margin-top: 1em; }
