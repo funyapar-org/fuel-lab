@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">🚗 Fuel Lab</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- ツール -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ツール</a>
+          <ul class="dropdown-menu">
+            {% for page in site.tools %}
+            <li><a class="dropdown-item" href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <!-- 車の知識 -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">車の知識</a>
+          <ul class="dropdown-menu">
+            {% for page in site.knowledge %}
+            <li><a class="dropdown-item" href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <!-- ソリオ日記 -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">私のソリオ</a>
+          <ul class="dropdown-menu">
+            {% for page in site.solio %}
+            <li><a class="dropdown-item" href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

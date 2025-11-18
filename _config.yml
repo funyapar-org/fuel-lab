@@ -4,3 +4,10 @@ baseurl: "/fuel-lab"
 url: "https://funyapar-org.github.io"
 markdown: kramdown
 theme: null
+collections:
+  tools:
+    output: true
+  knowledge:
+    output: true
+  solio:
+    output: true
