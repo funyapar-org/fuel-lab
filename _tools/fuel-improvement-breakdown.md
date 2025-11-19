@@ -1,180 +1,169 @@
 ---
 layout: default
-title: 燃費改善分析ツール
+title: 燃費改善アドバイスツール
 ---
 
-<h2 class="mb-4">燃費改善分析ツール</h2>
+# 🚗 燃費改善アドバイスツール（改良版）
 
-<form id="analysisForm" class="mb-5">
+現在の車の状態を入力すると、  
+**燃費改善の余地・改善ポイント・改善余地レーダーチャート**  
+を自動で分析します。
 
-  <div class="mb-3">
-    <label class="form-label">実燃費 (km/L)</label>
-    <input type="number" class="form-control" id="realFuel" required>
-  </div>
+---
 
-  <div class="mb-3">
-    <label class="form-label">カタログ燃費 (km/L)</label>
-    <input type="number" class="form-control" id="catalogFuel" required>
-  </div>
+## 🔧 入力フォーム
 
-  <div class="mb-3">
-    <label class="form-label">総走行距離 (km)</label>
-    <input type="number" class="form-control" id="totalMileage" required>
-  </div>
+<form id="fuelForm">
 
-  <div class="mb-3">
-    <label class="form-label">年間走行距離 (km)</label>
-    <input type="number" class="form-control" id="yearMileage" required>
-  </div>
+### 📌 1. 現在の燃費状況
+- **実燃費（km/L）**  
+  <input type="number" id="real_fuel" step="0.1">
 
-  <div class="mb-3">
-    <label class="form-label">走行シーンの傾向</label>
-    <select class="form-select" id="driveScene" required>
-      <option value="city">街乗り中心</option>
-      <option value="mixed">半々</option>
-      <option value="highway">高速中心</option>
-    </select>
-  </div>
+- **カタログ燃費（km/L）**  
+  <input type="number" id="catalog_fuel" step="0.1">
 
-  <div class="mb-3">
-    <label class="form-label">発進時アクセルワーク傾向</label>
-    <select class="form-select" id="accelStyle" required>
-      <option value="perfect">これ以上ないやさしさ（燃費改善余地ゼロ）</option>
-      <option value="gentle">かなり丁寧</option>
-      <option value="moderate">普通</option>
-      <option value="aggressive">やや強め</option>
-    </select>
-  </div>
+---
 
-  <div class="mb-3">
-    <label class="form-label">エンジンオイル交換からの経過月数</label>
-    <input type="number" class="form-control" id="oilMonths" required>
-  </div>
+### 📌 2. 車両状態
+- **総走行距離（km）**  
+  <input type="number" id="total_km">
 
-  <div class="mb-3">
-    <label class="form-label">タイヤ使用月数</label>
-    <input type="number" class="form-control" id="tireMonths" required>
-  </div>
+- **年間走行距離（km）**  
+  <input type="number" id="yearly_km">
 
-  <div class="mb-3">
-    <label class="form-label">現在のタイヤ空気圧 (kPa)</label>
-    <input type="number" class="form-control" id="tirePressure" required>
-  </div>
+- **最新のエンジンオイル交換（km前）**  
+  <input type="number" id="oil_change">
 
-  <button type="submit" class="btn btn-primary">分析する</button>
+- **最新のタイヤ交換（km前）**  
+  <input type="number" id="tire_change">
+
+---
+
+### 📌 3. 発進時アクセルワーク  
+（※ここに新項目を追加）
+
+<select id="accel">
+  <option value="bad">荒い</option>
+  <option value="normal">普通</option>
+  <option value="good">やさしい</option>
+  <option value="perfect">これ以上ないやさしさ</option> <!-- ★追加 -->
+</select>
+
+---
+
+### 📌 4. 現在のタイヤ空気圧（kPa）
+<input type="number" id="tire_pressure" step="0.1">
+
+<br><br>
+
+<button type="button" onclick="analyze()">分析する</button>
+
 </form>
 
-<hr>
+---
 
-<h3>燃費改善余地レーダーチャート</h3>
+# 📊 分析結果
 
-<div style="width: 400px; margin: auto;">
-  <canvas id="radarChart"></canvas>
-</div>
+<div id="summary" style="font-size:1.2em; margin-bottom:20px;"></div>
 
-<h3 class="mt-5">分析結果</h3>
-<div id="resultArea" class="mt-3"></div>
+---
 
-<!-- Chart.js -->
+## 🕸 改善余地レーダーチャート（追加）
+
+<canvas id="radarChart" width="400" height="400"></canvas>
+
+---
+
+# 📌 個別アドバイス
+<div id="advice"></div>
+
+---
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-// ▼ レーダーチャートオブジェクト
-let radarChart = null;
 
-// ▼ ユーティリティ
-function clamp(v, min, max) { return Math.min(Math.max(v, min), max); }
+function analyze() {
 
-document.getElementById("analysisForm").addEventListener("submit", function(e){
-  e.preventDefault();
+    // 入力値取得
+    const real = parseFloat(real_fuel.value);
+    const catalog = parseFloat(catalog_fuel.value);
+    const accel = accel.value;
+    const tireP = parseFloat(tire_pressure.value);
+    const oil = parseFloat(oil_change.value);
+    const tireC = parseFloat(tire_change.value);
 
-  // 入力値取得
-  const accelStyle = document.getElementById("accelStyle").value;
-  const oilMonths  = Number(document.getElementById("oilMonths").value);
-  const tireMonths = Number(document.getElementById("tireMonths").value);
-  const driveScene = document.getElementById("driveScene").value;
+    // --- 改善余地スコア計算 ---
+    let accel_score = 0;
+    if (accel === "bad") accel_score = 0.2;
+    else if (accel === "normal") accel_score = 0.5;
+    else if (accel === "good") accel_score = 0.8;
+    else if (accel === "perfect") accel_score = 1.0;   // ★追加
 
-  // スコアマップ
-  const accelScoreMap = {
-    perfect: 100,
-    gentle: 85,
-    moderate: 60,
-    aggressive: 30
-  };
+    let tire_score = Math.min(1, (270 - tireP) / 50);
+    if (tire_score < 0) tire_score = 0;
 
-  const sceneScoreMap = {
-    city: 50,
-    mixed: 70,
-    highway: 90
-  };
+    let oil_score = Math.min(1, oil / 8000);
+    let tire_age_score = Math.min(1, tireC / 40000);
 
-  // レーダーチャート用スコア
-  const scores = {
-    accel: accelScoreMap[accelStyle],
-    oil:   clamp(100 - oilMonths * 5, 20, 100),
-    tire:  clamp(100 - tireMonths * 2, 40, 100),
-    scene: sceneScoreMap[driveScene],
-    other: 70
-  };
+    // レーダーチャート用データ（改善余地＝1 - 現状）
+    const radarData = {
+        labels: ["アクセルワーク", "空気圧", "オイル", "タイヤ摩耗"],
+        datasets: [{
+            label: "改善余地",
+            data: [
+                1 - accel_score,
+                tire_score,
+                oil_score,
+                tire_age_score
+            ],
+            fill: true
+        }]
+    };
 
-  // ▼ レーダーチャート描画
-  const ctx = document.getElementById("radarChart");
-
-  if (radarChart) radarChart.destroy();
-
-  radarChart = new Chart(ctx, {
-    type: "radar",
-    data: {
-      labels: ["アクセル操作", "オイル状態", "タイヤ状態", "走行シーン適正", "その他"],
-      datasets: [{
-        label: "現在の状態スコア",
-        data: [scores.accel, scores.oil, scores.tire, scores.scene, scores.other],
-        fill: true
-      }]
-    },
-    options: {
-      scales: {
-        r: {
-          min: 0,
-          max: 100
+    // --- レーダーチャート描画 ---
+    new Chart(document.getElementById("radarChart"), {
+        type: "radar",
+        data: radarData,
+        options: {
+            scales: {
+                r: { min: 0, max: 1 }
+            }
         }
-      }
-    }
-  });
+    });
 
-  // ▼ コメント生成
-  let analysisText = "";
+    // --- サマリ ---
+    let summaryText = "";
 
-  // アクセル
-  if (accelStyle === "perfect") {
-    analysisText += "・アクセルワーク：完璧です。これ以上改善する余地はありません。<br>";
-  } else if (accelStyle === "gentle") {
-    analysisText += "・アクセルワーク：かなり丁寧で改善余地は小さいです。<br>";
-  } else if (accelStyle === "moderate") {
-    analysisText += "・アクセルワーク：一般的な操作で、少し丁寧にすると改善が見込めます。<br>";
-  } else {
-    analysisText += "・アクセルワーク：発進が強めなので改善余地が大きいです。<br>";
-  }
+    if (real < catalog * 0.6)
+        summaryText = "🚨 カタログ値比で燃費がかなり悪い状態です。複数の改善余地があります。";
+    else if (real < catalog * 0.8)
+        summaryText = "⚠️ カタログより少し悪いですが、改善できる部分があります。";
+    else
+        summaryText = "✅ 現状でも十分良い燃費ですが、更に改善の余地があります。";
 
-  // オイル
-  if (oilMonths >= 7) {
-    analysisText += "・エンジンオイル：交換時期を超えています。燃費悪化の主要因です。<br>";
-  } else if (oilMonths >= 4) {
-    analysisText += "・エンジンオイル：そろそろ交換すると燃費改善が見込めます。<br>";
-  } else {
-    analysisText += "・エンジンオイル：状態は良好です。<br>";
-  }
+    document.getElementById("summary").innerHTML = summaryText;
 
-  // タイヤ
-  if (tireMonths >= 36) {
-    analysisText += "・タイヤ：ゴム硬化の可能性が高く転がり抵抗増加。交換で改善見込み大。<br>";
-  } else if (tireMonths >= 24) {
-    analysisText += "・タイヤ：そろそろ交換を検討すると燃費改善効果があります。<br>";
-  } else {
-    analysisText += "・タイヤ：問題ありません。<br>";
-  }
+    // --- 個別アドバイス ---
+    let adv = "";
 
-  document.getElementById("resultArea").innerHTML = analysisText;
+    // アクセル
+    if (accel !== "perfect")
+        adv += "・発進時のアクセルワークを更に優しくすることで燃費が向上します。<br>";
 
-});
+    // 空気圧
+    if (tireP < 240)
+        adv += "・空気圧がやや低めです。規定値付近まで上げると転がり抵抗が減ります。<br>";
+
+    // オイル
+    if (oil > 6000)
+        adv += "・エンジンオイルが劣化している可能性があります。交換を検討してください。<br>";
+
+    // タイヤ
+    if (tireC > 35000)
+        adv += "・タイヤが摩耗している可能性があります。転がり抵抗が増えているかもしれません。<br>";
+
+    document.getElementById("advice").innerHTML = adv;
+}
+
 </script>
