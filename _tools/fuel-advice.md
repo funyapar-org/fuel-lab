@@ -201,7 +201,7 @@ document.getElementById('adviceForm').addEventListener('submit', function(e){
 
   // accelStyle factor: aggressive -> larger potential from driving improvement
   const accelFactors = { perfect:0, gentle: 0.4, moderate: 0.9, aggressive: 1.4 };
-  const accelFactor = accelFactors[accelStyle] || 1.0;
+  const accelFactor = accelFactors[accelStyle];
 
   // oil age factor
   let oilFactor = 1.0;
