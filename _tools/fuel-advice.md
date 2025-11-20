@@ -47,6 +47,7 @@ description: 車の現状を入力すると、何をどう改善すれば燃費�
           <div class="col-md-4">
             <label class="form-label">発進時アクセルワーク</label>
             <select id="accelStyle" class="form-select">
+              <option value="perfect">これ以上なく優しい（エコ）</option>
               <option value="gentle">優しい（エコ寄り）</option>
               <option value="moderate" selected>普通</option>
               <option value="aggressive">強め（急加速多め）</option>
@@ -54,21 +55,27 @@ description: 車の現状を入力すると、何をどう改善すれば燃費�
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">最後のエンジンオイル交換</label>
+            <label class="form-label">最後のエンジンオイル交換は何ヶ月前</label>
             <input id="oilMonths" class="form-control" type="number" step="1" value="8" min="0">
             <div class="form-text">最後に交換してからの経過月（例: 8 = 8ヶ月前）</div>
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">最後のタイヤ交換（または購入）</label>
+            <label class="form-label">最後のタイヤ交換（または購入）は何ヶ月前</label>
             <input id="tyreMonths" class="form-control" type="number" step="1" value="24" min="0">
-            <div class="form-text">経過月（例: 24 = 2年前）</div>
+            <div class="form-text">最後のタイヤ交換からの経過月（例: 24 = 2年前）</div>
           </div>
 
           <div class="col-md-4">
             <label class="form-label">現在のタイヤ空気圧（前輪平均 kPa）</label>
-            <input id="tyrePressure" class="form-control" type="number" step="1" value="230">
-            <div class="form-text">規定値を入力していない場合は車のドアラベル参照</div>
+            <input id="tyrePressure" class="form-control" type="number" step="1" value="240">
+            <div class="form-text">わからない場合は既定値もしくはちょっと少なめの値を入れると良い</div>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">規定タイヤ空気圧（前輪平均 kPa）</label>
+            <input id="recommendedPressure" class="form-control" type="number" step="1" value="250">
+            <div class="form-text">運転席のドアラベル参照</div>
           </div>
         </div>
 
@@ -179,6 +186,7 @@ document.getElementById('adviceForm').addEventListener('submit', function(e){
   const oilMonths = parseFloat(document.getElementById('oilMonths').value);
   const tyreMonths = parseFloat(document.getElementById('tyreMonths').value);
   const tyrePressure = parseFloat(document.getElementById('tyrePressure').value);
+  const recommendedPressure = parseFloat(document.getElementById('recommendedPressure').value);
 
   // basic checks
   if (!(curFuel>0 && catalogFuel>0 && annualKm>0 && gasPrice>0)) { alert('正しい値を入れてください'); return; }
@@ -192,7 +200,7 @@ document.getElementById('adviceForm').addEventListener('submit', function(e){
   const sceneFactor = sceneFactors[driveScene] || 1.0;
 
   // accelStyle factor: aggressive -> larger potential from driving improvement
-  const accelFactors = { gentle: 0.6, moderate: 1.0, aggressive: 1.4 };
+  const accelFactors = { perfect:0, gentle: 0.4, moderate: 0.9, aggressive: 1.4 };
   const accelFactor = accelFactors[accelStyle] || 1.0;
 
   // oil age factor
@@ -209,7 +217,6 @@ document.getElementById('adviceForm').addEventListener('submit', function(e){
 
   // tyre pressure factor: assume recommended ~240kPa for many cars; if below by >10kPa then penalty
   let pressurePenalty = 0;
-  const recommendedPressure = 240; // assume; user can adjust earlier in other tool
   if (tyrePressure < recommendedPressure - 10) pressurePenalty = clamp((recommendedPressure - tyrePressure) / recommendedPressure, 0, 0.2);
   else pressurePenalty = 0;
 
