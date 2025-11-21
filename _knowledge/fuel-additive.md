@@ -22,15 +22,17 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
 
 <div class="row mb-4">
   <div class="col-md-7">
-    エンジン内部では、走行とともに必ず「デポジット」と呼ばれる燃え残りの汚れが蓄積します。  
+    エンジン内部では、走行とともに必ず次のような箇所に「デポジット」と呼ばれる燃え残りの汚れが蓄積します。  
     この汚れが溜まると、車は本来の性能を発揮できなくなります。
   </div>
-  <div class="col-md-5">
-    <ul class="list-group shadow-sm">
-      <li class="list-group-item">インジェクターの噴射不良</li>
-      <li class="list-group-item">吸気バルブの汚れ</li>
-      <li class="list-group-item">燃焼室のカーボン蓄積</li>
-      <li class="list-group-item">ピストンヘッドのスス付着</li>
+</div>
+<div class="card border-danger mb-4">
+  <div class="card-body">
+    <ul class="mb-0">
+      <li>インジェクター</li>
+      <li>吸気バルブ</li>
+      <li>燃焼室</li>
+      <li>ピストンヘッド</li>
     </ul>
   </div>
 </div>
@@ -71,8 +73,6 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
   <li>走行距離 5万 km 以上</li>
 </ul>
 
-<hr>
-
 <h3> 2. 予防系（コンディショナー）</h3>
 <div class="card mb-3 shadow-sm">
   <div class="card-body">
@@ -86,8 +86,6 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
   <li>新車〜3万 km 程度</li>
   <li>洗浄系で綺麗にした後の維持に</li>
 </ul>
-
-<hr>
 
 <h3> 3. オクタン価向上剤</h3>
 <div class="card mb-3 shadow-sm">
