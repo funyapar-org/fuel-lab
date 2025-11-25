@@ -62,7 +62,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 <div class="row mb-4">
   <div class="col-md-6">
     <div class="card h-100">
-      <div class="card-header bg-light fw-bold">最優先条件</div>
+      <div class="card-header bg-primary fw-bold">最優先条件</div>
       <div class="card-body">
         <ul>
           <li>自宅または通勤経路の近く</li>
@@ -75,7 +75,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
   <div class="col-md-6 mt-3 mt-md-0">
     <div class="card h-100">
-      <div class="card-header bg-light fw-bold">プラスで考えたい要素</div>
+      <div class="card-header bg-primary fw-bold">プラスで考えたい要素</div>
       <div class="card-body">
         <ul>
           <li>アプリ割引や会員価格が強い</li>
@@ -93,11 +93,11 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <div class="card mb-4 border-primary">
   <div class="card-body">
-    <h5 class="card-title text-primary">ベストは「残り1/4～1/3のタイミング」</h5>
+    <h5 class="card-title text-primary">ベストは「残り1/2～1/4のタイミング」</h5>
     <ul>
       <li>タンクが軽く、わずかに燃費が良くなる</li>
       <li>値上げ前に備えられる</li>
-      <li>災害時の備えとしても安心（半分以下は非推奨）</li>
+      <li>1／2程度で給油する場合ならば災害時の備えとしても安心</li>
     </ul>
     <p class="mb-0">ギリギリまで走るのはリスクが多く、得はほぼありません。</p>
   </div>
