@@ -13,7 +13,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-primary">1</span> ガソリンスタンドごとに価格が違う理由
+<h2>1 ガソリンスタンドごとに価格が違う理由</h2>
 
 <div class="card mb-4">
   <div class="card-body">
@@ -30,7 +30,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-primary">2</span> 安ければ安いほど良いのか？
+<h2>2 安ければ安いほど良いのか？</h2>
 
 <div class="alert alert-warning">
 <strong>結論：必ずしも「最安」が最善ではありません。</strong><br>
@@ -57,7 +57,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-primary">3</span> 安さと距離のベストバランス
+<h2>3 安さと距離のベストバランス</h2>
 
 <div class="row mb-4">
   <div class="col-md-6">
@@ -89,7 +89,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-primary">4</span> 給油のベストタイミング
+<h2>4 給油のベストタイミング</h2>
 
 <div class="card mb-4 border-primary">
   <div class="card-body">
@@ -105,7 +105,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-primary">5</span> 燃費を考えるとタイヤの空気は毎回入れるべき？
+<h2>5 燃費を考えるとタイヤの空気は毎回入れるべき？</h2>
 
 <div class="alert alert-info">
 <strong>結論：毎回は不要。ただし1〜2ヶ月に1回はチェック必須。</strong>
@@ -125,7 +125,7 @@ description: "燃費を最大化しつつ、時間・お金・手間のバラン
 
 <hr>
 
-<span class="badge bg-success">まとめ</span>
+<h2>まとめ</h2>
 
 <div class="card border-success mb-4">
   <div class="card-body">
