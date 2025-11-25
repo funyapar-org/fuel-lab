@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /assets/diary.json
+---
+{% assign diary_posts = site.posts | where_exp: "post", "post.tags contains 'solio-diary'" %}
+[
+{% for post in diary_posts %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": {{ post.url | absolute_url | jsonify }},
+    "date": "{{ post.date | date: "%Y-%m-%d" }}",
+    "year": "{{ post.date | date: "%Y" }}",
+    "month": "{{ post.date | date: "%m" }}",
+    "excerpt": {{ post.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
+    "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+    "tags": {{ post.tags | jsonify }}
+  }{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]
