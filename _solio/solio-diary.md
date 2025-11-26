@@ -47,5 +47,8 @@ permalink: /solio-diary/
   </div>
 </div>
 
-<script src="{{ '/assets/js/solio-diary.js' | relative_url }}"></script>
+<script 
+  src="{{ '/assets/js/solio-diary.js' | relative_url }}"
+  data-json="{{ '/assets/diary.json' | absolute_url }}">
+</script>
 <link rel="stylesheet" href="{{ '/assets/css/solio-diary.css' | relative_url }}">
