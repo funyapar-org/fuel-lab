@@ -5,7 +5,8 @@
   - 検索・年月アーカイブ対応
 */
 (function(){
-  const JSON_URL = '{{ "/assets/diary.json" | relative_url }}';
+  const scriptEl = document.currentScript;
+  const JSON_URL = scriptEl.getAttribute('data-json');
   const BATCH = 10;
 
   let allPosts = [];
