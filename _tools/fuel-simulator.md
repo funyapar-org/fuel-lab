@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 燃費シミュレーター
-description: ガソリン車の燃費と年間燃料費を計算できるシミュレーターです。
+description: ガソリン車の年間燃料費と節約効果を簡単に計算！
 ---
 
 <div class="container my-5">

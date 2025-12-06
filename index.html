@@ -1,0 +1,55 @@
+---
+layout: default
+title: 燃費研究所 - Fuel Lab
+---
+
+<div class="container my-4">
+
+  <!-- Hero Section -->
+  <div class="p-4 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-2">
+      <h1 class="display-6 fw-bold">燃費研究所 - Fuel Lab</h1>
+      <p class="col-md-10 fs-5">
+        燃費改善のための実験・ツール公開サイトです。  
+        タイヤ、空気圧、軽量化、走り方、燃料添加剤など、実測をもとにした燃費向上データを発信しています。
+      </p>
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <h2 class="mb-3">🔧 燃費改善ツール</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+
+    {% for page in site.tools %}
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ page.title }}</h5>
+          <p class="card-text">{{ page.description }}</p>
+          <a href="{{ page.url | prepend: site.baseurl }}" class="btn btn-primary">開く</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+  <!-- Knowledge Section -->
+  <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
+  <div class="list-group mb-5">
+    {% for page in site.knowledge %}
+      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        {{ page.title }}
+      </a>
+    {% endfor %}
+  </div>
+
+  <!-- Diary Section -->
+  <h2 class="mb-3">📓 燃費実験日記</h2>
+  <div class="p-3 bg-white border rounded shadow-sm mb-5">
+    <p>最新の日記は X（旧Twitter）で更新しています。</p>
+    <a href="https://x.com/FuelLab_MySolio" class="btn btn-dark" target="_blank">
+      X（@FuelLab_MySolio）を見る
+    </a>
+  </div>
+
+</div>
