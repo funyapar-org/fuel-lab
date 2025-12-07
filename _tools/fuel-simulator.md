@@ -20,12 +20,12 @@ description: ガソリン車の年間燃料費と節約効果を簡単に計算�
 
           <div class="col-md-4">
             <label class="form-label">実燃費（km/L）</label>
-            <input type="number" class="form-control" id="fuelEfficiency" placeholder="例：15" required>
+            <input type="number" class="form-control" id="curFuel" step="0.01" placeholder="例：15" required>
           </div>
 
           <div class="col-md-4">
             <label class="form-label">年間走行距離（km）</label>
-            <input type="number" class="form-control" id="distance" placeholder="例：10000" required>
+            <input type="number" class="form-control" id="annualKm" placeholder="例：10000" required>
           </div>
 
           <div class="col-md-4">
@@ -70,20 +70,20 @@ description: ガソリン車の年間燃料費と節約効果を簡単に計算�
 document.getElementById('fuelForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  const fuelEfficiency = parseFloat(document.getElementById('fuelEfficiency').value);
-  const distance = parseFloat(document.getElementById('distance').value);
+  const curFuel = parseFloat(document.getElementById('curFuel').value);
+  const annualKm = parseFloat(document.getElementById('annualKm').value);
   const gasPrice = parseFloat(document.getElementById('gasPrice').value);
 
-  if (fuelEfficiency <= 0 || distance <= 0 || gasPrice <= 0) {
+  if (curFuel <= 0 || annualKm <= 0 || gasPrice <= 0) {
     alert("すべての項目を正しく入力してください。");
     return;
   }
 
-  const fuelUsed = distance / fuelEfficiency;   // L
+  const fuelUsed = annualKm / curFuel;   // L
   const annualCost = Math.round(fuelUsed * gasPrice);
 
-  const improvedEfficiency = fuelEfficiency * 1.05; // 5%改善
-  const improvedFuelUsed = distance / improvedEfficiency;
+  const improvedEfficiency = curFuel * 1.05; // 5%改善
+  const improvedFuelUsed = annualKm / improvedEfficiency;
   const improvedCost = Math.round(improvedFuelUsed * gasPrice);
 
   const saving = annualCost - improvedCost;
@@ -91,7 +91,7 @@ document.getElementById('fuelForm').addEventListener('submit', function(event) {
   document.getElementById('result').classList.remove("d-none");
   document.getElementById('resultText').innerHTML = `
     年間燃料費は <strong>${annualCost.toLocaleString()}</strong> 円です。
-    <br>（年間走行距離 ${distance.toLocaleString()}km、実燃費 ${fuelEfficiency}km/L、単価 ${gasPrice}円/L）
+    <br>（年間走行距離 ${annualKm.toLocaleString()}km、実燃費 ${curFuel}km/L、単価 ${gasPrice}円/L）
   `;
   document.getElementById('saving').textContent = saving.toLocaleString();
 });

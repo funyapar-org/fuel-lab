@@ -11,12 +11,12 @@ description: 空気圧や溝の減りから、燃費がどの程度悪化して�
 
     <div class="col-md-6">
       <label class="form-label">現在の実燃費 (km/L)</label>
-      <input id="currentFE" type="number" class="form-control" step="0.1" required>
+      <input id="curFuel" type="number" class="form-control" step="0.01" required>
     </div>
 
     <div class="col-md-6">
       <label class="form-label">現在の空気圧 (kPa)</label>
-      <input id="currentPressure" type="number" class="form-control" required>
+      <input id="tyrePressure" type="number" class="form-control" required>
     </div>
 
     <div class="col-md-6">
@@ -48,8 +48,8 @@ document.getElementById("tireForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   // --- 入力取得（必ず getElementById を使う） ---
-  const fuelCurrent = parseFloat(document.getElementById("currentFE").value);
-  const curP = parseFloat(document.getElementById("currentPressure").value);
+  const fuelCurrent = parseFloat(document.getElementById("curFuel").value);
+  const curP = parseFloat(document.getElementById("tyrePressure").value);
   const recP = parseFloat(document.getElementById("recommendedPressure").value);
   const curT = parseFloat(document.getElementById("currentTread").value);
   const newT = parseFloat(document.getElementById("newTread").value);

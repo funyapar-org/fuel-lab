@@ -38,11 +38,11 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
         </div>
         <div class="col-md-4">
           <label class="form-label">現在の実燃費（km/L）</label>
-          <input type="number" id="currentFuel" class="form-control" placeholder="例: 16.5" step="0.1" required>
+          <input type="number" id="curFuel" class="form-control" placeholder="例: 16.5" step="0.01" required>
         </div>
         <div class="col-md-4">
           <label class="form-label">タイヤ1本あたりの重量差（kg） <small class="text-muted">(任意)</small></label>
-          <input type="number" id="weightDiff" class="form-control" placeholder="例: -1.2（軽くなるときはマイナス）" step="0.1">
+          <input type="number" id="weightDiff" class="form-control" placeholder="例: -1.2（軽くなるときはマイナス）" step="0.01">
           <div class="form-text">未入力なら0。マイナスは軽量化、プラスは重くなる。</div>
         </div>
 
@@ -124,7 +124,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       const curSizeStr = document.getElementById('currentSize').value.trim();
       const newSizeStr = document.getElementById('newSize').value.trim();
       const vehicleWeight = parseFloat(document.getElementById('vehicleWeight').value) || 0;
-      const currentFuel = parseFloat(document.getElementById('currentFuel').value);
+      const curFuel = parseFloat(document.getElementById('curFuel').value);
       const weightDiff = parseFloat(document.getElementById('weightDiff').value) || 0;
       const pattern = document.getElementById('drivePattern').value;
 
@@ -132,7 +132,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       const n = parseTireSize(newSizeStr);
       if (!cur) return alert('現在のタイヤサイズの形式が正しくありません。例: 165/70R14');
       if (!n) return alert('変更後のタイヤサイズの形式が正しくありません。例: 165/70R14');
-      if (!(currentFuel > 0)) return alert('現在の実燃費を正しく入力してください。');
+      if (!(curFuel > 0)) return alert('現在の実燃費を正しく入力してください。');
 
       const curDia = cur.diameter;
       const newDia = n.diameter;
@@ -146,7 +146,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       const p = patternToP(pattern);
       const S = p * rrRatio + (1 - p);
       const fuelMultiplier = diaRatio / S;
-      const estFuel = (currentFuel * fuelMultiplier);
+      const estFuel = (curFuel * fuelMultiplier);
       const fuelChangePct = ((fuelMultiplier - 1) * 100).toFixed(2);
       const speedFactor = diaRatio.toFixed(4);
 
@@ -155,7 +155,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       document.getElementById('diaRatioPct').textContent = (diaRatioPct>0? '+' : '') + diaRatioPct;
       document.getElementById('widthRatioPct').textContent = (widthRatioPct>0? '+' : '') + widthRatioPct;
       document.getElementById('rrRatioPct').textContent = (rrRatioPct>0? '+' : '') + rrRatioPct;
-      document.getElementById('curFuelDisp').textContent = currentFuel.toFixed(2);
+      document.getElementById('curFuelDisp').textContent = curFuel.toFixed(2);
       document.getElementById('estFuelDisp').textContent = estFuel.toFixed(2);
       document.getElementById('fuelChangePct').textContent = (fuelChangePct>0? '+' : '') + fuelChangePct;
       document.getElementById('speedFactor').textContent = speedFactor;
@@ -164,7 +164,7 @@ description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃�
       interpret += `外径が ${(diaRatio-1)>=0 ? '大きく' : '小さく'}なったことで、回転数ベースの理論的影響は ${(diaRatio-1)*100 >=0 ? '+' : ''}${((diaRatio-1)*100).toFixed(2)}% です。<br>`;
       interpret += `幅変化と重量差から推定した転がり抵抗の変化は ${( (rrRatio-1)*100 >=0 ? '+' : '' ) + ((rrRatio-1)*100).toFixed(2)}% です。<br>`;
       interpret += `走行パターンは「${pattern === 'city' ? '市街地' : pattern === 'suburb' ? '郊外' : '高速'}」を想定しています（転がり抵抗寄与率 p = ${p}）。<br>`;
-      interpret += `<strong>総合推定：</strong> 燃費は ${fuelChangePct}% ${ fuelChangePct >= 0 ? '改善' : '悪化' }の見込みです（${currentFuel} → ${estFuel.toFixed(2)} km/L）。<br><br>`;
+      interpret += `<strong>総合推定：</strong> 燃費は ${fuelChangePct}% ${ fuelChangePct >= 0 ? '改善' : '悪化' }の見込みです（${curFuel} → ${estFuel.toFixed(2)} km/L）。<br><br>`;
       interpret += '※モデルは簡易的な推定です。タイヤ銘柄差、偏摩耗、空気圧、路面温度などの実車要因で実燃費は変わるため、必ず満タン法等で実測比較してください。';
 
       document.getElementById('interpretation').innerHTML = interpret;
