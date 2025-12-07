@@ -5,6 +5,41 @@
     {% include ga.html %}
   </head>
   <body>
+    <script>
+      // ----------
+      // 全 input の値を localStorage に保存・復元
+      // ----------
+      document.addEventListener("DOMContentLoaded", () => {
+        const inputs = document.querySelectorAll("input, select, textarea");
+
+        inputs.forEach(el => {
+          const key = "fuel_lab_" + el.id;
+
+          // ID がある要素だけ記憶対象
+          if (!el.id) return;
+
+          // 1. 保存済みデータがあれば最初に復元
+          const saved = localStorage.getItem(key);
+          if (saved !== null) {
+              if (el.type === "checkbox") {
+                  el.checked = saved === "true";
+              } else {
+                  el.value = saved;
+              }
+          }
+
+          // 2. 入力変更時に保存
+          el.addEventListener("input", () => {
+              if (el.type === "checkbox") {
+                  localStorage.setItem(key, el.checked);
+              } else {
+                  localStorage.setItem(key, el.value);
+              }
+          });
+        });
+      });
+    </script>
+
     {% include navbar.html %}
 
     <main class="container my-4">
