@@ -5,6 +5,8 @@ url: "https://funyapar-org.github.io"
 markdown: kramdown
 theme: null
 collections:
+  about:
+    output: true
   tools:
     output: true
   knowledge:
