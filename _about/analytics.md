@@ -8,6 +8,6 @@ description: "本サイトではアクセス解析のためにGoogle Analytics�
   <h1 class="mb-4">Google Analyticsについて</h1>
 
   <p class="lead">
-    本サイトではアクセス解析のためにGoogle Analyticsを使用しています。
+    Google Analyticsによりトラフィックデータを収集しています。
   </p>
 </div>
