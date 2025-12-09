@@ -34,7 +34,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
             私のソリオ日記
           </a>
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" href="/fuel-lab/solio-diary/">サイト内で見る</a>
             </li>
@@ -51,7 +51,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
             About
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             {% for page in site.about %}
             <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
             {% endfor %}
