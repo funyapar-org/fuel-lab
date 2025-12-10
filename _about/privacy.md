@@ -10,4 +10,8 @@ description: "本サイトではアクセス解析のためにGoogle Analytics�
   <p class="lead">
     本サイトではアクセス解析のためにGoogle Analyticsを使用しています。
   </p>
+
+  <p class="lead">
+    当サイトはAmazon.co.jpを宣伝しリンクすることによって紹介料を獲得できるアフィリエイトプログラムである「Amazonアソシエイト・プログラム」の参加者です。
+  </p>
 </div>

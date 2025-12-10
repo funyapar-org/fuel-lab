@@ -184,4 +184,21 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
   </div>
 </div>
 
+<h2>🛒 おすすめの燃料添加剤</h2>
+
+<div class="card my-3">
+  <div class="card-body">
+    <h5 class="card-title fw-bold">私が実際に使っている燃料添加剤「FCR-062」</h5>
+    <p class="card-text">
+      エンジン内部のデポジット除去に強力な <strong>PEA 洗浄系</strong>。  
+      街乗り中心の私のソリオでも明確な変化が感じられ、  
+      「まず1本試すならコレ」というレベルでおすすめできます。
+      非常にコスパに優れた一品です。
+    </p>
+    <a href="https://amzn.to/4aElZYg" target="_blank" class="btn btn-warning fw-bold">
+      ▶ Amazonで見る
+    </a>
+  </div>
+</div>
+
 </div>
