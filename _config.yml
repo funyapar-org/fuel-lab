@@ -11,3 +11,5 @@ collections:
     output: true
   knowledge:
     output: true
+plugins:
+  - jekyll-sitemap
