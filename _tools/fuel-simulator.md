@@ -55,11 +55,9 @@ description: ガソリン車の年間燃料費と節約効果を簡単に計算�
     </div>
 
     <div class="mt-4">
-      <p>💡燃費改善のためのおすすめグッズ：</p>
+      <p>💡燃費改善ってどうやるの？を解決！：</p>
       <ul>
-        <li><a href="#" target="_blank">タイヤ空気圧モニター（Amazon）</a></li>
-        <li><a href="#" target="_blank">高性能エンジンオイル添加剤（Amazon）</a></li>
-        <li><a href="#" target="_blank">燃費改善ドライブレコーダー（Amazon）</a></li>
+        <li><a href="/fuel-lab/tools/fuel-advice.html">燃費改善アドバイスツール</a></li>
       </ul>
     </div>
   </div>
