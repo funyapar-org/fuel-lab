@@ -55,7 +55,7 @@ description: ガソリン車の年間燃料費と節約効果を簡単に計算�
     </div>
 
     <div class="mt-4">
-      <p>💡燃費改善ってどうやるの？を解決！：</p>
+      <p>💡燃費改善ってどうやるの？を解決！</p>
       <ul>
         <li><a href="/fuel-lab/tools/fuel-advice.html">燃費改善アドバイスツール</a></li>
       </ul>
