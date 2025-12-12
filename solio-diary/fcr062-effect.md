@@ -87,7 +87,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
 
   {% assign before_fuel = 11 %}
   {% assign after_fuel = 14 %}
-  {% assign distance = 500 %}  <!-- 月500km走行の例 -->
+  {% assign distance = 700 %}  <!-- 月700km走行の例 -->
 
   {% assign before_gas = distance | divided_by: before_fuel %}
   {% assign after_gas = distance | divided_by: after_fuel %}
@@ -96,7 +96,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
   {% assign yearly_saved = money_saved | times: 12 %}
 
   <p>
-    月間走行距離を <strong>500km</strong> とした場合の試算です。
+    月間走行距離を <strong>700km</strong> とした場合の試算です。
   </p>
 
   <ul>
@@ -115,13 +115,10 @@ description: エンジンのかかりが悪いときがあり、インジェク�
   </div>
 
   <!-- Amazon アフィリンク -->
-  <h2 class="mt-5">FCR-062 を購入する</h2>
-
-  <p>私が実際に使った FCR-062 は以下の商品です。</p>
 
   <div class="card my-3">
     <div class="card-body">
-      <h5 class="card-title fw-bold">私が実際に使っている燃料添加剤「FCR-062」</h5>
+      <h5 class="card-title fw-bold">燃料添加剤「FCR-062」とは</h5>
       <p class="card-text">
         エンジン内部のデポジット除去に強力な <strong>PEA 洗浄系</strong>。  
         街乗り中心の私のソリオでも明確な変化が感じられ、  
