@@ -58,26 +58,26 @@ description: エンジンのかかりが悪いときがあり、インジェク�
     <li>FCR-062 単価：<strong>2500円/L（2.5円/ml）</strong></li>
     <li>1回の給油量：<strong>25L</strong></li>
     <li>月の給油回数：<strong>2回</strong></li>
-    <li>添加量：<strong>100ml/回</strong></li>
-    <li>集中洗浄：初回4回連続添加</li>
-    <li>以降：<strong>2回に1回</strong> 添加</li>
+    <li>添加量：<strong>90ml/回</strong></li>
+    <li>集中洗浄：初回3回連続添加</li>
+    <li>以降：<strong>4回に1回</strong> 添加</li>
   </ul>
 
   <h3 class="mt-4">年間の添加回数とコスト</h3>
 
   {% assign fcr_cost_ml = 2.5 %}
-  {% assign first_4 = 4 %}
+  {% assign first_count = 3 %}
   {% assign monthly_fill = 2 %}
   {% assign yearly_fill = 12 | times: monthly_fill %}
-  {% assign remaining = yearly_fill | minus: first_4 %}
-  {% assign later_add = remaining | divided_by: 2 %}
-  {% assign total_add = first_4 | plus: later_add %}
+  {% assign remaining = yearly_fill | minus: first_count %}
+  {% assign later_add = remaining | divided_by: 4 %}
+  {% assign total_add = first_count | plus: later_add %}
   {% assign yearly_fcr_ml = total_add | times: 100 %}
   {% assign yearly_fcr_cost = yearly_fcr_ml | times: fcr_cost_ml %}
 
   <ul>
     <li>年間給油回数：<strong>{{ yearly_fill }} 回</strong></li>
-    <li>年間添加回数（初回4回＋隔回）：<strong>{{ total_add }} 回</strong></li>
+    <li>年間添加回数（初回3回＋隔回）：<strong>{{ total_add }} 回</strong></li>
     <li>年間使用量：<strong>{{ yearly_fcr_ml }} ml</strong></li>
     <li>年間コスト：<strong>{{ yearly_fcr_cost | round }} 円</strong></li>
   </ul>
@@ -120,7 +120,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
     <div class="card-body">
       <h5 class="card-title fw-bold">燃料添加剤「FCR-062」とは</h5>
       <p class="card-text">
-        エンジン内部のデポジット除去に強力な <strong>PEA 洗浄系</strong>。  
+        エンジン内部の汚れ除去に強力な <strong>PEA 洗浄系</strong>。  
         街乗り中心の私のソリオでも明確な変化が感じられ、  
         「まず1本試すならコレ」というレベルでおすすめできます。
         非常にコスパに優れた一品です。
