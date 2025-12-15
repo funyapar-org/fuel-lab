@@ -33,7 +33,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
 
     <div class="col-md-6">
       <div class="card border-success mb-3 shadow-sm">
-        <div class="card-header bg-success text-white fw-bold">使用後（25L給油＋FCR-062：100ml）</div>
+        <div class="card-header bg-success text-white fw-bold">使用後（25L給油＋FCR-062：90ml）</div>
         <div class="card-body">
           <ul>
             <li>エンジンのかかりが<strong>最速レベルに改善</strong></li>
