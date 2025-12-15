@@ -70,7 +70,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
   {% assign monthly_fill = 2 %}
   {% assign yearly_fill = 12 | times: monthly_fill %}
   {% assign remaining = yearly_fill | minus: first_count %}
-  {% assign later_add = remaining | divided_by: 4 %}
+  {% assign later_add = remaining | divided_by: 4.0 %}
   {% assign total_add = first_count | plus: later_add %}
   {% assign yearly_fcr_ml = total_add | times: 100 %}
   {% assign yearly_fcr_cost = yearly_fcr_ml | times: fcr_cost_ml %}
