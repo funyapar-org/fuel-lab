@@ -1,0 +1,53 @@
+<!-- FCR-062 Amazon アフィリエイト（共通） -->
+
+<div class="card my-4">
+  <div class="card-body">
+
+    <h5 class="card-title fw-bold">
+      {{ include.title | default: "燃料添加剤「FCR-062」おすすめサイズ" }}
+    </h5>
+
+    <p class="card-text">
+      {{ include.lead | default: "PEA 洗浄系の定番燃料添加剤。Fuel Lab では費用対効果を重視して評価しています。" }}
+    </p>
+
+    <!-- メイン推奨 -->
+    <div class="border rounded p-3 mb-3">
+      <p class="fw-bold mb-1">
+        ▶ 推奨：1L（最もバランスが良い）
+      </p>
+      <p class="mb-2">
+        {{ include.main_reason | default: "初回の集中洗浄から継続使用まで無駄が出にくく、価格と使いやすさのバランスが最適です。" }}
+      </p>
+      <a href="{{ include.link_1l | default: 'https://amzn.to/4aElZYg' }}"
+         target="_blank"
+         class="btn btn-warning fw-bold">
+        Amazonで1Lを見る
+      </a>
+    </div>
+
+    <!-- サブリンク -->
+    <p class="mb-1">
+      <strong>まず効果を試したい方：</strong>
+      <a href="{{ include.link_300ml | default: 'https://amzn.to/4axI0bi' }}"
+         target="_blank">
+        300mlはこちら
+      </a>
+    </p>
+
+    <p class="mb-0">
+      <strong>長期使用・複数台向け：</strong>
+      <a href="{{ include.link_4l | default: 'https://amzn.to/4qp3hIP' }}"
+         target="_blank">
+        4Lはこちら
+      </a>
+    </p>
+
+    {% if include.note %}
+      <p class="text-muted small mt-3 mb-0">
+        {{ include.note }}
+      </p>
+    {% endif %}
+
+  </div>
+</div>
