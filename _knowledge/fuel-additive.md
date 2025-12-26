@@ -188,19 +188,13 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
 
 <h2>🛒 おすすめの燃料添加剤</h2>
 
-<div class="card my-3">
-  <div class="card-body">
-    <h5 class="card-title fw-bold">私が実際に使っている燃料添加剤「FCR-062」</h5>
-    <p class="card-text">
-      エンジン内部の汚れ除去に強力な <strong>PEA 洗浄系</strong>。  
-      街乗り中心の私のソリオでも明確な変化が感じられ、  
-      「まず1本試すならコレ」というレベルでおすすめできます。
-      非常にコスパに優れた一品です。
-    </p>
-    <a href="https://amzn.to/4aElZYg" target="_blank" class="btn btn-warning fw-bold">
-      ▶ Amazonで見る
-    </a>
-  </div>
-</div>
+<!-- Amazon アフィリンク -->
+
+{% include fcr062-affiliate.html
+  title="私が実際に使っている燃料添加剤「FCR-062」"
+  lead="エンジン内部の汚れ除去に強力な「PEA 洗浄系」ソリオで始動性・静粛性・実燃費に明確な変化があり、「まず1本試すならコレ」というレベルでおすすめできます。非常にコスパに優れた一品です。"
+  main_reason="25L給油＋100ml添加という使い方なら、1Lサイズが最も無駄がなく継続しやすいです。"
+  note="※ 効果の感じ方には個体差があります。Fuel Lab では実測値をもとに評価しています。"
+%}
 
 </div>
