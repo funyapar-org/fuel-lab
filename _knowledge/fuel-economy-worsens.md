@@ -1,12 +1,13 @@
 ---
 layout: default
-title: 燃費が徐々に悪化する原因
+nav_title: 燃費が徐々に悪化する原因とは？
+title: 燃費が徐々に悪化する原因とは？気づきにくい変化と自分でできる対策
 description: 最近ガソリン代が増えた気がする…その原因はエンジン内部の汚れやタイヤ空気圧かもしれません。燃費が少しずつ悪化する主な理由と対策をわかりやすく解説します。
 ---
 
 <div class="container my-4">
 
-## 燃費が徐々に悪化する原因
+## {{ page.title }}
 
 <div class="alert alert-warning">
 「急に悪くなったわけではないけど、  

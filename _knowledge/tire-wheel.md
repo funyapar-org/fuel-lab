@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "タイヤとホイールと燃費"
+nav_title: タイヤとホイールで燃費は変わる？
+title: タイヤとホイールで燃費は変わる？街乗り中心でも差が出る理由を解説
 description: "燃費とタイヤ・ホイールの関係をわかりやすく解説します。"
 ---
 
 
 <div class="container my-5">
-  <h1 class="mb-4">タイヤとホイールと燃費</h1>
+  <h1 class="mb-4">{{ page.title }}</h1>
 
   <p class="lead">
     燃費はエンジンだけで決まるものではありません。  

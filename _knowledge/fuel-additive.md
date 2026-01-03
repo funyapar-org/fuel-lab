@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "燃料添加剤とは"
+nav_title: 燃料添加剤とは
+title: 燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説
 description: "燃料添加剤の役割、仕組み、効果、種類、選び方を初心者にも分かりやすく解説します。"
 ---
 
 <div class="container py-4">
 
 <div class="text-center mb-5">
-  <h1 class="fw-bold">燃料添加剤とは</h1>
+  <h1 class="fw-bold">{{ page.title }}</h1>
   <p class="text-muted">エンジン内部の汚れを除去し、車本来の性能を取り戻すメンテナンスアイテム</p>
 </div>
 

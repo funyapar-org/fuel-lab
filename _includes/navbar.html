@@ -24,7 +24,7 @@
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">車の知識</a>
           <ul class="dropdown-menu">
             {% for page in site.knowledge %}
-            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.nav_title | default: page.title }}</a></li>
             {% endfor %}
           </ul>
         </li>
