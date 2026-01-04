@@ -9,7 +9,7 @@ description: "燃料添加剤の役割、仕組み、効果、種類、選び方
 
 <div class="text-center mb-5">
   <h1 class="fw-bold">{{ page.title }}</h1>
-  <p class="text-muted">エンジン内部の汚れを除去し、車本来の性能を取り戻すメンテナンスアイテム</p>
+  <p class="text-muted">燃料添加剤とはエンジン内部の汚れを除去し、車本来の性能を取り戻すメンテナンスアイテムです。</p>
 </div>
 
 <div class="alert alert-primary shadow-sm">

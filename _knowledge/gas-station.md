@@ -9,7 +9,7 @@ description: 燃費を最大化しつつ、時間・お金・手間のバラン�
   <h1 class="mb-4">{{ page.title }}</h1>
 
 <div class="lead mb-4">
-燃費を最大化しつつ、時間・お金・手間のバランスを取るための「ガソリンスタンド選び」完全ガイド。
+{{ page.description }}
 </div>
 
 <hr>
