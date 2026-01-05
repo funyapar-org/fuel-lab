@@ -25,7 +25,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
           <ul>
             <li>エンジンのかかりが悪いときがある</li>
             <li>購入時の実燃費 <strong>14km/L → 11km/L</strong> まで悪化</li>
-            <li>アイドリング回転数 <strong>1000rpm以上</strong></li>
+            <li>暖気後のアイドリング回転数 <strong>1000rpm以上</strong></li>
           </ul>
         </div>
       </div>
@@ -38,7 +38,7 @@ description: エンジンのかかりが悪いときがあり、インジェク�
           <ul>
             <li>エンジンのかかりが<strong>最速レベルに改善</strong></li>
             <li>平均実燃費が <strong>14km/L に回復</strong></li>
-            <li>アイドリング回転数 <strong>700rpm以下</strong> で安定</li>
+            <li>暖気後のアイドリング回転数 <strong>約650rpm</strong> で安定</li>
             <li>アイドリング音が静かになり、振動も低減</li>
           </ul>
         </div>
