@@ -50,6 +50,21 @@
           </ul>
         </li>
 
+        <!-- 私のソリオ -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">私のソリオ</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="https://x.com/FuelLab_MySolio" target="_blank">
+                X（@FuelLab_MySolio）
+              </a>
+            </li>
+            {% for page in site.solio %}
+            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.nav_title | default: page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
         <!-- このサイトについて -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">

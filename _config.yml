@@ -11,5 +11,7 @@ collections:
     output: true
   knowledge:
     output: true
+  solio:
+    output: true
 plugins:
   - jekyll-sitemap
