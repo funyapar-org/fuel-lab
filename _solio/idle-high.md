@@ -62,7 +62,7 @@ description: スズキ・ソリオでアイドリング回転数が1000rpm以上
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/assets/img/solio-idling-normal.jpg"
+      <img src="/fuel-lab/assets/img/solio-idling-normal.jpg"
            class="img-fluid rounded shadow-sm"
            alt="ソリオ 既定のアイドリング回転数 650rpm">
       <small class="text-muted d-block mt-2">
@@ -90,7 +90,7 @@ description: スズキ・ソリオでアイドリング回転数が1000rpm以上
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/assets/img/solio-idling-high.jpg"
+      <img src="/fuel-lab/assets/img/solio-idling-high.jpg"
            class="img-fluid rounded shadow-sm"
            alt="ソリオ アイドリング回転数が高い状態">
       <small class="text-muted d-block mt-2">
@@ -166,7 +166,7 @@ description: スズキ・ソリオでアイドリング回転数が1000rpm以上
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/assets/img/solio-idling-after.jpg"
+      <img src="/fuel-lab/assets/img/solio-idling-after.jpg"
            class="img-fluid rounded shadow-sm"
            alt="FCR-062使用後のアイドリング回転数">
       <small class="text-muted d-block mt-2">
