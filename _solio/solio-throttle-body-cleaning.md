@@ -93,7 +93,7 @@ description: ソリオで発進時のもたつきやアクセルレスポンス�
       <div class="row">
         <div class="col-md-6 mb-3">
           <p>清掃で分解する部分</p>
-          <img src="/fuel-lab/assets/img/throttle/cleaning0.jpg"\
+          <img src="/fuel-lab/assets/img/throttle/cleaning0.jpg"
                class="img-fluid rounded border mb-3"
               alt="清掃で分解する部分">
         </div>
