@@ -176,7 +176,7 @@ description: 冬になると燃費が悪くなるのはなぜ？寒冷時にエ�
             冬の燃費悪化が正常か、  
             故障を疑うべきかの判断基準を解説しています。
           </p>
-          <a href="/fuel-lab/knowledge/fuel-winter.html" class="btn btn-outline-primary">
+          <a href="/fuel-lab/knowledge/winter-fuel-economy-trouble.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
