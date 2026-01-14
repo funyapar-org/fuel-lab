@@ -136,7 +136,7 @@ description: エンジンのかかりが悪い原因を、バッテリー・点�
     <a href="/fuel-lab/knowledge/fuel-additive.html" class="btn btn-outline-secondary m-1">
       燃料添加剤とは
     </a>
-    <a href="/fuel-lab/solio-diary/fcr062-effect.html" class="btn btn-outline-primary m-1">
+    <a href="/fuel-lab/solio/fcr062-effect.html" class="btn btn-outline-primary m-1">
       FCR-062 を使ってみた
     </a>
   </div>

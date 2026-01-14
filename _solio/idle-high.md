@@ -232,7 +232,7 @@ description: スズキ・ソリオでアイドリング回転数が1000rpm以上
             実際にソリオで使用した  
             体験レビューをまとめています。
           </p>
-          <a href="/fuel-lab/solio-diary/fcr062-effect.html" class="btn btn-warning fw-bold">
+          <a href="/fuel-lab/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

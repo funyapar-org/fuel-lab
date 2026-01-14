@@ -172,7 +172,7 @@ description: 最近ガソリン代が増えた気がする…その原因はエ�
             <strong>FCR-062</strong>を使用し、
             燃費やエンジンの変化を実体験ベースでまとめています。
           </p>
-          <a href="/fuel-lab/solio-diary/fcr062-effect.html" class="btn btn-warning fw-bold">
+          <a href="/fuel-lab/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>
