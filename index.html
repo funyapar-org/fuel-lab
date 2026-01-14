@@ -46,7 +46,17 @@ description: 燃費改善のための実験・ツール公開サイトです。�
     {% endfor %}
   </div>
 
-  <!-- Diary Section -->
+  <!-- My solio Section -->
+  <h2 class="mb-3">🚗 私のソリオの試行錯誤の記録</h2>
+  <div class="list-group mb-5">
+    {% for page in site.solio %}
+      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        {{ page.title }}
+      </a>
+    {% endfor %}
+  </div>
+
+　<!-- Diary Section -->
   <h2 class="mb-3">📓 私のソリオの日記(燃費改善の試行錯誤など)</h2>
   <div class="p-3 bg-primary border rounded shadow-sm mb-5">
     <p>最新の日記は X（旧Twitter）で更新しています。</p>
