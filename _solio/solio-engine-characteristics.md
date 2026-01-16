@@ -7,7 +7,7 @@ description: スズキ・ソリオ（K12Cエンジン）の特性、燃費の出
 
 <div class="container my-5">
 
-  <h1 class="mb-4">ソリオのエンジン特性と燃費傾向</h1>
+  <h1 class="mb-4">{{ page.title }}</h1>
 
   <p class="lead">
     このページでは、私が所有しているスズキ・ソリオ（ガソリン車）形式：MA26Sを例に、
