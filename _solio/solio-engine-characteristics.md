@@ -140,7 +140,7 @@ description: スズキ・ソリオ（K12Cエンジン）の特性、燃費の出
   <div class="alert alert-primary mt-4">
     次に読むおすすめ：
     <ul class="mb-0">
-      <li><a href="/fuel-lab/solio/throttle-body-cleaning.html">スロットルバルブ清掃の実例</a></li>
+      <li><a href="/fuel-lab/solio/solio-throttle-body-cleaning.html">スロットルバルブ清掃の実例</a></li>
       <li><a href="/fuel-lab/knowledge/winter-fuel-economy.html">冬に燃費が下がる理由</a></li>
     </ul>
   </div>
