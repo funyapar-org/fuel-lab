@@ -66,7 +66,7 @@ description: スズキ・ソリオ（K12Cエンジン）の特性、燃費の出
 
   <div class="alert alert-secondary">
     関連記事：
-    <a href="/fuel-lab/solio/throttle-body-cleaning.html">
+    <a href="/fuel-lab/solio/solio-throttle-body-cleaning.html">
       スロットルバルブ清掃で発進時のレスポンスが改善した実例
     </a>
   </div>
