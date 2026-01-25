@@ -90,7 +90,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
       年間10,000km程度では、燃費差によるガソリン代の差は限定的です。
     </p>
 
-    <div class="card bg-secondary mt-3">
+    <div class="card mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
         ・<a href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">実燃費で考える燃費改善の考え方</a>
