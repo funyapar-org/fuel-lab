@@ -17,18 +17,11 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
     </p>
   </header>
 
-  <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">はじめに</h2>
-    <p>
-      ソリオを検討している人の多くは、フリードやシエンタと比較して悩んでいるのではないでしょうか。
-      私自身も同じように迷いました。
-    </p>
-    <p>
-      このページでは、カタログスペックやイメージではなく、
-      <strong>実際に購入時に考えた条件と、そこから導いた結論</strong>を整理しています。
-      同じような前提条件で車選びをしている方の参考になれば幸いです。
-    </p>
-  </section>
+  <div class="alert alert-primary mb-5">
+    <strong>この記事について</strong><br>
+    このページでは「なぜその選択に至ったのか」という考え方を中心にまとめています。  
+    実際の燃費改善方法やメンテナンス内容は、各詳細ページで解説しています。
+  </div>
 
   <section class="mb-5">
     <h2 class="h4 border-bottom pb-2 mb-3">購入時の前提条件</h2>
@@ -47,121 +40,104 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
   <section class="mb-5">
     <h2 class="h4 border-bottom pb-2 mb-3">比較検討した車種</h2>
     <p>
-      上記の条件を満たす車として、主に以下の3車種を比較しました。
+      条件を満たす車として、以下の車種を比較しました。
     </p>
     <ul>
       <li>スズキ ソリオ</li>
       <li>ホンダ フリード</li>
       <li>トヨタ シエンタ</li>
     </ul>
-    <p class="mt-3">
-      いずれも「コンパクト・スライドドア・ファミリー向け」という点で
-      よく比較対象になる車種です。
-    </p>
+
+    <div class="card bg-light mt-4">
+      <div class="card-body">
+        <strong>関連記事</strong><br>
+        ・<a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向まとめ</a><br>
+        ・<a href="/fuel-lab/knowledge/compact-minivan-comparison.html">コンパクトミニバンの維持費比較</a>
+      </div>
+    </div>
   </section>
 
   <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">中古車価格で見たときの差</h2>
+    <h2 class="h4 border-bottom pb-2 mb-3">中古車価格と初期費用</h2>
     <p>
-      同程度の年式・走行距離で中古車相場を調べると、
-      <strong>ソリオはフリード・シエンタより車体本体価格が明確に安い</strong>ケースが多く見られました。
+      同条件で中古車を探した結果、ソリオはフリード・シエンタより
+      <strong>車体本体価格が安いケースが多い</strong>と感じました。
     </p>
-    <p>
-      初期費用を抑えられることは、その後の維持費やメンテナンスに
-      予算を回せるという意味でも大きなメリットです。
-    </p>
+
+    <div class="border-start border-4 border-primary ps-3 mt-3">
+      初期費用を抑えることで、  
+      その後のメンテナンスや消耗品に予算を回しやすくなります。
+    </div>
   </section>
 
   <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">維持費の観点で考えたこと</h2>
+    <h2 class="h4 border-bottom pb-2 mb-3">維持費の観点で重視した点</h2>
 
     <h3 class="h6 mt-4">タイヤサイズと交換費用</h3>
     <p>
-      ソリオはタイヤサイズが小さく、なおかつ細めです。
-      これは見た目以上に維持費に効いてきます。
-    </p>
-    <p>
-      タイヤは消耗品であり、長期保有するほど交換回数が増えます。
-      1回あたりの交換費用が安いという点は、長く乗る前提では無視できません。
+      ソリオはタイヤサイズが小さく、交換費用が抑えやすいのが特徴です。
     </p>
 
-    <h3 class="h6 mt-4">燃費と年間走行距離</h3>
+    <div class="card bg-light mt-3">
+      <div class="card-body">
+        <strong>関連記事</strong><br>
+        ・<a href="/fuel-lab/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a>
+      </div>
+    </div>
+
+    <h3 class="h6 mt-4">年間走行距離と燃費差</h3>
     <p>
-      年間走行距離を約10,000kmと想定すると、
-      燃費差によるガソリン代の差は思ったほど大きくなりません。
+      年間10,000km程度では、燃費差によるガソリン代の差は限定的です。
     </p>
-    <p>
-      カタログ燃費の数値よりも、
-      <strong>実際の使用条件でどれだけ差が出るか</strong>を重視しました。
-    </p>
+
+    <div class="card bg-light mt-3">
+      <div class="card-body">
+        <strong>関連記事</strong><br>
+        ・<a href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">実燃費で考える燃費改善の考え方</a>
+      </div>
+    </div>
   </section>
 
   <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">なぜマイルドハイブリッドを選ばなかったのか</h2>
+    <h2 class="h4 border-bottom pb-2 mb-3">ハイブリッド車を選ばなかった理由</h2>
     <p>
-      マイルドハイブリッド車は燃費性能が魅力ですが、
-      中古車市場ではガソリン車より車体価格が高くなる傾向があります。
+      燃費性能は魅力的ですが、中古車価格差と長期保有時のリスクを考慮しました。
     </p>
+
+    <div class="alert alert-warning mt-3">
+      <strong>ポイント</strong><br>
+      年間走行距離が少ない場合、燃費差だけで価格差を回収するのは難しいケースがあります。
+    </div>
+
     <p>
-      年間走行距離が10,000km程度では、
-      <strong>燃費差だけで車体価格差を回収するのは難しい</strong>と判断しました。
+      また、乗り潰す前提ではリチウムイオンバッテリーの交換費用も無視できません。
     </p>
-    <p>
-      さらに、今回は「乗り潰す」前提だったため、
-      将来的なリチウムイオンバッテリーの交換費用や工賃も考慮しています。
-    </p>
+
+    <div class="card bg-light mt-3">
+      <div class="card-body">
+        <strong>関連記事</strong><br>
+        ・<a href="/fuel-lab/solio/solio-mild-hybrid-cost.html">ソリオ マイルドハイブリッドの維持費と注意点</a>
+      </div>
+    </div>
   </section>
 
   <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">安全性と車格について</h2>
-    <p>
-      軽自動車は維持費の面では非常に魅力的ですが、
-      家族を乗せる車として事故時の安全性を優先しました。
-    </p>
-    <p>
-      コンパクトカーでありながら、軽自動車より一回り大きい車格は、
-      精神的な安心感にもつながっています。
-    </p>
-  </section>
-
-  <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">最終的にソリオのガソリン車を選んだ理由</h2>
+    <h2 class="h4 border-bottom pb-2 mb-3">最終的な判断まとめ</h2>
     <ul>
-      <li>中古車の車体価格が比較的安い</li>
-      <li>タイヤなど消耗品の維持費が安い</li>
-      <li>構造が比較的シンプルで長期保有に向いている</li>
-      <li>自分の使用条件では燃費差の影響が小さい</li>
+      <li>中古車価格が比較的安い</li>
+      <li>消耗品コストが低い</li>
+      <li>構造がシンプルで長期保有向き</li>
+      <li>自分の使い方では燃費差が小さい</li>
     </ul>
   </section>
 
-  <section class="mb-5">
-    <h2 class="h4 border-bottom pb-2 mb-3">この判断が向いている人・向いていない人</h2>
-
-    <h3 class="h6 mt-4">向いている人</h3>
-    <ul>
-      <li>年間走行距離がそれほど多くない</li>
-      <li>中古車でコストパフォーマンスを重視したい</li>
-      <li>長く乗ることを前提にしている</li>
+  <section class="bg-light p-4 rounded">
+    <h2 class="h5 mb-3">次におすすめの記事</h2>
+    <ul class="mb-0">
+      <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
+      <li><a href="/fuel-lab/solio/solio-throttle-body-cleaning.html">ソリオのスロットルバルブ清掃DIY</a></li>
+      <li><a href="/fuel-lab/knowledge/city-driving-fuel-economy.html">街乗りでも燃費を諦めないための考え方</a></li>
     </ul>
-
-    <h3 class="h6 mt-4">向いていない人</h3>
-    <ul>
-      <li>新車購入が前提の人</li>
-      <li>年間走行距離が多い人</li>
-      <li>燃費性能を最優先したい人</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 class="h4 border-bottom pb-2 mb-3">おわりに</h2>
-    <p>
-      車選びに「絶対的な正解」はありません。
-      重要なのは、自分の使用条件と価値観に合っているかどうかです。
-    </p>
-    <p>
-      このページが、同じような条件で悩んでいる方の
-      判断材料のひとつになれば幸いです。
-    </p>
   </section>
 
 </div>
