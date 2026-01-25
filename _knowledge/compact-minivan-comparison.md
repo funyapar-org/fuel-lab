@@ -143,7 +143,7 @@ description: ソリオ・フリード・シエンタの維持費を、燃費・�
   </ul>
 </section>
 
-<section class="bg-light p-4 rounded">
+<section class="p-4 rounded">
   <h2 class="h5 mb-3">関連ページ</h2>
   <ul class="mb-0">
     <li><a href="/fuel-lab/solio/why-solio-gasoline.html">なぜソリオのガソリン車を選んだのか</a></li>
