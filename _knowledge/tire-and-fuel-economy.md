@@ -22,7 +22,7 @@ description: タイヤサイズは燃費だけでなく維持費にも大きく�
 <section class="mb-5">
   <h2 class="h4 border-bottom pb-2 mb-3">タイヤサイズはどこが違うのか</h2>
   <p>
-    一般的なタイヤサイズ表記（例：165/70R14"）は、  
+    一般的なタイヤサイズ表記（例：165/70R14）は、  
     以下の要素で構成されています。
   </p>
 
@@ -125,7 +125,7 @@ description: タイヤサイズは燃費だけでなく維持費にも大きく�
 
   <p>
     この特徴は、  
-    <a href="/fuel-lab/solio/why-solio-gasoline.html">
+    <a href="/fuel-lab/solio/why-choose-solio-gasoline.html">
       なぜソリオのガソリン車を選んだのか
     </a>
     という判断にも直結しています。
