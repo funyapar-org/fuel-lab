@@ -159,7 +159,7 @@ description: 燃費改善を考えるなら重要なのはカタログ燃費で�
   <h2 class="h5 mb-3">関連ページ</h2>
   <ul class="mb-0">
     <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
-    <li><a href="/fuel-lab/knowledge/tire-size-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
+    <li><a href="/fuel-lab/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
     <li><a href="/fuel-lab/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
   </ul>
 </section>
