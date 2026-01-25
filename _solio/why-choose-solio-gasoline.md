@@ -48,7 +48,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
       <li>トヨタ シエンタ</li>
     </ul>
 
-    <div class="card bg-success mt-4">
+    <div class="card bg-secondary mt-4">
       <div class="card-body">
         <strong>関連記事</strong><br>
         ・<a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向まとめ</a><br>
@@ -78,7 +78,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
       ソリオはタイヤサイズが小さく、交換費用が抑えやすいのが特徴です。
     </p>
 
-    <div class="card bg-success mt-3">
+    <div class="card bg-secondary mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
         ・<a href="/fuel-lab/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a>
@@ -90,7 +90,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
       年間10,000km程度では、燃費差によるガソリン代の差は限定的です。
     </p>
 
-    <div class="card bg-success mt-3">
+    <div class="card bg-secondary mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
         ・<a href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">実燃費で考える燃費改善の考え方</a>
@@ -113,7 +113,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
       また、乗り潰す前提ではリチウムイオンバッテリーの交換費用も無視できません。
     </p>
 
-    <div class="card bg-success mt-3">
+    <div class="card bg-secondary mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
         ・<a href="/fuel-lab/solio/solio-mild-hybrid-cost.html">ソリオ マイルドハイブリッドの維持費と注意点</a>
@@ -131,7 +131,7 @@ ogp_img: /assets/ogp/why-solio-gasoline.png
     </ul>
   </section>
 
-  <section class="bg-success p-4 rounded">
+  <section class="bg-secondary p-4 rounded">
     <h2 class="h5 mb-3">次におすすめの記事</h2>
     <ul class="mb-0">
       <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
