@@ -171,7 +171,7 @@ description: 純正アルミホイールは燃費的に有利なのか？サイ�
   </div>
   <div class="list-group list-group-flush">
     <a class="list-group-item list-group-item-action"
-       href="/fuel-lab/knowledge/real-fuel-economy.html">
+       href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">
       実燃費で考える燃費改善の考え方
     </a>
     <a class="list-group-item list-group-item-action"
