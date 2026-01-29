@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container my-5">
+  <h1 class="fw-bold mb-4">
+    タグ：{{ page.tag }}
+  </h1>
+
+  <div class="list-group">
+    {% assign posts = site.tags[page.tag] %}
+    {% for post in posts %}
+      <a href="{{ post.url }}"
+         class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ post.title }}</h5>
+        {% if post.description %}
+          <p class="mb-1 text-muted small">
+            {{ post.description }}
+          </p>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>
