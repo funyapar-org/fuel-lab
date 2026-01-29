@@ -9,7 +9,15 @@ permalink: /tags/
 
   {% assign tag_map = "" | split: "" %}
 
-  {% for page in site.pages %}
+  {% for page in site.knowledge %}
+    {% if page.tags %}
+      {% for tag in page.tags %}
+        {% assign tag_map = tag_map | push: tag %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% for page in site.solio %}
     {% if page.tags %}
       {% for tag in page.tags %}
         {% assign tag_map = tag_map | push: tag %}
