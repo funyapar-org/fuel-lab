@@ -1,7 +1,7 @@
 ---
 layout: default
 title: タグ一覧
-permalink: /fuel-lab/tags/
+permalink: /tags/
 ---
 
 <div class="container my-5">
