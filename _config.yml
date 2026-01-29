@@ -14,5 +14,8 @@ collections:
     output: true
   solio:
     output: true
+  tags:
+    output: true
+    permalink: /tags/:name/
 plugins:
   - jekyll-sitemap
