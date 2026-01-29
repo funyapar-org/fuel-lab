@@ -14,7 +14,5 @@ collections:
     output: true
   solio:
     output: true
-  tags:
-    output: true
 plugins:
   - jekyll-sitemap
