@@ -7,18 +7,37 @@ layout: default
     タグ：{{ page.tag }}
   </h1>
 
-  <div class="list-group">
-    {% assign posts = site.tags[page.tag] %}
-    {% for post in posts %}
-      <a href="{{ post.url }}"
-         class="list-group-item list-group-item-action">
-        <h5 class="mb-1">{{ post.title }}</h5>
-        {% if post.description %}
+  <!-- Knowledge Section -->
+  <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
+  <div class="list-group mb-5">
+    {% for page in site.knowledge %}
+      {% if page.tags contains page.tag %}
+      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ page.title }}</h5>
+        {% if page.description %}
           <p class="mb-1 text-muted small">
-            {{ post.description }}
+            {{ page.description }}
           </p>
         {% endif %}
       </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- My solio Section -->
+  <h2 class="mb-3">🚗 私のソリオと試行錯誤の記録</h2>
+  <div class="list-group mb-5">
+    {% for page in site.solio %}
+      {% if page.tags contains page.tag %}
+      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ page.title }}</h5>
+        {% if page.description %}
+          <p class="mb-1 text-muted small">
+            {{ page.description }}
+          </p>
+        {% endif %}
+      </a>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
