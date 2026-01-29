@@ -10,11 +10,11 @@ layout: default
   <!-- Knowledge Section -->
   <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
   <div class="list-group mb-5">
-    {% for page in site.knowledge %}
-      {% if page.tags contains page.tag %}
-      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-        <h5 class="mb-1">{{ page.title }}</h5>
-        {% if page.description %}
+    {% for tmp_page in site.knowledge %}
+      {% if tmp_page.tags contains page.tag %}
+      <a href="{{ tmp_page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ tmp_page.title }}</h5>
+        {% if tmp_page.description %}
           <p class="mb-1 text-muted small">
             {{ page.description }}
           </p>
@@ -27,11 +27,11 @@ layout: default
   <!-- My solio Section -->
   <h2 class="mb-3">🚗 私のソリオと試行錯誤の記録</h2>
   <div class="list-group mb-5">
-    {% for page in site.solio %}
-      {% if page.tags contains page.tag %}
-      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-        <h5 class="mb-1">{{ page.title }}</h5>
-        {% if page.description %}
+    {% for tmp_page in site.solio %}
+      {% if tmp_page.tags contains page.tag %}
+      <a href="{{ tmp_page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ tmp_page.title }}</h5>
+        {% if tmp_page.description %}
           <p class="mb-1 text-muted small">
             {{ page.description }}
           </p>
