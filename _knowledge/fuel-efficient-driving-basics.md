@@ -72,7 +72,7 @@ tags:
 
 <div class="alert alert-info">
   関連ページ：  
-  <a href="/fuel-lab/knowledge/low-rpm-dirty-misunderstanding-solio-k12c.html" class="alert-link">
+  <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html" class="alert-link">
     低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
   </a>
 </div>
