@@ -53,7 +53,7 @@ tags:
 
     <p>
       これらは<strong>昔のエンジンでは事実だった側面</strong>があります。  
-      ただし、<a href="/fuel-lab/knowledge/engine-oil-and-fuel-economy.html">エンジンオイルや燃焼制御の進化</a>を
+      ただし、<a href="/fuel-lab/knowledge/engine-oil-and-combustion-evolution.html">エンジンオイルや燃焼制御の進化</a>を
       考慮せずに語られているケースが多いのも事実です。
     </p>
   </section>
