@@ -131,7 +131,7 @@ tags:
     <p>
       ソリオのK12Cエンジンは、低回転で走ることを前提に設計されています。  
       <a href="/fuel-lab/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転</a>と
-      <a href="/fuel-lab/knowledge/engine-oil-and-fuel-economy.html">基本的なメンテナンス</a>を守っていれば、
+      <a href="/fuel-lab/knowledge/car-maintenance-basic.html">基本的なメンテナンス</a>を守っていれば、
       過度に心配する必要はありません。
     </p>
   </section>
