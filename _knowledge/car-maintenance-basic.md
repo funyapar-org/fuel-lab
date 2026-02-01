@@ -135,7 +135,7 @@ tags:
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-and-combustion-control.html">
+      <a href="/fuel-lab/knowledge/engine-oil-and-combustion-evolution.html">
         エンジンオイルや燃焼制御の進化が低回転運転を可能にした理由
       </a>
     </li>
