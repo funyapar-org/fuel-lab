@@ -202,7 +202,7 @@ tags:
             <th>純正スチール + キャップ</th>
             <td>約5.1kg</td>
           </tr>
-          <tr class="table-success">
+          <tr>
             <th>G-SPEED G-07</th>
             <td><strong>約4.4kg</strong></td>
           </tr>
@@ -213,6 +213,15 @@ tags:
         </tbody>
       </table>
     </div>
+
+    <p class="mt-3">
+      今回は同重量の2種類の軽量ホイール（G-07 / G-08）で迷ったが、
+      最終的には スポークが太く横剛性が出やすい設計 の G-08 を選択した。
+    </p>
+
+    <p class="mt-3">
+      燃費面では差が出にくいが、街乗りでの操舵安定性やふらつき感を抑えたいという判断からである。
+    </p>
 
     <p class="mt-3">
       バネ下で合計 <strong>約2.8kgの軽量化</strong>。
