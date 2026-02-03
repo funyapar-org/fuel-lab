@@ -45,6 +45,23 @@
     <main class="container my-4">
       {{ content }}
     </main>
+    
+    {% if page.tags and page.tags.size > 0 %}
+    <hr class="my-4">
+    
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <span class="text-muted small">タグ:</span>
+    
+      {% for tag in page.tags %}
+        <a
+          href="/fuel-lab/tags/{{ tag | uri_escape }}/"
+          class="badge rounded-pill bg-secondary text-decoration-none"
+        >
+          {{ tag }}
+        </a>
+      {% endfor %}
+    </div>
+    {% endif %}
 
     {% include footer.html %}
   </body>
