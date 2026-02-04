@@ -3,6 +3,10 @@ layout: default
 nav_title: ソリオのエンジン特性と燃費傾向
 title: ソリオのエンジン特性と燃費傾向｜K12Cエンジンをオーナー目線で解説
 description: スズキ・ソリオ（K12Cエンジン）の特性、燃費の出やすい条件、体感が悪化しやすいポイントを実体験ベースで解説します。
+tags:
+  - エンジン
+  - K12C
+  - ソリオ
 ---
 
 <div class="container my-5">

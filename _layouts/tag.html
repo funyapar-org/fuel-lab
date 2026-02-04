@@ -7,6 +7,13 @@ layout: default
     タグ：{{ page.tag }}
   </h1>
 
+  {% if page.description %}
+  <!-- Description -->
+  <div class="alert alert-info">
+    {{ page.description }}
+  </div>
+  {% endif %}
+
   <!-- Knowledge Section -->
   <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
   <div class="list-group mb-5">

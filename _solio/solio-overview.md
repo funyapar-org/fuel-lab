@@ -3,6 +3,11 @@ layout: default
 nav_title: ソリオ燃費改善トップページ
 title: ソリオ燃費改善トップページ | 初めての方はこのページから見るのがおすすめ
 description: スズキ ソリオのエンジン特性、街乗り燃費傾向、燃費改善の取り組みを一覧でまとめたトップページ
+tags:
+  - ソリオ
+  - 燃費改善
+  - 街乗り
+  - エンジン
 ---
 
 <div class="container my-4">
@@ -23,6 +28,20 @@ description: スズキ ソリオのエンジン特性、街乗り燃費傾向、
     <li>実際に行っている<strong>燃費改善施策の全体像</strong>を一覧で示す</li>
     <li>各詳細解説ページへの<strong>案内ページ</strong>として機能させる</li>
   </ul>
+
+  <hr class="my-4">
+
+  <h2 class="h4 mb-3">なぜソリオを選んだのか</h2>
+
+  <p class="mt-2">
+    以下のページでどのように考えてソリオを選択したかを詳しく解説しています。
+  </p>
+
+  <p>
+    👉 <a href="/fuel-lab/solio/why-choose-solio-gasoline.html">
+      なぜソリオのガソリン車を選んだのか｜維持費と長期保有を重視した現実的な判断
+    </a>
+  </p>
 
   <hr class="my-4">
 
@@ -62,6 +81,16 @@ description: スズキ ソリオのエンジン特性、街乗り燃費傾向、
   <p>
     👉 <a href="/fuel-lab/solio/solio-engine-characteristics.html">
       ソリオのエンジン特性と燃費傾向
+    </a>
+  </p>
+  <p>
+    👉 <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html">
+      低回転＝汚れるは誤解？ソリオのエンジンK12Cが低回転前提でも問題ない理由
+    </a>
+  </p>
+  <p>
+    👉 <a href="/fuel-lab/solio/solio-port-injection-fuel-additive.html">
+      ソリオは直噴じゃない？燃料添加剤が効きやすいエンジン構造を解説
     </a>
   </p>
 
@@ -107,6 +136,15 @@ description: スズキ ソリオのエンジン特性、街乗り燃費傾向、
         </tr>
       </thead>
       <tbody>
+      　<tr>
+          <td>タイヤ・ホイール交換</td>
+          <td>軽量かつ転がり抵抗AAAタイヤに交換</td>
+          <td>
+            <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
+              詳細を見る
+            </a>
+          </td>
+        </tr>
         <tr>
           <td>吸気系</td>
           <td>スロットルバルブ清掃</td>
