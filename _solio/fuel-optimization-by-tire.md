@@ -268,6 +268,17 @@ tags:
   <hr>
 
   <section class="my-5">
+    <h2 class="fw-semibold">実際に交換した結果を後日公開予定</h2>
+
+    <p class="mt-3">
+      現在のタイヤがまだ使えそうなので少々間が空きますが、実際に交換した後の燃費改善結果を公開予定です。
+    </p>
+  </section>
+
+
+  <hr>
+
+  <section class="my-5">
     <h2 class="fw-semibold">関連ページ</h2>
     <ul class="mt-3">
       <li><a href="/fuel-lab/knowledge/tire-wheel.html">タイヤとホイールで燃費は変わる？</a></li>
