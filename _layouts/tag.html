@@ -15,10 +15,18 @@ layout: default
   {% endif %}
 
   <!-- Knowledge Section -->
+  {% assign knowledge_page_map = "" | split: "" %}
+
+  {% for tmp_page in site.knowledge %}
+    {% if tmp_page.tags contains page.tag %}
+      {% assign knowledge_page_map = knowledge_page_map | push: tmp_page %}
+    {% endif %}
+  {% endfor %}
+
+  {% if knowledge_page_map.size > 0 %}
   <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
   <div class="list-group mb-5">
-    {% for tmp_page in site.knowledge %}
-      {% if tmp_page.tags contains page.tag %}
+    {% for tmp_page in knowledge_page_map %}
       <a href="{{ tmp_page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
         <h5 class="mb-1">{{ tmp_page.title }}</h5>
         {% if tmp_page.description %}
@@ -27,15 +35,23 @@ layout: default
           </p>
         {% endif %}
       </a>
-      {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
 
   <!-- My solio Section -->
+  {% assign solio_page_map = "" | split: "" %}
+
+  {% for tmp_page in site.solio %}
+    {% if tmp_page.tags contains page.tag %}
+      {% assign solio_page_map = solio_page_map | push: tmp_page %}
+    {% endif %}
+  {% endfor %}
+
+  {% if solio_page_map.size > 0 %}
   <h2 class="mb-3">🚗 私のソリオと試行錯誤の記録</h2>
   <div class="list-group mb-5">
-    {% for tmp_page in site.solio %}
-      {% if tmp_page.tags contains page.tag %}
+    {% for tmp_page in solio_page_map %}
       <a href="{{ tmp_page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
         <h5 class="mb-1">{{ tmp_page.title }}</h5>
         {% if tmp_page.description %}
@@ -44,7 +60,7 @@ layout: default
           </p>
         {% endif %}
       </a>
-      {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
 </div>
