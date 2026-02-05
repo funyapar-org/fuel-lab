@@ -123,7 +123,7 @@ tags:
             <th>重量</th>
             <th>溝の深さ</th>
             <th>特徴</th>
-　　　　　　　　<th>価格</th>
+            <th>価格</th>
           </tr>
         </thead>
         <tbody>
