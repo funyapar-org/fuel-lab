@@ -98,6 +98,7 @@ tags:
       <li><strong>重量（1本あたり）</strong></li>
       <li><strong>溝の深さ（寿命）</strong></li>
       <li><strong>サイドウォール剛性（ふらつき）</strong></li>
+      <li><strong>価格</strong></li>
     </ol>
 
     <p class="mt-3">
@@ -122,6 +123,7 @@ tags:
             <th>重量</th>
             <th>溝の深さ</th>
             <th>特徴</th>
+　　　　　　　　<th>価格</th>
           </tr>
         </thead>
         <tbody>
@@ -132,6 +134,7 @@ tags:
             <td>約6.3kg</td>
             <td>約6.5mm</td>
             <td>バランス型</td>
+            <td>5,906円/1本</td>
           </tr>
           <tr>
             <td>RV03CK</td>
@@ -140,6 +143,16 @@ tags:
             <td>約6.3kg</td>
             <td>7.2mm</td>
             <td>剛性重視</td>
+            <td>8,202円/1本</td>
+          </tr>
+          <tr>
+            <td>RV03CK</td>
+            <td>165/70R14</td>
+            <td>A / a</td>
+            <td>約6.2kg</td>
+            <td>6.8mm</td>
+            <td>剛性重視</td>
+            <td>7,860円/1本</td>
           </tr>
           <tr class="table-success">
             <td><strong>BluEarth AE-01F</strong></td>
@@ -148,6 +161,7 @@ tags:
             <td><strong>約5.8kg</strong></td>
             <td>6.4mm</td>
             <td>転がり抵抗最優先</td>
+            <td>6,240円/1本</td>
           </tr>
         </tbody>
       </table>
