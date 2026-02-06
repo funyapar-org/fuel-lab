@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 0W-16と0W-20の違いをわかりやすく解説｜どっちを選ぶべき？
-nav_title: 0W-16と0W-20
+nav_title: エンジンオイル 0W-16と0W-20
 tags:
   - エンジンオイル
   - 0W-16
