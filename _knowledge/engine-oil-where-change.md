@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ディーラー・量販店・DIY、どこでオイル交換するのが正解？
-nav_title: オイル交換の場所
+nav_title: エンジンオイル交換の場所
 tags:
   - エンジンオイル
   - オイル交換
