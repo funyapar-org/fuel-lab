@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+　　　　- "_tags/*.md"
       - "_knowledge/*.md"
       - "_solio/*.md"
 
