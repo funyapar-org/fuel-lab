@@ -3,11 +3,11 @@ layout: default
 title: 0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？
 nav_title: 指定外オイルの燃費影響
 tags:
-  - エンジンオイル
-  - 0W-16
-  - 0W-20
-  - 燃費
-  - 維持費
+  - engine-oil
+  - 0w-16
+  - 0w-20
+  - fuel-economy
+  - running-cost
 ---
 
 <div class="container my-5">
