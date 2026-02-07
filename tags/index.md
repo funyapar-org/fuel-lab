@@ -29,9 +29,10 @@ permalink: /tags/
 
   <div class="d-flex flex-wrap gap-2">
     {% for tag in unique_tags %}
+      {% assign display_name = site.data.tag_aliases[tag] | default: tag %}
       <a href="/fuel-lab/tags/{{ tag | url_encode }}/"
          class="badge bg-primary text-decoration-none">
-        {{ tag }}
+        {{ display_name }}
       </a>
     {% endfor %}
   </div>
