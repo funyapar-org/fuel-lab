@@ -9,6 +9,9 @@ on:
       - "_knowledge/*.md"
       - "_solio/*.md"
 
+permissions:
+  contents: write
+
 jobs:
   generate-tags:
     runs-on: ubuntu-latest
@@ -61,7 +64,7 @@ jobs:
       
             git add _tags
             git commit -m "chore: auto-generate tag pages"
-            git push
+            git push --verbose
           else
             echo "No changes to commit"
           fi
