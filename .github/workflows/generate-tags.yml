@@ -1,0 +1,57 @@
+name: Generate Tag Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_knowledge/*.md"
+      - "_solio/*.md"
+
+jobs:
+  generate-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Generate tag pages
+        run: |
+          mkdir -p _tags
+
+          tags=$(grep -rho "tags:.*" . \
+            | sed 's/tags:[[:space:]]*//' \
+            | tr -d '[],' \
+            | tr ' ' '\n' \
+            | grep -E '^[a-z0-9-]+$' \
+            | sort -u)
+
+          for tag in $tags; do
+            file="_tags/${tag}.md"
+            if [ ! -f "$file" ]; then
+              echo "Creating tag page: $tag"
+              cat <<EOF > "$file"
+---
+layout: tag
+tag: $tag
+title: "$tag"
+---
+EOF
+            fi
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add _tags
+          if ! git diff --cached --quiet; then
+            git commit -m "auto: generate tag pages"
+            git push
+          fi
