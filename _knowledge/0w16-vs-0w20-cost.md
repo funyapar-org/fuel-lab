@@ -8,6 +8,7 @@ tags:
   - 0w-20
   - fuel-economy
   - running-cost
+  - viscosity
 ---
 
 <div class="container my-5">
