@@ -9,7 +9,6 @@ tags:
   - fuel-economy
   - running-cost
   - engine-oil-viscosity
-  - fuel-economy-worse
 ---
 
 <div class="container my-5">
