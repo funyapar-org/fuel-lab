@@ -24,6 +24,11 @@ jobs:
 
       - name: Generate tag pages
         run: |
+          ls -la
+          ls -la _knowledge || true
+          ls -la _solio || true
+          find . -name "*.md" | head -20
+
           set -e
 
           mkdir -p _tags
