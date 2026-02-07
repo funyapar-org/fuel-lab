@@ -23,26 +23,30 @@ jobs:
 
       - name: Generate tag pages
         run: |
+          set -e
+      
           mkdir -p _tags
-
+      
           tags=$(grep -rho "tags:.*" . \
             | sed 's/tags:[[:space:]]*//' \
             | tr -d '[],' \
             | tr ' ' '\n' \
             | grep -E '^[a-z0-9-]+$' \
             | sort -u)
-
+      
           for tag in $tags; do
             file="_tags/${tag}.md"
             if [ ! -f "$file" ]; then
               echo "Creating tag page: $tag"
-              cat > "$file" <<'EOF'
----
-layout: tag
-tag: $tag
-title: "$tag"
----
-EOF
+      
+              {
+                echo "---"
+                echo "layout: tag"
+                echo "tag: $tag"
+                echo "title: \"$tag\""
+                echo "---"
+              } > "$file"
+      
             fi
           done
 
