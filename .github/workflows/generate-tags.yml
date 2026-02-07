@@ -28,12 +28,13 @@ jobs:
 
           mkdir -p _tags
 
-          tags=$(grep -rho "tags:.*" . \
-            | sed 's/tags:[[:space:]]*//' \
-            | tr -d '[],' \
-            | tr ' ' '\n' \
+          tags=$(grep -rho "^- .*" _knowledge _solio \
+            | sed 's/^- //' \
             | grep -E '^[a-z0-9-]+$' \
             | sort -u)
+      
+          echo "Detected tags:"
+          echo "$tags"
 
           for tag in $tags; do
             file="_tags/${tag}.md"
