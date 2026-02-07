@@ -28,8 +28,8 @@ jobs:
 
           mkdir -p _tags
 
-          tags=$(grep -rho "^- .*" _knowledge _solio \
-            | sed 's/^- //' \
+          tags=$(grep -rho "^[[:space:]]*-[[:space:]]*" _knowledge _solio \
+            | sed 's/^[[:space:]]*-[[:space:]]*//' \
             | grep -E '^[a-z0-9-]+$' \
             | sort -u)
       
