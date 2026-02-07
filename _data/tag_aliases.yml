@@ -11,6 +11,7 @@ eco-tire: エコタイヤ
 engine: エンジン
 engine-dirt: エンジンの汚れ
 engine-oil: エンジンオイル
+engine-oil-viscosity: エンジンオイル粘度
 engine-life: エンジン寿命
 oil-change: オイル交換
 catalog-fuel-economy: カタログ燃費
