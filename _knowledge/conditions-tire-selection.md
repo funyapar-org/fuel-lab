@@ -3,12 +3,12 @@ layout: default
 nav_title: 条件別タイヤ選びフローチャート
 title: 条件別タイヤ選びフローチャート｜燃費・街乗り重視で後悔しない判断軸
 tags:
-  - タイヤ
-  - 選び方
-  - 燃費改善
-  - 街乗り
-  - ソリオ
-  - タイヤラベリング
+  - tire
+  - how-to-choose
+  - fuel-economy-improve
+  - city-driving
+  - solio
+  - tire-labeling
 ---
 
 <div class="container my-5">
