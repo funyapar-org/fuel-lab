@@ -2,12 +2,14 @@
 layout: default
 title: 0W-16と0W-20の違いをわかりやすく解説｜どっちを選ぶべき？
 nav_title: エンジンオイル 0W-16と0W-20
+description: エンジンオイル粘度についてや、現在と昔ではエンジンの加工精度が違うので考え方も変わってきていることについて解説します。
 tags:
-  - エンジンオイル
-  - 0W-16
-  - 0W-20
-  - 粘度
-  - 燃費改善
+  - engine-oil
+  - 0w-16
+  - 0w-20
+  - engine-oil-viscosity
+  - fuel-economy-improve
+  - misconception
 ---
 
 <div class="container my-5">
