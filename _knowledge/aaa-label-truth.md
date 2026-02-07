@@ -4,10 +4,10 @@ nav_title: "AAAラベリングは本当に燃費がいいのか？"
 title: "AAAラベリングは本当に燃費がいいのか？｜転がり抵抗表示の正しい読み方"
 description: 転がり抵抗「AAA」は本当に燃費向上につながるのか？ラベリング制度の仕組みと実燃費との関係、注意点をソリオの実用目線で解説します。
 tags:
-  - タイヤ
-  - 燃費改善
-  - 実燃費
-  - 知識
+  - tire
+  - fuel-economy-improve
+  - real-fuel-economy
+  - knowledge
 ---
 
 <div class="container my-4">
