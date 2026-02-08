@@ -4,6 +4,9 @@ nav_title: タイヤとホイールで燃費は変わる？
 title: タイヤとホイールで燃費は変わる？街乗り中心でも差が出る理由を解説
 description: "燃費とタイヤ・ホイールの関係をわかりやすく解説します。"
 tags:
+  - tire
+  - wheel
+  - fuel-economy
 ---
 
 
