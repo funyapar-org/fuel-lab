@@ -4,13 +4,13 @@ nav_title: FCR-062 を使ってみた
 title: FCR-062 を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー
 description: エンジンのかかりが悪いときがあり、インジェクターが汚れているのではと疑ったので、燃料添加剤「FCR-062」を添加した記録です。
 tags:
-  - 燃費改善
-  - やってみた
-  - ソリオ
-  - 燃料添加剤
-  - エンジンの汚れ
-  - FCR-062
-  - メンテナンス
+  - fuel-economy-improve
+  - try-and-error
+  - solio
+  - fuel-additive
+  - engine-dirt
+  - fcr-062
+  - maintenance
 ---
 
 <div class="container my-5">
