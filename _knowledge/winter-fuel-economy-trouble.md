@@ -4,11 +4,11 @@ nav_title: 冬だけ燃費が悪いのは異常？
 title: 冬だけ燃費が悪いのは異常？故障と正常の見分け方を解説
 description: 冬になると燃費が急に悪くなるのは故障なのか？それとも正常な変化なのか？寒冷時に燃費が落ちる理由と、点検すべきポイントをわかりやすく解説します。
 tags:
-  - 燃費悪化
-  - トラブル
-  - 冬
-  - 点検
-  - 暖機運転
+  - fuel-economy-worse
+  - trouble
+  - winter
+  - inspection
+  - warm-up
 ---
 
 <div class="container my-4">
