@@ -5,9 +5,9 @@ title: なぜソリオのガソリン車を選んだのか｜維持費と長期�
 description: ファミリー用途・年間走行距離1万km・長期保有前提で、なぜソリオのガソリン車を選んだのか。フリード・シエンタとの比較や、マイルドハイブリッドを選ばなかった理由を実体験ベースで解説します。
 ogp_img: /assets/ogp/why-solio-gasoline.png
 tags:
-  - ソリオ
-  - 維持費
-  - 選び方
+  - solio
+  - running-cost
+  - how-to-choose
 ---
 
 <div class="container my-5">
