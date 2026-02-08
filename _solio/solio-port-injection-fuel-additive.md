@@ -4,11 +4,11 @@ nav_title: ソリオと燃料添加剤の相性
 title: ソリオは直噴じゃない？燃料添加剤が効きやすいエンジン構造を解説
 description: ソリオのエンジンは直噴ではなくポート噴射方式です。この構造が、燃料添加剤（FCR-062など）が効きやすい理由や、吸気バルブ洗浄との関係をわかりやすく解説します。
 tags:
-  - ソリオ
-  - エンジン
-  - 燃料添加剤
-  - エンジンの汚れ
-  - FCR-062
+  - solio
+  - engine
+  - fuel-additive
+  - engine-dirt
+  - fcr-062
 ---
 
 <div class="container my-4">
