@@ -4,10 +4,10 @@ nav_title: アイドリング回転数が高い原因とは？
 title: アイドリング回転数が高い原因とは？1000rpm以上になる理由を解説
 description: アイドリング回転数が高い原因を、エア漏れ・エンジン内部の汚れ・センサー異常などから初心者向けに解説。実体験をもとに改善策も紹介します。
 tags:
-  - アイドリング回転数
-  - トラブル
-  - メンテナンス
-  - エンジンの汚れ
+  - idling-rpm
+  - trouble
+  - maintenance
+  - engine-dirt
 ---
 
 <div class="container my-5">
