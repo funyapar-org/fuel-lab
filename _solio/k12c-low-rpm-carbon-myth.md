@@ -4,11 +4,11 @@ nav_title: 低回転＝汚れるは誤解？ソリオは大丈夫？
 title: 低回転＝汚れるは誤解？ソリオのエンジンK12Cが低回転前提でも問題ない理由
 description: 低回転運転はエンジンを汚すと言われがちですが、ソリオのK12Cエンジンは設計段階から低回転運用を前提としています。その理由と、現代エンジンにおける本当の注意点を解説します。
 tags:
-  - エンジン
-  - K12C
-  - 街乗り
-  - ソリオ
-  - 誤解
+  - engine
+  - k12c
+  - city-driving
+  - solio
+  - misconception
 ---
 
 <div class="container my-5">
