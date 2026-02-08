@@ -4,10 +4,10 @@ nav_title: アイドリングが不安定な原因とは？
 title: アイドリングが不安定な原因とは？回転数が上下する理由を解説
 description: アイドリングが安定しない原因を、エンジン内部の汚れ・空気量の乱れ・センサーのズレなどから初心者向けに解説。実体験ベースの改善例も紹介します。
 tags:
-  - アイドリング回転数
-  - トラブル
-  - メンテナンス
-  - エンジンの汚れ
+  - idling-rpm
+  - trouble
+  - maintenance
+  - engine-dirt
 ---
 
 <div class="container my-5">
