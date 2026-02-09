@@ -12,6 +12,7 @@ engine: エンジン
 engine-dirt: エンジンの汚れ
 engine-oil: エンジンオイル
 engine-oil-viscosity: エンジンオイル粘度
+engine-protection: エンジン保護
 engine-life: エンジン寿命
 oil-change: オイル交換
 catalog-fuel-economy: カタログ燃費
@@ -52,7 +53,7 @@ misconception: 誤解
 suspension: 足回り
 driving-skill: 運転技術
 how-to-choose: 選び方
-engine-oil-standards: エンジンオイル規格
+engine-oil-standard: エンジンオイル規格
 engine-oil-selection: エンジンオイルの選び方
 fully-synthetic-oil: 全合成油(100%化学合成油)
 semi-synthetic-oil: 部分合成油
