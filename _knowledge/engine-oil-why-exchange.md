@@ -1,7 +1,7 @@
 ---
 layout: default
 title: エンジンオイル交換ってなぜ必要なの？
-nav_title: オイル交換の理由
+nav_title: エンジンオイル交換ってなぜ必要？
 description: エンジンオイル交換がなぜ必要なのかを、劣化の仕組みと実際の走行条件からわかりやすく解説します。
 tags:
   - engine-oil
