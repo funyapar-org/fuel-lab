@@ -15,197 +15,190 @@ tags:
 ---
 
 <div class="container my-4">
-  <div class="row">
-    <div class="col-lg-9">
+  <h1 class="mb-4">エンジンオイル規格の役割分担</h1>
 
-      <p class="lead">
-        エンジンオイル選びで「SAE」「API」「ILSAC」「ACEA」といった規格名を目にすることは多いですが、
-        それぞれが<strong>何を評価している規格なのか</strong>を正しく説明できる人は意外と多くありません。
-      </p>
+  <p>
+    エンジンオイル選びで「全合成油を選んでおけば安心」と思われがちですが、
+    実際に重要なのは<strong>どの規格を満たしているか</strong>です。
+    エンジンオイルには複数の規格が存在し、それぞれ<strong>評価している項目がまったく異なります</strong>。
+  </p>
 
-      <p>
-        本ページでは、各エンジンオイル規格の<strong>役割分担</strong>を明確にし、
-        「全合成油かどうか」よりも<strong>規格を見るべき理由</strong>を整理します。
-      </p>
+  <p>
+    このページでは、代表的な4つの規格である
+    <strong>SAE・API・ILSAC・ACEA</strong>について、
+    「何を決めている規格なのか」「どう役割分担されているのか」
+    という視点で整理します。
+  </p>
 
-      <hr class="my-4">
+  <hr class="my-5">
 
-      <h2>エンジンオイル規格は「役割」が違う</h2>
+  <h2>SAE規格：粘度（硬さ）だけを定める規格</h2>
 
-      <p>
-        まず大前提として、エンジンオイルの規格は<strong>横並びで優劣を競うものではありません</strong>。
-        それぞれが以下のように役割を分担しています。
-      </p>
+  <p>
+    SAE規格は、エンジンオイルの<strong>粘度（硬さ）</strong>のみを定める規格です。
+    <strong>性能の優劣を示す規格ではありません</strong>。
+  </p>
 
-      <div class="table-responsive my-3">
-        <table class="table table-bordered align-middle">
-          <thead class="table-light">
-            <tr>
-              <th>規格</th>
-              <th>主な役割</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SAE</td>
-              <td>粘度（硬さ・温度特性）を定義</td>
-            </tr>
-            <tr>
-              <td>API</td>
-              <td>エンジン保護性能の最低基準</td>
-            </tr>
-            <tr>
-              <td>ILSAC</td>
-              <td>燃費性能・触媒保護を重視（主に日本・北米）</td>
-            </tr>
-            <tr>
-              <td>ACEA</td>
-              <td>高負荷・長寿命を重視（主に欧州）</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <p>
+    代表的な表記例が <strong>0W-20</strong> です。
+  </p>
 
-      <hr class="my-4">
-
-      <h2>SAE規格｜「0W-20」など粘度を決める規格</h2>
-
-      <p>
-        SAE規格は<strong>エンジンオイルの粘度のみ</strong>を定義する規格です。
-        代表的な表記が「0W-20」「5W-30」といったものです。
-      </p>
-
-      <ul>
-        <li>W前：低温時の粘度（始動性）</li>
-        <li>W後：高温時の粘度（油膜保持）</li>
+  <div class="card mb-4">
+    <div class="card-body">
+      <ul class="mb-0">
+        <li>
+          <strong>左側（W側）</strong>：低温時の粘度特性  
+          数値が小さいほど低温で柔らかく、始動性や暖機前の摩耗に有利
+        </li>
+        <li>
+          <strong>右側</strong>：高温（約100℃）時の粘度  
+          数値が大きいほど高温でも油膜を維持しやすい
+        </li>
       </ul>
-
-      <div class="alert alert-warning">
-        SAE規格は<strong>性能の良し悪しを示すものではありません</strong>。
-        粘度が同じでも、清浄性能や耐摩耗性能は別物です。
-      </div>
-
-      <p>
-        粘度指定については、以下のページも参考になります。
-      </p>
-
-      <p>
-        <a href="/fuel-lab/knowledge/0w16-vs-0w20-cost.html" class="link-primary">
-          0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？
-        </a>
-      </p>
-
-      <hr class="my-4">
-
-      <h2>API規格｜エンジン保護性能の最低ライン</h2>
-
-      <p>
-        API規格は、エンジンオイルとして<strong>最低限満たすべき性能</strong>を定めた規格です。
-        ガソリン車用は「S」から始まり、アルファベットが進むほど新しい規格になります。
-      </p>
-
-      <p>
-        例：
-      </p>
-
-      <ul>
-        <li>API SN</li>
-        <li>API SP（最新世代）</li>
-      </ul>
-
-      <div class="alert alert-info">
-        API規格は「これ以上でないと使えない」という<strong>足切りライン</strong>です。
-        APIが新しい＝必ずしも高性能というわけではありません。
-      </div>
-
-      <hr class="my-4">
-
-      <h2>ILSAC規格｜燃費性能と日本車向け設計</h2>
-
-      <p>
-        ILSAC規格は、API規格をベースにしつつ、
-        <strong>燃費性能・触媒保護・低粘度対応</strong>を重視した規格です。
-      </p>
-
-      <p>
-        代表例：
-      </p>
-
-      <ul>
-        <li>ILSAC GF-5</li>
-        <li>ILSAC GF-6A / GF-6B</li>
-      </ul>
-
-      <p>
-        日本車・ハイブリッド車・低粘度指定車では、
-        ILSAC規格への適合が非常に重要になります。
-      </p>
-
-      <div class="alert alert-success">
-        多くの国産車では<strong>ILSAC規格に適合しているか</strong>が実質的な必須条件です。
-      </div>
-
-      <hr class="my-4">
-
-      <h2>ACEA規格｜高負荷・ロングライフ向け</h2>
-
-      <p>
-        ACEA規格は欧州車向けの規格で、
-        <strong>高速巡航・高温・長距離走行</strong>を前提とした設計思想です。
-      </p>
-
-      <p>
-        カテゴリー例：
-      </p>
-
-      <ul>
-        <li>ACEA A/B：ガソリン・ディーゼル兼用</li>
-        <li>ACEA C：DPF・触媒対応（低灰分）</li>
-      </ul>
-
-      <div class="alert alert-secondary">
-        ACEA規格は「高性能」ですが、
-        <strong>必ずしも日本車に最適とは限りません</strong>。
-      </div>
-
-      <hr class="my-4">
-
-      <h2>結論｜規格は「全部見る」が正解</h2>
-
-      <p>
-        エンジンオイル選びでは、
-        「全合成油かどうか」よりも以下の順で確認するのが合理的です。
-      </p>
-
-      <ol>
-        <li>メーカー指定のSAE粘度</li>
-        <li>API / ILSAC / ACEA の適合有無</li>
-        <li>使用環境（街乗り・高速・短距離）</li>
-      </ol>
-
-      <p>
-        この考え方については、以下のページでより詳しく解説しています。
-      </p>
-
-      <p>
-        <a href="/fuel-lab/knowledge/engine-oil-selection-standards.html" class="link-primary">
-          全合成油ならOKは大間違い？オイル選びは規格を見よ
-        </a>
-      </p>
-
-      <hr class="my-5">
-
-      <p class="text-muted">
-        本ページはエンジンオイル規格の基礎理解を目的としています。
-        車種別・実用的な選び方については、ソリオ関連ページもあわせてご覧ください。
-      </p>
-
-      <p>
-        <a href="/fuel-lab/solio/solio-overview.html" class="link-secondary">
-          ソリオの燃費改善トップページ
-        </a>
-      </p>
-
     </div>
   </div>
+
+  <p>
+    重要なのは、<strong>SAE規格は「使用条件への適合性」を見るための指標</strong>であり、
+    「0W-20は0W-30より性能が低い」といった意味ではない点です。
+  </p>
+
+  <hr class="my-5">
+
+  <h2>API規格：エンジン保護性能と耐久性の指標</h2>
+
+  <p>
+    API規格は、主に<strong>エンジン内部の保護性能</strong>を評価する規格です。
+    摩耗防止、清浄性、酸化安定性などが対象になります。
+  </p>
+
+  <p>
+    ガソリンエンジン用は <strong>S</strong> から始まる記号で表され、
+    アルファベットが進むほど<strong>要求性能が厳しくなります</strong>。
+  </p>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <p class="mb-1"><strong>主なAPI規格（新しい順）</strong></p>
+      <ul class="mb-0">
+        <li>API SP（最新世代）</li>
+        <li>API SN</li>
+        <li>API SM</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    原則として、<strong>車両指定以上のAPI規格であれば後退することはありません</strong>。
+    ただし、API規格だけで燃費性能まで判断することはできません。
+  </p>
+
+  <hr class="my-5">
+
+  <h2>ILSAC規格：燃費・排ガス・実用性能を重視</h2>
+
+  <p>
+    ILSAC規格は、日本と北米市場を中心に策定された規格で、
+    <strong>燃費性能・排ガス性能・実用耐久性</strong>を重視しています。
+  </p>
+
+  <p>
+    ILSAC規格は <strong>GF</strong> という世代記号で表され、
+    <strong>世代が新しいほど要求性能は厳しくなります</strong>。
+  </p>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <p class="mb-1"><strong>ILSAC規格の世代順</strong></p>
+      <ul class="mb-0">
+        <li>GF-6A / GF-6B（最新）</li>
+        <li>GF-5</li>
+        <li>GF-4</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    特に重要なのが <strong>GF-6A と GF-6B の違い</strong>です。
+  </p>
+
+  <ul>
+    <li>
+      <strong>GF-6A</strong>：従来規格との互換性あり（0W-20など）
+    </li>
+    <li>
+      <strong>GF-6B</strong>：0W-16専用規格。下位互換なし
+    </li>
+  </ul>
+
+  <p>
+    0W-16指定車では、<strong>GF-6B対応かどうか</strong>が重要な判断材料になります。
+  </p>
+
+  <hr class="my-5">
+
+  <h2>ACEA規格：高負荷・高速走行を想定した欧州規格</h2>
+
+  <p>
+    ACEA規格は欧州車向けに策定されており、
+    <strong>高負荷・高速巡航・ロングライフ</strong>を重視した思想が特徴です。
+  </p>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <ul class="mb-0">
+        <li><strong>A/B</strong>：ガソリン・ディーゼル汎用</li>
+        <li><strong>C</strong>：触媒・DPF保護（低灰分）</li>
+        <li><strong>E</strong>：大型商用車向け</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    国産コンパクトカーでは、ACEA規格が必須になるケースは多くありませんが、
+    オイルの思想の違いを理解する上では有用な指標です。
+  </p>
+
+  <hr class="my-5">
+
+  <h2>まとめ：オイル選びは「規格の組み合わせ」で決まる</h2>
+
+  <p>
+    エンジンオイルの性能は、
+    「全合成油かどうか」ではなく、
+    <strong>SAE・API・ILSAC・ACEAという規格の組み合わせ</strong>で決まります。
+  </p>
+
+  <ul>
+    <li>SAE：使用条件に合う粘度か</li>
+    <li>API：エンジン保護性能は十分か</li>
+    <li>ILSAC：燃費・排ガス性能に適合しているか</li>
+    <li>ACEA：設計思想が車に合っているか</li>
+  </ul>
+
+  <p>
+    次のステップとして、実際の車種ごとに
+    「どの規格を重視すべきか」を整理すると、オイル選びで迷わなくなります。
+  </p>
+  
+  <p>
+    関連ページ：
+    <a href="/fuel-lab/knowledge/engine-oil-selection-standards.html">全合成油ならOKは大間違い？オイル選びは規格を見よ</a><br>
+    <a href="/fuel-lab/knowledge/engine-oil-selection-flow.html">エンジンオイル選択のフローチャート</a><br>
+    <a href="/fuel-lab/solio/0w16-vs-0w20-cost.html">0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？</a>
+  </p>
+
+  <hr class="my-5">
+
+  <p class="text-muted">
+    本ページはエンジンオイル規格の基礎理解を目的としています。
+    車種別・実用的な選び方については、ソリオ関連ページもあわせてご覧ください。
+  </p>
+
+  <p>
+    <a href="/fuel-lab/solio/solio-overview.html" class="link-secondary">
+      ソリオの燃費改善トップページ
+    </a>
+  </p>
+
 </div>
