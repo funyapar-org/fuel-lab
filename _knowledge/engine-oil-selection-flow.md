@@ -8,7 +8,7 @@ tags:
   - engine-oil-selection
   - engine-oil-standard
   - sae-viscosity
-  - api-standard
+  - api-oil-standard
   - ilsac-standard
   - fuel-economy
   - engine-protection
