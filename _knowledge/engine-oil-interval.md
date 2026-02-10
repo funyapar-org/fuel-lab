@@ -1,7 +1,7 @@
 ---
 layout: default
 title: エンジンオイルは何kmごとに交換すべき？【街乗り・短距離で考える】
-nav_title: エンジンオイル交換の距離
+nav_title: エンジンオイル交換のタイミング
 description: エンジンオイルの交換タイミングは車の使用状況によって変わるので分かりやすく解説します。
 tags:
   - engine-oil
