@@ -253,6 +253,10 @@ tags:
     <strong>指定粘度を外れることによるリスク</strong>
     （始動性・内部抵抗・保証条件）は
     数字では見えません。
+    どのようなリスクがあるのかはこちらで詳しく解説しています。
+    →<a href="/fuel-lab/knowledge/oil-spec-ignored-consequences.html">
+      エンジンオイル規格を無視すると何が起きるのか？｜静かに進行する5つのリスク
+    </a>
   </p>
 
   <div class="alert alert-info">
