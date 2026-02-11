@@ -15,7 +15,7 @@ tags:
 
 <div class="container my-4">
 
-  <div class="p-4 p-md-5 mb-4 bg-light rounded-3 border">
+  <div class="p-4 p-md-5 mb-4 rounded-3 border">
     <div class="container-fluid py-3">
       <h1 class="display-6 fw-bold">AZ CEG-003 0W-16は買いか？</h1>
       <p class="lead mb-3">
