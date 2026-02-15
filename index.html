@@ -1,67 +1,170 @@
 ---
 layout: default
 title: Fuel Lab - 燃費・維持費改善研究所
-description: 燃費改善のための実験・ツール公開サイトです。タイヤ、空気圧、軽量化、走り方、燃料添加剤など、実測をもとにした燃費向上データを発信しています。
+description: 燃費と維持費を理論と実測で最適化する研究サイト。エンジンオイル、タイヤ、添加剤、運転方法を検証します。
+permalink: /fuel-lab/index.html
 ---
 
-<div class="container my-4">
+<div class="container my-5">
 
-  <!-- Hero Section -->
-  <div class="p-4 mb-4 bg-primary rounded-3">
-    <div class="container-fluid py-2">
+  <!-- Hero -->
+  <div class="p-5 mb-5 bg-light rounded-3 border">
+    <div class="container-fluid py-3">
       <h1 class="display-6 fw-bold">
         Fuel Lab - 燃費・維持費改善研究所
       </h1>
-      <p class="col-md-10 fs-5">
-        燃費改善のための実験・ツール公開サイトです。  
-        タイヤ、空気圧、軽量化、走り方、燃料添加剤など、実測をもとにした燃費向上データを発信しています。
+      <p class="col-lg-10 fs-5 text-muted">
+        燃費改善は感覚ではなく、条件と理屈で決まります。<br>
+        オイル粘度・転がり抵抗・吸気効率・添加剤効果などを、
+        実測データとロジックで検証する実証型サイトです。
       </p>
     </div>
   </div>
 
-  <!-- Tools Section -->
-  <h2 class="mb-3">🔧 燃費改善ツール</h2>
-  <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+  <!-- Category Section -->
+  <div class="mb-5">
+    <h2 class="mb-4">カテゴリから探す</h2>
 
-    {% for page in site.tools %}
-    <div class="col">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">{{ page.title }}</h5>
-          <p class="card-text">{{ page.description }}</p>
-          <a href="{{ page.url | prepend: site.baseurl }}" class="btn btn-primary">開く</a>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <div class="col">
+        <a href="/fuel-lab/category/engine-oil/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">エンジンオイル</h5>
+              <p class="card-text text-muted small">
+                0W-16、API SP、GF-6Bなどの規格比較とコスト検証。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/fuel-lab/category/tire/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">タイヤ</h5>
+              <p class="card-text text-muted small">
+                転がり抵抗、空気圧、サイズ変更の燃費影響。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/fuel-lab/category/fuel-additive/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">燃料添加剤</h5>
+              <p class="card-text text-muted small">
+                PEA系清浄剤と燃費改善効果の実証。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/fuel-lab/category/fuel-economy/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">燃費理論</h5>
+              <p class="card-text text-muted small">
+                燃費に影響する物理要因の整理と検証。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/fuel-lab/category/maintenance/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">メンテナンス</h5>
+              <p class="card-text text-muted small">
+                維持費と耐久性の最適化。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/fuel-lab/category/solio/" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">ソリオ</h5>
+              <p class="card-text text-muted small">
+                私のソリオの特性や実車データによる燃費検証記録。
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Series Section -->
+  <div class="mb-5">
+    <h2 class="mb-4">燃費改善検証シリーズ</h2>
+
+    {% assign series_pages = site.solio | where: "series", "fuel-economy-verification" | sort: "date" | reverse %}
+
+    <div class="list-group">
+      {% for page in series_pages limit:5 %}
+        <a href="{{ page.url }}" class="list-group-item list-group-item-action">
+          {{ page.title }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <div class="mb-5">
+    <h2 class="mb-4">燃費改善ツール</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      {% for page in site.tools %}
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ page.title }}</h5>
+            <p class="card-text text-muted small">{{ page.description }}</p>
+            <a href="{{ page.url | prepend: site.baseurl }}" class="btn btn-outline-primary btn-sm">開く</a>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-  {% endfor %}
   </div>
 
-  <!-- Knowledge Section -->
-  <h2 class="mb-3">📘 燃費改善の基礎知識</h2>
-  <div class="list-group mb-5">
-    {% for page in site.knowledge %}
-      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-        {{ page.title }}
-      </a>
-    {% endfor %}
+  <!-- Latest Articles -->
+  <div class="mb-5">
+    <h2 class="mb-4">最新記事</h2>
+
+    {% assign all_pages = site.knowledge | concat: site.solio | sort: "date" | reverse %}
+
+    <div class="list-group">
+      {% for page in all_pages limit:6 %}
+        <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+          {{ page.title }}
+        </a>
+      {% endfor %}
+    </div>
   </div>
 
-  <!-- My solio Section -->
-  <h2 class="mb-3">🚗 私のソリオと試行錯誤の記録</h2>
-  <div class="list-group mb-5">
-    {% for page in site.solio %}
-      <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-        {{ page.title }}
-      </a>
-    {% endfor %}
-  </div>
-
-　<!-- Diary Section -->
-  <h2 class="mb-3">📓 私のソリオの日記(燃費改善の試行錯誤など)</h2>
-  <div class="p-3 bg-primary border rounded shadow-sm mb-5">
-    <p>最新の日記は X（旧Twitter）で更新しています。</p>
-    <a href="https://x.com/FuelLab_MySolio" class="btn btn-dark" target="_blank">
-      X（@FuelLab_MySolio）を見る
+  <!-- Diary -->
+  <div class="p-4 bg-light border rounded">
+    <h5 class="mb-3">ソリオ日記</h5>
+    <p class="text-muted small">
+      日々の試行錯誤は X（旧Twitter）で更新しています。
+    </p>
+    <a href="https://x.com/FuelLab_MySolio" class="btn btn-dark btn-sm" target="_blank">
+      X（@FuelLab_MySolio）
     </a>
   </div>
 

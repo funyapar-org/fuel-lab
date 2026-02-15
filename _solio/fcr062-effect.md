@@ -5,6 +5,7 @@ title: FCR-062 を使ってみた | 中古車や使い込んだ車におすす�
 description: エンジンのかかりが悪いときがあり、インジェクターが汚れているのではと疑ったので、燃料添加剤「FCR-062」を添加した記録です。
 date: 2025-12-12
 category: solio
+series: fuel-economy-verification
 tags:
   - fuel-economy-improve
   - try-and-error

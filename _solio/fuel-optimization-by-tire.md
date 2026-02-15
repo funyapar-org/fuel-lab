@@ -5,6 +5,7 @@ title: タイヤ交換で燃費14km/L→15km/Lを狙う | ソリオで“タイ�
 description: ソリオの実燃費14km/Lから15km/L超を目指し、エコタイヤと軽量ホイールを数値で比較・検討した全記録。ラベリング、重量、剛性、寿命までFuel-lab的に整理。
 date: 2026-02-03
 category: solio
+series: fuel-economy-verification
 tags:
   - fuel-economy-improve
   - eco-tire
