@@ -3,6 +3,8 @@ layout: default
 title: エンジンオイル規格の役割分担｜SAE・API・ILSAC・ACEAを正しく理解する
 nav_title: エンジンオイル規格の役割分担
 description: エンジンオイル選びで混乱しがちなSAE・API・ILSAC・ACEA規格。それぞれが何を評価し、どんな役割を持つのかを比較しながらわかりやすく解説します。
+date: 2026-02-10
+category: engine-oil
 tags:
   - engine-oil
   - engine-oil-standard

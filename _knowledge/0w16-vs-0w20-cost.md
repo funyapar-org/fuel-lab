@@ -3,6 +3,8 @@ layout: default
 title: 0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？
 nav_title: 指定外オイルの燃費影響
 description: エンジンオイルの価格差と燃費への影響を考慮して、どちらが本当にお得な選択なのかを考察しました。
+date: 2026-02-07
+category: engine-oil
 tags:
   - engine-oil
   - 0w-16

@@ -3,6 +3,8 @@ layout: default
 nav_title: ソリオ燃費改善トップページ
 title: ソリオ燃費改善トップページ | 初めての方はこのページから見るのがおすすめ
 description: スズキ ソリオのエンジン特性、街乗り燃費傾向、燃費改善の取り組みを一覧でまとめたトップページ
+date: 2026-01-17
+category: solio
 tags:
   - solio
   - fuel-economy-improve

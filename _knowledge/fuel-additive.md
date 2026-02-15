@@ -3,6 +3,8 @@ layout: default
 nav_title: 燃料添加剤とは
 title: 燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説
 description: 燃料添加剤の役割、仕組み、効果、種類、選び方を初心者にも分かりやすく解説します。
+date: 2025-11-21
+category: fuel-additive
 tags:
   - fuel-additive
   - engine-dirt

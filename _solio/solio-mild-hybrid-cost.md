@@ -3,6 +3,8 @@ layout: default
 nav_title: ソリオ マイルドハイブリッドの維持費と注意点
 title: ソリオ マイルドハイブリッドの維持費と注意点
 description: スズキ ソリオ マイルドハイブリッドは本当に維持費が安いのか？ガソリン車との違い、バッテリー交換リスク、実燃費を踏まえた注意点を実体験ベースで解説します。
+date: 2026-01-25
+category: solio
 tags:
   - engine
   - running-cost

@@ -3,6 +3,8 @@ layout: default
 nav_title: 実燃費で考える燃費改善の考え方
 title: 実燃費で考える燃費改善の考え方｜カタログ燃費に振り回されないために
 description: 燃費改善を考えるなら重要なのはカタログ燃費ではなく実燃費です。街乗り・短距離走行を前提に、現実的な燃費改善の考え方を解説します。
+date: 2026-01-25
+category: fuel-economy
 tags:
   - real-fuel-economy
   - catalog-fuel-economy

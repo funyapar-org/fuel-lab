@@ -3,6 +3,8 @@ layout: default
 nav_title: 寒いと燃費が下がる理由
 title: 寒いと燃費が下がる理由｜冬に燃費が悪化する仕組みをわかりやすく解説
 description: 冬になると燃費が悪くなるのはなぜ？寒冷時にエンジンが燃料を多く使う理由や、街乗りで燃費が落ちやすい仕組みを初心者向けに解説します。
+date: 2026-01-15
+category: fuel-economy
 tags:
   - fuel-economy-worse
   - winter

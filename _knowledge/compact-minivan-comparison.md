@@ -3,6 +3,8 @@ layout: default
 nav_title: コンパクトミニバンの維持費比較
 title: コンパクトミニバンの維持費比較｜ソリオ・フリード・シエンタを現実的に考える
 description: ソリオ・フリード・シエンタの維持費を、燃費・タイヤ・消耗品・車両構造の観点から比較。年間1万km・街乗り中心という現実的な条件で考察します。
+date: 2026-01-25
+category: tire
 tags: 
   - compact-minivan
   - running-cost

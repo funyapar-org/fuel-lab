@@ -3,6 +3,8 @@ layout: default
 nav_title: 基本的なメンテナンス
 title: 基本的なメンテナンス｜低回転運転でもエンジンを汚さないために
 description: 低回転主体の運転でもエンジンを汚さないために重要な、オイル管理・点火系・吸気系など基本的なメンテナンスを解説します。
+date: 2026-02-01
+category: maintenance
 tags:
   - engine
   - maintenance

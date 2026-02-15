@@ -3,6 +3,8 @@ layout: default
 nav_title: スロットル清掃をやってみた
 title: ソリオのスロットルバルブ清掃をDIYで実施｜発進時のもたつきとアイドリング改善
 description: ソリオで発進時のもたつきやアクセルレスポンス低下を感じ、スロットルバルブ清掃をDIYで実施しました。使用した道具、注意点、清掃手順、清掃前後の変化を写真付きでまとめています。
+date: 2026-01-13
+category: solio
 tags:
   - try-and-error
   - solio

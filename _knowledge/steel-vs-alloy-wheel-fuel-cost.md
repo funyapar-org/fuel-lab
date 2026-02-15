@@ -3,6 +3,8 @@ layout: default
 nav_title: 純正アルミホイールは本当に燃費にいい？
 title: 純正アルミホイールは本当にお得？燃費・維持費から考える最適解
 description: 純正アルミホイールは燃費的に有利なのか？サイズアップや重量、慣性モーメントの観点から、純正スチール→社外軽量アルミという選択がなぜ合理的なのかを実燃費目線で解説します。
+date: 2026-01-26
+category: tire
 tags:
   - wheel
   - fuel-economy-improve

@@ -3,6 +3,8 @@ layout: default
 title: "AZ CEG-003 0W-16は買い？SP / GF-6B対応の最安クラス全合成油を検証"
 nav_title: "AZ CEG-003は買い？"
 description: "AZ CEG-003 0W-16（API SP / ILSAC GF-6B対応）は本当にコスパ最強なのか？規格・価格・適合車種・向いている人まで論理的に検証します。"
+date: 2026-02-12
+category: engine-oil
 tags:
   - engine-oil
   - 0w-16

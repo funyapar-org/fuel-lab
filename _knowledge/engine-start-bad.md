@@ -3,6 +3,8 @@ layout: default
 nav_title: エンジン始動が悪い原因とは？
 title: エンジン始動が悪い原因とは？セルは回るのにかからない理由
 description: エンジンのかかりが悪い原因を、バッテリー・点火系・エンジン内部の汚れなどからわかりやすく解説。実体験をもとにした改善策も紹介します。
+date: 2025-12-29
+category: fuel-additive
 tags:
   - engine
   - startability

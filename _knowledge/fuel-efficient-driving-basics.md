@@ -3,6 +3,8 @@ layout: default
 nav_title: 燃費を意識した運転
 title: 燃費を意識した運転とは？アクセル操作と回転数で差が出る理由
 description: 燃費は「どこを走るか」だけでなく「どう操作するか」でも大きく変わります。アクセルの踏み方、回転数の考え方、CVT車で燃費を落とさない運転の基本を解説します。
+date: 2026-01-31
+category: fuel-economy
 tags:
   - fuel-economy-improve
   - driving-skill

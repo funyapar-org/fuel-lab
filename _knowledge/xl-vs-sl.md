@@ -2,6 +2,8 @@
 layout: default
 title: エクストラロード（XL）タイヤは燃費的に不利？街乗りソリオでの考え方
 description: エクストラロード（XL）タイヤは本当に燃費に不利なのか？構造の違い・重量・空気圧の観点から、街乗り中心のソリオでどう考えるべきかを整理します。
+date: 2026-02-05
+category: tire
 tags:
   - tire
   - fuel-economy

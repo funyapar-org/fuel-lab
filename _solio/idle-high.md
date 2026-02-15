@@ -3,6 +3,8 @@ layout: default
 nav_title: アイドリング回転数が下がらなかった
 title: ソリオのアイドリング回転数が下がらない原因と対処法｜故障？放置していい症状なのか
 description: スズキ・ソリオでアイドリング回転数が1000rpm以上から下がらない症状を実体験ベースで解説。原因の考え方と、燃料添加剤FCR-062で改善した実例を写真付きで紹介します。
+date: 2026-01-09
+category: solio
 tags:
   - try-and-error
   - solio

@@ -3,6 +3,8 @@ layout: default
 title: エンジンオイル規格を無視すると何が起きるのか？｜静かに進行する5つのリスク
 nav_title: オイル規格を無視すると？
 description: エンジンオイルの規格を無視すると、すぐ壊れない代わりに確実にダメージが蓄積します。SAE・API・ILSAC規格を無視した場合に起こる代表的なトラブルと、そのメカニズムを解説します。
+date: 2026-02-11
+category: engine-oil
 tags:
   - engine-oil
   - engine-oil-standard

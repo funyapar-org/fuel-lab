@@ -3,6 +3,8 @@ layout: default
 nav_title: 燃費改善のためにできること
 title: 燃費改善のために今日からできること｜ガソリン代を抑える基本対策まとめ
 description: すぐに実践できる燃費改善テクニックから、メカニズムに踏み込んだ本格的な対策までまとめました。
+date: 2025-11-24
+category: fuel-economy
 tags:
   - fuel-economy-improve
   - driving-skill

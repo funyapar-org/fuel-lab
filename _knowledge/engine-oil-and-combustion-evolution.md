@@ -3,6 +3,8 @@ layout: default
 nav_title: エンジンオイルや燃焼制御の進化
 title: エンジンオイルや燃焼制御の進化｜低回転運転でもエンジンが汚れにくい理由
 description: 低回転＝エンジンが汚れるという常識は本当か？最新のエンジンオイル技術と燃焼制御の進化により、現代エンジンが低回転前提でも問題なく成立している理由を解説します。
+date: 2026-02-01
+category: engine-oil
 tags: 
   - engine
   - engine-oil

@@ -3,6 +3,8 @@ layout: default
 nav_title: 燃費視点のガソリンスタンドの選び方
 title: 燃費視点のガソリンスタンドの選び方｜見落としがちなガソリンスタンドまでの距離や、給油や空気圧チェックのタイミングのお話
 description: 燃費を最大化しつつ、時間・お金・手間のバランスを取るための「ガソリンスタンド選び」完全ガイド。
+date: 2025-11-25
+category: maintenance
 tags:
   - gas-station
   - refuel-timing

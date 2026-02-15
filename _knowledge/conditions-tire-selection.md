@@ -3,6 +3,8 @@ layout: default
 nav_title: 条件別タイヤ選びフローチャート
 title: 条件別タイヤ選びフローチャート｜燃費・街乗り重視で後悔しない判断軸
 description: 運転傾向や使用状況に合わせてどのようなタイヤを求めるべきかアドバイスします。
+date: 2026-02-05
+category: tire
 tags:
   - tire
   - how-to-choose

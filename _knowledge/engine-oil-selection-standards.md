@@ -3,6 +3,8 @@ layout: default
 title: 全合成油ならOKは大間違い？エンジンオイル選びは「規格」を見よ
 nav_title: 全合成油は万能？
 description: 「全合成油＝一番良いオイル」という認識は本当に正しいのか？エンジンオイル選びで本当に重視すべき「規格」の役割と、基油との優先順位をわかりやすく解説します。
+date: 2026-02-09
+category: engine-oil
 tags:
   - engine-oil
   - engine-oil-standard

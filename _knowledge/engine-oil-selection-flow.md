@@ -3,6 +3,8 @@ layout: default
 title: エンジンオイル選択フローチャート｜規格から逆算する失敗しない選び方
 nav_title: エンジンオイル選択フローチャート
 description: エンジンオイルは「全合成油を選べばOK」ではありません。メーカー指定・SAE粘度・API・ILSACなどの規格から逆算する、失敗しないエンジンオイル選択フローチャートを解説します。
+date: 2026-02-10
+category: engine-oil
 tags:
   - engine-oil
   - engine-oil-selection

@@ -3,6 +3,8 @@ layout: default
 nav_title: 街乗り燃費対策
 title: 街乗りでも燃費を諦めたくない人におすすめの燃費対策
 description: 渋滞や信号が多い街乗りでも燃費を少しでも良くしたい方向けに、経路選び・運転操作・車両状態の観点から実践しやすい燃費対策をまとめました。
+date: 2026-01-22
+category: fuel-economy
 tags:
   - fuel-economy-improve
   - driving-skill
