@@ -58,7 +58,17 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
   <div>
     <h3 class="mb-4">燃費関連記事一覧</h3>
 
-    {% assign fuel_pages = site.pages | where: "category", "fuel-economy" | sort: "date" | reverse %}
+    {% assign pages = "" | split: "" %}
+
+    {% for tmp_page in site.knowledge %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% for tmp_page in site.solio %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% assign fuel_pages = pages | where: "category", "fuel-economy" | sort: "date" | reverse %}
 
     {% if fuel_pages.size > 0 %}
       <div class="list-group">

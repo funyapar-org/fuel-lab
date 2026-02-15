@@ -59,7 +59,17 @@ description: タイヤの転がり抵抗、空気圧管理、サイズ変更に�
   <div>
     <h3 class="mb-4">タイヤ関連記事一覧</h3>
 
-    {% assign tire_pages = site.pages | where: "category", "tire" | sort: "date" | reverse %}
+    {% assign pages = "" | split: "" %}
+
+    {% for tmp_page in site.knowledge %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% for tmp_page in site.solio %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% assign tire_pages = pages | where: "category", "tire" | sort: "date" | reverse %}
 
     {% if tire_pages.size > 0 %}
       <div class="list-group">

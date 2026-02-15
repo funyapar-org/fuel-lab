@@ -58,7 +58,17 @@ description: エンジンオイル交換、エアフィルター交換、タイ�
   <div>
     <h3 class="mb-4">メンテナンス関連記事一覧</h3>
 
-    {% assign maintenance_pages = site.pages | where: "category", "maintenance" | sort: "date" | reverse %}
+    {% assign pages = "" | split: "" %}
+
+    {% for tmp_page in site.knowledge %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% for tmp_page in site.solio %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% assign maintenance_pages = pages | where: "category", "maintenance" | sort: "date" | reverse %}
 
     {% if maintenance_pages.size > 0 %}
       <div class="list-group">

@@ -58,7 +58,17 @@ description: 燃料添加剤の洗浄効果や燃費改善効果は本当にあ�
   <div>
     <h3 class="mb-4">燃料添加剤関連記事一覧</h3>
 
-    {% assign additive_pages = site.pages | where: "category", "fuel-additive" | sort: "date" | reverse %}
+    {% assign pages = "" | split: "" %}
+
+    {% for tmp_page in site.knowledge %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% for tmp_page in site.solio %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% assign additive_pages = pages | where: "category", "fuel-additive" | sort: "date" | reverse %}
 
     {% if additive_pages.size > 0 %}
       <div class="list-group">

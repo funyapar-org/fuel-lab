@@ -58,7 +58,17 @@ description: 0W-16・API SP・GF-6B対応オイルの比較や粘度選び、コ
   <div>
     <h3 class="mb-4">エンジンオイル関連記事一覧</h3>
 
-    {% assign oil_pages = site.pages | where: "category", "engine-oil" | sort: "date" | reverse %}
+    {% assign pages = "" | split: "" %}
+
+    {% for tmp_page in site.knowledge %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% for tmp_page in site.solio %}
+      {% assign pages = pages | push: tmp_page %}
+    {% endfor %}
+
+    {% assign oil_pages = pages | where: "category", "engine-oil" | sort: "date" | reverse %}
 
     {% if oil_pages.size > 0 %}
       <div class="list-group">
