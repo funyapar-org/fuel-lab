@@ -3,6 +3,7 @@ layout: default
 title: エアクリーナー交換で燃費は良くなる？NA街乗りでは効果が出にくい理由
 nav_title: エアクリ交換と燃費の関係
 description: エアクリーナー交換で燃費は向上するのか。自然吸気エンジンの街乗り条件において効果が出にくい理由を、吸気抵抗とスロットル制御の観点から整理します。
+date: 2026-02-18
 category: fuel-economy
 tags:
   - fuel-economy
@@ -10,7 +11,6 @@ tags:
   - intake-resistance
   - na-engine
   - pumping-loss
-date: 2026-02-18
 ---
 
 
