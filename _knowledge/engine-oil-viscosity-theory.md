@@ -3,6 +3,7 @@ layout: default
 title: 粘度は低いほど燃費に有利？理論的検証
 nav_title: 低粘度オイルは本当に燃費に有利か
 description: エンジンオイルの粘度が低いほど燃費は向上するのか。流体摩擦、ポンピングロス、油膜厚さの観点から理論的に検証します。
+date: 2026-02-17
 category: engine-oil
 tags:
   - engine-oil
@@ -10,7 +11,6 @@ tags:
   - fuel-economy
   - friction-loss
   - theoretical-analysis
-date: 2026-02-17
 ---
 
 <div class="container my-5">
