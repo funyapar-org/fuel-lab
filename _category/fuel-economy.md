@@ -25,12 +25,12 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/0w16-vs-0w20-cost.html" class="text-decoration-none">
-                0W-16と0W-20で燃費はどれくらい変わるのか？
+              <a href="/fuel-lab/knowledge/first-action.html" class="text-decoration-none">
+                燃費改善のために今日からできること｜ガソリン代を抑える基本対策まとめ
               </a>
             </h5>
             <p class="card-text text-muted small">
-              粘度差によるフリクション低減効果と実用域での差を検証。
+              すぐに実践できる燃費改善テクニックから、メカニズムに踏み込んだ本格的な対策までまとめました。
             </p>
           </div>
         </div>
