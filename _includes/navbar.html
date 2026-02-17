@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">🚗 Fuel Lab - 燃費・維持費改善研究所</a>
+
+    <a class="navbar-brand" href="/fuel-lab/">
+      🚗 Fuel Lab - 燃費・維持費改善研究所
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -9,54 +12,60 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
-        <!-- ツール -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ツール</a>
-          <ul class="dropdown-menu">
-            {% for page in site.tools %}
-            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endfor %}
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/engine-oil/">
+            エンジンオイル
+          </a>
         </li>
 
-        <!-- 車の知識 -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">車の知識</a>
-          <ul class="dropdown-menu">
-            {% for page in site.knowledge %}
-            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.nav_title | default: page.title }}</a></li>
-            {% endfor %}
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/tire/">
+            タイヤ
+          </a>
         </li>
 
-        <!-- 私のソリオ -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">私のソリオ</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="https://x.com/FuelLab_MySolio" target="_blank">
-                X（@FuelLab_MySolio）
-              </a>
-            </li>
-            {% for page in site.solio %}
-            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.nav_title | default: page.title }}</a></li>
-            {% endfor %}
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/fuel-additive/">
+            燃料添加剤
+          </a>
         </li>
 
-        <!-- このサイトについて -->
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/fuel-economy/">
+            燃費理論
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/maintenance/">
+            メンテナンス
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/fuel-lab/category/solio/">
+            ソリオ
+          </a>
+        </li>
+
+        <!-- ツールのみドロップダウン維持 -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            About
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            ツール
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            {% for page in site.about %}
-            <li><a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% for page in site.tools %}
+            <li>
+              <a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">
+                {{ page.title }}
+              </a>
+            </li>
             {% endfor %}
           </ul>
         </li>
 
       </ul>
     </div>
+
   </div>
 </nav>

@@ -1,7 +1,59 @@
 <!-- 共通フッター -->
-<footer class="bg-dark text-light text-center py-4 mt-5 position-relative">
+<footer class="bg-dark text-light mt-5 pt-5 pb-4">
   <div class="container">
-    <p class="mb-2 small">© 2026 Fuel Lab - 燃費・維持費改善研究所</p>
+
+    <div class="row">
+
+      <!-- サイト概要 -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Fuel Lab</h6>
+        <p class="small text-muted">
+          燃費と維持費を理論と実測で最適化する研究サイト。
+          オイル・タイヤ・添加剤・運転方法を検証しています。
+        </p>
+      </div>
+
+      <!-- カテゴリ -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">カテゴリ</h6>
+        <ul class="list-unstyled small">
+          <li><a href="/fuel-lab/category/engine-oil/" class="text-decoration-none text-light">エンジンオイル</a></li>
+          <li><a href="/fuel-lab/category/tire/" class="text-decoration-none text-light">タイヤ</a></li>
+          <li><a href="/fuel-lab/category/fuel-additive/" class="text-decoration-none text-light">燃料添加剤</a></li>
+          <li><a href="/fuel-lab/category/fuel-economy/" class="text-decoration-none text-light">燃費理論</a></li>
+          <li><a href="/fuel-lab/category/maintenance/" class="text-decoration-none text-light">メンテナンス</a></li>
+          <li><a href="/fuel-lab/category/solio/" class="text-decoration-none text-light">ソリオ</a></li>
+        </ul>
+      </div>
+
+      <!-- サイト情報 -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">サイト情報</h6>
+        <ul class="list-unstyled small">
+          {% for page in site.about %}
+          <li>
+            <a href="{{ page.url | prepend: site.baseurl }}" class="text-decoration-none text-light">
+              {{ page.title }}
+            </a>
+          </li>
+          {% endfor %}
+          <li>
+            <a href="https://x.com/FuelLab_MySolio" target="_blank" class="text-decoration-none text-light">
+              X（@FuelLab_MySolio）
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="text-center small text-muted">
+      © 2026 Fuel Lab - 燃費・維持費改善研究所
+    </div>
+
   </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
