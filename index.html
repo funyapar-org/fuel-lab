@@ -115,7 +115,7 @@ description: 燃費と維持費を理論と実測で最適化する研究サイ�
 
     <div class="list-group">
       {% for page in series_pages limit:5 %}
-        <a href="{{ page.url }}" class="list-group-item list-group-item-action">
+        <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
           {{ page.title }}
         </a>
       {% endfor %}
