@@ -19,6 +19,9 @@ github pages でjekyllを使用しています。
 default.htmlである程度共通化が進んでいます。
 共通部分でbootstrap v5.3を読み込んでいるのでいい感じの見た目に整えてください。
 「##」などのmd固有の見出し表現は使わないでください。
+title, nav_title, description, category, tagsを設定してください。
+tagsは英数のケバブケースでお願いします。
 関連ページのリンクがあると嬉しいです。
+リンクのパスは車の知識ページならば「/fuel-lab/knowledge/*.html」、私のソリオに関するページならば「/fuel-lab/solio/*.html」という形式にしてください。
 コピペしたいので各ファイルは全文でください。
 ------------------------
