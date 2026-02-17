@@ -75,7 +75,7 @@ date: 2026-02-17
   </div>
 
   <!-- 実用領域の整理 -->
-  <div class="card bg-light border-0 mb-4">
+  <div class="card bg-success border-0 mb-4">
     <div class="card-body">
       <h5 class="fw-bold">実用域での結論</h5>
       <ul>
