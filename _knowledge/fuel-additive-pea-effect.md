@@ -3,6 +3,7 @@ layout: default
 title: PEA系燃料添加剤は本当に効果があるのか？
 nav_title: PEA添加剤の効果検証
 description: PEA（ポリエーテルアミン）系燃料添加剤は燃費や出力に本当に効果があるのか。清浄作用の仕組みと燃費改善の理論的背景を整理します。
+date: 2026-02-18
 category: fuel-additive
 tags:
   - fuel-additive
@@ -10,7 +11,6 @@ tags:
   - injector-cleaning
   - combustion-efficiency
   - fuel-economy
-date: 2026-02-18
 ---
 
 <div class="container my-5">
