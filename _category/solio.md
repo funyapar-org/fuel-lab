@@ -74,7 +74,7 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
       <div class="list-group">
 
         {% for page in solio_pages %}
-          <a href="{{ page.url }}" class="list-group-item list-group-item-action py-3">
+          <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action py-3">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">{{ page.title }}</h5>
               {% if page.date %}

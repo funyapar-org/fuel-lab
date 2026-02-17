@@ -74,7 +74,7 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
       <div class="list-group">
 
         {% for page in fuel_pages %}
-          <a href="{{ page.url }}" class="list-group-item list-group-item-action py-3">
+          <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action py-3">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">{{ page.title }}</h5>
               {% if page.date %}
