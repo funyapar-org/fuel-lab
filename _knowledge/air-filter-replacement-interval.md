@@ -76,7 +76,7 @@ date: 2026-02-19 00:00:00 +0900
 
       <h2 class="h4 mt-5">使用環境による違い</h2>
 
-      <div class="card my-4 border-0 bg-light">
+      <div class="card my-4 border-0 bg-success">
         <div class="card-body">
           <h3 class="h6">交換を早めるべき環境</h3>
           <ul>
@@ -87,7 +87,7 @@ date: 2026-02-19 00:00:00 +0900
         </div>
       </div>
 
-      <div class="card my-4 border-0 bg-light">
+      <div class="card my-4 border-0 bg-success">
         <div class="card-body">
           <h3 class="h6">交換を急ぐ必要がないケース</h3>
           <ul>
