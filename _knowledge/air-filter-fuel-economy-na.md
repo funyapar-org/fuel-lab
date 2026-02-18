@@ -13,7 +13,6 @@ tags:
   - pumping-loss
 ---
 
-
 <div class="container my-5">
 
   <!-- ページヘッダー -->
