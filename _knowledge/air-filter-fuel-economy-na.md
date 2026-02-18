@@ -85,7 +85,7 @@ tags:
   </div>
 
   <!-- 結論 -->
-  <div class="card bg-light border-0 mb-5">
+  <div class="card bg-success border-0 mb-5">
     <div class="card-body">
       <h5 class="fw-bold">結論</h5>
       <p>
