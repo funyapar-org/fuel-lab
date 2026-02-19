@@ -2,7 +2,7 @@
 title: "アルミテープチューンで燃費は本当に良くなるのか？トヨタ特許と実践検証"
 nav_title: "アルミテープチューンは燃費向上する？"
 description: "アルミテープチューンで燃費が改善するという噂は本当なのか。トヨタの帯電制御特許の目的、検証動画の問題点、そして実際に4輪タイヤハウスへ施工した結果を整理します。"
-category: "燃費"
+category: fuel-economy
 tags:
 - aluminum-tape-tune
 - fuel-economy
