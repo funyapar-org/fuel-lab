@@ -139,7 +139,7 @@ date: 2026-02-19 13:00:00 +0900
       <ul>
         <li><a href="/fuel-lab/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a></li>
         <li><a href="/fuel-lab/knowledge/first-action.html">燃費改善の最初にやるべきこと</a></li>
-        <li><a href="/fuel-lab/solio/">ソリオ実燃費改善トップ</a></li>
+        <li><a href="/fuel-lab/solio/solio-overview.html">ソリオ実燃費改善トップページ</a></li>
       </ul>
 
     </div>
