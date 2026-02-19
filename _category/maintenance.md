@@ -40,12 +40,12 @@ description: エンジンオイル交換、エアフィルター交換、タイ�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/air-filter-replacement-interval.html" class="text-decoration-none">
-                エアフィルターはいつ交換すべきか？
+              <a href="/fuel-lab/knowledge/regular-vs-premium-cleaning-myth.html" class="text-decoration-none">
+                レギュラー車にハイオクを入れるとエンジンは綺麗になる？
               </a>
             </h5>
             <p class="card-text text-muted small">
-              吸気効率とコストの観点から適切な交換タイミングを整理。
+              レギュラー仕様車にハイオクを入れるとエンジン内部が綺麗になるという噂は本当か。オクタン価・清浄剤・ノッキング制御の観点から合理的に検証します。
             </p>
           </div>
         </div>
