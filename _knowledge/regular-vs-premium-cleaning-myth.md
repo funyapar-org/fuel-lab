@@ -60,7 +60,7 @@ date: 2026-02-19 00:00:00 +0900
 
       <h2 class="h4 mt-5">なぜ「綺麗になる」と言われるのか</h2>
 
-      <div class="card border-0 bg-light my-4">
+      <div class="card border-0 bg-success my-4">
         <div class="card-body">
           <h3 class="h6">理由1：清浄剤の配合量</h3>
           <p>
@@ -74,7 +74,7 @@ date: 2026-02-19 00:00:00 +0900
         </div>
       </div>
 
-      <div class="card border-0 bg-light my-4">
+      <div class="card border-0 bg-success my-4">
         <div class="card-body">
           <h3 class="h6">理由2：燃焼状態の安定化</h3>
           <p>
