@@ -86,6 +86,10 @@ date: 2026-02-19 13:00:00 +0900
         <li class="list-group-item">比較方法：通常使用時の燃費記録との比較</li>
       </ul>
 
+      <img src="/fuel-lab/assets/img/aluminum_tape/aluminum_tape_front1.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例1">
+      <img src="/fuel-lab/assets/img/aluminum_tape/aluminum_tape_front2.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例2">
+      <img src="/fuel-lab/assets/img/aluminum_tape/aluminum_tape_rear.jpg" class="img-fluid rounded shadow-sm mb-4" alt="リアタイヤハウス内のアルミテープ施工例">
+
       <p>
         タイヤハウスは乱流が強く、空力的影響が大きい部位です。
         仮に効果が出るなら検出しやすい箇所と考えました。
