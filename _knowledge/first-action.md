@@ -128,4 +128,13 @@ tags:
     当サイトのシミュレーターを使えば、車種・走行距離・使用状況から最適な改善方法を提案できます。  
     ぜひあなたの車で「どの改善が最も効くのか」をチェックしてみてください。
   </p>
+
+  <hr class="my-5">
+
+  <h2 class="mb-3">関連ページ</h2>
+
+  <ul>
+    <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
+    <li><a href="/fuel-lab/solio/solio-overview.html">ソリオ実燃費改善トップページ</a></li>
+  </ul>
 </div>
