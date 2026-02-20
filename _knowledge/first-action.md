@@ -100,14 +100,25 @@ tags:
   </div>
 
   <p>
-    当サイトでは、燃費改善効果のシミュレーションや走行データの分析ツールを用意しています。  
-    状態に合わせて最適な添加剤を選びたい方は以下のツールも活用してください。
+    燃料添加剤とは何か。燃料添加剤を使うべきタイミングなどは以下の関連ページを参照してください。
   </p>
 
   <ul class="list-group mb-4">
-    <li class="list-group-item">燃焼効率シミュレーター</li>
-    <li class="list-group-item">走行条件別の燃費改善予測ツール</li>
-    <li class="list-group-item">エンジン内部汚れ診断ツール</li>
+    <li class="list-group-item">
+      <a href="/fuel-lab/knowledge/fuel-additive.html">燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/fuel-lab/knowledge/engine-start-bad.html">エンジン始動が悪い原因とは？セルは回るのにかからない理由</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/fuel-lab/knowledge/idle-high.html">アイドリング回転数が高い原因とは？1000rpm以上になる理由を解説</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/fuel-lab/knowledge/idle-unstable.html">アイドリングが不安定な原因とは？回転数が上下する理由を解説</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/fuel-lab/solio/fcr062-effect.html">燃料添加剤(FCR-062)を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー</a>
+    </li>
   </ul>
 
   <h2 class="mt-5">7. 走行ルートや環境を工夫する</h2>
@@ -125,7 +136,7 @@ tags:
   </p>
 
   <p class="mt-4">
-    当サイトのシミュレーターを使えば、車種・走行距離・使用状況から最適な改善方法を提案できます。  
+    当サイトのツールを使えば、車種・走行距離・使用状況から最適な改善方法を提案できます。  
     ぜひあなたの車で「どの改善が最も効くのか」をチェックしてみてください。
   </p>
 
