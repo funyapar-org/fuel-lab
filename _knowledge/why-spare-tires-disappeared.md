@@ -128,7 +128,7 @@ date: 2026-02-22 19:30:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法の正しいやり方</a></li>
+        <li><a href="/fuel-lab/knowledge/puncture-repair-kit-vs-roadservice.html">パンク修理キットvsロードサービス</a></li>
         <li><a href="/fuel-lab/knowledge/engine-oil-selection-standards.html">エンジンオイルの選び方</a></li>
         <li><a href="/fuel-lab/solio/solio-overview.html">ソリオ実燃費記録</a></li>
       </ul>
