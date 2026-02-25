@@ -24,6 +24,7 @@ tags:
 
   <div class="alert alert-secondary">
     一般的な重量レンジの中央値を用いた理論試算です。<br>
+    計算に使用している各サイズの重量はページ下部に一覧表があります。<br>
     1kg/本あたり燃費0.5％変化（街乗り想定）として計算しています。
   </div>
 
@@ -101,8 +102,6 @@ tags:
   </div>
 
   <div id="result" class="mt-5"></div>
-
-  <hr class="my-5">
     
   <div class="card p-4 mt-5">
     <h2 class="h5 mb-3">ホイール重量一覧（中央値）</h2>
@@ -126,6 +125,8 @@ tags:
       </table>
     </div>
   </div>
+
+  <hr class="my-5">
 
   <h2 class="h4">関連ページ</h2>
   <ul>
