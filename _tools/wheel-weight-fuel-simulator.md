@@ -103,6 +103,29 @@ tags:
   <div id="result" class="mt-5"></div>
 
   <hr class="my-5">
+    
+  <div class="card p-4 mt-5">
+    <h2 class="h5 mb-3">ホイール重量一覧（中央値）</h2>
+    <p class="text-muted">
+      一般的な製品レンジの中央値を採用しています。
+    </p>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>インチ</th>
+            <th>スチール</th>
+            <th>一般鋳造アルミ</th>
+            <th>軽量鋳造アルミ</th>
+            <th>軽量鍛造アルミ</th>
+          </tr>
+        </thead>
+        <tbody id="weightTableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <h2 class="h4">関連ページ</h2>
   <ul>
@@ -155,5 +178,25 @@ function calculateImpact() {
     </div>
   `;
 }
+
+function generateWeightTable() {
+  const tbody = document.getElementById("weightTableBody");
+  tbody.innerHTML = "";
+
+  Object.keys(weights).forEach(size => {
+    const row = `
+      <tr>
+        <td>${size}</td>
+        <td>${weights[size].steel.toFixed(1)} kg</td>
+        <td>${weights[size].cast.toFixed(1)} kg</td>
+        <td>${weights[size].lightcast.toFixed(1)} kg</td>
+        <td>${weights[size].forged.toFixed(1)} kg</td>
+      </tr>
+    `;
+    tbody.innerHTML += row;
+  });
+}
+
+generateWeightTable();
 
 </script>
