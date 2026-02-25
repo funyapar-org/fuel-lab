@@ -46,7 +46,7 @@ tags:
 
     // 燃費条件
     const baseFuelEconomy = 15; // km/L（0W-16時）
-    const fuelEconomyDropRate = 0.02; // 0W-20での燃費低下率（2%想定）
+    const fuelEconomyDropRate = 0.01; // 0W-20での燃費低下率
 
     // ガソリン価格
     const gasPrice = 145; // 円 / L
