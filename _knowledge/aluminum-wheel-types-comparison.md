@@ -11,7 +11,7 @@ tags:
 - cast-wheel
 - forged-wheel
 - fuel-economy
-date: 2026-02-22 22:30:00 +0900
+date: 2026-02-24 22:30:00 +0900
 ---
 
 <div class="container my-5">
