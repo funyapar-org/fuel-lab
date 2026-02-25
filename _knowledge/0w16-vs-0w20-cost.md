@@ -49,7 +49,7 @@ tags:
     const fuelEconomyDropRate = 0.01; // 0W-20での燃費低下率
 
     // ガソリン価格
-    const gasPrice = 145; // 円 / L
+    const gasPrice = 150; // 円 / L
 
     // 交換条件
     const oilChangeInterval = 5000; // km
