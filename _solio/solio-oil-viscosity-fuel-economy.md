@@ -5,6 +5,7 @@ nav_title: ソリオ粘度変更の燃費予測
 description: MA26Sソリオに入っていた5W-30を指定粘度0W-16へ戻した場合、燃費はどの程度改善するのかを数値で検証します。
 date: 2026-02-25 00:20:00 +0900
 category: solio
+series: fuel-economy-verification
 tags:
   - solio
   - ma26s
