@@ -35,7 +35,7 @@ tags:
 
   <hr class="my-4">
 
-  <h2 class="h4 mt-4">計算条件（あとから変更可能）</h2>
+  <h2 class="h4 mt-4">計算条件</h2>
 
   <script>
     /* ===== 計算用変数 ===== */
