@@ -3,12 +3,24 @@
   fuel: 19.40
   season: summer
   note: 中古購入後初回給油
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-09-20
   distance: 237
   fuel: 21.56
   season: summer
   note: 燃費悪化期
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-10-01
   distance: 276
@@ -16,28 +28,58 @@
   season: summer
   note: 添加剤投入後
   link: /fuel-lab/solio/fcr062-effect.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-10-18
   distance: 318
   fuel: 22.52
   season: autumn
   note: 秋の燃費改善
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-11-07
   distance: 314
   fuel: 22.14
   season: autumn
   note: 秋の燃費改善
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-11-21
   distance: 310
   fuel: 21.86
   season: autumn
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-11-29
   distance: 160
   fuel: 11.24
   season: autumn
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-12-11
   distance: 163
@@ -45,6 +87,12 @@
   season: winter
   note: 冬の始まり
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2025-12-20
   distance: 255
@@ -52,6 +100,12 @@
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2026-01-04
   distance: 225
@@ -59,6 +113,12 @@
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2026-01-26
   distance: 277
@@ -66,6 +126,12 @@
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2026-02-13
   distance: 264
@@ -73,6 +139,12 @@
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
 
 - date: 2026-02-23
   distance: 174
@@ -80,4 +152,9 @@
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
-
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
