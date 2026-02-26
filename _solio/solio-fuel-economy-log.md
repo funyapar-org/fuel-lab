@@ -30,11 +30,10 @@ date: 2026-02-26 21:00:00 +0900
   {% for log in sorted_logs %}
     {% if prev_odometer %}
       {% assign distance = log.odometer | minus: prev_odometer %}
-      {% assign economy = distance | divided_by: log.fuel | round: 2 %}
     {% else %}
-      {% assign distance = nil %}
-      {% assign economy = nil %}
+      {% assign distance = log.odometer | minus: site.data.solio_meta.purchase.odometer %}
     {% endif %}
+    {% assign economy = distance | divided_by: log.fuel | round: 2 %}
 
     {% capture row %}
       <tr>
