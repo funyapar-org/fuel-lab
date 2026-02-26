@@ -176,10 +176,29 @@ date: 2026-02-26 21:00:00 +0900
   </div>
 
   <!-- 季節燃費 -->
-  {% assign winter_avg = winter_distance | divided_by: winter_fuel | round: 2 %}
-  {% assign spring_avg = spring_distance | divided_by: spring_fuel | round: 2 %}
-  {% assign summer_avg = summer_distance | divided_by: summer_fuel | round: 2 %}
-  {% assign autumn_avg = autumn_distance | divided_by: autumn_fuel | round: 2 %}
+  {% if winter_fuel > 0 %}
+    {% assign winter_avg = winter_distance | divided_by: winter_fuel | round: 2 %}
+  {% else %}
+    {% assign winter_avg = nil %}
+  {% endif %}
+  
+  {% if spring_fuel > 0 %}
+    {% assign spring_avg = spring_distance | divided_by: spring_fuel | round: 2 %}
+  {% else %}
+    {% assign spring_avg = nil %}
+  {% endif %}
+  
+  {% if summer_fuel > 0 %}
+    {% assign summer_avg = summer_distance | divided_by: summer_fuel | round: 2 %}
+  {% else %}
+    {% assign summer_avg = nil %}
+  {% endif %}
+  
+  {% if autumn_fuel > 0 %}
+    {% assign autumn_avg = autumn_distance | divided_by: autumn_fuel | round: 2 %}
+  {% else %}
+    {% assign autumn_avg = nil %}
+  {% endif %}
 
   <h2 class="h4 mt-5 mb-3">季節別平均燃費</h2>
 
@@ -189,7 +208,9 @@ date: 2026-02-26 21:00:00 +0900
       <div class="card text-center">
         <div class="card-body">
           <div class="text-muted small">冬(1月、2月、12月)</div>
-          <div class="fs-4 fw-bold">{{ winter_avg }} km/L</div>
+          <div class="fs-4 fw-bold">
+            {% if winter_avg %}{{ winter_avg }} km/L{% else %}-{% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -198,7 +219,9 @@ date: 2026-02-26 21:00:00 +0900
       <div class="card text-center">
         <div class="card-body">
           <div class="text-muted small">春(3月、4月、5月、6月前半)</div>
-          <div class="fs-4 fw-bold">{{ spring_avg }} km/L</div>
+          <div class="fs-4 fw-bold">
+            {% if spring_avg %}{{ spring_avg }} km/L{% else %}-{% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -207,7 +230,9 @@ date: 2026-02-26 21:00:00 +0900
       <div class="card text-center">
         <div class="card-body">
           <div class="text-muted small">夏(6月後半、7月、8月、9月)</div>
-          <div class="fs-4 fw-bold">{{ summer_avg }} km/L</div>
+          <div class="fs-4 fw-bold">
+            {% if summer_avg %}{{ summer_avg }} km/L{% else %}-{% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -216,7 +241,9 @@ date: 2026-02-26 21:00:00 +0900
       <div class="card text-center">
         <div class="card-body">
           <div class="text-muted small">秋(10月、11月)</div>
-          <div class="fs-4 fw-bold">{{ autumn_avg }} km/L</div>
+          <div class="fs-4 fw-bold">
+            {% if autumn_avg %}{{ autumn_avg }} km/L{% else %}-{% endif %}
+          </div>
         </div>
       </div>
     </div>
