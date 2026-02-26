@@ -1,0 +1,18 @@
+- date: 2025-09-06
+  distance: 272
+  fuel: 19.40
+  season: summer
+  note: 中古購入後初回給油
+
+- date: 2025-09-20
+  distance: 237
+  fuel: 21.56
+  season: summer
+  note: 燃費悪化期
+
+- date: 2025-10-01
+  distance: 276
+  fuel: 19.71
+  season: summer
+  note: 添加剤投入後
+  link: /fuel-lab/solio/fcr062-effect.html
