@@ -23,17 +23,21 @@ date: 2026-02-26 21:00:00 +0900
   </p>
 
   {% assign sorted_logs = site.data.solio_fuel_log | sort: "date" %}
-
-  {% assign prev_odometer = nil %}
+  {% assign prev_odometer = site.data.solio_meta.purchase.odometer %}
+  
   {% assign rows = "" %}
+  
+  {% assign total_distance = 0 %}
+  {% assign total_fuel = 0 %}
+  {% assign total_cost = 0 %}
+  {% assign max_economy = 0 %}
+  {% assign min_economy = 999 %}
+  {% assign count = 0 %}
 
   {% for log in sorted_logs %}
-    {% if prev_odometer %}
-      {% assign distance = log.odometer | minus: prev_odometer %}
-    {% else %}
-      {% assign distance = log.odometer | minus: site.data.solio_meta.purchase.odometer %}
-    {% endif %}
-    {% assign economy = distance | divided_by: log.fuel | round: 2 %}
+    {% assign distance = log.odometer | minus: prev_odometer %}
+    {% assign economy = distance | divided_by: log.fuel %}
+    {% assign round_economy = economy | round: 2 %}
 
     {% capture row %}
       <tr>
@@ -42,8 +46,8 @@ date: 2026-02-26 21:00:00 +0900
           {% if distance %}{{ distance }}{% else %}-{% endif %}
         </td>
         <td data-value="{{ log.fuel }}">{{ log.fuel }}</td>
-        <td data-value="{{ economy | default: 0 }}">
-          {% if economy %}{{ economy }}{% else %}-{% endif %}
+        <td data-value="{{ round_economy | default: 0 }}">
+          {% if round_economy %}{{ round_economy }}{% else %}-{% endif %}
         </td>
         <td>
           {% if log.link %}
@@ -56,8 +60,66 @@ date: 2026-02-26 21:00:00 +0900
     {% endcapture %}
 
     {% assign rows = row | append: rows %}
+
+    {% assign total_distance = total_distance | plus: distance %}
+    {% assign total_fuel = total_fuel | plus: log.fuel %}
+    {% assign cost = log.fuel | times: log.price_per_liter %}
+    {% assign total_cost = total_cost | plus: cost %}
+
+    {% if economy > max_economy %}
+      {% assign max_economy = economy %}
+    {% endif %}
+
+    {% if economy < min_economy %}
+      {% assign min_economy = economy %}
+    {% endif %}
+
+    {% assign count = count | plus: 1 %}
     {% assign prev_odometer = log.odometer %}
   {% endfor %}
+
+  {% assign avg_economy = total_distance | divided_by: total_fuel | round: 2 %}
+  {% assign cost_per_km = total_cost | divided_by: total_distance | round: 2 %}
+
+  <div class="row g-3 mb-4">
+
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="text-muted small">総平均燃費</div>
+        <div class="fs-4 fw-bold">{{ avg_economy }} km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="text-muted small">最高燃費</div>
+        <div class="fs-4 fw-bold">{{ max_economy | round: 2 }} km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="text-muted small">最低燃費</div>
+        <div class="fs-4 fw-bold">{{ min_economy | round: 2 }} km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="text-muted small">1kmあたり燃料コスト</div>
+        <div class="fs-4 fw-bold">¥{{ cost_per_km }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
   <div class="table-responsive">
     <table id="fuelTable" class="table table-striped table-hover align-middle">
