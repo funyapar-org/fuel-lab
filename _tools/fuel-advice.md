@@ -1,7 +1,9 @@
 ---
 layout: default
+nav_title: 燃費改善アドバイスツール
 title: 燃費改善アドバイスツール
 description: 実燃費や整備履歴、走行傾向を入力すると、何を優先して改善すべきか（効果・費用対効果・実行手順）を提示します。
+category: fuel-economy
 ---
 
 <div class="container my-4">

@@ -57,7 +57,7 @@
             {% for page in site.tools %}
             <li>
               <a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">
-                {{ page.title }}
+                {{ page.nav_title | default: page.title }}
               </a>
             </li>
             {% endfor %}

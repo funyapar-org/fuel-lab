@@ -1,7 +1,9 @@
 ---
 layout: default
+nav_title: 燃費シミュレーター
 title: 燃費シミュレーター
 description: ガソリン車の年間燃料費と節約効果を簡単に計算！
+category: fuel-economy
 ---
 
 <div class="container my-5">

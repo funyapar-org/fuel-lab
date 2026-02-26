@@ -1,8 +1,9 @@
 ---
 layout: default
-nav_title: ハイブリッド車とガソリン車の損益分岐シミュレーター
+nav_title: ハイブリッド車の損益分岐シミュレーター
 title: ハイブリッド車とガソリン車の損益分岐シミュレーター
 description: 実燃費ベースで、ハイブリッド車とガソリン車の「何年乗ると元が取れるか」を計算する簡易シミュレーターです。
+category: fuel-economy
 ---
 
 <div class="container my-5">

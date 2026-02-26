@@ -1,7 +1,9 @@
 ---
 layout: default
+nav_title: タイヤサイズ変更の燃費影響シミュレーター
 title: タイヤサイズ変更の燃費影響シミュレーター
 description: タイヤサイズ変更（例：165/70R14 → 155/80R13）が燃費に与える影響を外径と転がり抵抗から簡易推定します。
+catgory: tire
 ---
 
 <style>
