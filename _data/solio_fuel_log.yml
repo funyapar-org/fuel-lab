@@ -16,3 +16,68 @@
   season: summer
   note: 添加剤投入後
   link: /fuel-lab/solio/fcr062-effect.html
+
+- date: 2025-10-18
+  distance: 318
+  fuel: 22.52
+  season: autumn
+  note: 秋の燃費改善
+
+- date: 2025-11-07
+  distance: 314
+  fuel: 22.14
+  season: autumn
+  note: 秋の燃費改善
+
+- date: 2025-11-21
+  distance: 310
+  fuel: 21.86
+  season: autumn
+
+- date: 2025-11-29
+  distance: 160
+  fuel: 11.24
+  season: autumn
+
+- date: 2025-12-11
+  distance: 163
+  fuel: 11.62
+  season: winter
+  note: 冬の始まり
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
+- date: 2025-12-20
+  distance: 255
+  fuel: 18.45
+  season: winter
+  note: 冬の燃費悪化
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
+- date: 2026-01-04
+  distance: 225
+  fuel: 16.44
+  season: winter
+  note: 冬の燃費悪化
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
+- date: 2026-01-26
+  distance: 277
+  fuel: 20.34
+  season: winter
+  note: 冬の燃費悪化
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
+- date: 2026-02-13
+  distance: 264
+  fuel: 19.43
+  season: winter
+  note: 冬の燃費悪化
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
+- date: 2026-02-23
+  distance: 174
+  fuel: 12.81
+  season: winter
+  note: 冬の燃費悪化
+  link: /fuel-lab/knowledge/winter-fuel-economy.html
+
