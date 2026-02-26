@@ -1,6 +1,8 @@
 - date: 2025-09-06
+  odometer: 25529
   distance: 272
   fuel: 19.40
+  price_per_liter: 160
   season: summer
   note: 中古購入後初回給油
   conditions:
@@ -11,8 +13,10 @@
     pressure_kpa: 250
 
 - date: 2025-09-20
+  odometer: 25766
   distance: 237
   fuel: 21.56
+  price_per_liter: 161
   season: summer
   note: 燃費悪化期
   conditions:
@@ -23,8 +27,10 @@
     pressure_kpa: 250
 
 - date: 2025-10-01
+  odometer: 26042
   distance: 276
   fuel: 19.71
+  price_per_liter: 160
   season: summer
   note: 添加剤投入後
   link: /fuel-lab/solio/fcr062-effect.html
@@ -36,8 +42,10 @@
     pressure_kpa: 250
 
 - date: 2025-10-18
+  odometer: 26360
   distance: 318
   fuel: 22.52
+  price_per_liter: 159
   season: autumn
   note: 秋の燃費改善
   conditions:
@@ -48,8 +56,10 @@
     pressure_kpa: 250
 
 - date: 2025-11-07
+  odometer: 26674
   distance: 314
   fuel: 22.14
+  price_per_liter: 158
   season: autumn
   note: 秋の燃費改善
   conditions:
@@ -60,8 +70,10 @@
     pressure_kpa: 250
 
 - date: 2025-11-21
+  odometer: 26984
   distance: 310
   fuel: 21.86
+  price_per_liter: 152
   season: autumn
   conditions:
     oil: 5w-30
@@ -71,8 +83,10 @@
     pressure_kpa: 250
 
 - date: 2025-11-29
+  odometer: 27144
   distance: 160
   fuel: 11.24
+  price_per_liter: 149
   season: autumn
   conditions:
     oil: 5w-30
@@ -82,8 +96,10 @@
     pressure_kpa: 250
 
 - date: 2025-12-11
+  odometer: 27307
   distance: 163
   fuel: 11.62
+  price_per_liter: 143
   season: winter
   note: 冬の始まり
   link: /fuel-lab/knowledge/winter-fuel-economy.html
@@ -95,8 +111,10 @@
     pressure_kpa: 250
 
 - date: 2025-12-20
+  odometer: 27562
   distance: 255
   fuel: 18.45
+  price_per_liter: 141
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
@@ -108,8 +126,10 @@
     pressure_kpa: 250
 
 - date: 2026-01-04
+  odometer: 27787
   distance: 225
   fuel: 16.44
+  price_per_liter: 138
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
@@ -121,8 +141,10 @@
     pressure_kpa: 250
 
 - date: 2026-01-26
+  odometer: 28064
   distance: 277
   fuel: 20.34
+  price_per_liter: 139
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
@@ -134,8 +156,10 @@
     pressure_kpa: 250
 
 - date: 2026-02-13
+  odometer: 28328
   distance: 264
   fuel: 19.43
+  price_per_liter: 143
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
@@ -147,8 +171,10 @@
     pressure_kpa: 250
 
 - date: 2026-02-23
+  odometer: 28502
   distance: 174
   fuel: 12.81
+  price_per_liter: 142
   season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
