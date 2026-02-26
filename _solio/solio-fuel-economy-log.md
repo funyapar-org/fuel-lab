@@ -22,6 +22,44 @@ date: 2026-02-26 21:00:00 +0900
     走行距離は前回給油時との差分から自動計算しています。
   </p>
 
+  {% assign sorted_logs = site.data.solio_fuel_log | sort: "date" %}
+
+  {% assign prev_odometer = nil %}
+  {% assign rows = "" %}
+
+  {% for log in sorted_logs %}
+    {% if prev_odometer %}
+      {% assign distance = log.odometer | minus: prev_odometer %}
+      {% assign economy = distance | divided_by: log.fuel | round: 2 %}
+    {% else %}
+      {% assign distance = nil %}
+      {% assign economy = nil %}
+    {% endif %}
+
+    {% capture row %}
+      <tr>
+        <td data-value="{{ log.date }}">{{ log.date | date: "%Y-%m-%d" }}</td>
+        <td data-value="{{ distance | default: 0 }}">
+          {% if distance %}{{ distance }}{% else %}-{% endif %}
+        </td>
+        <td data-value="{{ log.fuel }}">{{ log.fuel }}</td>
+        <td data-value="{{ economy | default: 0 }}">
+          {% if economy %}{{ economy }}{% else %}-{% endif %}
+        </td>
+        <td>
+          {% if log.link %}
+            <a href="{{ log.link }}">{{ log.note }}</a>
+          {% else %}
+            {{ log.note }}
+          {% endif %}
+        </td>
+      </tr>
+    {% endcapture %}
+
+    {% assign rows = row | append: rows %}
+    {% assign prev_odometer = log.odometer %}
+  {% endfor %}
+
   <div class="table-responsive">
     <table id="fuelTable" class="table table-striped table-hover align-middle">
       <thead class="table-light">
@@ -34,56 +72,10 @@ date: 2026-02-26 21:00:00 +0900
         </tr>
       </thead>
       <tbody>
-        {% assign logs = site.data.solio_fuel_log | sort: "date" | reverse %}
-
-        {% for log in logs %}
-          {% assign prev_index = forloop.index %}
-          {% assign sorted_logs = site.data.solio_fuel_log | sort: "date" %}
-          {% assign prev_log = sorted_logs[prev_index] %}
-
-          {% if prev_log %}
-            {% assign distance = log.odometer | minus: prev_log.odometer %}
-            {% assign fuel = log.fuel %}
-            {% assign economy = distance | divided_by: fuel | round: 2 %}
-          {% else %}
-            {% assign distance = 0 %}
-            {% assign economy = 0 %}
-          {% endif %}
-
-          <tr>
-            <td data-value="{{ log.date }}">
-              {{ log.date | date: "%Y-%m-%d" }}
-            </td>
-            <td data-value="{{ distance }}">
-              {% if distance > 0 %}{{ distance }}{% else %}-{% endif %}
-            </td>
-            <td data-value="{{ log.fuel }}">
-              {{ log.fuel }}
-            </td>
-            <td data-value="{{ economy }}">
-              {% if economy > 0 %}{{ economy }}{% else %}-{% endif %}
-            </td>
-            <td>
-              {% if log.link %}
-                <a href="{{ log.link }}">{{ log.note }}</a>
-              {% else %}
-                {{ log.note }}
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
+        {{ rows }}
       </tbody>
     </table>
   </div>
-
-  <hr class="my-5">
-
-  <h2 class="h4 mb-3">関連ページ</h2>
-  <ul>
-    <li><a href="/fuel-lab/solio/solio-fuel-summary.html">ソリオ 実燃費まとめ</a></li>
-    <li><a href="/fuel-lab/knowledge/winter-fuel-economy.html">冬の燃費悪化について</a></li>
-    <li><a href="/fuel-lab/solio/fcr062-effect.html">燃料添加剤の効果検証</a></li>
-  </ul>
 
 </div>
 
