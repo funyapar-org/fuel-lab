@@ -1,0 +1,7 @@
+g08:
+  model: HOT STUFF G-SPEED G-08
+  weight_each: 4.4
+
+oem_steel:
+  model: OEM Steel
+  weight_each: 7.0
