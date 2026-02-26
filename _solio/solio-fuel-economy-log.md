@@ -53,7 +53,7 @@ date: 2026-02-26 21:00:00 +0900
     {% assign economy = distance | divided_by: log.fuel %}
     {% assign round_economy = economy | round: 2 %}
 
-    <!-- 統計値 -->
+    {% comment %} 統計値 {% endcomment %}
     {% assign total_distance = total_distance | plus: distance %}
     {% assign total_fuel = total_fuel | plus: log.fuel %}
     {% assign cost = log.fuel | times: log.price_per_liter %}
@@ -69,7 +69,7 @@ date: 2026-02-26 21:00:00 +0900
 
     {% assign count = count | plus: 1 %}
 
-    <!-- 季節燃費 -->
+    {% comment %} 季節燃費 {% endcomment %}
     {% assign month = log.date | date: "%m" | plus: 0 %}
     {% assign day = log.date | date: "%d" | plus: 0 %}
 
@@ -106,7 +106,7 @@ date: 2026-02-26 21:00:00 +0900
         {% assign autumn_fuel = autumn_fuel | plus: log.fuel %}
     {% endcase %}
 
-    <!-- 燃費ログ一覧テーブル作成 -->
+    {% comment %} 燃費ログ一覧テーブル作成 {% endcomment %}
     {% capture row %}
       <tr>
         <td data-value="{{ log.date }}">{{ log.date | date: "%Y-%m-%d" }}</td>
