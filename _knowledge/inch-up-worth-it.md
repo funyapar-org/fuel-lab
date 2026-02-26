@@ -217,6 +217,21 @@ tags:
         タイヤとホイールで燃費は変わる？
       </a>
     </li>
+    <li>
+      <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
+        ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
+      </a>
+    </li>
+    <li>
+      <a href="/fuel-lab/tools/tire-simulator.html">
+        タイヤサイズ変更の燃費影響シミュレーター
+      </a>
+    </li>
+    <li>
+      <a href="/fuel-lab/tools/wheel-weight-fuel-simulator.html">
+        ホイール重量と燃費影響シミュレーター
+      </a>
+    </li>
   </ul>
 
 </div>

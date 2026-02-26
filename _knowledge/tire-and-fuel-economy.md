@@ -159,6 +159,21 @@ tags:
     <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
     <li><a href="/fuel-lab/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
     <li><a href="/fuel-lab/knowledge/fuel-economy-worsens.html">燃費が徐々に悪化する原因</a></li>
+    <li>
+      <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
+        ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
+      </a>
+    </li>
+    <li>
+      <a href="/fuel-lab/tools/tire-simulator.html">
+        タイヤサイズ変更の燃費影響シミュレーター
+      </a>
+    </li>
+    <li>
+      <a href="/fuel-lab/tools/wheel-weight-fuel-simulator.html">
+        ホイール重量と燃費影響シミュレーター
+      </a>
+    </li>
   </ul>
 </section>
 

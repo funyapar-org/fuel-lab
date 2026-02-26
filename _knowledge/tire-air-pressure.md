@@ -170,8 +170,8 @@ tags:
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/solio/solio-oil-viscosity-fuel-economy.html">
-        ソリオの粘度変更による燃費予測
+      <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
+        ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
       </a>
     </li>
   </ul>
