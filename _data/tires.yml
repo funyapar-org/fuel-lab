@@ -1,0 +1,14 @@
+ae01f:
+  model: ヨコハマタイヤ BluEarth AE-01F
+  weight_each: 5.8
+  labeling: AAA / c
+
+eg02:
+  model: GOODYEAR EfficientGrip EG02
+  weight_each: 6.3
+  labeling: AA / c
+
+rv03ck:
+  model: ヨコハマタイヤ BluEarth RV03CK
+  weight_each: 6.2
+  labeling: A / a
