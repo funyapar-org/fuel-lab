@@ -14,7 +14,7 @@ date: 2026-02-26 21:00:00 +0900
 ---
 
 <!-- 燃費計算値読み込み -->
-{% include solio_fuel_stats.html %}
+{% include solio-fuel-stats.html %}
 
 <div class="container my-5">
 
