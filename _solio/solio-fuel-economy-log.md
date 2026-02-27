@@ -21,8 +21,11 @@ date: 2026-02-26 21:00:00 +0900
   <h1 class="mb-4">ソリオ 実燃費ログ（満タン法）</h1>
 
   <p class="text-muted">
-    満タン法に基づき、オドメーター差分から算出した実測燃費ログです。
-    走行距離は前回給油時との差分から自動計算しています。
+    本ページの燃費は
+    <a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法</a>
+    に基づき算出してた実測燃費ログです。
+    算出方法の詳細はリンク先の解説ページをご覧ください。
+    走行距離は前回給油時とのオドメーター差分から自動計算しています。
   </p>
 
   <div class="row g-3 mb-4">
@@ -132,6 +135,15 @@ date: 2026-02-26 21:00:00 +0900
       </tbody>
     </table>
   </div>
+
+　<hr class="my-5">
+
+  <h2 class="h5 mb-3">関連ページ</h2>
+  <ul>
+    <li><a href="/fuel-lab/solio/solio-fuel-summary.html">ソリオ 実燃費まとめ</a></li>
+    <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法とは？算出方法の解説</a></li>
+    <li><a href="/fuel-lab/solio/">ソリオ燃費研究トップ</a></li>
+  </ul>
 
 </div>
 
