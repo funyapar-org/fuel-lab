@@ -126,6 +126,10 @@ date: 2026-02-26 21:00:00 +0900
     </div>
 
   </div>
+  
+  <h2 class="h4 mb-3">燃費推移</h2>
+
+  <canvas id="fuelChart" height="100"></canvas>
 
   <!-- WLTC比較 -->
   <h2 class="h4 mb-3">カタログ燃費（WLTC）との比較</h2>
@@ -158,5 +162,34 @@ date: 2026-02-26 21:00:00 +0900
   <a href="/fuel-lab/solio/solio-fuel-economy-log.html" class="btn btn-primary">
     実燃費ログを見る
   </a>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+  const ctx = document.getElementById('fuelChart');
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [{{ chart_labels | remove_first: "," }}],
+      datasets: [{
+        label: '実燃費 (km/L)',
+        data: [{{ chart_data | remove_first: "," }}],
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: true }
+      },
+      scales: {
+        y: {
+          beginAtZero: false
+        }
+      }
+    }
+  });
+  </script>
 
 </div>
