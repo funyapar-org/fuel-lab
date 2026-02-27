@@ -129,7 +129,9 @@ date: 2026-02-26 21:00:00 +0900
   
   <h2 class="h4 mb-3">燃費推移</h2>
 
-  <canvas id="fuelChart" height="100"></canvas>
+  <div class="mb-5">
+    <canvas id="fuelChart" height="200"></canvas>
+  </div>
 
   <!-- WLTC比較 -->
   <h2 class="h4 mb-3">カタログ燃費（WLTC）との比較</h2>
