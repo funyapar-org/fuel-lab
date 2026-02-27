@@ -24,6 +24,10 @@
 {% assign autumn_distance = 0 %}
 {% assign autumn_fuel = 0 %}
 
+<!-- 燃費チャート -->
+{% assign chart_labels = "" %}
+{% assign chart_data = "" %}
+
 {% for log in sorted_logs %}
   {% assign distance = log.odometer | minus: prev_odometer %}
   {% assign economy = distance | divided_by: log.fuel %}
@@ -104,6 +108,16 @@
   {% endcapture %}
 
   {% assign rows = row | append: rows %}
+  
+  {% comment %} 燃費チャート用データ作成 {% endcomment %}
+  {% capture chart_labels %}
+  {{ chart_labels }},"{{ log.date | date: "%Y-%m-%d" }}"
+  {% endcapture %}
+  
+  {% capture chart_data %}
+  {{ chart_data }},{{ economy | round: 2 }}
+  {% endcapture %}
+  
   {% assign prev_odometer = log.odometer %}
 {% endfor %}
 
