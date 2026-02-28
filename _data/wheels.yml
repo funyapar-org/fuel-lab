@@ -1,7 +1,9 @@
 g08:
-  model: HOT STUFF G-SPEED G-08
+  company: ホットスタッフ
+  model: G-SPEED G-08
   weight_each: 4.4
 
 oem_steel:
-  model: OEM Steel
+  company: スズキ
+  model: 純正スチール
   weight_each: 7.0
