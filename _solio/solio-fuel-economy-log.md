@@ -144,7 +144,7 @@ date: 2026-02-26 21:00:00 +0900
 
       <div class="modal-header">
         <h5 class="modal-title" id="modalTitle">
-          走行条件
+          詳細情報
         </h5>
         <button type="button"
                 class="btn-close"
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = event.relatedTarget;
 
     document.getElementById('modalTitle').textContent =
-      "走行条件（" + button.getAttribute('data-date') + "）";
+      "詳細情報（" + button.getAttribute('data-date') + "）";
 
     document.getElementById('modalPrice').textContent =
       button.getAttribute('data-price');
