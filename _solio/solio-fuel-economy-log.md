@@ -154,7 +154,7 @@ date: 2026-02-26 21:00:00 +0900
 
       <div class="modal-body small">
         <ul class="mb-0">
-          <li>ガソリン単価: <span id="modalPrice"></span></li>
+          <li>ガソリン単価: <span id="modalPrice"></span> 円/L</li>
           <li>オイル粘度: <span id="modalOil"></span></li>
           <li>ホイール: <span id="modalWheel"></span></li>
           <li>タイヤ: <span id="modalTire"></span></li>
