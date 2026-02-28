@@ -158,17 +158,17 @@
         <div class="modal-body small">
   
           <ul class="mb-0">
-            <li>オイル: {{ log.oil }}</li>
-            <li>タイヤ: {{ log.tire }}</li>
-            <li>ホイール: {{ log.wheel }}</li>
-            <li>空気圧: {{ log.pressure_kpa }} kPa</li>
+            <li>オイル: {{ log.conditions.oil }}</li>
+            <li>タイヤ: {{ log.conditions.tire }}</li>
+            <li>ホイール: {{ log.conditions.wheel }}</li>
+            <li>空気圧: {{ log.conditions.pressure_kpa }} kPa</li>
   
-            {% if log.tread_depth_mm %}
-              <li>残溝: {{ log.tread_depth_mm }} mm</li>
+            {% if log.conditions.tread_depth_mm %}
+              <li>残溝: {{ log.conditions.tread_depth_mm }} mm</li>
             {% endif %}
   
-            {% if log.rotation_count %}
-              <li>ローテーション: {{ log.rotation_count }} 回目</li>
+            {% if log.conditions.rotation_count %}
+              <li>ローテーション: {{ log.conditions.rotation_count }} 回目</li>
             {% endif %}
           </ul>
   
