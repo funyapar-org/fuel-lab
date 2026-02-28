@@ -96,15 +96,20 @@
   
   {% comment %} 走行条件変化チェック {% endcomment %}
   {% assign condition_changed = false %}
-  {% if prev_oil and (
-    log.conditions.oil != prev_oil or
-    log.conditions.tire != prev_tire or
-    log.conditions.wheel != prev_wheel or
-    log.conditions.pressure_kpa != prev_pressure or
-    log.conditions.tread_depth_mm != prev_tread or
-    log.conditions.rotation_count != prev_rotation
-  ) %}
-    {% assign condition_changed = true %}
+  {% if prev_oil %}
+    {% if log.conditions.oil != prev_oil %}
+      {% assign condition_changed = true %}
+    {% elsif log.conditions.tire != prev_tire %}
+      {% assign condition_changed = true %}
+    {% elsif log.conditions.wheel != prev_wheel %}
+      {% assign condition_changed = true %}
+    {% elsif log.conditions.pressure_kpa != prev_pressure %}
+      {% assign condition_changed = true %}
+    {% elsif log.conditions.tread_depth_mm != prev_tread %}
+      {% assign condition_changed = true %}
+    {% elsif log.conditions.rotation_count != prev_rotation %}
+      {% assign condition_changed = true %}
+    {% endif %}
   {% endif %}
 
   {% comment %} 燃費ログ一覧テーブル作成 {% endcomment %}
