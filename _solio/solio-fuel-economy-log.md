@@ -154,7 +154,8 @@ date: 2026-02-26 21:00:00 +0900
 
       <div class="modal-body small">
         <ul class="mb-0">
-          <li>オイル: <span id="modalOil"></span></li>
+          <li>ガソリン単価: <span id="modalPrice"></span></li>
+          <li>オイル粘度: <span id="modalOil"></span></li>
           <li>ホイール: <span id="modalWheel"></span></li>
           <li>タイヤ: <span id="modalTire"></span></li>
           <li>空気圧: <span id="modalPressure"></span> kPa</li>
@@ -212,6 +213,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('modalTitle').textContent =
       "走行条件（" + button.getAttribute('data-date') + "）";
+
+    document.getElementById('modalPrice').textContent =
+      button.getAttribute('data-price');
 
     document.getElementById('modalOil').textContent =
       button.getAttribute('data-oil');
