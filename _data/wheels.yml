@@ -2,8 +2,10 @@ g08:
   company: ホットスタッフ
   model: G-SPEED G-08
   weight_each: 4.4
+  size: 14×4.5J PCD100 45
 
 oem_steel:
   company: スズキ
   model: 純正スチール
   weight_each: 7.0
+  size: 14×4.5J PCD100 45
