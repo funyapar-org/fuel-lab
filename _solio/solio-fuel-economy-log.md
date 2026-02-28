@@ -203,4 +203,34 @@ document.querySelectorAll("#fuelTable th[data-sort]").forEach(header => {
     rows.forEach(row => tbody.appendChild(row));
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('conditionModal');
+
+  modal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+
+    document.getElementById('modalTitle').textContent =
+      "走行条件（" + button.getAttribute('data-date') + "）";
+
+    document.getElementById('modalOil').textContent =
+      button.getAttribute('data-oil');
+
+    document.getElementById('modalTire').textContent =
+      button.getAttribute('data-tire');
+
+    document.getElementById('modalWheel').textContent =
+      button.getAttribute('data-wheel');
+
+    document.getElementById('modalPressure').textContent =
+      button.getAttribute('data-pressure');
+      
+    document.getElementById('modalMizo').textContent =
+      button.getAttribute('data-mizo');
+
+    document.getElementById('modalRotaion').textContent =
+      button.getAttribute('data-rotation');
+
+  });
+});
 </script>
