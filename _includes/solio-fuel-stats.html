@@ -131,14 +131,15 @@
             変更
           </span>
         {% endif %}
-      
+        
+        {% assign tire_data = site.data.tires[log.conditions.tire] %}
         <button class="btn btn-sm btn-outline-secondary"
           data-bs-toggle="modal"
           data-bs-target="#conditionModal"
           data-date="{{ log.date }}"
           data-price="{{ log.price_per_liter }}"
           data-oil="{{ log.conditions.oil }}"
-          data-tire="{{ log.conditions.tire }}"
+          data-tire="{% if tire_data %}{{ tire_data.model }}({{ tire_data.size }})){% else %}{{ log.conditions.tire }}{% endif %}"
           data-wheel="{{ log.conditions.wheel }}"
           data-pressure="{{ log.conditions.pressure_kpa }}"
           data-mizo="{{ log.conditions.tread_depth_mm }}"
