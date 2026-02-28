@@ -159,7 +159,7 @@ date: 2026-02-26 21:00:00 +0900
           <li>タイヤ: <span id="modalTire"></span></li>
           <li>空気圧: <span id="modalPressure"></span> kPa</li>
           <li>タイヤ溝: <span id="modalMizo"></span> mm</li>
-          <li>タイヤローテ回数: <span id="modalRotation"></span></li>
+          <li>タイヤローテ回数: <span id="modalRotation"></span> 回</li>
         </ul>
       </div>
 
