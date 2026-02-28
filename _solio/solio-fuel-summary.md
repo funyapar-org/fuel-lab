@@ -75,16 +75,15 @@ date: 2026-02-26 21:00:00 +0900
     </div>
 
   </div>
-
-  <!-- 季節別 -->
-  <h2 class="h4 mb-3">季節別平均燃費</h2>
+  
+  <h2 class="h4 mt-5 mb-3">季節別平均燃費</h2>
 
   <div class="row g-3 mb-5">
 
     <div class="col-md-3">
       <div class="card text-center">
         <div class="card-body">
-          <div class="text-muted small">冬</div>
+          <div class="text-muted small">冬(1月、2月、12月)</div>
           <div class="fs-4 fw-bold">
             {% if winter_avg %}{{ winter_avg }} km/L{% else %}-{% endif %}
           </div>
@@ -95,7 +94,7 @@ date: 2026-02-26 21:00:00 +0900
     <div class="col-md-3">
       <div class="card text-center">
         <div class="card-body">
-          <div class="text-muted small">春</div>
+          <div class="text-muted small">春(3月、4月、5月、6月前半)</div>
           <div class="fs-4 fw-bold">
             {% if spring_avg %}{{ spring_avg }} km/L{% else %}-{% endif %}
           </div>
@@ -106,7 +105,7 @@ date: 2026-02-26 21:00:00 +0900
     <div class="col-md-3">
       <div class="card text-center">
         <div class="card-body">
-          <div class="text-muted small">夏</div>
+          <div class="text-muted small">夏(6月後半、7月、8月、9月)</div>
           <div class="fs-4 fw-bold">
             {% if summer_avg %}{{ summer_avg }} km/L{% else %}-{% endif %}
           </div>
@@ -117,7 +116,7 @@ date: 2026-02-26 21:00:00 +0900
     <div class="col-md-3">
       <div class="card text-center">
         <div class="card-body">
-          <div class="text-muted small">秋</div>
+          <div class="text-muted small">秋(10月、11月)</div>
           <div class="fs-4 fw-bold">
             {% if autumn_avg %}{{ autumn_avg }} km/L{% else %}-{% endif %}
           </div>
