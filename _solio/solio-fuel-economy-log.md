@@ -27,6 +27,12 @@ date: 2026-02-26 21:00:00 +0900
     算出方法の詳細はリンク先の解説ページをご覧ください。<br>
     走行距離は前回給油時とのオドメーター差分から自動計算しています。
   </p>
+  
+  <h2 class="h4 mb-3">燃費推移</h2>
+
+  <div class="mb-5">
+    <canvas id="fuelChart" height="150"></canvas>
+  </div>
 
   <div class="row g-3 mb-4">
 
@@ -57,66 +63,9 @@ date: 2026-02-26 21:00:00 +0900
       </div>
     </div>
 
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">1kmあたり燃料コスト</div>
-          <div class="fs-4 fw-bold">¥{{ cost_per_km }}</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
-  <h2 class="h4 mt-5 mb-3">季節別平均燃費</h2>
 
-  <div class="row g-3 mb-5">
-
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">冬(1月、2月、12月)</div>
-          <div class="fs-4 fw-bold">
-            {% if winter_avg %}{{ winter_avg }} km/L{% else %}-{% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">春(3月、4月、5月、6月前半)</div>
-          <div class="fs-4 fw-bold">
-            {% if spring_avg %}{{ spring_avg }} km/L{% else %}-{% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">夏(6月後半、7月、8月、9月)</div>
-          <div class="fs-4 fw-bold">
-            {% if summer_avg %}{{ summer_avg }} km/L{% else %}-{% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">秋(10月、11月)</div>
-          <div class="fs-4 fw-bold">
-            {% if autumn_avg %}{{ autumn_avg }} km/L{% else %}-{% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
   <!-- 燃費ログ一覧テーブル -->
   <div class="table-responsive">
@@ -166,7 +115,7 @@ date: 2026-02-26 21:00:00 +0900
 
     </div>
   </div>
-</div>
+  </div>
 
 　<hr class="my-5">
 
@@ -237,4 +186,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('fuelChart');
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [{{ chart_labels | remove_first: "," }}],
+      datasets: [{
+        label: '実燃費 (km/L)',
+        data: [{{ chart_data | remove_first: "," }}],
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: true }
+      },
+      scales: {
+        y: {
+          beginAtZero: false
+        }
+      }
+    }
+  });
+
 </script>
