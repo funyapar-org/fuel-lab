@@ -120,7 +120,7 @@ date: 2026-02-26 21:00:00 +0900
 
   <!-- 燃費ログ一覧テーブル -->
   <div class="table-responsive">
-    <table id="fuelTable" class="table table-striped table-hover align-middle">
+    <table id="fuelTable" class="table table-sm table-striped table-hover align-middle small">
       <thead class="table-light">
         <tr>
           <th data-sort="date" style="cursor:pointer;">日付</th>
