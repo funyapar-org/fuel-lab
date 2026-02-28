@@ -97,12 +97,12 @@
   {% comment %} 走行条件変化チェック {% endcomment %}
   {% assign condition_changed = false %}
   {% if prev_oil and (
-    log.oil != prev_oil or
-    log.tire != prev_tire or
-    log.wheel != prev_wheel or
-    log.pressure_kpa != prev_pressure or
-    log.tread_depth_mm != prev_tread or
-    log.rotation_count != prev_rotation
+    log.conditions.oil != prev_oil or
+    log.conditions.tire != prev_tire or
+    log.conditions.wheel != prev_wheel or
+    log.conditions.pressure_kpa != prev_pressure or
+    log.conditions.tread_depth_mm != prev_tread or
+    log.conditions.rotation_count != prev_rotation
   ) %}
     {% assign condition_changed = true %}
   {% endif %}
@@ -136,7 +136,7 @@
           data-wheel="{{ log.conditions.wheel }}"
           data-pressure="{{ log.conditions.pressure_kpa }}"
           data-mizo="{{ log.conditions.tread_depth_mm }}"
-          data-rotaion="{{ log.conditions.rotation_count }}">
+          data-rotaion="{{ log.conditions.rotation_count | default: 0 }}">
           詳細
         </button>
       
@@ -162,6 +162,13 @@
   {% capture chart_data %}
   {{ chart_data }},{{ economy | round: 2 }}
   {% endcapture %}
+  
+  {% assign prev_oil = log.conditions.oil %}
+  {% assign prev_tire = log.conditions.tire %}
+  {% assign prev_wheel = log.conditions.wheel %}
+  {% assign prev_pressure = log.conditions.pressure_kpa %}
+  {% assign prev_tread = log.conditions.tread_depth_mm %}
+  {% assign prev_rotation = log.conditions.rotation_count %}
   
   {% assign prev_odometer = log.odometer %}
 {% endfor %}
