@@ -127,6 +127,7 @@ date: 2026-02-26 21:00:00 +0900
           <th data-sort="number" style="cursor:pointer;">走行距離 (km)</th>
           <th data-sort="number" style="cursor:pointer;">給油量 (L)</th>
           <th data-sort="number" style="cursor:pointer;">実燃費 (km/L)</th>
+          <th>条件</th>
           <th>備考</th>
         </tr>
       </thead>
