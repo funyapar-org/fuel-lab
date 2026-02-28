@@ -31,9 +31,60 @@ date: 2026-02-26 21:00:00 +0900
   <h2 class="h4 mb-3">燃費推移</h2>
 
   <div class="mb-5">
-    <canvas id="fuelChart" height="150"></canvas>
+    <canvas id="fuelChart" height="200"></canvas>
   </div>
 
+  <!-- 燃費ログ一覧テーブル -->
+  <div class="table-responsive">
+    <table id="fuelTable" class="table table-sm table-striped table-hover align-middle small">
+      <thead class="table-light">
+        <tr>
+          <th data-sort="date" style="cursor:pointer;">日付</th>
+          <th data-sort="number" style="cursor:pointer;">走行距離 (km)</th>
+          <th data-sort="number" style="cursor:pointer;">給油量 (L)</th>
+          <th data-sort="number" style="cursor:pointer;">実燃費 (km/L)</th>
+          <th>詳細</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ rows }}
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- 走行条件モーダル -->
+  <div class="modal fade" id="conditionModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">
+            詳細情報
+          </h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body small">
+          <ul class="mb-0">
+            <li>ガソリン単価: <span id="modalPrice"></span> 円/L</li>
+            <li>オイル粘度: <span id="modalOil"></span></li>
+            <li>ホイール: <span id="modalWheel"></span></li>
+            <li>タイヤ: <span id="modalTire"></span></li>
+            <li>空気圧: <span id="modalPressure"></span> kPa</li>
+            <li>タイヤ溝: <span id="modalMizo"></span> mm</li>
+            <li>タイヤローテ回数: <span id="modalRotation"></span> 回</li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- 燃費サマリー -->
   <div class="row g-3 mb-4">
 
     <div class="col-md-3">
@@ -63,58 +114,6 @@ date: 2026-02-26 21:00:00 +0900
       </div>
     </div>
 
-  </div>
-
-
-
-  <!-- 燃費ログ一覧テーブル -->
-  <div class="table-responsive">
-    <table id="fuelTable" class="table table-sm table-striped table-hover align-middle small">
-      <thead class="table-light">
-        <tr>
-          <th data-sort="date" style="cursor:pointer;">日付</th>
-          <th data-sort="number" style="cursor:pointer;">走行距離 (km)</th>
-          <th data-sort="number" style="cursor:pointer;">給油量 (L)</th>
-          <th data-sort="number" style="cursor:pointer;">実燃費 (km/L)</th>
-          <th>詳細</th>
-          <th>備考</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ rows }}
-      </tbody>
-    </table>
-  </div>
-  
-  <!-- 走行条件モーダル -->
-  <div class="modal fade" id="conditionModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle">
-          詳細情報
-        </h5>
-        <button type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body small">
-        <ul class="mb-0">
-          <li>ガソリン単価: <span id="modalPrice"></span> 円/L</li>
-          <li>オイル粘度: <span id="modalOil"></span></li>
-          <li>ホイール: <span id="modalWheel"></span></li>
-          <li>タイヤ: <span id="modalTire"></span></li>
-          <li>空気圧: <span id="modalPressure"></span> kPa</li>
-          <li>タイヤ溝: <span id="modalMizo"></span> mm</li>
-          <li>タイヤローテ回数: <span id="modalRotation"></span> 回</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
   </div>
 
 　<hr class="my-5">
