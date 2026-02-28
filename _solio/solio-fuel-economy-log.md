@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
       button.getAttribute('data-mizo');
 
     document.getElementById('modalRotaion').textContent =
-      button.getAttribute('data-rotation_count');
+      button.getAttribute('data-rotation');
 
   });
 });
