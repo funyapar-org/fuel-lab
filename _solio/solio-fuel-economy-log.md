@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('modalMizo').textContent =
       button.getAttribute('data-mizo');
 
-    document.getElementById('modalRotaion').textContent =
+    document.getElementById('modalRotation').textContent =
       button.getAttribute('data-rotation');
 
   });
