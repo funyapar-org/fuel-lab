@@ -28,6 +28,14 @@
 {% assign chart_labels = "" %}
 {% assign chart_data = "" %}
 
+<!-- 走行条件 -->
+{% assign prev_oil = nil %}
+{% assign prev_tire = nil %}
+{% assign prev_wheel = nil %}
+{% assign prev_pressure = nil %}
+{% assign prev_tread = nil %}
+{% assign prev_rotation = nil %}
+
 {% for log in sorted_logs %}
   {% assign distance = log.odometer | minus: prev_odometer %}
   {% assign economy = distance | divided_by: log.fuel %}
@@ -85,6 +93,19 @@
       {% assign autumn_distance = autumn_distance | plus: distance %}
       {% assign autumn_fuel = autumn_fuel | plus: log.fuel %}
   {% endcase %}
+  
+  {% comment %} 走行条件変化チェック {% endcomment %}
+  {% assign condition_changed = false %}
+  {% if prev_oil and (
+    log.oil != prev_oil or
+    log.tire != prev_tire or
+    log.wheel != prev_wheel or
+    log.pressure_kpa != prev_pressure or
+    log.tread_depth_mm != prev_tread or
+    log.rotation_count != prev_rotation
+  ) %}
+    {% assign condition_changed = true %}
+  {% endif %}
 
   {% comment %} 燃費ログ一覧テーブル作成 {% endcomment %}
   {% capture row %}
@@ -97,6 +118,42 @@
       <td data-value="{{ round_economy | default: 0 }}">
         {% if round_economy %}{{ round_economy }}{% else %}-{% endif %}
       </td>
+      
+      <td>
+
+        {% if condition_changed %}
+          <span class="badge bg-warning text-dark me-2">
+            条件変更
+          </span>
+        {% endif %}
+      
+        <button class="btn btn-sm btn-outline-secondary"
+                data-bs-toggle="collapse"
+                data-bs-target="#cond{{ forloop.index }}">
+          詳細
+        </button>
+      
+        <div class="collapse mt-2" id="cond{{ forloop.index }}">
+          <div class="small text-muted text-start">
+      
+            オイル: {{ log.oil }}<br>
+            タイヤ: {{ log.tire }}<br>
+            ホイール: {{ log.wheel }}<br>
+            空気圧: {{ log.pressure_kpa }} kPa<br>
+      
+            {% if log.tread_depth_mm %}
+              残溝: {{ log.tread_depth_mm }} mm<br>
+            {% endif %}
+      
+            {% if log.rotation_count %}
+              ローテーション: {{ log.rotation_count }} 回目
+            {% endif %}
+      
+          </div>
+        </div>
+      
+      </td>
+      
       <td>
         {% if log.link %}
           <a href="{{ log.link }}">{{ log.note }}</a>
