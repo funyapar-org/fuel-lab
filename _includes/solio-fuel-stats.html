@@ -143,6 +143,40 @@
         {% endif %}
       </td>
     </tr>
+
+    <div class="modal fade" id="condModal{{ forloop.index }}" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title">
+            走行条件（{{ log.date }}）
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <div class="modal-body small">
+  
+          <ul class="mb-0">
+            <li>オイル: {{ log.oil }}</li>
+            <li>タイヤ: {{ log.tire }}</li>
+            <li>ホイール: {{ log.wheel }}</li>
+            <li>空気圧: {{ log.pressure_kpa }} kPa</li>
+  
+            {% if log.tread_depth_mm %}
+              <li>残溝: {{ log.tread_depth_mm }} mm</li>
+            {% endif %}
+  
+            {% if log.rotation_count %}
+              <li>ローテーション: {{ log.rotation_count }} 回目</li>
+            {% endif %}
+          </ul>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
   {% endcapture %}
 
   {% assign rows = row | append: rows %}
