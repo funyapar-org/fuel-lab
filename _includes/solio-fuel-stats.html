@@ -128,8 +128,15 @@
         {% endif %}
       
         <button class="btn btn-sm btn-outline-secondary"
-                data-bs-toggle="modal"
-                data-bs-target="#condModal{{ forloop.index }}">
+          data-bs-toggle="modal"
+          data-bs-target="#conditionModal"
+          data-date="{{ log.date }}"
+          data-oil="{{ log.conditions.oil }}"
+          data-tire="{{ log.conditions.tire }}"
+          data-wheel="{{ log.conditions.wheel }}"
+          data-pressure="{{ log.conditions.pressure_kpa }}"
+          data-mizo="{{ log.conditions.tread_depth_mm }}"
+          data-rotaion="{{ log.conditions.rotation_count }}">
           詳細
         </button>
       
