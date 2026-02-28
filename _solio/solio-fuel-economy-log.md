@@ -136,6 +136,36 @@ date: 2026-02-26 21:00:00 +0900
       </tbody>
     </table>
   </div>
+  
+  <!-- 走行条件モーダル -->
+  <div class="modal fade" id="conditionModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">
+          走行条件
+        </h5>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body small">
+        <ul class="mb-0">
+          <li>オイル: <span id="modalOil"></span></li>
+          <li>ホイール: <span id="modalWheel"></span></li>
+          <li>タイヤ: <span id="modalTire"></span></li>
+          <li>空気圧: <span id="modalPressure"></span> kPa</li>
+          <li>タイヤ溝: <span id="modalMizo"></span> mm</li>
+          <li>タイヤローテ回数: <span id="modalRotation"></span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 　<hr class="my-5">
 
