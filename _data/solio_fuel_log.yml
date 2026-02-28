@@ -11,6 +11,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-09-20
   odometer: 25766
@@ -25,6 +27,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-10-01
   odometer: 26042
@@ -40,6 +44,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-10-18
   odometer: 26360
@@ -54,6 +60,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-11-07
   odometer: 26674
@@ -68,6 +76,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-11-21
   odometer: 26984
@@ -81,6 +91,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-11-29
   odometer: 27144
@@ -94,6 +106,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-12-11
   odometer: 27307
@@ -109,6 +123,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2025-12-20
   odometer: 27562
@@ -124,6 +140,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2026-01-04
   odometer: 27787
@@ -139,6 +157,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2026-01-26
   odometer: 28064
@@ -154,6 +174,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2026-02-13
   odometer: 28328
@@ -169,6 +191,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
 
 - date: 2026-02-23
   odometer: 28502
@@ -184,3 +208,5 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
+    tread_depth_mm: 6.0
+    rotation_count: 0
