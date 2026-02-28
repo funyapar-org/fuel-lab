@@ -133,6 +133,8 @@
         {% endif %}
         
         {% assign tire_data = site.data.tires[log.conditions.tire] %}
+        {% assign wheel_data = site.data.wheels[log.conditions.wheel] %}
+        
         <button class="btn btn-sm btn-outline-secondary"
           data-bs-toggle="modal"
           data-bs-target="#conditionModal"
@@ -140,7 +142,7 @@
           data-price="{{ log.price_per_liter }}"
           data-oil="{{ log.conditions.oil }}"
           data-tire="{% if tire_data %}{{ tire_data.model }}({{ tire_data.size }}){% else %}{{ log.conditions.tire }}{% endif %}"
-          data-wheel="{{ log.conditions.wheel }}"
+          data-wheel="{% if wheel_data %}{{ wheel_data.model }}({{ wheel_data.size }}){% else %}{{ log.conditions.wheel }}{% endif %}"
           data-pressure="{{ log.conditions.pressure_kpa }}"
           data-mizo="{{ log.conditions.tread_depth_mm }}"
           data-rotation="{{ log.conditions.rotation_count }}">
