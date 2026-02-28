@@ -119,38 +119,19 @@
         {% if round_economy %}{{ round_economy }}{% else %}-{% endif %}
       </td>
       
-      <td>
+      <td class="text-center">
 
         {% if condition_changed %}
-          <span class="badge bg-warning text-dark me-2">
-            条件変更
+          <span class="badge bg-warning text-dark d-block mb-1">
+            変更
           </span>
         {% endif %}
       
         <button class="btn btn-sm btn-outline-secondary"
-                data-bs-toggle="collapse"
-                data-bs-target="#cond{{ forloop.index }}">
+                data-bs-toggle="modal"
+                data-bs-target="#condModal{{ forloop.index }}">
           詳細
         </button>
-      
-        <div class="collapse mt-2" id="cond{{ forloop.index }}">
-          <div class="small text-muted text-start">
-      
-            オイル: {{ log.oil }}<br>
-            タイヤ: {{ log.tire }}<br>
-            ホイール: {{ log.wheel }}<br>
-            空気圧: {{ log.pressure_kpa }} kPa<br>
-      
-            {% if log.tread_depth_mm %}
-              残溝: {{ log.tread_depth_mm }} mm<br>
-            {% endif %}
-      
-            {% if log.rotation_count %}
-              ローテーション: {{ log.rotation_count }} 回目
-            {% endif %}
-      
-          </div>
-        </div>
       
       </td>
       
