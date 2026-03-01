@@ -67,6 +67,11 @@ date: 2026-02-26 21:00:00 +0900
             <strong>タイヤ溝：</strong>
             フロント {{ latest_log.conditions.tread_depth_mm_f }} mm / リア {{ latest_log.conditions.tread_depth_mm_r }} mm
           </li>
+
+          <li>
+            <strong>タイヤローテーション：</strong>
+            {{ latest_log.conditions.rotation_count }} 回
+          </li>
         </ul>
   
       </div>
