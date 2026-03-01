@@ -39,6 +39,10 @@ date: 2026-02-26 21:00:00 +0900
   {% assign latest_log = sorted_logs | last %}
   
   {% if latest_log and latest_log.conditions %}
+
+    {% assign tire_data = site.data.tires[latest_log.conditions.tire] %}
+    {% assign wheel_data = site.data.wheels[latest_log.conditions.wheel] %}
+     
     <div class="card mb-5">
       <div class="card-body">
   
@@ -50,12 +54,12 @@ date: 2026-02-26 21:00:00 +0900
   
           <li>
             <strong>ホイール：</strong>
-            {{ latest_log.conditions.wheel | default: "不明" }}
+            {{ wheel_data.model | default: "不明" }}({{ wheel_data.size | default: "不明" }})
           </li>
   
           <li>
             <strong>タイヤ：</strong>
-            {{ latest_log.conditions.tire | default: "不明" }}
+            {{ tire_data.model | default: "不明" }}({{ tire_data.size | default: "不明" }})
           </li>
   
           <li>
