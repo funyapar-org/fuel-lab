@@ -62,6 +62,11 @@ date: 2026-02-26 21:00:00 +0900
               不明
             {% endif %}
           </li>
+
+          <li>
+            <strong>タイヤ溝：</strong>
+            フロント {{ latest_log.conditions.tread_depth_mm_f }} mm / リア {{ latest_log.conditions.tread_depth_mm_r }} mm
+          </li>
         </ul>
   
       </div>
