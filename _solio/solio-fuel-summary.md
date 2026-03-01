@@ -63,17 +63,6 @@ date: 2026-02-26 21:00:00 +0900
       </div>
     </div>
 
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <div class="text-muted small">1kmあたり燃料コスト</div>
-          <div class="fs-4 fw-bold">
-            {% if cost_per_km %}¥{{ cost_per_km }}{% else %}-{% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
   
   <h2 class="h4 mt-5 mb-3">季節別平均燃費</h2>
