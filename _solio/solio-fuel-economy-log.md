@@ -77,7 +77,7 @@ date: 2026-02-26 21:00:00 +0900
             <li>ホイール: <span id="modalWheel"></span></li>
             <li>タイヤ: <span id="modalTire"></span></li>
             <li>空気圧: <span id="modalPressure"></span> kPa</li>
-            <li>タイヤ溝: <span id="modalMizo"></span> mm</li>
+            <li>タイヤ溝: フロント <span id="modalTreadF"></span> mm / リア <span id="modalTreadR"></span> mm</li>
             <li>タイヤローテ回数: <span id="modalRotation"></span> 回</li>
           </ul>
         </div>
@@ -206,8 +206,12 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('modalPressure').textContent =
       button.getAttribute('data-pressure');
       
-    document.getElementById('modalMizo').textContent =
-      button.getAttribute('data-mizo');
+    document.getElementById('modalTreadF').textContent =
+      button.getAttribute('data-tread-f');
+
+  document.getElementById('modalTreadR').textContent =
+      button.getAttribute('data-tread-r');
+
 
     document.getElementById('modalRotation').textContent =
       button.getAttribute('data-rotation');
