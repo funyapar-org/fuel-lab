@@ -28,7 +28,7 @@ date: 2026-02-26 21:00:00 +0900
     走行距離は前回給油時とのオドメーター差分から自動計算しています。
   </p>
   
-  <h2 class="h4 mb-3">燃費推移</h2>
+  <h2 class="h4 mb-3">実燃費推移</h2>
 
   <div class="mb-5">
     <canvas id="fuelChart" height="200"></canvas>
