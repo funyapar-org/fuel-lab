@@ -32,6 +32,47 @@ date: 2026-02-26 21:00:00 +0900
   </p>
 
   <hr class="my-4">
+    
+  <!-- 現在の走行条件 -->
+  <h2 class="h4 mb-3">現在の走行条件</h2>
+  
+  {% assign latest_log = sorted_logs | last %}
+  
+  {% if latest_log and latest_log.conditions %}
+    <div class="card mb-5">
+      <div class="card-body">
+  
+        <ul class="list-unstyled mb-0">
+          <li>
+            <strong>オイル粘度：</strong>
+            {{ latest_log.conditions.oil | default: "不明" }}
+          </li>
+  
+          <li>
+            <strong>ホイール：</strong>
+            {{ latest_log.conditions.wheel | default: "不明" }}
+          </li>
+  
+          <li>
+            <strong>タイヤ：</strong>
+            {{ latest_log.conditions.tire | default: "不明" }}
+          </li>
+  
+          <li>
+            <strong>空気圧：</strong>
+            {% if latest_log.conditions.pressure_kpa %}
+              {{ latest_log.conditions.pressure_kpa }} kPa
+            {% else %}
+              不明
+            {% endif %}
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  {% endif %}
+
+  <hr class="my-4">
 
   <!-- 総合統計 -->
   <div class="row g-3 mb-5">
