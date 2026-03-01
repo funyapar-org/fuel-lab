@@ -18,12 +18,6 @@ date: 2026-02-26 21:00:00 +0900
 
   <h1 class="mb-3">ソリオ 実燃費まとめ</h1>
 
-  <p class="lead">
-    現在の総平均実燃費は
-    <strong>{{ avg_economy }} km/L</strong>
-    です。
-  </p>
-
   <p class="text-muted small">
     本データは
     <a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法</a>
@@ -32,9 +26,9 @@ date: 2026-02-26 21:00:00 +0900
   </p>
     
   <!-- 現在の走行条件 -->
-  <h2 class="h4 mb-3">現在の走行条件</h2>
-  
   {% assign latest_log = sorted_logs | last %}
+  
+  <h2 class="h4 mb-3">現在の走行条件({{ latest_log.date }})</h2>
   
   {% if latest_log and latest_log.conditions %}
 
