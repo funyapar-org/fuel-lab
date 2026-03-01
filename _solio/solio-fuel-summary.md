@@ -27,7 +27,7 @@ date: 2026-02-26 21:00:00 +0900
   <p class="text-muted small">
     本データは
     <a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法</a>
-    に基づく私のソリオ(DBA-MA26S)の実測値です。
+    に基づく私のソリオ(DBA-MA26S)の実測値です。<br>
     詳細ログはページ下部から確認できます。
   </p>
     
