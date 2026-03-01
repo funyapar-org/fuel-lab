@@ -23,7 +23,7 @@ date: 2026-02-26 21:00:00 +0900
   <p class="text-muted">
     本ページの燃費は
     <a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法</a>
-    に基づき算出してた私のソリオ(MA26S)の実測燃費ログです。<br>
+    に基づき算出してた私のソリオ(DBA-MA26S)の実測燃費ログです。<br>
     算出方法の詳細はリンク先の解説ページをご覧ください。<br>
     走行距離は前回給油時とのオドメーター差分から自動計算しています。
   </p>
@@ -34,7 +34,7 @@ date: 2026-02-26 21:00:00 +0900
     <canvas id="fuelChart" height="200"></canvas>
   </div>
   
-  <h2 class="h4 mb-3">給油毎の燃費履歴</h2>
+  <h2 class="h4 mb-3">給油毎の実燃費ログ</h2>
 
   <!-- 燃費ログ一覧テーブル -->
   <div class="table-responsive">
