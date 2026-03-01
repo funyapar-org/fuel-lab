@@ -132,23 +132,32 @@ date: 2026-02-26 21:00:00 +0900
     <canvas id="fuelChart" height="200"></canvas>
   </div>
 
-  <!-- WLTC比較 -->
-  <h2 class="h4 mb-3">カタログ燃費（WLTC）との比較</h2>
-
-  {% assign wltc = 19.6 %} <!-- 必要に応じて変更 -->
-
+  <!-- カタログ燃費（参考値） -->
+  <h2 class="h4 mb-3">カタログ燃費（参考値）</h2>
+  
+  {% assign jc08 = 24.8 %} <!-- DBA-MA26S 公表値 -->
+  
   <div class="card mb-5">
     <div class="card-body">
+  
       <p>
-        カタログ燃費（WLTCモード）：<strong>{{ wltc }} km/L</strong><br>
-        実測平均燃費：<strong>{{ avg_economy }} km/L</strong>
+        カタログ燃費（JC08モード）：<strong>{{ jc08 }} km/L</strong><br>
+        実測総平均燃費：<strong>{{ avg_economy }} km/L</strong>
       </p>
-
-      {% assign diff = avg_economy | minus: wltc | round: 2 %}
-
-      <p>
-        差：{{ diff }} km/L
+  
+      {% if avg_economy and jc08 > 0 %}
+        {% assign achievement = avg_economy | times: 100 | divided_by: jc08 | round: 1 %}
+        <p>
+          達成率（JC08比）：<strong>{{ achievement }} %</strong>
+        </p>
+      {% endif %}
+  
+      <p class="text-muted small mb-0">
+        ※本車両（DBA-MA26S）はWLTCモード公表前の世代のため、
+        カタログ値はJC08モード（24.8 km/L）を参考値として掲載しています。<br>
+        ※JC08モードは実走行より高めに算出される傾向があります。
       </p>
+  
     </div>
   </div>
 
