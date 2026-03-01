@@ -166,7 +166,7 @@ date: 2026-02-26 21:00:00 +0900
 
   <h2 class="h5 mb-3">詳細データ</h2>
   <p>
-    全給油ログの一覧は以下ページで公開しています。
+    全給油毎の実燃費ログの一覧は以下ページで公開しています。
   </p>
 
   <a href="/fuel-lab/solio/solio-fuel-economy-log.html" class="btn btn-primary">
