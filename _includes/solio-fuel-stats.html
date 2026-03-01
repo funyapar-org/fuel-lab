@@ -147,8 +147,8 @@
           data-tire="{% if tire_data %}{{ tire_data.model }}({{ tire_data.size }}){% else %}{{ log.conditions.tire }}{% endif %}"
           data-wheel="{% if wheel_data %}{{ wheel_data.model }}({{ wheel_data.size }}){% else %}{{ log.conditions.wheel }}{% endif %}"
           data-pressure="{{ log.conditions.pressure_kpa }}"
-          data-tread_f="{{ log.conditions.tread_depth_mm_f }}"
-          data-tread_r="{{ log.conditions.tread_depth_mm_r }}"
+          data-tread-f="{{ log.conditions.tread_depth_mm_f }}"
+          data-tread-r="{{ log.conditions.tread_depth_mm_r }}"
           data-rotation="{{ log.conditions.rotation_count }}">
           詳細
         </button>
