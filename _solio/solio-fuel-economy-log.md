@@ -134,6 +134,15 @@ date: 2026-02-26 21:00:00 +0900
       </div>
     </div>
 
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="text-muted small">総ガソリン代(中古車なので購入後のみ)</div>
+          <div class="fs-4 fw-bold">{{ total_cost }} 円</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 　<hr class="my-5">
