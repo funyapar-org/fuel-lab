@@ -33,6 +33,8 @@ date: 2026-02-26 21:00:00 +0900
   <div class="mb-5">
     <canvas id="fuelChart" height="200"></canvas>
   </div>
+  
+  <h2 class="h4 mb-3">給油毎の燃費履歴</h2>
 
   <!-- 燃費ログ一覧テーブル -->
   <div class="table-responsive">
