@@ -116,6 +116,24 @@ date: 2026-02-26 21:00:00 +0900
       </div>
     </div>
 
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="text-muted small">総走行距離(中古車なので購入後のみ)</div>
+          <div class="fs-4 fw-bold">{{ total_distance }} km</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="text-muted small">総給油量(中古車なので購入後のみ)</div>
+          <div class="fs-4 fw-bold">{{ total_fuel }} L</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 　<hr class="my-5">
