@@ -11,7 +11,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 6.0
+    tread_depth_mm_r: 6.0
     rotation_count: 0
 
 - date: 2025-09-20
@@ -27,7 +28,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.9
+    tread_depth_mm_r: 6.0
     rotation_count: 0
 
 - date: 2025-10-01
@@ -44,7 +46,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.9
+    tread_depth_mm_r: 6.0
     rotation_count: 0
 
 - date: 2025-10-18
@@ -60,7 +63,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.8
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2025-11-07
@@ -76,7 +80,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.8
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2025-11-21
@@ -91,7 +96,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.8
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2025-11-29
@@ -106,7 +112,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.7
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2025-12-11
@@ -123,7 +130,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.7
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2025-12-20
@@ -140,7 +148,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.7
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2026-01-04
@@ -157,7 +166,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.7
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2026-01-26
@@ -174,7 +184,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.6
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2026-02-13
@@ -191,7 +202,8 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.6
+    tread_depth_mm_r: 5.9
     rotation_count: 0
 
 - date: 2026-02-23
@@ -208,5 +220,6 @@
     tire_size: 165/70R14
     wheel: oem_steel
     pressure_kpa: 250
-    tread_depth_mm: 6.0
+    tread_depth_mm_f: 5.5
+    tread_depth_mm_r: 5.8
     rotation_count: 0
