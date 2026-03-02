@@ -2,6 +2,7 @@
 layout: default
 title: "ソリオ 実燃費まとめ"
 nav_title: "実燃費まとめ"
+description: "私のソリオの現状と実燃費の統計をまとめています"
 category: solio
 tags:
   - solio
