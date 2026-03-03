@@ -113,14 +113,14 @@ tags:
 
   <div class="list-group mb-3">
 
-    <a href="/fuel-lab/solio/real-fuel-economy-summary.html"
+    <a href="/fuel-lab/solio/solio-fuel-summary.html"
        class="list-group-item list-group-item-action">
       実燃費まとめページ（総平均・季節変動・条件表示）
     </a>
 
-    <a href="/fuel-lab/solio/monthly-gasoline-cost.html"
+    <a href="/fuel-lab/solio/solio-fuel-summary-log.html"
        class="list-group-item list-group-item-action">
-      月間ガソリン代の推移
+      実燃費ログ一覧
     </a>
 
     <a href="/fuel-lab/knowledge/winter-fuel-economy.html"
