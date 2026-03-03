@@ -1,15 +1,16 @@
 ---
 layout: default
-nav_title: ソリオ燃費改善トップページ
-title: ソリオ燃費改善トップページ | 初めての方はこのページから見るのがおすすめ
-description: スズキ ソリオのエンジン特性、街乗り燃費傾向、燃費改善の取り組みを一覧でまとめたトップページ
-date: 2026-01-17
+nav_title: ソリオ燃費改善研究トップ
+title: ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを目指す
+description: スズキ ソリオ（DBA-MA26S ガソリン車）で街乗り95%条件下において実燃費16km/Lを目指す燃費改善研究プロジェクトの総合トップページ
+date: 2026-03-04 01:40:00 +0900
 category: solio
 tags:
   - solio
   - fuel-economy-improve
-  - city-driving
-  - engine
+  - real-fuel-economy
+  - fuel-cost
+  - research-project
 ---
 
 <div class="container my-4">
@@ -17,116 +18,121 @@ tags:
   <h1 class="mb-3">{{ page.title }}</h1>
 
   <p class="lead">
-    このページでは、スズキ ソリオ（ガソリン車）を<strong>街乗り中心（約95%以上）</strong>で使用している実体験をもとに、
-    車両の特性・燃費傾向・燃費改善の取り組みを一覧形式で整理しています。
+    街乗り中心（約95%以上）という条件下で、
+    ソリオ（DBA-MA26S ガソリン車）の<strong>実燃費16km/L達成</strong>を目標に
+    データを蓄積・検証している燃費改善研究プロジェクトです。
   </p>
 
   <hr class="my-4">
 
-  <h2 class="h4 mb-3">このトップページの目的</h2>
-  <ul>
-    <li>ソリオが<strong>どんな特性の車か</strong>を短時間で把握できるようにする</li>
-    <li>燃費が伸びやすい理由／落ちやすい条件を整理する</li>
-    <li>実際に行っている<strong>燃費改善施策の全体像</strong>を一覧で示す</li>
-    <li>各詳細解説ページへの<strong>案内ページ</strong>として機能させる</li>
-  </ul>
-
-  <hr class="my-4">
-
-  <h2 class="h4 mb-3">なぜソリオを選んだのか</h2>
-
-  <p class="mt-2">
-    以下のページでどのように考えてソリオを選択したかを詳しく解説しています。
-  </p>
-
-  <p>
-    👉 <a href="/fuel-lab/solio/why-choose-solio-gasoline.html">
-      なぜソリオのガソリン車を選んだのか｜維持費と長期保有を重視した現実的な判断
-    </a>
-  </p>
-
-  <hr class="my-4">
-
-  <h2 class="h4 mb-3">ソリオという車の基本的な特徴</h2>
-
-  <div class="table-responsive">
-    <table class="table table-bordered align-middle">
-      <tbody>
-        <tr>
-          <th class="table-light" style="width: 30%;">車種カテゴリ</th>
-          <td>コンパクトトールワゴン</td>
-        </tr>
-        <tr>
-          <th class="table-light">主な使用環境</th>
-          <td>街乗り（信号・低速走行が多い）</td>
-        </tr>
-        <tr>
-          <th class="table-light">エンジン形式</th>
-          <td>自然吸気・ポート噴射（直噴ではない）</td>
-        </tr>
-        <tr>
-          <th class="table-light">燃費特性の傾向</th>
-          <td>低負荷・低回転域で効率が良い</td>
-        </tr>
-        <tr>
-          <th class="table-light">燃費に影響しやすい要素</th>
-          <td>暖機状態・吸気系の汚れ・走行距離の短さ</td>
-        </tr>
-      </tbody>
-    </table>
+  <h2 class="h4 mb-3">現在の目標と進捗</h2>
+  
+  {% include solio-fuel-stats.html %}
+  
+  {% assign target = 16.0 %}
+  {% assign progress_raw = avg_economy | times: 100 | divided_by: target %}
+  {% assign progress = progress_raw | round: 0 %}
+  
+  {% if progress > 100 %}
+    {% assign progress = 100 %}
+  {% endif %}
+  
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+  
+      <div class="row text-center mb-3">
+        <div class="col-md-4">
+          <div class="fw-bold text-muted small">現在の総平均実燃費</div>
+          <div class="fs-4">
+            {{ avg_economy }} km/L
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="fw-bold text-muted small">目標</div>
+          <div class="fs-4">
+            {{ target }} km/L
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="fw-bold text-muted small">達成率</div>
+          <div class="fs-4">
+            {{ progress }}%
+          </div>
+        </div>
+      </div>
+  
+      <div class="progress"
+           role="progressbar"
+           aria-valuenow="{{ progress }}"
+           aria-valuemin="0"
+           aria-valuemax="100"
+           style="height: 24px;">
+  
+        <div class="progress-bar progress-bar-striped progress-bar-animated"
+             style="width: {{ progress }}%;">
+          {{ progress }}%
+        </div>
+  
+      </div>
+  
+      {% assign remaining = target | minus: avg_economy | round: 2 %}
+  
+      <p class="mt-3 mb-0 text-muted small">
+        目標まであと {{ remaining }} km/L
+      </p>
+  
+    </div>
   </div>
 
-  <p class="mt-2">
-    エンジン特性の詳細については、以下のページで詳しく解説しています。
-  </p>
-
-  <p>
-    👉 <a href="/fuel-lab/solio/solio-engine-characteristics.html">
-      ソリオのエンジン特性と燃費傾向
-    </a>
-  </p>
-  <p>
-    👉 <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html">
-      低回転＝汚れるは誤解？ソリオのエンジンK12Cが低回転前提でも問題ない理由
-    </a>
-  </p>
-  <p>
-    👉 <a href="/fuel-lab/solio/solio-port-injection-fuel-additive.html">
-      ソリオは直噴じゃない？燃料添加剤が効きやすいエンジン構造を解説
-    </a>
-  </p>
-
   <hr class="my-4">
 
-  <h2 class="h4 mb-3">街乗り中心での燃費傾向</h2>
-
-  <p>
-    ソリオは街乗り主体でも比較的燃費が安定しやすい一方、以下の条件では燃費が落ちやすい傾向があります。
-  </p>
+  <h2 class="h4 mb-3">この研究の前提条件</h2>
 
   <ul>
-    <li>短距離走行が続く（エンジンが温まりきらない）</li>
-    <li>冬季など外気温が低い時期</li>
-    <li>吸気系・スロットル周りの汚れが蓄積している状態</li>
+    <li>車両：DBA-MA26S（ガソリン車）</li>
+    <li>エンジン：K12C 自然吸気</li>
+    <li>使用環境：街乗り約95%以上</li>
+    <li>計測方法：満タン法による実測</li>
   </ul>
 
   <p>
-    特に<strong>冬場の燃費低下</strong>については、以下のページで原因と対策を整理しています。
+    車両特性やエンジン構造の詳細はこちら：
   </p>
 
   <p>
-    👉 <a href="/fuel-lab/knowledge/winter-fuel-economy.html">
-      寒いと燃費が下がる理由
+    👉 <a href="/fuel-lab/solio/solio-vehicle-characteristics-overview.html">
+      ソリオ車両特性まとめ
     </a>
   </p>
 
   <hr class="my-4">
 
-  <h2 class="h4 mb-3">実施している燃費改善施策一覧</h2>
+  <h2 class="h4 mb-3">実燃費データを見る</h2>
 
-  <p>
-    現在行っている、または検証中の燃費改善施策を一覧にまとめています。
-  </p>
+  <div class="list-group mb-3">
+
+    <a href="/fuel-lab/solio/real-fuel-economy-summary.html"
+       class="list-group-item list-group-item-action">
+      実燃費まとめページ（総平均・季節変動・条件表示）
+    </a>
+
+    <a href="/fuel-lab/solio/monthly-gasoline-cost.html"
+       class="list-group-item list-group-item-action">
+      月間ガソリン代の推移
+    </a>
+
+    <a href="/fuel-lab/knowledge/winter-fuel-economy.html"
+       class="list-group-item list-group-item-action">
+      冬季燃費低下のメカニズム解説
+    </a>
+
+  </div>
+
+  <hr class="my-4">
+
+  <h2 class="h4 mb-3">現在実施している燃費改善施策</h2>
 
   <div class="table-responsive">
     <table class="table table-striped align-middle">
@@ -134,13 +140,13 @@ tags:
         <tr>
           <th>カテゴリ</th>
           <th>施策内容</th>
-          <th>詳細ページ</th>
+          <th>詳細</th>
         </tr>
       </thead>
       <tbody>
-      　<tr>
-          <td>タイヤ・ホイール交換</td>
-          <td>軽量かつ転がり抵抗AAAタイヤに交換</td>
+        <tr>
+          <td>タイヤ・ホイール</td>
+          <td>軽量ホイール＋転がり抵抗AAAタイヤ</td>
           <td>
             <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
               詳細を見る
@@ -158,7 +164,7 @@ tags:
         </tr>
         <tr>
           <td>燃料系</td>
-          <td>燃料添加剤（FCR-062）の使用</td>
+          <td>燃料添加剤（FCR-062）使用</td>
           <td>
             <a href="/fuel-lab/solio/fcr062-effect.html">
               詳細を見る
@@ -166,8 +172,8 @@ tags:
           </td>
         </tr>
         <tr>
-          <td>走行条件</td>
-          <td>暖機完了後の走行を意識</td>
+          <td>運転条件</td>
+          <td>暖機完了後の効率域維持</td>
           <td>
             <a href="/fuel-lab/knowledge/winter-fuel-economy.html">
               関連解説
@@ -180,16 +186,20 @@ tags:
 
   <hr class="my-4">
 
-  <h2 class="h4 mb-3">この先追加予定のページ</h2>
+  <h2 class="h4 mb-3">プロジェクトの目的</h2>
 
-  <ul>
-    <li>街乗り特化で燃費を伸ばす運転の考え方</li>
-    <li>ソリオで陥りやすい燃費悪化トラブルまとめ</li>
-    <li>メンテナンス頻度と燃費の関係</li>
-  </ul>
+  <p>
+    ハイブリッドでもターボでもない自然吸気ガソリン車で、
+    条件管理と整備最適化によりどこまで実燃費を向上できるかを検証すること。
+  </p>
 
-  <p class="mt-3">
-    各ページが増え次第、このトップページも随時更新していきます。
+  <p>
+    単なるカタログ比較ではなく、
+    <strong>実使用環境における再現可能な改善</strong>を重視しています。
+  </p>
+
+  <p class="mt-4">
+    今後もデータが蓄積され次第、各ページを更新していきます。
   </p>
 
 </div>
