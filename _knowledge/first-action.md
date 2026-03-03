@@ -146,6 +146,6 @@ tags:
 
   <ul>
     <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
-    <li><a href="/fuel-lab/solio/solio-overview.html">ソリオ実燃費改善トップページ</a></li>
+    <li><a href="/fuel-lab/solio/">ソリオ実燃費改善トップページ</a></li>
   </ul>
 </div>
