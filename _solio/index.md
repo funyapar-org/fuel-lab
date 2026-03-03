@@ -118,7 +118,7 @@ tags:
       実燃費まとめページ（総平均・季節変動・条件表示）
     </a>
 
-    <a href="/fuel-lab/solio/solio-fuel-summary-log.html"
+    <a href="/fuel-lab/solio/solio-fuel-economy-log.html"
        class="list-group-item list-group-item-action">
       実燃費ログ一覧
     </a>
