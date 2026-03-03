@@ -157,7 +157,7 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/solio/real-fuel-economy-summary.html">
+      <a href="/fuel-lab/solio/solio-fuel-summary.html">
         実燃費まとめページ
       </a>
     </li>
