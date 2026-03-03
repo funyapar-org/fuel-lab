@@ -10,7 +10,7 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
   <div class="mb-4">
     <h1 class="fw-bold">ソリオ</h1>
     <p class="text-muted">
-      実車（スズキ ソリオ MA26S 1.2L NA）の特徴や検証カテゴリです。<br>
+      実車（スズキ ソリオ DBA-MA26S 1.2L NA）の特徴や検証カテゴリです。<br>
       オイル粘度比較、燃費変化、添加剤効果などを実測値ベースで整理しています。
     </p>
   </div>
@@ -25,12 +25,12 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/solio/solio-throttle-body-cleaning.html" class="text-decoration-none">
-                ソリオのスロットルバルブ清掃をDIYで実施｜発進時のもたつきとアイドリング改善
+              <a href="/fuel-lab/solio/" class="text-decoration-none">
+                ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを目指す
               </a>
             </h5>
             <p class="card-text text-muted small">
-              ソリオで発進時のもたつきやアクセルレスポンス低下を感じ、スロットルバルブ清掃をDIYで実施しました。使用した道具、注意点、清掃手順、清掃前後の変化を写真付きでまとめています。
+              スズキ ソリオ（DBA-MA26S ガソリン車）で街乗り95%条件下において実燃費16km/Lを目指す燃費改善研究プロジェクトの総合トップページ
             </p>
           </div>
         </div>
@@ -40,12 +40,12 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/solio/fcr062-effect.html" class="text-decoration-none">
-                燃料添加剤(FCR-062)で燃費は改善するのか？実走行検証
+              <a href="/fuel-lab/solio/solio-fuel-summary.html" class="text-decoration-none">
+                ソリオ 実燃費まとめ
               </a>
             </h5>
             <p class="card-text text-muted small">
-              私のソリオでの変化量を実測値ベースで検証。
+              私のソリオの現状と実燃費の統計をまとめています。
             </p>
           </div>
         </div>
