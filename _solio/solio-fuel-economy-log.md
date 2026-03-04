@@ -204,8 +204,27 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('modalTreadF').textContent = log.conditions.tread_depth_mm_f;
     document.getElementById('modalTreadR').textContent = log.conditions.tread_depth_mm_r;
     document.getElementById('modalRotation').textContent = log.conditions.rotation_count;
+    
+    highlightIfChanged('modalOil', log.conditions.oil, prev.conditions.oil);
+    highlightIfChanged('modalTire', log.conditions.tire, prev.conditions.tire);
+    highlightIfChanged('modalWheel', log.conditions.wheel, prev.conditions.wheel);
+    highlightIfChanged('modalPressure', log.conditions.pressure_kpa, prev.conditions.pressure_kpa);
+    highlightIfChanged('modalTreadF', log.conditions.tread_depth_mm_f, prev.conditions.tread_depth_mm_f);
+    highlightIfChanged('modalTreadR', log.conditions.tread_depth_mm_r, prev.conditions.tread_depth_mm_r);
+    highlightIfChanged('modalRotation', log.conditions.rotation_count, prev.conditions.rotation_count);
+
   });
 });
+
+function highlightIfChanged(id, current, previous) {
+  const el = document.getElementById(id);
+
+  if (!previous) return;
+
+  if (current !== previous) {
+    el.classList.add("text-danger", "fw-bold");
+  }
+}
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
