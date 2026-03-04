@@ -29,6 +29,7 @@
 {% assign chart_data = "" %}
 
 <!-- 走行条件 -->
+{% assign prev_log = nil %}
 {% assign prev_oil = nil %}
 {% assign prev_tire = nil %}
 {% assign prev_wheel = nil %}
@@ -141,6 +142,8 @@
         <button class="btn btn-sm btn-outline-secondary"
           data-bs-toggle="modal"
           data-bs-target="#conditionModal"
+          data-log='{{ log | jsonify }}'
+          data-prev='{{ prev_log | jsonify }}'
           data-date="{{ log.date }}"
           data-price="{{ log.price_per_liter }}"
           data-oil="{{ log.conditions.oil }}"
@@ -176,6 +179,7 @@
   {{ chart_data }},{{ economy | round: 2 }}
   {% endcapture %}
   
+  {% assign prev_log = log %}
   {% assign prev_oil = log.conditions.oil %}
   {% assign prev_tire = log.conditions.tire %}
   {% assign prev_wheel = log.conditions.wheel %}
