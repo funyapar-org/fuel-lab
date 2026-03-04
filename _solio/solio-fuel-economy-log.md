@@ -219,10 +219,15 @@ document.addEventListener('DOMContentLoaded', function () {
 function highlightIfChanged(id, current, previous) {
   const el = document.getElementById(id);
 
-  if (!previous) return;
+  if (!previous) {
+    el.className = "";
+    return;
+  }
 
   if (current !== previous) {
     el.classList.add("text-danger", "fw-bold");
+  } else {
+    el.className = "";
   }
 }
 </script>
