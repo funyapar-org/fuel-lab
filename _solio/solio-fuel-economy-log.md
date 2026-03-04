@@ -187,35 +187,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   modal.addEventListener('show.bs.modal', function (event) {
     const button = event.relatedTarget;
+    
+    const log = JSON.parse(button.getAttribute('data-log'));
+    const prev = JSON.parse(button.getAttribute('data-prev') || "{}");
+    
+    const TIRES = {{ site.data.tires | jsonify }};
+    const WHEELS = {{ site.data.wheels | jsonify }};
 
-    document.getElementById('modalTitle').textContent =
-      "詳細情報（" + button.getAttribute('data-date') + "）";
+    document.getElementById('modalTitle').textContent = "詳細情報（" + log.date + "）";
 
-    document.getElementById('modalPrice').textContent =
-      button.getAttribute('data-price');
-
-    document.getElementById('modalOil').textContent =
-      button.getAttribute('data-oil');
-
-    document.getElementById('modalTire').textContent =
-      button.getAttribute('data-tire');
-
-    document.getElementById('modalWheel').textContent =
-      button.getAttribute('data-wheel');
-
-    document.getElementById('modalPressure').textContent =
-      button.getAttribute('data-pressure');
-      
-    document.getElementById('modalTreadF').textContent =
-      button.getAttribute('data-tread-f');
-
-  document.getElementById('modalTreadR').textContent =
-      button.getAttribute('data-tread-r');
-
-
-    document.getElementById('modalRotation').textContent =
-      button.getAttribute('data-rotation');
-
+    document.getElementById('modalPrice').textContent = log.price_per_liter;
+    document.getElementById('modalOil').textContent = log.conditions.oil;
+    document.getElementById('modalTire').textContent = TIRES[log.conditions.tire].model + "(" + TIRES[log.conditions.tire].size + ")";
+    document.getElementById('modalWheel').textContent = WHEELS[log.conditions.wheel].model + "(" + WHEELS[log.conditions.wheel].size + ")";
+    document.getElementById('modalPressure').textContent = log.conditions.pressure_kpa;
+    document.getElementById('modalTreadF').textContent = log.conditions.tread_depth_mm_f;
+    document.getElementById('modalTreadR').textContent = log.conditions.tread_depth_mm_r;
+    document.getElementById('modalRotation').textContent = log.conditions.rotation_count;
   });
 });
 </script>
