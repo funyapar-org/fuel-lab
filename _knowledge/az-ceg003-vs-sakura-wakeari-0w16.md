@@ -271,7 +271,7 @@ SPオイルは基本的に問題なく使用できます。
 </li>
 
 <li>
-<a href="/fuel-lab/solio/fuel-economy-log.html">
+<a href="/fuel-lab/solio/solio-fuel-economy-log.html">
 ソリオ実燃費ログ（満タン法）
 </a>
 </li>
