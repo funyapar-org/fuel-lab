@@ -277,7 +277,7 @@ SPオイルは基本的に問題なく使用できます。
 </li>
 
 <li>
-<a href="/fuel-lab/knowledge/engine-oil-viscosity-fuel-economy.html">
+<a href="/fuel-lab/knowledge/engine-oil-viscosity-theory.html">
 エンジンオイル粘度と燃費の関係
 </a>
 </li>
