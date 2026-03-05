@@ -28,7 +28,7 @@ date: 2026-03-05 11:30:00 +0900
 </p>
 
 <p>
-この記事では<strong>0W-16の4L缶</strongで両者を比較し、
+この記事では<strong>0W-16の4L缶</strong>で両者を比較し、
 価格・規格・特徴を整理してみました。
 </p>
 
@@ -95,7 +95,7 @@ Amazonで価格を見る
 <tr>
 <th>項目</th>
 <th>AZ CEG-003</th>
-<th>SAKURAワケありエンジンオイル</th>
+<th>SAKURA ワケありエンジンオイル</th>
 </tr>
 </thead>
 <tbody>
@@ -150,7 +150,7 @@ Amazonで価格を見る
 
 <ul>
 <li>AZ CEG-003：3550円</li>
-<li>SAKURAワケあり：3585円</li>
+<li>SAKURAワケありエンジンオイル：3585円</li>
 </ul>
 
 <p>
@@ -158,7 +158,7 @@ Amazonで価格を見る
 </p>
 
 <p>
-しかしSAKURAは<strong>Amazon定期配送が利用可能</strongで、
+しかしSAKURAは<strong>Amazon定期配送が利用可能</strong>で、
 10%割引が適用されると
 </p>
 
@@ -175,7 +175,7 @@ Amazonで価格を見る
 <h2 class="mt-4">規格の違い</h2>
 
 <p>
-両オイルとも<strong>API SP</strongを満たしています。
+両オイルとも<strong>API SP</strong>を満たしています。
 </p>
 
 <p>
@@ -192,7 +192,7 @@ Amazonで価格を見る
 </p>
 
 <p>
-GF-6Bは主に<strong>0W-16など超低粘度オイル向けの燃費規格</strongです。
+GF-6Bは主に<strong>0W-16など超低粘度オイル向けの燃費規格</strong>です。
 </p>
 
 <p>
@@ -245,7 +245,7 @@ SPオイルは基本的に問題なく使用できます。
 
 <p>
 通常価格はほぼ同じですが、
-<strong>定期配送を使うならSAKURAの方が安くなる</strongのが大きなポイントです。
+<strong>定期配送を使うならSAKURAの方が安くなる</strong>のが大きなポイントです。
 </p>
 
 <p>
