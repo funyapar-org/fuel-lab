@@ -253,7 +253,7 @@ SPオイルは基本的に問題なく使用できます。
 </p>
 
 <p>
-<a href="/fuel-lab/knowledge/why-choose-sakura-oil.html">
+<a href="/fuel-lab/solio/why-choose-sakura-oil.html">
 なぜソリオにSAKURAワケありエンジンオイルを選んだのか
 </a>
 </p>
@@ -265,7 +265,7 @@ SPオイルは基本的に問題なく使用できます。
 <ul>
 
 <li>
-<a href="/fuel-lab/knowledge/why-choose-sakura-oil.html">
+<a href="/fuel-lab/solio/why-choose-sakura-oil.html">
 なぜソリオにSAKURAワケありエンジンオイルを選んだのか
 </a>
 </li>
