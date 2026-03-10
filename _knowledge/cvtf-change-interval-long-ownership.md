@@ -10,7 +10,7 @@ tags:
 - transmission
 - maintenance
 - solio
-date: 2026-03-11 09:00:00 +0900
+date: 2026-03-11 06:00:00 +0900
 ---
 
 <div class="container my-4">
