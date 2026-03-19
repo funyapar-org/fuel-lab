@@ -22,6 +22,6 @@ default.htmlである程度共通化が進んでいます。
 title, nav_title, description, category, tagsを設定してください。
 tagsは英数のケバブケースでお願いします。
 関連ページのリンクがあると嬉しいです。
-リンクのパスは車の知識ページならば「/fuel-lab/knowledge/*.html」、私のソリオに関するページならば「/fuel-lab/solio/*.html」という形式にしてください。
+リンクのパスは車の知識ページならば「{{ site.baseurl }}/knowledge/*.html」、私のソリオに関するページならば「{{ site.baseurl }}/solio/*.html」という形式にしてください。
 コピペしたいので各ファイルは全文でください。
 ------------------------

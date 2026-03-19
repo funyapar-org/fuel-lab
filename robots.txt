@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://funyapar-org.github.io/fuel-lab/sitemap.xml
+Sitemap: https://funyapar-fuel-lab.com/sitemap.xml
