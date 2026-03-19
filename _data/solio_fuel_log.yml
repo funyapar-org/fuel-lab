@@ -1,9 +1,7 @@
 - date: 2025-09-06
-  odometer: 25529
-  distance: 272
+  odometer: 25534
   fuel: 19.40
   price_per_liter: 160
-  season: summer
   note: 中古購入後初回給油
   conditions:
     oil: 5w-30
@@ -16,11 +14,9 @@
     rotation_count: 0
 
 - date: 2025-09-20
-  odometer: 25766
-  distance: 237
+  odometer: 25771
   fuel: 21.56
   price_per_liter: 161
-  season: summer
   note: 燃費悪化期
   conditions:
     oil: 5w-30
@@ -33,11 +29,9 @@
     rotation_count: 0
 
 - date: 2025-10-01
-  odometer: 26042
-  distance: 276
+  odometer: 26047
   fuel: 19.71
   price_per_liter: 160
-  season: summer
   note: 添加剤投入後
   link: /fuel-lab/solio/fcr062-effect.html
   conditions:
@@ -51,11 +45,9 @@
     rotation_count: 0
 
 - date: 2025-10-18
-  odometer: 26360
-  distance: 318
+  odometer: 26365
   fuel: 22.52
   price_per_liter: 159
-  season: autumn
   note: 秋の燃費改善
   conditions:
     oil: 5w-30
@@ -68,11 +60,9 @@
     rotation_count: 0
 
 - date: 2025-11-07
-  odometer: 26674
-  distance: 314
+  odometer: 26679
   fuel: 22.14
   price_per_liter: 158
-  season: autumn
   note: 秋の燃費改善
   conditions:
     oil: 5w-30
@@ -85,11 +75,9 @@
     rotation_count: 0
 
 - date: 2025-11-21
-  odometer: 26984
-  distance: 310
+  odometer: 26989
   fuel: 21.86
   price_per_liter: 152
-  season: autumn
   conditions:
     oil: 5w-30
     tire: eg02
@@ -101,11 +89,9 @@
     rotation_count: 0
 
 - date: 2025-11-29
-  odometer: 27144
-  distance: 160
+  odometer: 27149
   fuel: 11.24
   price_per_liter: 149
-  season: autumn
   conditions:
     oil: 5w-30
     tire: eg02
@@ -117,11 +103,9 @@
     rotation_count: 0
 
 - date: 2025-12-11
-  odometer: 27307
-  distance: 163
+  odometer: 27312
   fuel: 11.62
   price_per_liter: 143
-  season: winter
   note: 冬の始まり
   link: /fuel-lab/knowledge/winter-fuel-economy.html
   conditions:
@@ -135,11 +119,9 @@
     rotation_count: 0
 
 - date: 2025-12-20
-  odometer: 27562
-  distance: 255
+  odometer: 27567
   fuel: 18.45
   price_per_liter: 141
-  season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
   conditions:
@@ -153,11 +135,9 @@
     rotation_count: 0
 
 - date: 2026-01-04
-  odometer: 27787
-  distance: 225
+  odometer: 27792
   fuel: 16.44
   price_per_liter: 138
-  season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
   conditions:
@@ -171,11 +151,9 @@
     rotation_count: 0
 
 - date: 2026-01-26
-  odometer: 28064
-  distance: 277
+  odometer: 28069
   fuel: 20.34
   price_per_liter: 139
-  season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
   conditions:
@@ -189,11 +167,9 @@
     rotation_count: 0
 
 - date: 2026-02-13
-  odometer: 28328
-  distance: 264
+  odometer: 28333
   fuel: 19.43
   price_per_liter: 143
-  season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
   conditions:
@@ -207,13 +183,26 @@
     rotation_count: 0
 
 - date: 2026-02-23
-  odometer: 28502
-  distance: 174
+  odometer: 28507
   fuel: 12.81
   price_per_liter: 142
-  season: winter
   note: 冬の燃費悪化
   link: /fuel-lab/knowledge/winter-fuel-economy.html
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
+    tread_depth_mm_f: 5.5
+    tread_depth_mm_r: 5.8
+    rotation_count: 0
+
+- date: 2026-03-19
+  odometer: 28759
+  fuel: 18.36
+  price_per_liter: 160
+  note: 春の燃費改善
   conditions:
     oil: 5w-30
     tire: eg02
