@@ -22,7 +22,7 @@ tags:
     </h1>
     <p class="text-muted">
       「低回転で走るとエンジンが汚れる」「たまには回さないとダメ」<br>
-      こうした話を聞いて、<a href="/fuel-lab/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転</a>に
+      こうした話を聞いて、<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転</a>に
       不安を感じたことはありませんか？
     </p>
   </header>
@@ -56,7 +56,7 @@ tags:
 
     <p>
       これらは<strong>昔のエンジンでは事実だった側面</strong>があります。  
-      ただし、<a href="/fuel-lab/knowledge/engine-oil-and-combustion-evolution.html">エンジンオイルや燃焼制御の進化</a>を
+      ただし、<a href="{{ site.baseurl }}/knowledge/engine-oil-and-combustion-evolution.html">エンジンオイルや燃焼制御の進化</a>を
       考慮せずに語られているケースが多いのも事実です。
     </p>
   </section>
@@ -81,7 +81,7 @@ tags:
     </div>
 
     <p>
-      これは、<a href="/fuel-lab/knowledge/steel-vs-alloy-wheel-fuel-cost.html">ホイール重量や転がり抵抗を意識した燃費改善</a>
+      これは、<a href="{{ site.baseurl }}/knowledge/steel-vs-alloy-wheel-fuel-cost.html">ホイール重量や転がり抵抗を意識した燃費改善</a>
       と同じく、「日常使用で効く部分」を重視した設計思想です。
     </p>
   </section>
@@ -106,7 +106,7 @@ tags:
     <h3 class="h5 fw-bold mt-4">必要以上に「洗浄」を意識しなくてよい</h3>
     <p>
       どうしても汚れが気になる場合でも、
-      <a href="/fuel-lab/knowledge/fuel-additive.html">燃料添加剤</a>を
+      <a href="{{ site.baseurl }}/knowledge/fuel-additive.html">燃料添加剤</a>を
       正しく理解した上で使用することが重要です。
     </p>
   </section>
@@ -133,8 +133,8 @@ tags:
     </p>
     <p>
       ソリオのK12Cエンジンは、低回転で走ることを前提に設計されています。  
-      <a href="/fuel-lab/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転</a>と
-      <a href="/fuel-lab/knowledge/car-maintenance-basic.html">基本的なメンテナンス</a>を守っていれば、
+      <a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転</a>と
+      <a href="{{ site.baseurl }}/knowledge/car-maintenance-basic.html">基本的なメンテナンス</a>を守っていれば、
       過度に心配する必要はありません。
     </p>
   </section>

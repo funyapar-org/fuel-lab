@@ -115,7 +115,7 @@ tags:
       </p>
 
       <div class="mt-3">
-        <a href="/fuel-lab/knowledge/winter-fuel-economy.html" class="btn btn-sm btn-outline-primary">
+        <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html" class="btn btn-sm btn-outline-primary">
           寒いと燃費が下がる理由
         </a>
       </div>
@@ -163,10 +163,10 @@ tags:
       </p>
 
       <div class="mt-3 d-flex flex-wrap gap-2">
-        <a href="/fuel-lab/knowledge/fuel-additive.html" class="btn btn-sm btn-outline-warning">
+        <a href="{{ site.baseurl }}/knowledge/fuel-additive.html" class="btn btn-sm btn-outline-warning">
           燃料添加剤とは？
         </a>
-        <a href="/fuel-lab/solio/solio-throttle-body-cleaning.html" class="btn btn-sm btn-outline-warning">
+        <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning.html" class="btn btn-sm btn-outline-warning">
           ソリオのスロットルバルブ清掃
         </a>
       </div>

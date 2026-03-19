@@ -105,19 +105,19 @@ tags:
 
   <ul class="list-group mb-4">
     <li class="list-group-item">
-      <a href="/fuel-lab/knowledge/fuel-additive.html">燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説</a>
+      <a href="{{ site.baseurl }}/knowledge/fuel-additive.html">燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説</a>
     </li>
     <li class="list-group-item">
-      <a href="/fuel-lab/knowledge/engine-start-bad.html">エンジン始動が悪い原因とは？セルは回るのにかからない理由</a>
+      <a href="{{ site.baseurl }}/knowledge/engine-start-bad.html">エンジン始動が悪い原因とは？セルは回るのにかからない理由</a>
     </li>
     <li class="list-group-item">
-      <a href="/fuel-lab/knowledge/idle-high.html">アイドリング回転数が高い原因とは？1000rpm以上になる理由を解説</a>
+      <a href="{{ site.baseurl }}/knowledge/idle-high.html">アイドリング回転数が高い原因とは？1000rpm以上になる理由を解説</a>
     </li>
     <li class="list-group-item">
-      <a href="/fuel-lab/knowledge/idle-unstable.html">アイドリングが不安定な原因とは？回転数が上下する理由を解説</a>
+      <a href="{{ site.baseurl }}/knowledge/idle-unstable.html">アイドリングが不安定な原因とは？回転数が上下する理由を解説</a>
     </li>
     <li class="list-group-item">
-      <a href="/fuel-lab/solio/fcr062-effect.html">燃料添加剤(FCR-062)を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー</a>
+      <a href="{{ site.baseurl }}/solio/fcr062-effect.html">燃料添加剤(FCR-062)を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー</a>
     </li>
   </ul>
 
@@ -145,7 +145,7 @@ tags:
   <h2 class="mb-3">関連ページ</h2>
 
   <ul>
-    <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
-    <li><a href="/fuel-lab/solio/">ソリオ実燃費改善トップページ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
+    <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費改善トップページ</a></li>
   </ul>
 </div>

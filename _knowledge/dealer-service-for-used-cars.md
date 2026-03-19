@@ -174,10 +174,10 @@ date: 2026-03-16 14:20:00 +0900
 <h2 class="mt-4">関連ページ</h2>
 
 <ul>
-<li><a href="/fuel-lab/knowledge/cvtf-change-interval-long-ownership.html">CVTフルードは交換するべき？</a></li>
-<li><a href="/fuel-lab/knowledge/engine-warmup-idling-vs-driving.html">エンジン暖機は必要？</a></li>
-<li><a href="/fuel-lab/knowledge/short-trip-poor-fuel-economy.html">短距離走行はなぜ燃費が悪い？</a></li>
-<li><a href="/fuel-lab/solio/solio-fuel-economy-log.html">ソリオ燃費ログ（実燃費公開）</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership.html">CVTフルードは交換するべき？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">エンジン暖機は必要？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離走行はなぜ燃費が悪い？</a></li>
+<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ燃費ログ（実燃費公開）</a></li>
 </ul>
 
 </div>

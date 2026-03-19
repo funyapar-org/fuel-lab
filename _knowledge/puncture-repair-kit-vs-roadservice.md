@@ -148,9 +148,9 @@ date: 2026-02-22 18:30:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="/fuel-lab/knowledge/engine-oil-selection-standards.html">エンジンオイルの選び方</a></li>
-        <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">満タン法の正しいやり方</a></li>
-        <li><a href="/fuel-lab/solio/solio-overview.html">ソリオ燃費改善トップページ</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards.html">エンジンオイルの選び方</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">満タン法の正しいやり方</a></li>
+        <li><a href="{{ site.baseurl }}/solio/solio-overview.html">ソリオ燃費改善トップページ</a></li>
       </ul>
 
     </div>

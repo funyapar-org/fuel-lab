@@ -46,7 +46,7 @@ tags:
           <p>
             年間1万km程度では、燃費差によるガソリン代の差は<strong>数万円レベル</strong>に収まることが多いです。
           </p>
-          <a href="/fuel-lab/knowledge/real-fuel-economy-thinking.html" class="link-primary">
+          <a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html" class="link-primary">
             実燃費の考え方はこちら
           </a>
         </div>
@@ -60,7 +60,7 @@ tags:
           <p>
             車重・タイヤサイズは、長期的な維持費に大きく影響します。
           </p>
-          <a href="/fuel-lab/knowledge/tire-and-fuel-economy.html" class="link-primary">
+          <a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html" class="link-primary">
             タイヤと燃費・維持費の関係
           </a>
         </div>
@@ -135,7 +135,7 @@ tags:
     燃費差だけで価格差を回収できないケースも少なくありません。
   </div>
 
-  <a href="/fuel-lab/solio/solio-mild-hybrid-cost.html" class="link-primary">
+  <a href="{{ site.baseurl }}/solio/solio-mild-hybrid-cost.html" class="link-primary">
     マイルドハイブリッドの維持費について詳しく見る
   </a>
 </section>
@@ -152,9 +152,9 @@ tags:
 <section class="p-4 rounded">
   <h2 class="h5 mb-3">関連ページ</h2>
   <ul class="mb-0">
-    <li><a href="/fuel-lab/solio/why-choose-solio-gasoline.html">なぜソリオのガソリン車を選んだのか</a></li>
-    <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
-    <li><a href="/fuel-lab/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
+    <li><a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline.html">なぜソリオのガソリン車を選んだのか</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
   </ul>
 </section>
 

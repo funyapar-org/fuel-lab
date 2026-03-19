@@ -74,7 +74,7 @@ tags:
 
   <p>
     規格の役割について詳しく知りたい方は
-    <a href="/fuel-lab/knowledge/engine-oil-standards-overview.html">
+    <a href="{{ site.baseurl }}/knowledge/engine-oil-standards-overview.html">
       エンジンオイル規格の役割分担
     </a>
     もご覧ください。
@@ -166,7 +166,7 @@ tags:
 
   <p>
     粘度変更による燃費や維持費の影響については
-    <a href="/fuel-lab/knowledge/0w16-vs-0w20-cost.html">
+    <a href="{{ site.baseurl }}/knowledge/0w16-vs-0w20-cost.html">
       0W-16と0W-20の維持費比較
     </a>
     も参考になります。

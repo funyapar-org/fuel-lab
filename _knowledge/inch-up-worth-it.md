@@ -203,32 +203,32 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/knowledge/inch-down-merits-demerits.html">
+      <a href="{{ site.baseurl }}/knowledge/inch-down-merits-demerits.html">
         インチダウンのメリットとデメリット
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/aluminum-wheel-types-comparison.html">
+      <a href="{{ site.baseurl }}/knowledge/aluminum-wheel-types-comparison.html">
         アルミホイールの種類と特徴比較
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/tire-wheel.html">
+      <a href="{{ site.baseurl }}/knowledge/tire-wheel.html">
         タイヤとホイールで燃費は変わる？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/solio/fuel-optimization-by-tire.html">
+      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
         ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/tools/tire-simulator.html">
+      <a href="{{ site.baseurl }}/tools/tire-simulator.html">
         タイヤサイズ変更の燃費影響シミュレーター
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/tools/wheel-weight-fuel-simulator.html">
+      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator.html">
         ホイール重量と燃費影響シミュレーター
       </a>
     </li>

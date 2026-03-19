@@ -26,7 +26,7 @@ description: タイヤの転がり抵抗、空気圧管理、サイズ変更に�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/tire-and-fuel-economy.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html" class="text-decoration-none">
                 タイヤサイズと燃費・維持費の関係｜意外と見落とされがちな重要ポイント
               </a>
             </h5>
@@ -41,7 +41,7 @@ description: タイヤの転がり抵抗、空気圧管理、サイズ変更に�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/aaa-label-truth.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/aaa-label-truth.html" class="text-decoration-none">
                 AAAラベリングは本当に燃費がいいのか？｜転がり抵抗表示の正しい読み方
               </a>
             </h5>

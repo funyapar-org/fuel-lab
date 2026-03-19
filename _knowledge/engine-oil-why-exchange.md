@@ -130,9 +130,9 @@ tags:
   <h2>次に読むと理解が深まるページ</h2>
 
   <ul>
-    <li><a href="/fuel-lab/knowledge/engine-oil-interval.html">エンジンオイルは何kmごとに交換すべき？</a></li>
-    <li><a href="/fuel-lab/knowledge/engine-oil-viscosity.html">0W-16と0W-20の違いをわかりやすく解説</a></li>
-    <li><a href="/fuel-lab/knowledge/engine-oil-diy-vs-shop.html">オイル交換はDIYと店舗、どちらが得？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">エンジンオイルは何kmごとに交換すべき？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity.html">0W-16と0W-20の違いをわかりやすく解説</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/engine-oil-diy-vs-shop.html">オイル交換はDIYと店舗、どちらが得？</a></li>
   </ul>
 
   <div class="alert alert-secondary mt-5">

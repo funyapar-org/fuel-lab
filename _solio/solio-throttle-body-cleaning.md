@@ -50,7 +50,7 @@ tags:
 
       <div class="row">
         <div class="col-md-6 mb-3">
-          <img src="/fuel-lab/assets/img/throttle/tools.jpg"
+          <img src="{{ site.baseurl }}/assets/img/throttle/tools.jpg"
                class="img-fluid rounded border"
                alt="スロットルバルブ清掃に使用した道具一式">
         </div>
@@ -101,7 +101,7 @@ tags:
       <div class="row">
         <div class="col-md-6 mb-3">
           <p>清掃で分解する部分</p>
-          <img src="/fuel-lab/assets/img/throttle/cleaning0.jpg"
+          <img src="{{ site.baseurl }}/assets/img/throttle/cleaning0.jpg"
                class="img-fluid rounded border mb-3"
               alt="清掃で分解する部分">
         </div>
@@ -147,10 +147,10 @@ tags:
         </ol>
       </div>
 
-      <img src="/fuel-lab/assets/img/throttle/cleaning1.jpg"
+      <img src="{{ site.baseurl }}/assets/img/throttle/cleaning1.jpg"
            class="img-fluid rounded border mb-3"
            alt="スロットルバルブ清掃">
-      <img src="/fuel-lab/assets/img/throttle/cleaning2.jpg"
+      <img src="{{ site.baseurl }}/assets/img/throttle/cleaning2.jpg"
            class="img-fluid rounded border mb-3"
            alt="スロットルバルブの汚れ">
     </div>
@@ -199,7 +199,7 @@ tags:
             アイドリングが高止まりする原因と、  
             実際に改善した事例をまとめています。
           </p>
-          <a href="/fuel-lab/knowledge/idle-high.html"
+          <a href="{{ site.baseurl }}/knowledge/idle-high.html"
              class="btn btn-outline-secondary">
             ページを見る
           </a>
@@ -214,7 +214,7 @@ tags:
           <p>
             燃料添加剤FCR-062を使用した実体験レビューです。
           </p>
-          <a href="/fuel-lab/solio/fcr062-effect.html"
+          <a href="{{ site.baseurl }}/solio/fcr062-effect.html"
              class="btn btn-warning fw-bold">
             レビューを見る
           </a>

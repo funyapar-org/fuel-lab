@@ -71,7 +71,7 @@ tags:
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/fuel-lab/assets/img/solio-idling-normal.jpg"
+      <img src="{{ site.baseurl }}/assets/img/solio-idling-normal.jpg"
            class="img-fluid rounded shadow-sm"
            alt="ソリオ 既定のアイドリング回転数 650rpm">
       <small class="text-muted d-block mt-2">
@@ -99,7 +99,7 @@ tags:
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/fuel-lab/assets/img/solio-idling-high.jpg"
+      <img src="{{ site.baseurl }}/assets/img/solio-idling-high.jpg"
            class="img-fluid rounded shadow-sm"
            alt="ソリオ アイドリング回転数が高い状態">
       <small class="text-muted d-block mt-2">
@@ -175,7 +175,7 @@ tags:
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="/fuel-lab/assets/img/solio-idling-after.jpg"
+      <img src="{{ site.baseurl }}/assets/img/solio-idling-after.jpg"
            class="img-fluid rounded shadow-sm"
            alt="FCR-062使用後のアイドリング回転数">
       <small class="text-muted d-block mt-2">
@@ -226,7 +226,7 @@ tags:
             燃料添加剤がどのように働くのかを  
             初心者向けに解説しています。
           </p>
-          <a href="/fuel-lab/knowledge/fuel-additive.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -241,7 +241,7 @@ tags:
             実際にソリオで使用した  
             体験レビューをまとめています。
           </p>
-          <a href="/fuel-lab/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
+          <a href="{{ site.baseurl }}/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

@@ -106,12 +106,12 @@ tags:
 
     <div class="list-group">
 
-      <a href="/fuel-lab/knowledge/0w16-vs-0w20-cost.html"
+      <a href="{{ site.baseurl }}/knowledge/0w16-vs-0w20-cost.html"
          class="list-group-item list-group-item-action">
         0W-16と0W-20で燃費はどれくらい変わるのか？
       </a>
 
-      <a href="/fuel-lab/knowledge/engine-oil-interval.html"
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html"
          class="list-group-item list-group-item-action">
         エンジンオイル交換は何kmごとが最適か？
       </a>

@@ -59,7 +59,7 @@ category: fuel-economy
     <div class="mt-4">
       <p>💡燃費改善ってどうやるの？を解決！</p>
       <ul>
-        <li><a href="/fuel-lab/tools/fuel-advice.html">燃費改善アドバイスツール</a></li>
+        <li><a href="{{ site.baseurl }}/tools/fuel-advice.html">燃費改善アドバイスツール</a></li>
       </ul>
     </div>
   </div>

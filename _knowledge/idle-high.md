@@ -137,10 +137,10 @@ tags:
 
   <!-- 関連リンク -->
   <div class="mt-4 text-center">
-    <a href="/fuel-lab/knowledge/engine-start-bad.html" class="btn btn-outline-secondary m-1">
+    <a href="{{ site.baseurl }}/knowledge/engine-start-bad.html" class="btn btn-outline-secondary m-1">
       エンジン始動が悪い原因
     </a>
-    <a href="/fuel-lab/knowledge/fuel-additive.html" class="btn btn-outline-primary m-1">
+    <a href="{{ site.baseurl }}/knowledge/fuel-additive.html" class="btn btn-outline-primary m-1">
       燃料添加剤とは？
     </a>
   </div>

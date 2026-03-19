@@ -177,7 +177,7 @@ AAAは規定試験において「最も転がり抵抗が小さい」グルー�
           サイズ変更が燃費や交換コストにどう影響するのかを、
           数値ベースで解説しています。
         </p>
-        <a href="/fuel-lab/knowledge/tire-and-fuel-cost.html" class="btn btn-outline-primary">
+        <a href="{{ site.baseurl }}/knowledge/tire-and-fuel-cost.html" class="btn btn-outline-primary">
           ページを見る
         </a>
       </div>
@@ -193,7 +193,7 @@ AAAは規定試験において「最も転がり抵抗が小さい」グルー�
         <p>
           ソリオで実際に行ったタイヤ・ホイール選びの思考過程と結果をまとめています。
         </p>
-        <a href="/fuel-lab/solio/fuel-optimization-by-tire.html" class="btn btn-secondary">
+        <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html" class="btn btn-secondary">
           実記録を見る
         </a>
       </div>

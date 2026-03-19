@@ -123,17 +123,17 @@ tags:
         <h2 class="h5 fw-semibold mb-3">関連ページ</h2>
         <ul>
           <li>
-            <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html">
+            <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
               低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
             </a>
           </li>
           <li>
-            <a href="/fuel-lab/knowledge/driving-for-fuel-efficiency.html">
+            <a href="{{ site.baseurl }}/knowledge/driving-for-fuel-efficiency.html">
               燃費を意識した運転とは？低回転エンジンとの正しい付き合い方
             </a>
           </li>
           <li>
-            <a href="/fuel-lab/knowledge/oil-viscosity-0w16-0w20.html">
+            <a href="{{ site.baseurl }}/knowledge/oil-viscosity-0w16-0w20.html">
               0W-16と0W-20の違い｜燃費とエンジン保護の考え方
             </a>
           </li>

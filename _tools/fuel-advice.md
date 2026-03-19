@@ -145,7 +145,7 @@ const ACTIONS = [
   },
   {
     id: 'injector',
-    name: 'エンジンのクリーニング（<a href="/fuel-lab/knowledge/fuel-additive.html">燃料添加剤</a> / プロ清掃）',
+    name: 'エンジンのクリーニング（<a href="{{ site.baseurl }}/knowledge/fuel-additive.html">燃料添加剤</a> / プロ清掃）',
     cost_jpy: 3000,
     max_pct: 0.08,
     desc: '噴霧改善やカーボン除去で燃焼効率が上がります。汚れがひどい場合は大きく効きます。'
@@ -308,7 +308,7 @@ document.getElementById('adviceForm').addEventListener('submit', function(e){
             ${it.id === 'oil' ? '<li>オイルとオイルフィルタを交換。</li>' : ''}
             ${it.id === 'tyre_pressure' ? '<li>各タイヤを規定空気圧に調整。月1回点検を推奨。</li>' : ''}
             ${it.id === 'tyre_replace' ? '<li>低転がり抵抗の新品エコタイヤへ交換。</li>' : ''}
-            ${it.id === 'injector' ? '<li>洗浄系の<a href="/fuel-lab/knowledge/fuel-additive.html">燃料添加剤</a>を給油時に適量投入、もしくはプロによる洗浄施工を実施。</li>' : ''}
+            ${it.id === 'injector' ? '<li>洗浄系の<a href="{{ site.baseurl }}/knowledge/fuel-additive.html">燃料添加剤</a>を給油時に適量投入、もしくはプロによる洗浄施工を実施。</li>' : ''}
             ${it.id === 'driving' ? '<li>発進は穏やかに：0→20km/hをゆっくり、定速巡航で燃費改善。</li>' : ''}
             ${it.id === 'ecu' ? '<li>整備や改善後はしばらく通常走行すると、車の制御システムが新しい状態に自動調整されます。</li>' : ''}
             ${it.id === 'spark' ? '<li>プラグの点検・必要なら交換（ギャップ/熱価を確認）。</li>' : ''}

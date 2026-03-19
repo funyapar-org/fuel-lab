@@ -55,7 +55,7 @@
       {% for tag in page.tags %}
         {% assign display_name = site.data.tag_aliases[tag] | default: tag %}
         <a
-          href="/fuel-lab/tags/{{ tag | uri_escape }}/"
+          href="{{ site.baseurl }}/tags/{{ tag | uri_escape }}/"
           class="badge rounded-pill bg-secondary text-decoration-none"
         >
           {{ display_name }}

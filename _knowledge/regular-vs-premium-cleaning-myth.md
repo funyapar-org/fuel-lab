@@ -102,7 +102,7 @@ date: 2026-02-19 00:00:00 +0900
 
       <div class="alert alert-info mt-4">
         詳細は
-        <a href="/fuel-lab/knowledge/fuel-additive-pea-effect.html">
+        <a href="{{ site.baseurl }}/knowledge/fuel-additive-pea-effect.html">
           PEA系燃料添加剤は本当に効果があるのか？
         </a>
         を参照してください。
@@ -139,17 +139,17 @@ date: 2026-02-19 00:00:00 +0900
       <h2 class="h5 mb-3">関連ページ</h2>
       <ul>
         <li>
-          <a href="/fuel-lab/knowledge/fuel-additive.html">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive.html">
             燃料添加剤とは何か？効果・メリット・使うべき人を初心者向けに解説
           </a>
         </li>
         <li>
-          <a href="/fuel-lab/knowledge/fuel-additive-pea-effect.html">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive-pea-effect.html">
             PEA系燃料添加剤は本当に効果があるのか？
           </a>
         </li>
         <li>
-          <a href="/fuel-lab/solio/fcr062-effect.html">
+          <a href="{{ site.baseurl }}/solio/fcr062-effect.html">
             PEA系燃料添加剤(FCR-062)を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー
           </a>
         </li>

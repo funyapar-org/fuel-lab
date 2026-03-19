@@ -247,19 +247,19 @@ K12Cエンジンの指定規格はおおむね次の通りです。
 <ul>
 
 <li>
-<a href="/fuel-lab/knowledge/az-ceg003-vs-sakura-wakeari-0w16.html">
+<a href="{{ site.baseurl }}/knowledge/az-ceg003-vs-sakura-wakeari-0w16.html">
 AZ CEG-003 vs SAKURAワケありエンジンオイル比較
 </a>
 </li>
 
 <li>
-<a href="/fuel-lab/knowledge/engine-oil-viscosity-theory.html">
+<a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory.html">
 エンジンオイル粘度と燃費の関係
 </a>
 </li>
 
 <li>
-<a href="/fuel-lab/solio/solio-fuel-economy-log.html">
+<a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">
 ソリオ実燃費ログ（満タン法）
 </a>
 </li>

@@ -171,10 +171,10 @@ CVTFは低温時に粘度が高くなり、次のような損失が増えます�
 <h2 class="mt-4">関連ページ</h2>
 
 <ul>
-<li><a href="/fuel-lab/knowledge/engine-warmup-idling-vs-driving.html">エンジン暖機は必要？アイドリングより暖気走行が燃費に有利な理由</a></li>
-<li><a href="/fuel-lab/knowledge/blue-coolant-light-warmup.html">青い水温警告灯が消えたら暖機完了？</a></li>
-<li><a href="/fuel-lab/knowledge/cvt-warmup-distance.html">CVTは何kmで暖機完了する？</a></li>
-<li><a href="/fuel-lab/solio/solio-fuel-economy-log.html">ソリオ燃費ログ（実燃費公開）</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">エンジン暖機は必要？アイドリングより暖気走行が燃費に有利な理由</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/blue-coolant-light-warmup.html">青い水温警告灯が消えたら暖機完了？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/cvt-warmup-distance.html">CVTは何kmで暖機完了する？</a></li>
+<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ燃費ログ（実燃費公開）</a></li>
 </ul>
 
 </div>

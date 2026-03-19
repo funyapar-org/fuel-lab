@@ -114,7 +114,7 @@ tags:
 
   <p>
     空気圧管理の基礎については
-    <a href="/fuel-lab/knowledge/tire-air-pressure.html">
+    <a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">
       燃費に効く空気圧管理の基礎
     </a>
     も参照してください。
@@ -193,22 +193,22 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/knowledge/tire-air-pressure.html">
+      <a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">
         燃費に効く空気圧管理の基礎
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/tire-change-diy-worth-it.html">
+      <a href="{{ site.baseurl }}/knowledge/tire-change-diy-worth-it.html">
         タイヤ交換DIYは本当に得か？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/inch-up-worth-it.html">
+      <a href="{{ site.baseurl }}/knowledge/inch-up-worth-it.html">
         インチアップは本当に損なのか？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/tools/wheel-weight-fuel-simulator.html">
+      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator.html">
         ホイール重量と燃費影響シミュレーター
       </a>
     </li>

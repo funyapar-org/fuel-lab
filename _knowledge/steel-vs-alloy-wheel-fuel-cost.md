@@ -178,15 +178,15 @@ tags:
   </div>
   <div class="list-group list-group-flush">
     <a class="list-group-item list-group-item-action"
-       href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">
+       href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">
       実燃費で考える燃費改善の考え方
     </a>
     <a class="list-group-item list-group-item-action"
-       href="/fuel-lab/knowledge/tire-and-fuel-economy.html">
+       href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">
       タイヤサイズと燃費・維持費の関係
     </a>
     <a class="list-group-item list-group-item-action"
-       href="/fuel-lab/solio/solio-overview.html">
+       href="{{ site.baseurl }}/solio/solio-overview.html">
       ソリオという車の特徴と燃費傾向まとめ
     </a>
   </div>

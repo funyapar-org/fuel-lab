@@ -25,7 +25,7 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/solio/" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/solio/" class="text-decoration-none">
                 ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを目指す
               </a>
             </h5>
@@ -40,7 +40,7 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/solio/solio-fuel-summary.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/solio/solio-fuel-summary.html" class="text-decoration-none">
                 ソリオ 実燃費まとめ
               </a>
             </h5>

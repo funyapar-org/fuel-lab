@@ -106,12 +106,12 @@ tags:
 
     <div class="list-group">
 
-      <a href="/fuel-lab/knowledge/first-action.html"
+      <a href="{{ site.baseurl }}/knowledge/first-action.html"
          class="list-group-item list-group-item-action">
         燃費改善のために今日からできること｜ガソリン代を抑える基本対策まとめ
       </a>
 
-      <a href="/fuel-lab/knowledge/city-driving-fuel-saving.html"
+      <a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html"
          class="list-group-item list-group-item-action">
         街乗りでも燃費を諦めたくない人におすすめの燃費対策
       </a>

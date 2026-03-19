@@ -146,22 +146,22 @@ tags:
 
       <ul>
         <li>
-          <a href="/fuel-lab/knowledge/engine-oil-standards-overview.html">
+          <a href="{{ site.baseurl }}/knowledge/engine-oil-standards-overview.html">
             エンジンオイル規格の役割分担とは？
           </a>
         </li>
         <li>
-          <a href="/fuel-lab/knowledge/engine-oil-selection-flow.html">
+          <a href="{{ site.baseurl }}/knowledge/engine-oil-selection-flow.html">
             エンジンオイル選択のフローチャート
           </a>
         </li>
         <li>
-          <a href="/fuel-lab/knowledge/engine-oil-why-exchange.html">
+          <a href="{{ site.baseurl }}/knowledge/engine-oil-why-exchange.html">
             エンジンオイル交換ってなぜ必要なの？
           </a>
         </li>
         <li>
-          <a href="/fuel-lab/solio/0w16-vs-0w20-cost.html">
+          <a href="{{ site.baseurl }}/solio/0w16-vs-0w20-cost.html">
             0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？
           </a>
         </li>

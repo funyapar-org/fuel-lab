@@ -86,9 +86,9 @@ date: 2026-02-19 13:00:00 +0900
         <li class="list-group-item">比較方法：通常使用時の燃費記録との比較</li>
       </ul>
 
-      <img src="/fuel-lab/assets/img/aluminum_tape/front1.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例1">
-      <img src="/fuel-lab/assets/img/aluminum_tape/front2.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例2">
-      <img src="/fuel-lab/assets/img/aluminum_tape/rear.jpg" class="img-fluid rounded shadow-sm mb-4" alt="リアタイヤハウス内のアルミテープ施工例">
+      <img src="{{ site.baseurl }}/assets/img/aluminum_tape/front1.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例1">
+      <img src="{{ site.baseurl }}/assets/img/aluminum_tape/front2.jpg" class="img-fluid rounded shadow-sm mb-4" alt="フロントタイヤハウス内のアルミテープ施工例2">
+      <img src="{{ site.baseurl }}/assets/img/aluminum_tape/rear.jpg" class="img-fluid rounded shadow-sm mb-4" alt="リアタイヤハウス内のアルミテープ施工例">
 
       <p>
         タイヤハウスは乱流が強く、空力的影響が大きい部位です。
@@ -141,10 +141,10 @@ date: 2026-02-19 13:00:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="/fuel-lab/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a></li>
-        <li><a href="/fuel-lab/knowledge/first-action.html">燃費改善の最初にやるべきこと</a></li>
-        <li><a href="/fuel-lab/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
-        <li><a href="/fuel-lab/solio/">ソリオ実燃費改善トップページ</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/first-action.html">燃費改善の最初にやるべきこと</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
+        <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費改善トップページ</a></li>
       </ul>
 
     </div>

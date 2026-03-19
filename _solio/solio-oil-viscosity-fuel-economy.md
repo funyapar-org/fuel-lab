@@ -176,17 +176,17 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-viscosity.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity.html">
         エンジンオイル粘度の違いを解説
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-interval.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">
         オイル交換は何kmごとが適切？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/az-ceg-003-0w16-review.html">
+      <a href="{{ site.baseurl }}/knowledge/az-ceg-003-0w16-review.html">
         エンジンオイル AZ社のCEG-003 0W-16は買いか？
       </a>
     </li>

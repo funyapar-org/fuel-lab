@@ -177,7 +177,7 @@ tags:
 
   <div class="alert alert-info">
     関連記事：<br>
-    <a href="/fuel-lab/knowledge/engine-oil-interval.html">
+    <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">
       エンジンオイルは何kmごとに交換すべき？（街乗り・短距離基準）
     </a>
   </div>
@@ -188,17 +188,17 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-why-exchange.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-why-exchange.html">
         エンジンオイル交換ってなぜ必要なの？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-interval.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">
         エンジンオイルは何kmごとに交換すべき？
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html">
+      <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
         低回転＝汚れるは誤解？ソリオK12Cの実情
       </a>
     </li>

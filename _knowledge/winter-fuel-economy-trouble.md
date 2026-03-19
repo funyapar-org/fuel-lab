@@ -146,7 +146,7 @@ tags:
             冬に燃費が落ちる仕組みを、  
             エンジン制御や物理的な観点から詳しく解説しています。
           </p>
-          <a href="/fuel-lab/knowledge/winter-fuel-economy.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -161,7 +161,7 @@ tags:
             気づきにくい燃費低下の原因と、  
             自分でできる対策をまとめた解説ページです。
           </p>
-          <a href="/fuel-lab/knowledge/fuel-economy-worsens.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>

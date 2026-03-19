@@ -133,17 +133,17 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/solio/k12c-low-rpm-carbon-myth.html">
+      <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
         低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-and-combustion-evolution.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-and-combustion-evolution.html">
         エンジンオイルや燃焼制御の進化が低回転運転を可能にした理由
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/city-driving-fuel-saving.html">
+      <a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">
         街乗りでも燃費を諦めたくない人におすすめの燃費対策
       </a>
     </li>

@@ -25,7 +25,7 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/first-action.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/first-action.html" class="text-decoration-none">
                 燃費改善のために今日からできること｜ガソリン代を抑える基本対策まとめ
               </a>
             </h5>
@@ -40,7 +40,7 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/fuel-lab/knowledge/air-filter-fuel-economy-na.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html" class="text-decoration-none">
                 エアクリーナー交換で燃費は良くなる？NA街乗りでは効果が出にくい理由
               </a>
             </h5>

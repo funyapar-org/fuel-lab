@@ -298,11 +298,11 @@ tags:
   <section class="my-5">
     <h2 class="fw-semibold">関連ページ</h2>
     <ul class="mt-3">
-      <li><a href="/fuel-lab/knowledge/tire-wheel.html">タイヤとホイールで燃費は変わる？</a></li>
-      <li><a href="/fuel-lab/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
-      <li><a href="/fuel-lab/knowledge/aaa-label-truth.html">AAAラベリングは本当に燃費が良いのか</a></li>
-      <li><a href="/fuel-lab/knowledge/steel-vs-alloy-wheel-fuel-cost.html">純正アルミホイールは本当に燃費に有利なのか？</a></li>
-      <li><a href="/fuel-lab/knowledge/xl-vs-sl.html">エクストラロード（XL）タイヤは燃費的に不利？</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/tire-wheel.html">タイヤとホイールで燃費は変わる？</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/aaa-label-truth.html">AAAラベリングは本当に燃費が良いのか</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/steel-vs-alloy-wheel-fuel-cost.html">純正アルミホイールは本当に燃費に有利なのか？</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/xl-vs-sl.html">エクストラロード（XL）タイヤは燃費的に不利？</a></li>
     </ul>
   </section>
 

@@ -57,8 +57,8 @@ tags:
     <div class="card   mt-4">
       <div class="card-body">
         <strong>関連記事</strong><br>
-        ・<a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向まとめ</a><br>
-        ・<a href="/fuel-lab/knowledge/compact-minivan-comparison.html">コンパクトミニバンの維持費比較</a>
+        ・<a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向まとめ</a><br>
+        ・<a href="{{ site.baseurl }}/knowledge/compact-minivan-comparison.html">コンパクトミニバンの維持費比較</a>
       </div>
     </div>
   </section>
@@ -87,7 +87,7 @@ tags:
     <div class="card   mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
-        ・<a href="/fuel-lab/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a>
+        ・<a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a>
       </div>
     </div>
 
@@ -99,7 +99,7 @@ tags:
     <div class="card mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
-        ・<a href="/fuel-lab/knowledge/real-fuel-economy-thinking.html">実燃費で考える燃費改善の考え方</a>
+        ・<a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">実燃費で考える燃費改善の考え方</a>
       </div>
     </div>
   </section>
@@ -122,7 +122,7 @@ tags:
     <div class="card   mt-3">
       <div class="card-body">
         <strong>関連記事</strong><br>
-        ・<a href="/fuel-lab/solio/solio-mild-hybrid-cost.html">ソリオ マイルドハイブリッドの維持費と注意点</a>
+        ・<a href="{{ site.baseurl }}/solio/solio-mild-hybrid-cost.html">ソリオ マイルドハイブリッドの維持費と注意点</a>
       </div>
     </div>
   </section>
@@ -140,9 +140,9 @@ tags:
   <section class="p-4 rounded">
     <h2 class="h5 mb-3">次におすすめの記事</h2>
     <ul class="mb-0">
-      <li><a href="/fuel-lab/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
-      <li><a href="/fuel-lab/solio/solio-throttle-body-cleaning.html">ソリオのスロットルバルブ清掃DIY</a></li>
-      <li><a href="/fuel-lab/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
+      <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
+      <li><a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning.html">ソリオのスロットルバルブ清掃DIY</a></li>
+      <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
     </ul>
   </section>
 

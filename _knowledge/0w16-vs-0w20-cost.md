@@ -256,7 +256,7 @@ tags:
     （始動性・内部抵抗・保証条件）は
     数字では見えません。
     どのようなリスクがあるのかはこちらで詳しく解説しています。
-    →<a href="/fuel-lab/knowledge/oil-spec-ignored-consequences.html">
+    →<a href="{{ site.baseurl }}/knowledge/oil-spec-ignored-consequences.html">
       エンジンオイル規格を無視すると何が起きるのか？｜静かに進行する5つのリスク
     </a>
   </p>
@@ -272,17 +272,17 @@ tags:
 
   <ul>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-viscosity.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity.html">
         0W-16と0W-20の違いをわかりやすく解説
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/knowledge/engine-oil-interval.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">
         エンジンオイルは何kmごとに交換すべき？（街乗り・短距離）
       </a>
     </li>
     <li>
-      <a href="/fuel-lab/solio/engine-oil-cost-solio.html">
+      <a href="{{ site.baseurl }}/solio/engine-oil-cost-solio.html">
         ソリオのオイル交換はいくらかかる？
       </a>
     </li>

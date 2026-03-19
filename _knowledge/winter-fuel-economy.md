@@ -182,7 +182,7 @@ tags:
             冬の燃費悪化が正常か、  
             故障を疑うべきかの判断基準を解説しています。
           </p>
-          <a href="/fuel-lab/knowledge/winter-fuel-economy-trouble.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy-trouble.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -197,7 +197,7 @@ tags:
             季節以外の原因で燃費が落ちるケースと、  
             自分でできる対策をまとめています。
           </p>
-          <a href="/fuel-lab/knowledge/fuel-economy-worsens.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
