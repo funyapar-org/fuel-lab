@@ -1,7 +1,7 @@
 title: Fuel Lab
 description: 車の燃費や整備情報を扱う実験的サイト
 baseurl: ""
-url: "https://funyapar-org.github.io"
+url: "https://funyapar-fuel-lab.com"
 default_ogp_img: "/assets/ogp/default.png"
 markdown: kramdown
 theme: null
