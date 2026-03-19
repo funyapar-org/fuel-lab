@@ -1,5 +1,5 @@
 - date: 2025-09-06
-  odometer: 25534
+  odometer: 25535
   fuel: 19.40
   price_per_liter: 160
   note: 中古購入後初回給油
@@ -14,7 +14,7 @@
     rotation_count: 0
 
 - date: 2025-09-20
-  odometer: 25771
+  odometer: 25772
   fuel: 21.56
   price_per_liter: 161
   note: 燃費悪化期
@@ -29,7 +29,7 @@
     rotation_count: 0
 
 - date: 2025-10-01
-  odometer: 26047
+  odometer: 26048
   fuel: 19.71
   price_per_liter: 160
   note: 添加剤投入後
@@ -45,7 +45,7 @@
     rotation_count: 0
 
 - date: 2025-10-18
-  odometer: 26365
+  odometer: 26366
   fuel: 22.52
   price_per_liter: 159
   note: 秋の燃費改善
@@ -60,7 +60,7 @@
     rotation_count: 0
 
 - date: 2025-11-07
-  odometer: 26679
+  odometer: 26680
   fuel: 22.14
   price_per_liter: 158
   note: 秋の燃費改善
@@ -75,7 +75,7 @@
     rotation_count: 0
 
 - date: 2025-11-21
-  odometer: 26989
+  odometer: 26990
   fuel: 21.86
   price_per_liter: 152
   conditions:
@@ -89,7 +89,7 @@
     rotation_count: 0
 
 - date: 2025-11-29
-  odometer: 27149
+  odometer: 27150
   fuel: 11.24
   price_per_liter: 149
   conditions:
@@ -103,7 +103,7 @@
     rotation_count: 0
 
 - date: 2025-12-11
-  odometer: 27312
+  odometer: 27313
   fuel: 11.62
   price_per_liter: 143
   note: 冬の始まり
@@ -119,7 +119,7 @@
     rotation_count: 0
 
 - date: 2025-12-20
-  odometer: 27567
+  odometer: 27568
   fuel: 18.45
   price_per_liter: 141
   note: 冬の燃費悪化
@@ -135,7 +135,7 @@
     rotation_count: 0
 
 - date: 2026-01-04
-  odometer: 27792
+  odometer: 27793
   fuel: 16.44
   price_per_liter: 138
   note: 冬の燃費悪化
@@ -151,7 +151,7 @@
     rotation_count: 0
 
 - date: 2026-01-26
-  odometer: 28069
+  odometer: 28070
   fuel: 20.34
   price_per_liter: 139
   note: 冬の燃費悪化
@@ -167,7 +167,7 @@
     rotation_count: 0
 
 - date: 2026-02-13
-  odometer: 28333
+  odometer: 28334
   fuel: 19.43
   price_per_liter: 143
   note: 冬の燃費悪化
@@ -183,7 +183,7 @@
     rotation_count: 0
 
 - date: 2026-02-23
-  odometer: 28507
+  odometer: 28508
   fuel: 12.81
   price_per_liter: 142
   note: 冬の燃費悪化
@@ -199,7 +199,7 @@
     rotation_count: 0
 
 - date: 2026-03-19
-  odometer: 28760
+  odometer: 28759
   fuel: 18.36
   price_per_liter: 160
   note: 春の燃費改善
