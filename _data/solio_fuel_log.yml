@@ -203,6 +203,7 @@
   fuel: 18.36
   price_per_liter: 160
   note: 春の燃費改善
+  link: /knowledge/spring-temperature-fuel-economy.html
   conditions:
     oil: 5w-30
     tire: eg02
