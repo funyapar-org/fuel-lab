@@ -197,7 +197,7 @@ date: 2026-03-21 15:30:00 +0900
   </div>
 
   <p>
-    → <a href="{{ site.baseurl }}/maintenance/pollen-air-filter-replacement.html">花粉とエアクリーナーの関係はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉とエアクリーナーの関係はこちら</a>
   </p>
 
   <hr class="my-5">
