@@ -97,6 +97,10 @@ date: 2026-03-21 16:40:00 +0900
   <h2 class="mb-3">個別解説ページ</h2>
 
   <div class="list-group">
+  
+    <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.md" class="list-group-item list-group-item-action">
+      花粉・黄砂は放置NG？ボディへのダメージと正しい洗車タイミング
+    </a>
 
     <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html" class="list-group-item list-group-item-action">
       花粉の時期はエアクリーナー交換をすべき？燃費への影響を解説
