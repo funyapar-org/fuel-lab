@@ -161,7 +161,7 @@ tags:
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/solio/0w16-vs-0w20-cost.html">
+          <a href="{{ site.baseurl }}/knowledge/0w16-vs-0w20-cost.html">
             0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？
           </a>
         </li>
