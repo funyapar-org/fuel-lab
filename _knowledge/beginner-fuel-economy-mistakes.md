@@ -53,7 +53,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/inch-up-worth-it.html">関連解説を見る</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/l-s-b-range-fuel-economy.html">関連解説を見る</a>
   </p>
 
   <hr class="my-5">
