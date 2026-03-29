@@ -119,6 +119,10 @@ date: 2026-03-24 16:10:00 +0900
   <p class="fw-bold">
     → 穏やかな加速が最も効率的
   </p>
+  
+  <p>
+    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転とは？</a>
+  </p>
 
   <hr class="my-5">
 
