@@ -210,6 +210,18 @@ date: 2026-02-26 21:00:00 +0900
     実燃費ログを見る
   </a>
   
+  <!-- 導線2 -->
+  <hr class="my-5">
+
+  <h2 class="h5 mb-3">燃費改善研究</h2>
+  <p>
+    街乗り中心（約95%以上）という条件下で、 ソリオ（DBA-MA26S ガソリン車）の燃費改善の計画と結果をまとめています。
+  </p>
+
+  <a href="{{ site.baseurl }}/solio/" class="btn btn-primary">
+    燃費改善研究を見る
+  </a>
+  
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
