@@ -167,13 +167,12 @@ date: 2026-03-24 16:10:00 +0900
   </ul>
 
   <p>
-    特に春は要注意です。
+    特に春は花粉・黄砂の影響があり要注意です。
   </p>
 
-  <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉の影響</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html">黄砂の影響</a></li>
-  </ul>
+  <p>
+    詳細：<a href="{{ site.baseurl }}/knowledge/air-filter-neglect-effects.html">エアクリーナーを交換しないとどうなる？</a>
+  </p>
 
   <hr class="my-5">
 
