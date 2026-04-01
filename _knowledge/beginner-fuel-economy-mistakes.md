@@ -137,7 +137,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
   
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/first-action.html#:~:text=%E6%9C%9F%E5%BE%85%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82-,3.%20%E4%B8%8D%E8%A6%81%E3%81%AA%E8%8D%B7%E7%89%A9%E3%82%92%E9%99%8D%E3%82%8D%E3%81%99%EF%BC%88%E8%BB%BD%E9%87%8F%E5%8C%96%EF%BC%89,-%E8%BB%8A%E4%B8%A1%E9%87%8D%E9%87%8F%E3%81%8C">燃費改善のために今日からできること</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-economy-weight-impact.html">荷物を積みっぱなしで燃費はどれくらい悪化する？</a>
   </p>
 
   <hr class="my-5">
@@ -151,6 +151,10 @@ date: 2026-03-24 16:10:00 +0900
 
   <p class="fw-bold">
     → コンプレッサー負荷で燃費悪化
+  </p>
+  
+  <p>
+    詳細：<a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact.html">エアコンで燃費はどれくらい悪化する？</a>
   </p>
 
   <hr class="my-5">
