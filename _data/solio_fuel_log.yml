@@ -218,7 +218,8 @@
   odometer: 29130
   fuel: 24.28
   price_per_liter: 148
-  note: 200kmほど高速道路使用
+  note: 約200km高速道路走行
+  link: /knowledge/highway-vs-city-fuel-economy.html
   conditions:
     oil: 5w-30
     tire: eg02
