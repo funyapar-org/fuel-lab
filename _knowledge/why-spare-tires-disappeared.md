@@ -130,7 +130,7 @@ date: 2026-02-22 19:30:00 +0900
       <ul>
         <li><a href="{{ site.baseurl }}/knowledge/puncture-repair-kit-vs-roadservice.html">パンク修理キットvsロードサービス</a></li>
         <li><a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards.html">エンジンオイルの選び方</a></li>
-        <li><a href="{{ site.baseurl }}/solio/solio-overview.html">ソリオ実燃費記録</a></li>
+        <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費記録</a></li>
       </ul>
 
     </div>

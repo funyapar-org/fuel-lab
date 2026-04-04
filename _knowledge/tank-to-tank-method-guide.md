@@ -152,7 +152,7 @@ date: 2026-02-20 09:00:00 +0900
       <ul>
         <li><a href="{{ site.baseurl }}/knowledge/first-action.html">燃費改善のために今日からできること｜ガソリン代を抑える基本対策まとめ</a></li>
         <li><a href="{{ site.baseurl }}/knowledge/aluminum-tape-tune-fuel-economy.html">アルミテープチューンは燃費向上する？</a></li>
-        <li><a href="{{ site.baseurl }}/solio/solio-overview.html">ソリオ実燃費改善トップページ</a></li>
+        <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費改善トップページ</a></li>
       </ul>
 
     </div>

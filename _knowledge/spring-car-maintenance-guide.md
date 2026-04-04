@@ -98,7 +98,7 @@ date: 2026-03-21 16:40:00 +0900
 
   <div class="list-group">
   
-    <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.md" class="list-group-item list-group-item-action">
+    <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.html" class="list-group-item list-group-item-action">
       花粉・黄砂は放置NG？ボディへのダメージと正しい洗車タイミング
     </a>
 

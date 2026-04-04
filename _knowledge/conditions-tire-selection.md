@@ -139,7 +139,7 @@ tags:
 
   <p>
     関連記事：
-    <a href="{{ site.baseurl }}/knowledge/k12c-low-rpm-carbon-myth.html">
+    <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
       低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
     </a>
   </p>

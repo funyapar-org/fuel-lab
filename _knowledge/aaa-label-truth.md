@@ -177,7 +177,7 @@ AAAは規定試験において「最も転がり抵抗が小さい」グルー�
           サイズ変更が燃費や交換コストにどう影響するのかを、
           数値ベースで解説しています。
         </p>
-        <a href="{{ site.baseurl }}/knowledge/tire-and-fuel-cost.html" class="btn btn-outline-primary">
+        <a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html" class="btn btn-outline-primary">
           ページを見る
         </a>
       </div>

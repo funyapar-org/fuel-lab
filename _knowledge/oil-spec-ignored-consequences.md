@@ -202,7 +202,7 @@ tags:
 
   <p class="mt-4">
     関連ページ：<br>
-    <a href="{{ site.baseurl }}/knowledge/engine-oil-standards.html">エンジンオイル規格の役割分担｜SAE / API / ILSAC / ACEA</a><br>
+    <a href="{{ site.baseurl }}/knowledge/engine-oil-standards-overview.html">エンジンオイル規格の役割分担｜SAE / API / ILSAC / ACEA</a><br>
     <a href="{{ site.baseurl }}/knowledge/engine-oil-selection-flow.html">エンジンオイル選択フローチャート</a><br>
     <a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards.html">全合成油ならOKは大間違い？オイル選びは規格を見よ</a><br>
     <a href="{{ site.baseurl }}/knowledge/0w16-vs-0w20-cost.html">0W-16指定車に0W-20を入れたら燃費と維持費はどうなる？</a>

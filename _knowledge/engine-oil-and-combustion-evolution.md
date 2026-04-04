@@ -128,12 +128,12 @@ tags:
             </a>
           </li>
           <li>
-            <a href="{{ site.baseurl }}/knowledge/driving-for-fuel-efficiency.html">
+            <a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">
               燃費を意識した運転とは？低回転エンジンとの正しい付き合い方
             </a>
           </li>
           <li>
-            <a href="{{ site.baseurl }}/knowledge/oil-viscosity-0w16-0w20.html">
+            <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity.html">
               0W-16と0W-20の違い｜燃費とエンジン保護の考え方
             </a>
           </li>

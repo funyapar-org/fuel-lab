@@ -282,8 +282,8 @@ tags:
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/engine-oil-cost-solio.html">
-        ソリオのオイル交換はいくらかかる？
+      <a href="{{ site.baseurl }}/solio/solio-oil-viscosity-fuel-economy.html">
+        中古ソリオに5W-30が入っていた？指定粘度0W-16に戻すと燃費はどれくらい改善するのか
       </a>
     </li>
   </ul>

@@ -186,7 +186,7 @@ tags:
       タイヤサイズと燃費・維持費の関係
     </a>
     <a class="list-group-item list-group-item-action"
-       href="{{ site.baseurl }}/solio/solio-overview.html">
+       href="{{ site.baseurl }}/solio/">
       ソリオという車の特徴と燃費傾向まとめ
     </a>
   </div>
