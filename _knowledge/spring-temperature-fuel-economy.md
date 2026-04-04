@@ -47,8 +47,8 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">アイドリング暖機と暖機走行の違い</a><br>
-    → <a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離走行で燃費が悪くなる理由</a>
+    → <a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving/">アイドリング暖機と暖機走行の違い</a><br>
+    → <a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離走行で燃費が悪くなる理由</a>
   </p>
 
   <h3 class="mt-4">② CVTフルードの粘度低下が早い</h3>
@@ -61,8 +61,8 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/cvt-warmup-distance.html">CVTの暖機に必要な距離とは？</a><br>
-    → <a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership.html">CVTFは交換すべき？長期使用の考え方</a>
+    → <a href="{{ site.baseurl }}/knowledge/cvt-warmup-distance/">CVTの暖機に必要な距離とは？</a><br>
+    → <a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership/">CVTFは交換すべき？長期使用の考え方</a>
   </p>
 
   <h3 class="mt-4">③ 燃焼状態が安定する</h3>
@@ -75,7 +75,7 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/idle-high.html">アイドリング回転数が高い理由</a>
+    → <a href="{{ site.baseurl }}/knowledge/idle-high/">アイドリング回転数が高い理由</a>
   </p>
 
   <hr class="my-5">
@@ -133,7 +133,7 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離走行はなぜ燃費が悪い？</a>
+    → <a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離走行はなぜ燃費が悪い？</a>
   </p>
 
   <hr class="my-5">
@@ -153,8 +153,8 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/blue-coolant-light-warmup.html">青い水温ランプはいつ消える？</a><br>
-    → <a href="{{ site.baseurl }}/knowledge/cvt-warmup-distance.html">CVT暖機距離の目安</a>
+    → <a href="{{ site.baseurl }}/knowledge/blue-coolant-light-warmup/">青い水温ランプはいつ消える？</a><br>
+    → <a href="{{ site.baseurl }}/knowledge/cvt-warmup-distance/">CVT暖機距離の目安</a>
   </p>
 
   <hr class="my-5">
@@ -172,7 +172,7 @@ date: 2026-03-21 14:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">暖機走行の方が良い理由</a>
+    → <a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving/">暖機走行の方が良い理由</a>
   </p>
 
   <hr class="my-5">

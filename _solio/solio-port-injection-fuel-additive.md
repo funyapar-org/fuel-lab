@@ -233,7 +233,7 @@ tags:
           実際にソリオで使用した体験レビュー。<br>
           アイドリングやレスポンスの変化を詳しくまとめています。
         </p>
-        <a href="{{ site.baseurl }}/solio/fcr062-effect.html" class="btn btn-outline-primary">
+        <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-outline-primary">
           ページを見る
         </a>
       </div>
@@ -247,7 +247,7 @@ tags:
         <p class="card-text">
           アイドリングや発進時の違和感を感じたときに行ったDIY清掃の記録です。
         </p>
-        <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning.html" class="btn btn-outline-secondary">
+        <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/" class="btn btn-outline-secondary">
           ページを見る
         </a>
       </div>

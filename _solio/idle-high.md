@@ -226,7 +226,7 @@ tags:
             燃料添加剤がどのように働くのかを  
             初心者向けに解説しています。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/fuel-additive.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive/" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -241,7 +241,7 @@ tags:
             実際にソリオで使用した  
             体験レビューをまとめています。
           </p>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
+          <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

@@ -196,7 +196,7 @@ tags:
             タイヤ重量・ラベリング・価格差まで含めて、<br>
             実燃費目線で検討した実例。
           </p>
-          <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -211,7 +211,7 @@ tags:
             カタログ燃費と実燃費が一致しない理由を、<br>
             条件別に整理。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/aaa-label-truth.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/aaa-label-truth/" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>

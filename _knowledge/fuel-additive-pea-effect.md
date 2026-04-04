@@ -102,12 +102,12 @@ tags:
 
     <div class="list-group">
 
-      <a href="{{ site.baseurl }}/solio/fcr062-effect.html"
+      <a href="{{ site.baseurl }}/solio/fcr062-effect/"
          class="list-group-item list-group-item-action">
         燃料添加剤(FCR-062)投入後の燃費変化検証（ソリオ実測）
       </a>
 
-      <a href="{{ site.baseurl }}/solio/idle-high.html"
+      <a href="{{ site.baseurl }}/solio/idle-high/"
          class="list-group-item list-group-item-action">
         ソリオのアイドリング回転数が下がらない原因と対処法｜故障？放置していい症状なのか
       </a>

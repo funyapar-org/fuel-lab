@@ -141,9 +141,9 @@ date: 2026-02-19 13:00:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a></li>
-        <li><a href="{{ site.baseurl }}/knowledge/first-action.html">燃費改善の最初にやるべきこと</a></li>
-        <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/first-action/">燃費改善の最初にやるべきこと</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">燃費計測の基礎『満タン法』完全ガイド｜正しいやり方と誤差を減らす実践ポイント</a></li>
         <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費改善トップページ</a></li>
       </ul>
 

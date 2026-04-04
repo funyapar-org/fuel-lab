@@ -76,7 +76,7 @@ date: 2026-03-21 15:00:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval.html">エアフィルターの交換時期の目安</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval/">エアフィルターの交換時期の目安</a>
   </p>
 
   <hr class="my-5">
@@ -98,7 +98,7 @@ date: 2026-03-21 15:00:00 +0900
   </ul>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係</a>
   </p>
 
   <hr class="my-5">

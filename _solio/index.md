@@ -102,7 +102,7 @@ tags:
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/solio/solio-vehicle-characteristics-overview.html">
+    👉 <a href="{{ site.baseurl }}/solio/solio-vehicle-characteristics-overview/">
       ソリオ車両特性まとめ
     </a>
   </p>
@@ -113,17 +113,17 @@ tags:
 
   <div class="list-group mb-3">
 
-    <a href="{{ site.baseurl }}/solio/solio-fuel-summary.html"
+    <a href="{{ site.baseurl }}/solio/solio-fuel-summary/"
        class="list-group-item list-group-item-action">
       実燃費まとめページ（総平均・季節変動・条件表示）
     </a>
 
-    <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html"
+    <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/"
        class="list-group-item list-group-item-action">
       実燃費ログ一覧
     </a>
 
-    <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html"
+    <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy/"
        class="list-group-item list-group-item-action">
       冬季燃費低下のメカニズム解説
     </a>
@@ -148,7 +148,7 @@ tags:
           <td>タイヤ・ホイール</td>
           <td>軽量ホイール＋転がり抵抗AAAタイヤ</td>
           <td>
-            <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
+            <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">
               詳細を見る
             </a>
           </td>
@@ -157,7 +157,7 @@ tags:
           <td>吸気系</td>
           <td>スロットルバルブ清掃</td>
           <td>
-            <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning.html">
+            <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">
               詳細を見る
             </a>
           </td>
@@ -166,7 +166,7 @@ tags:
           <td>燃料系</td>
           <td>燃料添加剤（FCR-062）使用</td>
           <td>
-            <a href="{{ site.baseurl }}/solio/fcr062-effect.html">
+            <a href="{{ site.baseurl }}/solio/fcr062-effect/">
               詳細を見る
             </a>
           </td>
@@ -175,7 +175,7 @@ tags:
           <td>運転条件</td>
           <td>暖機完了後の効率域維持</td>
           <td>
-            <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html">
+            <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy/">
               関連解説
             </a>
           </td>

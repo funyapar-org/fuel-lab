@@ -82,7 +82,7 @@ date: 2026-04-02 18:00:00 +0900
   </p>
 
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りで燃費を改善する方法</a>
+    関連：<a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りで燃費を改善する方法</a>
   </p>
 
   <h2 class="mt-5">理由② エンジンが効率の良い状態で安定する</h2>
@@ -118,7 +118,7 @@ date: 2026-04-02 18:00:00 +0900
   </p>
 
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離で燃費が悪化する理由</a>
+    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が悪化する理由</a>
   </p>
 
   <h2 class="mt-5">注意：速度を上げすぎると逆効果</h2>
@@ -185,11 +185,11 @@ date: 2026-04-02 18:00:00 +0900
   <h2 class="mt-5">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離で燃費が悪化する理由</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りで燃費を改善する方法</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転とは？</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">実燃費の考え方</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ実燃費ログ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が悪化する理由</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りで燃費を改善する方法</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費を意識した運転とは？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">実燃費の考え方</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ実燃費ログ</a></li>
   </ul>
 
 </div>

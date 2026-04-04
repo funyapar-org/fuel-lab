@@ -191,22 +191,22 @@ tags:
 
   <ul>
     <li>
-      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator.html">
+      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator/">
         ホイール重量と燃費影響シミュレーター
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/inch-up-worth-it.html">
+      <a href="{{ site.baseurl }}/knowledge/inch-up-worth-it/">
         インチアップは本当に損なのか？
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">
+      <a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">
         燃費に効く空気圧管理の基礎
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/solio-oil-viscosity-fuel-economy.html">
+      <a href="{{ site.baseurl }}/solio/solio-oil-viscosity-fuel-economy/">
         ソリオの粘度変更による燃費予測
       </a>
     </li>

@@ -168,9 +168,9 @@ date: 2026-02-24 22:30:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="{{ site.baseurl }}/knowledge/aluminum-vs-steel-wheels-fuel-economy.html">アルミとスチールは燃費に差が出る？</a></li>
-        <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
-        <li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">ソリオ タイヤ交換で燃費14km/L→15km/Lを狙う</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/aluminum-vs-steel-wheels-fuel-economy/">アルミとスチールは燃費に差が出る？</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">タイヤサイズと燃費・維持費の関係</a></li>
+        <li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">ソリオ タイヤ交換で燃費14km/L→15km/Lを狙う</a></li>
       </ul>
 
     </div>

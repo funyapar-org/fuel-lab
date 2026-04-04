@@ -105,8 +105,8 @@ date: 2026-04-01 10:00:00 +0900
   </ul>
 
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りで燃費を改善する方法</a><br>
-    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離で燃費が悪化する理由</a>
+    関連：<a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りで燃費を改善する方法</a><br>
+    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が悪化する理由</a>
   </p>
 
   <h2 class="mt-5">エンジンへの悪影響はある？</h2>
@@ -140,7 +140,7 @@ date: 2026-04-01 10:00:00 +0900
 
   <p>
     詳細はこちら：<br>
-    <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval.html">エアフィルターの交換時期</a>
+    <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval/">エアフィルターの交換時期</a>
   </p>
 
   <h2 class="mt-5">汚れの主な原因</h2>
@@ -160,8 +160,8 @@ date: 2026-04-01 10:00:00 +0900
   </p>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉による影響</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html">黄砂による影響</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/">花粉による影響</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement/">黄砂による影響</a></li>
   </ul>
 
   <h2 class="mt-5">結論</h2>
@@ -177,10 +177,10 @@ date: 2026-04-01 10:00:00 +0900
   <h2 class="mt-5">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes.html">初心者がやりがちな燃費が悪くなる運転10選</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターは燃費に影響する？</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html">燃費が悪化する原因まとめ</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ実燃費ログ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes/">初心者がやりがちな燃費が悪くなる運転10選</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターは燃費に影響する？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が悪化する原因まとめ</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ実燃費ログ</a></li>
   </ul>
 
 </div>

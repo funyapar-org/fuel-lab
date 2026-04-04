@@ -253,7 +253,7 @@ SPオイルは基本的に問題なく使用できます。
 </p>
 
 <p>
-<a href="{{ site.baseurl }}/solio/why-choose-sakura-oil.html">
+<a href="{{ site.baseurl }}/solio/why-choose-sakura-oil/">
 なぜソリオにSAKURAワケありエンジンオイルを選んだのか
 </a>
 </p>
@@ -265,19 +265,19 @@ SPオイルは基本的に問題なく使用できます。
 <ul>
 
 <li>
-<a href="{{ site.baseurl }}/solio/why-choose-sakura-oil.html">
+<a href="{{ site.baseurl }}/solio/why-choose-sakura-oil/">
 なぜソリオにSAKURAワケありエンジンオイルを選んだのか
 </a>
 </li>
 
 <li>
-<a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">
+<a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">
 ソリオ実燃費ログ（満タン法）
 </a>
 </li>
 
 <li>
-<a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory.html">
+<a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory/">
 エンジンオイル粘度と燃費の関係
 </a>
 </li>

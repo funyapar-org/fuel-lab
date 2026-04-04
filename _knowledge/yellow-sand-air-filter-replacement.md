@@ -84,7 +84,7 @@ date: 2026-03-21 15:30:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval.html">エアフィルター交換時期の考え方</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval/">エアフィルター交換時期の考え方</a>
   </p>
 
   <hr class="my-5">
@@ -107,7 +107,7 @@ date: 2026-03-21 15:30:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係</a>
   </p>
 
   <hr class="my-5">
@@ -197,7 +197,7 @@ date: 2026-03-21 15:30:00 +0900
   </div>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉とエアクリーナーの関係はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/">花粉とエアクリーナーの関係はこちら</a>
   </p>
 
   <hr class="my-5">

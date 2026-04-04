@@ -160,7 +160,7 @@ date: 2026-03-22 01:10:00 +0900
   </ul>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.html">洗車タイミングの詳細はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing/">洗車タイミングの詳細はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -206,10 +206,10 @@ date: 2026-03-22 01:10:00 +0900
   <h2 class="mb-3">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.html">花粉・黄砂と洗車タイミング</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉とエアクリーナーの関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html">黄砂とエアクリーナーの関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/spring-car-maintenance-guide.html">春のメンテナンスまとめ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing/">花粉・黄砂と洗車タイミング</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/">花粉とエアクリーナーの関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement/">黄砂とエアクリーナーの関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/spring-car-maintenance-guide/">春のメンテナンスまとめ</a></li>
   </ul>
 
   <hr class="my-5">

@@ -25,7 +25,7 @@ description: エンジンオイル交換、エアフィルター交換、タイ�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/engine-oil-interval/" class="text-decoration-none">
                 エンジンオイル交換は何kmごとが最適か？
               </a>
             </h5>
@@ -40,7 +40,7 @@ description: エンジンオイル交換、エアフィルター交換、タイ�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/knowledge/regular-vs-premium-cleaning-myth.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/regular-vs-premium-cleaning-myth/" class="text-decoration-none">
                 レギュラー車にハイオクを入れるとエンジンは綺麗になる？
               </a>
             </h5>

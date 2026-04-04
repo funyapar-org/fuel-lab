@@ -21,7 +21,7 @@ date: 2026-02-26 21:00:00 +0900
 
   <p class="text-muted small">
     本データは
-    <a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">満タン法</a>
+    <a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法</a>
     に基づく私のソリオ(DBA-MA26S)の実測値です。<br>
     詳細ログはページ下部から確認できます。
   </p>
@@ -206,7 +206,7 @@ date: 2026-02-26 21:00:00 +0900
     全給油毎の実燃費ログの一覧は以下ページで公開しています。
   </p>
 
-  <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html" class="btn btn-primary">
+  <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/" class="btn btn-primary">
     実燃費ログを見る
   </a>
   

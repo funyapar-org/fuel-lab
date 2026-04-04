@@ -186,10 +186,10 @@ CVTF暖機距離を考えると、短距離走行では燃費が悪化しやす�
 <h2 class="mt-4">関連ページ</h2>
 
 <ul>
-<li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">エンジン暖機は必要？アイドリングより暖気走行が燃費に有利な理由</a></li>
-<li><a href="{{ site.baseurl }}/knowledge/blue-coolant-light-warmup.html">青い水温警告灯が消えたら暖機完了？</a></li>
-<li><a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership.html">CVTフルードは交換するべき？</a></li>
-<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ燃費ログ（実燃費公開）</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving/">エンジン暖機は必要？アイドリングより暖気走行が燃費に有利な理由</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/blue-coolant-light-warmup/">青い水温警告灯が消えたら暖機完了？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership/">CVTフルードは交換するべき？</a></li>
+<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ燃費ログ（実燃費公開）</a></li>
 </ul>
 
 </div>

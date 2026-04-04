@@ -155,22 +155,22 @@ tags:
 
   <ul>
     <li>
-      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator.html">
+      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator/">
         ホイール重量と燃費影響シミュレーター
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/inch-up-worth-it.html">
+      <a href="{{ site.baseurl }}/knowledge/inch-up-worth-it/">
         インチアップは本当に損なのか？
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/tire-change-diy-worth-it.html">
+      <a href="{{ site.baseurl }}/knowledge/tire-change-diy-worth-it/">
         タイヤ交換DIYは本当に得か？
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
+      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">
         ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
       </a>
     </li>

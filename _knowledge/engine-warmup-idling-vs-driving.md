@@ -178,9 +178,9 @@ CVTFは低温時に粘度が高くなるため、以下のような損失が増�
 <h2 class="mt-4">関連ページ</h2>
 
 <ul>
-<li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を良くする運転テクニック</a></li>
-<li><a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership.html">CVTフルードは交換するべき？</a></li>
-<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ燃費ログ</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費を良くする運転テクニック</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/cvtf-change-interval-long-ownership/">CVTフルードは交換するべき？</a></li>
+<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ燃費ログ</a></li>
 </ul>
 
 </div>

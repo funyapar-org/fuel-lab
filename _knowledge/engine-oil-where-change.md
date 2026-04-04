@@ -185,7 +185,7 @@ tags:
 
   <div class="alert alert-info">
     関連記事：<br>
-    <a href="{{ site.baseurl }}/knowledge/engine-oil-interval.html">
+    <a href="{{ site.baseurl }}/knowledge/engine-oil-interval/">
       エンジンオイルは何kmごとに交換すべき？（街乗り・短距離）
     </a>
   </div>
@@ -196,17 +196,17 @@ tags:
 
   <ul>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/engine-oil-why-exchange.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-why-exchange/">
         エンジンオイル交換ってなぜ必要なの？
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity.html">
+      <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity/">
         0W-16と0W-20の違いをわかりやすく解説
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/solio-oil-viscosity-fuel-economy.html">
+      <a href="{{ site.baseurl }}/solio/solio-oil-viscosity-fuel-economy/">
         中古ソリオに5W-30が入っていた？指定粘度0W-16に戻すと燃費はどれくらい改善するのか
       </a>
     </li>

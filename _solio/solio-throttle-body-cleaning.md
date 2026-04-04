@@ -199,7 +199,7 @@ tags:
             アイドリングが高止まりする原因と、  
             実際に改善した事例をまとめています。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/idle-high.html"
+          <a href="{{ site.baseurl }}/knowledge/idle-high/"
              class="btn btn-outline-secondary">
             ページを見る
           </a>
@@ -214,7 +214,7 @@ tags:
           <p>
             燃料添加剤FCR-062を使用した実体験レビューです。
           </p>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect.html"
+          <a href="{{ site.baseurl }}/solio/fcr062-effect/"
              class="btn btn-warning fw-bold">
             レビューを見る
           </a>

@@ -178,11 +178,11 @@ tags:
   </div>
   <div class="list-group list-group-flush">
     <a class="list-group-item list-group-item-action"
-       href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">
+       href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">
       実燃費で考える燃費改善の考え方
     </a>
     <a class="list-group-item list-group-item-action"
-       href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">
+       href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">
       タイヤサイズと燃費・維持費の関係
     </a>
     <a class="list-group-item list-group-item-action"

@@ -215,12 +215,12 @@ date: 2026-03-11 06:00:00 +0900
 
       <ul class="list-group mb-5">
         <li class="list-group-item">
-          <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory.html">
+          <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory/">
             エンジンオイルの粘度は燃費に影響する？粘度の違いを解説
           </a>
         </li>
         <li class="list-group-item">
-          <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">
+          <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">
             ソリオ燃費ログ｜実燃費データまとめ
           </a>
         </li>

@@ -163,9 +163,9 @@ date: 2026-02-22 21:40:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
-        <li><a href="{{ site.baseurl }}/knowledge/steel-vs-alloy-wheel-fuel-cost.html">純正アルミホイールは本当に燃費にいい？</a></li>
-        <li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">ソリオ タイヤ交換で燃費14km/L→15km/Lを狙う</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">タイヤサイズと燃費・維持費の関係</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/steel-vs-alloy-wheel-fuel-cost/">純正アルミホイールは本当に燃費にいい？</a></li>
+        <li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">ソリオ タイヤ交換で燃費14km/L→15km/Lを狙う</a></li>
       </ul>
 
     </div>

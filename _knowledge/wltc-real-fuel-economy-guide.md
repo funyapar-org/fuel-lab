@@ -163,7 +163,7 @@ date: 2026-04-04 00:30:00 +0900
   </p>
 
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離で燃費が悪化する理由</a>
+    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が悪化する理由</a>
   </p>
 
   <h2 class="mt-5">実燃費を正しく把握するには</h2>
@@ -178,7 +178,7 @@ date: 2026-04-04 00:30:00 +0900
   </ul>
 
   <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">満タン法のやり方</a>
+    関連：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法のやり方</a>
   </p>
 
   <h2 class="mt-5">結論</h2>
@@ -195,10 +195,10 @@ date: 2026-04-04 00:30:00 +0900
   <h2 class="mt-5">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">実燃費の考え方</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/highway-vs-city-fuel-economy.html">高速道路と街乗りの燃費差</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html">燃費が悪くなる原因まとめ</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">ソリオ実燃費ログ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">実燃費の考え方</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/highway-vs-city-fuel-economy/">高速道路と街乗りの燃費差</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が悪くなる原因まとめ</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ実燃費ログ</a></li>
   </ul>
 
 </div>

@@ -25,7 +25,7 @@ description: 0W-16・API SP・GF-6B対応オイルの比較や粘度選び、コ
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/knowledge/az-ceg-003-0w16-review.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/az-ceg-003-0w16-review/" class="text-decoration-none">
                 0W-16 API SP / GF-6B対応オイルのコスパ比較
               </a>
             </h5>
@@ -40,7 +40,7 @@ description: 0W-16・API SP・GF-6B対応オイルの比較や粘度選び、コ
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/knowledge/engine-oil-viscosity-theory/" class="text-decoration-none">
                 粘度は低いほど燃費に有利？理論的検証
               </a>
             </h5>

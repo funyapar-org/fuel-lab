@@ -159,7 +159,7 @@ date: 2026-03-24 21:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離運転の影響はこちら</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離運転の影響はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -167,10 +167,10 @@ date: 2026-03-24 21:10:00 +0900
   <h2 class="mb-4">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes.html">燃費が悪くなる運転10選</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">暖機運転の考え方</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">空気圧と燃費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log.html">実燃費ログ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes/">燃費が悪くなる運転10選</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving/">暖機運転の考え方</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">空気圧と燃費の関係</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">実燃費ログ</a></li>
   </ul>
 
   <hr class="my-5">

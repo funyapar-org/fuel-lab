@@ -160,9 +160,9 @@ date: 2026-03-29 22:00:00 +0900
   <h2 class="mt-5">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact.html">エアコンで燃費はどれくらい悪化する？</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">タイヤの空気圧で燃費はどれくらい変わる？</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary.html">ソリオ関連の実燃費・運用記録</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact/">エアコンで燃費はどれくらい悪化する？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">タイヤの空気圧で燃費はどれくらい変わる？</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary/">ソリオ関連の実燃費・運用記録</a></li>
   </ul>
 
 </div>

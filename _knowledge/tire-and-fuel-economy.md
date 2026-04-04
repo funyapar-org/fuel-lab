@@ -132,7 +132,7 @@ tags:
 
   <p>
     この特徴は、  
-    <a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline.html">
+    <a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline/">
       なぜソリオのガソリン車を選んだのか
     </a>
     という判断にも直結しています。
@@ -156,21 +156,21 @@ tags:
 <section class="p-4 rounded">
   <h2 class="h5 mb-3">関連ページ</h2>
   <ul class="mb-0">
-    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html">燃費が徐々に悪化する原因</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics/">ソリオのエンジン特性と燃費傾向</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りでも燃費を諦めないための考え方</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が徐々に悪化する原因</a></li>
     <li>
-      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
+      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">
         ソリオのタイヤ交換で燃費14km/L→15km/Lを狙う
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/tools/tire-simulator.html">
+      <a href="{{ site.baseurl }}/tools/tire-simulator/">
         タイヤサイズ変更の燃費影響シミュレーター
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator.html">
+      <a href="{{ site.baseurl }}/tools/wheel-weight-fuel-simulator/">
         ホイール重量と燃費影響シミュレーター
       </a>
     </li>

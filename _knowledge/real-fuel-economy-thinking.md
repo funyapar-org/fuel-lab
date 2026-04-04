@@ -115,8 +115,8 @@ tags:
   </p>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html">寒いと燃費が下がる理由</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html">燃費が徐々に悪化する原因</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/winter-fuel-economy/">寒いと燃費が下がる理由</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が徐々に悪化する原因</a></li>
   </ul>
 </section>
 
@@ -164,9 +164,9 @@ tags:
 <section class="p-4 rounded">
   <h2 class="h5 mb-3">関連ページ</h2>
   <ul class="mb-0">
-    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオのエンジン特性と燃費傾向</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy.html">タイヤサイズと燃費・維持費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html">街乗りでも燃費を諦めないための考え方</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics/">ソリオのエンジン特性と燃費傾向</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">タイヤサイズと燃費・維持費の関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りでも燃費を諦めないための考え方</a></li>
   </ul>
 </section>
 

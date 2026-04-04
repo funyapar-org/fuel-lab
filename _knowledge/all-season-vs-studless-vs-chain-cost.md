@@ -356,11 +356,11 @@ date: 2026-03-12 09:00:00 +0900
 
 <ul>
 
-<li><a href="{{ site.baseurl }}/knowledge/tire-rotation-worth-it.html">タイヤローテーションは必要？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/tire-rotation-worth-it/">タイヤローテーションは必要？</a></li>
 
-<li><a href="{{ site.baseurl }}/knowledge/tire-change-diy-worth-it.html">タイヤ組み替え交換をDIYでやるのは本当に得か？</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/tire-change-diy-worth-it/">タイヤ組み替え交換をDIYでやるのは本当に得か？</a></li>
 
-<li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">ソリオのタイヤホイール交換で燃費アップ計画</a></li>
+<li><a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">ソリオのタイヤホイール交換で燃費アップ計画</a></li>
 
 </ul>
 

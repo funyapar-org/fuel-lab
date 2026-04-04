@@ -122,9 +122,9 @@ category: tire
 
   <h2 class="h4">関連ページ</h2>
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/inch-up-worth-it.html">インチアップは本当に損なのか？</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/inch-down-merits-demerits.html">インチダウンのメリットとデメリット</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">燃費に効く空気圧管理の基礎</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/inch-up-worth-it/">インチアップは本当に損なのか？</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/inch-down-merits-demerits/">インチダウンのメリットとデメリット</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">燃費に効く空気圧管理の基礎</a></li>
   </ul>
 
 </div>

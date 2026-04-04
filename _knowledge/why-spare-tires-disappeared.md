@@ -128,8 +128,8 @@ date: 2026-02-22 19:30:00 +0900
       <h2 class="mb-3">関連ページ</h2>
 
       <ul>
-        <li><a href="{{ site.baseurl }}/knowledge/puncture-repair-kit-vs-roadservice.html">パンク修理キットvsロードサービス</a></li>
-        <li><a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards.html">エンジンオイルの選び方</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/puncture-repair-kit-vs-roadservice/">パンク修理キットvsロードサービス</a></li>
+        <li><a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards/">エンジンオイルの選び方</a></li>
         <li><a href="{{ site.baseurl }}/solio/">ソリオ実燃費記録</a></li>
       </ul>
 

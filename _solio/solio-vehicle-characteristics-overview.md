@@ -75,13 +75,13 @@ tags:
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">
+    👉 <a href="{{ site.baseurl }}/solio/solio-engine-characteristics/">
       ソリオのエンジン特性と燃費傾向
     </a>
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
+    👉 <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth/">
       低回転＝汚れるは誤解？K12Cの構造的背景
     </a>
   </p>
@@ -101,7 +101,7 @@ tags:
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/solio/solio-port-injection-fuel-additive.html">
+    👉 <a href="{{ site.baseurl }}/solio/solio-port-injection-fuel-additive/">
       ポート噴射と燃料添加剤の関係
     </a>
   </p>
@@ -126,7 +126,7 @@ tags:
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy.html">
+    👉 <a href="{{ site.baseurl }}/knowledge/winter-fuel-economy/">
       寒いと燃費が下がる理由
     </a>
   </p>
@@ -146,7 +146,7 @@ tags:
   </p>
 
   <p>
-    👉 <a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline.html">
+    👉 <a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline/">
       なぜソリオのガソリン車を選んだのか
     </a>
   </p>
@@ -157,17 +157,17 @@ tags:
 
   <ul>
     <li>
-      <a href="{{ site.baseurl }}/solio/solio-fuel-summary.html">
+      <a href="{{ site.baseurl }}/solio/solio-fuel-summary/">
         実燃費まとめページ
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
+      <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">
         タイヤ交換による燃費最適化
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning.html">
+      <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">
         スロットル清掃の影響検証
       </a>
     </li>

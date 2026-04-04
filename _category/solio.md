@@ -40,7 +40,7 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/solio/solio-fuel-summary.html" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/solio/solio-fuel-summary/" class="text-decoration-none">
                 ソリオ 実燃費まとめ
               </a>
             </h5>

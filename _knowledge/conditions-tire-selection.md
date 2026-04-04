@@ -72,7 +72,7 @@ tags:
 
       <p class="mt-3">
         関連記事：
-        <a href="{{ site.baseurl }}/knowledge/aaa-label-truth.html">
+        <a href="{{ site.baseurl }}/knowledge/aaa-label-truth/">
           AAAラベリングは本当に燃費がいいのか
         </a>
       </p>
@@ -111,7 +111,7 @@ tags:
 
       <p class="mt-3">
         実例：
-        <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire.html">
+        <a href="{{ site.baseurl }}/solio/fuel-optimization-by-tire/">
           燃費14km/L→15km/Lを狙う ソリオで「タイヤとホイール」を数値で選んだ全記録
         </a>
       </p>
@@ -139,7 +139,7 @@ tags:
 
   <p>
     関連記事：
-    <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html">
+    <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth/">
       低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
     </a>
   </p>

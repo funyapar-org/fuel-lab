@@ -79,7 +79,7 @@ tags:
 
 <div class="alert alert-info">
   関連ページ：  
-  <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth.html" class="alert-link">
+  <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth/" class="alert-link">
     低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
   </a>
 </div>
@@ -143,7 +143,7 @@ tags:
         <p class="card-text">
           経路選び・渋滞回避・街乗り特有の燃費悪化要因にフォーカスしたページです。
         </p>
-        <a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving.html" class="btn btn-outline-primary">
+        <a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/" class="btn btn-outline-primary">
           ページを見る
         </a>
       </div>
@@ -157,7 +157,7 @@ tags:
         <p class="card-text">
           運転以外に、燃費が落ちていく代表的な原因を整理しています。
         </p>
-        <a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html" class="btn btn-warning fw-bold">
+        <a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/" class="btn btn-warning fw-bold">
           原因を確認する
         </a>
       </div>

@@ -158,7 +158,7 @@ date: 2026-03-24 18:40:00 +0900
   </ul>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費向上の基本はこちら</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費向上の基本はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -166,10 +166,10 @@ date: 2026-03-24 18:40:00 +0900
   <h2 class="mb-4">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes.html">燃費が悪くなる運転10選</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離運転の影響</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">空気圧と燃費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics.html">ソリオの特性</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/beginner-fuel-economy-mistakes/">燃費が悪くなる運転10選</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離運転の影響</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">空気圧と燃費の関係</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics/">ソリオの特性</a></li>
   </ul>
 
   <hr class="my-5">

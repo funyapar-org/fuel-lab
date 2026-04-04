@@ -68,7 +68,7 @@ date: 2026-02-19 00:00:00 +0900
 
       <div class="alert alert-info mt-4">
         燃費と吸気抵抗の関係については
-        <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">
+        <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">
           エアクリーナー交換で燃費は良くなる？NA街乗りでは効果が出にくい理由
         </a>
         も参考になります。
@@ -119,12 +119,12 @@ date: 2026-02-19 00:00:00 +0900
       <h2 class="h5 mb-3">関連ページ</h2>
       <ul>
         <li>
-          <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">
+          <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">
             エアクリーナー交換で燃費は良くなる？NA街乗りでは効果が出にくい理由
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/knowledge/fuel-additive-pea-effect.html">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive-pea-effect/">
             PEA系燃料添加剤は本当に効果があるのか？
           </a>
         </li>

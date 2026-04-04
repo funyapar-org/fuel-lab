@@ -160,7 +160,7 @@ date: 2026-03-22 00:30:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/sakura-petals-air-filter.html">桜と吸気系の関係はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/sakura-petals-air-filter/">桜と吸気系の関係はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -173,8 +173,8 @@ date: 2026-03-22 00:30:00 +0900
   </p>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉とエアクリーナーの関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html">黄砂とエアクリーナーの関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/">花粉とエアクリーナーの関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement/">黄砂とエアクリーナーの関係</a></li>
   </ul>
 
   <hr class="my-5">

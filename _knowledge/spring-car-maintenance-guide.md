@@ -98,19 +98,19 @@ date: 2026-03-21 16:40:00 +0900
 
   <div class="list-group">
   
-    <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing.html" class="list-group-item list-group-item-action">
+    <a href="{{ site.baseurl }}/knowledge/pollen-yellow-sand-wash-timing/" class="list-group-item list-group-item-action">
       花粉・黄砂は放置NG？ボディへのダメージと正しい洗車タイミング
     </a>
 
-    <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html" class="list-group-item list-group-item-action">
+    <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/" class="list-group-item list-group-item-action">
       花粉の時期はエアクリーナー交換をすべき？燃費への影響を解説
     </a>
 
-    <a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html" class="list-group-item list-group-item-action">
+    <a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement/" class="list-group-item list-group-item-action">
       黄砂の時期はエアクリーナー交換をすべき？花粉より影響が大きい理由を解説
     </a>
 
-    <a href="{{ site.baseurl }}/knowledge/sakura-petals-air-filter.html" class="list-group-item list-group-item-action">
+    <a href="{{ site.baseurl }}/knowledge/sakura-petals-air-filter/" class="list-group-item list-group-item-action">
       桜の花びらでエアクリーナーは詰まる？春ドライブと吸気系の関係
     </a>
 
@@ -158,7 +158,7 @@ date: 2026-03-21 16:40:00 +0900
   </ul>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -181,9 +181,9 @@ date: 2026-03-21 16:40:00 +0900
   <h2 class="mb-3">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval.html">エアフィルター交換時期の目安</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens.html">燃費が悪化する原因まとめ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/air-filter-replacement-interval/">エアフィルター交換時期の目安</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が悪化する原因まとめ</a></li>
   </ul>
 
   <hr class="my-5">

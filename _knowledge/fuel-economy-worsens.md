@@ -163,7 +163,7 @@ tags:
             <strong>エンジン内部の汚れ</strong>に対し、
             燃料添加剤がどのように働くのかを解説しています。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/fuel-additive.html" class="btn btn-outline-primary">
+          <a href="{{ site.baseurl }}/knowledge/fuel-additive/" class="btn btn-outline-primary">
             ページを見る
           </a>
         </div>
@@ -179,7 +179,7 @@ tags:
             <strong>FCR-062</strong>を使用し、
             燃費やエンジンの変化を実体験ベースでまとめています。
           </p>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect.html" class="btn btn-warning fw-bold">
+          <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

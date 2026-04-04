@@ -151,8 +151,8 @@ date: 2026-03-21 16:10:00 +0900
   </div>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement.html">花粉の影響はこちら</a><br>
-    → <a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement.html">黄砂の影響はこちら</a>
+    → <a href="{{ site.baseurl }}/knowledge/pollen-air-filter-replacement/">花粉の影響はこちら</a><br>
+    → <a href="{{ site.baseurl }}/knowledge/yellow-sand-air-filter-replacement/">黄砂の影響はこちら</a>
   </p>
 
   <hr class="my-5">
@@ -171,7 +171,7 @@ date: 2026-03-21 16:10:00 +0900
   </p>
 
   <p>
-    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na.html">エアフィルターと燃費の関係</a>
+    → <a href="{{ site.baseurl }}/knowledge/air-filter-fuel-economy-na/">エアフィルターと燃費の関係</a>
   </p>
 
   <hr class="my-5">

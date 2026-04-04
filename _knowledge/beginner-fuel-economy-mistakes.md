@@ -53,7 +53,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/l-s-b-range-fuel-economy.html">L・S・Bレンジはいつ使う？常用で燃費が悪化する理由</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/l-s-b-range-fuel-economy/">L・S・Bレンジはいつ使う？常用で燃費が悪化する理由</a>
   </p>
 
   <hr class="my-5">
@@ -70,7 +70,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy.html">短距離燃費悪化の仕組み</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離燃費悪化の仕組み</a>
   </p>
 
   <hr class="my-5">
@@ -87,7 +87,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/tire-air-pressure.html">空気圧と燃費の関係</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/tire-air-pressure/">空気圧と燃費の関係</a>
   </p>
 
   <hr class="my-5">
@@ -104,7 +104,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving.html">暖機運転の正解</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/engine-warmup-idling-vs-driving/">暖機運転の正解</a>
   </p>
 
   <hr class="my-5">
@@ -121,7 +121,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
   
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費を意識した運転とは？</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費を意識した運転とは？</a>
   </p>
 
   <hr class="my-5">
@@ -137,7 +137,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
   
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-economy-weight-impact.html">荷物を積みっぱなしで燃費はどれくらい悪化する？</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/fuel-economy-weight-impact/">荷物を積みっぱなしで燃費はどれくらい悪化する？</a>
   </p>
 
   <hr class="my-5">
@@ -154,7 +154,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
   
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact.html">エアコンで燃費はどれくらい悪化する？</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact/">エアコンで燃費はどれくらい悪化する？</a>
   </p>
 
   <hr class="my-5">
@@ -171,7 +171,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/air-filter-neglect-effects.html">エアクリーナーを交換しないとどうなる？</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/air-filter-neglect-effects/">エアクリーナーを交換しないとどうなる？</a>
   </p>
 
   <hr class="my-5">
@@ -187,7 +187,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide.html">満タン法のやり方</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法のやり方</a>
   </p>
 
   <hr class="my-5">
@@ -204,7 +204,7 @@ date: 2026-03-24 16:10:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/car-maintenance-basic.html">基本メンテナンスまとめ</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/car-maintenance-basic/">基本メンテナンスまとめ</a>
   </p>
 
   <hr class="my-5">
@@ -226,9 +226,9 @@ date: 2026-03-24 16:10:00 +0900
   <h2 class="mb-4">関連ページ</h2>
 
   <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics.html">燃費向上の基本テクニック</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking.html">実燃費の考え方</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary.html">ソリオの実燃費まとめ</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費向上の基本テクニック</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">実燃費の考え方</a></li>
+    <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary/">ソリオの実燃費まとめ</a></li>
   </ul>
 
 </div>
