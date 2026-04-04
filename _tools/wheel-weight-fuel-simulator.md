@@ -5,14 +5,6 @@ nav_title: ホイール重量×燃費シミュレーター
 description: 13〜16インチのスチール・鋳造アルミ・鍛造アルミの重量差から燃費と年間ガソリン代への影響を試算できるシミュレーター。
 date: 2026-02-26 00:30:00 +0900
 category: tire
-tags:
-  - tire
-  - wheel-weight
-  - fuel-economy
-  - simulator
-  - unsprung-weight
-  - inch-up
-  - inch-down
 ---
 
 <div class="container my-5">
