@@ -5,19 +5,16 @@ url: "https://funyapar-fuel-lab.com"
 default_ogp_img: "/assets/ogp/default.png"
 markdown: kramdown
 theme: null
+permalink: pretty
 collections:
   about:
     output: true
-    permalink: pretty
   tools:
     output: true
-    permalink: pretty
   knowledge:
     output: true
-    permalink: pretty
   solio:
     output: true
-    permalink: pretty
   tags:
     output: true
     permalink: /tags/:name/
