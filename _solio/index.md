@@ -5,6 +5,7 @@ title: ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを�
 description: スズキ ソリオ（DBA-MA26S ガソリン車）で街乗り95%条件下において実燃費16km/Lを目指す燃費改善研究プロジェクトの総合トップページ
 date: 2026-03-04 01:40:00 +0900
 category: solio
+permalink: /solio/
 tags:
   - solio
   - fuel-economy-improve
