@@ -33,7 +33,7 @@
   fuel: 19.71
   price_per_liter: 160
   note: 添加剤投入後
-  link: /solio/fcr062-effect.html
+  link: /solio/fcr062-effect/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -107,7 +107,7 @@
   fuel: 11.62
   price_per_liter: 143
   note: 冬の始まり
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -123,7 +123,7 @@
   fuel: 18.45
   price_per_liter: 141
   note: 冬の燃費悪化
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -139,7 +139,7 @@
   fuel: 16.44
   price_per_liter: 138
   note: 冬の燃費悪化
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -155,7 +155,7 @@
   fuel: 20.34
   price_per_liter: 139
   note: 冬の燃費悪化
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -171,7 +171,7 @@
   fuel: 19.43
   price_per_liter: 143
   note: 冬の燃費悪化
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -187,7 +187,7 @@
   fuel: 12.81
   price_per_liter: 142
   note: 冬の燃費悪化
-  link: /knowledge/winter-fuel-economy.html
+  link: /knowledge/winter-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -203,7 +203,7 @@
   fuel: 18.36
   price_per_liter: 160
   note: 春の燃費改善
-  link: /knowledge/spring-temperature-fuel-economy.html
+  link: /knowledge/spring-temperature-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
@@ -219,7 +219,7 @@
   fuel: 24.28
   price_per_liter: 148
   note: 約200km高速道路走行
-  link: /knowledge/highway-vs-city-fuel-economy.html
+  link: /knowledge/highway-vs-city-fuel-economy/
   conditions:
     oil: 5w-30
     tire: eg02
