@@ -16,7 +16,7 @@ date: 2026-04-13 10:00:00 +0900
 
 <div class="container my-4">
 
-  <div class="p-4 mb-4 bg-light rounded">
+  <div class="p-4 mb-4 rounded">
     <h1 class="mb-3">ディーゼル車を街乗りだけで使うと損する理由</h1>
     <p class="mb-0">
       「軽油は安いからディーゼル車はお得」──そう思って選ぶ人は多いですが、
