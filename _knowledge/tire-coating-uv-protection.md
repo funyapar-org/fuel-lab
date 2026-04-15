@@ -5,11 +5,11 @@ nav_title: "タイヤひび割れ対策"
 description: "タイヤのヘアクラック対策としてコーティングがどれだけ有効かを解説。ワックスとの違いや寿命シミュレーションを踏まえ、最も現実的な延命方法を紹介します。"
 category: tire
 tags:
-- tire-maintenance
-- tire-crack
-- uv-protection
-- car-maintenance
-- tire-coating
+  - tire-maintenance
+  - tire-crack
+  - uv-protection
+  - car-maintenance
+  - tire-coating
 date: 2026-04-15 03:00:00 +0900
 ---
 
