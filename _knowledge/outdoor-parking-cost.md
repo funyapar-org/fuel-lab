@@ -218,6 +218,8 @@ date: 2026-04-16 04:00:00 +0900
 
   <ul>
     <li><a href="{{ site.baseurl }}/knowledge/tire-coating-uv-protection/">タイヤのひび割れ対策とコーティング</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">タイヤサイズと燃費・維持費の関係</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/tire-wheel/">タイヤとホイールで燃費は変わる？街乗り中心でも差が出る理由を解説</a></li>
   </ul>
 
 </div>
