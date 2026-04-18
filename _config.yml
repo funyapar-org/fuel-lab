@@ -9,6 +9,8 @@ permalink: pretty
 collections:
   about:
     output: true
+  carwash:
+    output: true
   tools:
     output: true
   knowledge:
