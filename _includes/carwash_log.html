@@ -23,5 +23,12 @@
       <li>{{ m.name }}（{{ m.price }}円）</li>
       {% endfor %}
     </ul>
+
+    <h5>ツール</h5>
+    <ul>
+      {% for tool_name in log.tools %}
+      <li>{{ tool_name }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
