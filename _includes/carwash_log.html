@@ -17,7 +17,14 @@
       {% endfor %}
     </ul>
 
-    <h5>使用メニュー</h5>
+    <h5>コイン洗車場使用メニュー</h5>
+    <ul>
+      {% for m in log.menu %}
+      <li>{{ m.name }}（{{ m.price }}円）</li>
+      {% endfor %}
+    </ul>
+    
+    <h5>洗浄剤やワックスなどの</h5>
     <ul>
       {% for m in log.menu %}
       <li>{{ m.name }}（{{ m.price }}円）</li>
@@ -26,8 +33,8 @@
 
     <h5>ツール</h5>
     <ul>
-      {% for tool_name in log.tools %}
-      <li>{{ tool_name }}</li>
+      {% for chemical in log.chemicals %}
+      <li>{{ chemical.category }}: {{ chemical.name }}</li>
       {% endfor %}
     </ul>
   </div>
