@@ -1,0 +1,59 @@
+- id: 2026-04-18
+  date: 2026-04-18
+  temp_max: 22
+
+  total_time: 90
+  cost: 800
+
+  timeline:
+    - label: 高圧洗浄開始
+      time: "12:10"
+    - label: 高圧洗浄完了
+      time: "12:12"
+    - label: 洗車終了
+      time: "12:58"
+    - label: 門型洗車機完了
+      time: "13:10"
+    - label: 吹上げ完了
+      time: "13:20"
+    - label: ホイール装着
+      time: "13:30"
+    - label: タイヤ施工
+      time: "13:38"
+
+  steps:
+    - name: 高圧洗浄
+      duration: 2
+    - name: 泡洗車〜拭き上げ
+      duration: 46
+    - name: 門型洗車機
+      duration: 12
+    - name: 仕上げ
+      duration: 30
+
+  menu:
+    - name: 高圧洗浄機
+      price: 200
+    - name: 門型洗車機（水洗い＋下回り）
+      price: 600
+
+  chemicals:
+    shampoo: ワックスinシャンプー（3倍濃縮）
+    tire: タイヤコーティング+R
+
+  tools:
+    - ケルヒャー（フォームガン）
+    - マイクロファイバー6枚
+    - スポンジ
+    - タイヤブラシ
+
+  findings:
+    - 作業時間が長すぎる（90分）
+    - 下回り洗浄は不要
+    - 水滴跡が発生（濃度・拭き上げ遅れ）
+    - ホイールは家でやるべき
+
+  next_actions:
+    - 工程削減（門型洗車機カット）
+    - ホイール事前洗浄
+    - 洗浄とコーティングの分離検討
