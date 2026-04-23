@@ -129,7 +129,7 @@ date: 2026-04-11 04:30:00 +0900
   </p>
 
   <p>
-    詳細：<a href="{{ site.baseurl }}/knowledge/highway-fuel-economy-benefit/">高速道路で燃費が良くなる理由</a>
+    詳細：<a href="{{ site.baseurl }}/knowledge/highway-vs-city-fuel-economy/">高速道路で燃費が良くなる理由</a>
   </p>
 
   <hr class="my-5">
@@ -210,7 +210,7 @@ date: 2026-04-11 04:30:00 +0900
 
   <ul>
     <li><a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact/">エアコンと燃費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/summer-fuel-economy-worsening/">夏に燃費が悪化する原因</a></li>
+    <li><a href="{{ site.baseurl }}/knowledge/summer-fuel-economy-loss/">夏に燃費が悪化する原因</a></li>
     <li><a href="{{ site.baseurl }}/knowledge/fuel-efficient-driving-basics/">燃費を意識した運転とは？</a></li>
     <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary/">ソリオの実燃費まとめ</a></li>
   </ul>
