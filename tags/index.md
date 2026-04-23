@@ -1,5 +1,7 @@
 ---
 layout: default
+sitemap: false
+noindex: true
 title: タグ一覧
 permalink: /tags/
 ---
