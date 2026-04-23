@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="robots" content="noindex, follow">
   <meta charset="utf-8">
+  <meta name="robots" content="noindex, follow">
   <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
-  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
   <title>Redirecting...</title>
+  <script>
+    window.location.href = "{{ page.redirect_to | absolute_url }}";
+  </script>
 </head>
 <body>
   <p>Redirecting...</p>
