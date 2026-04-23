@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" data-bs-theme="dark">
   <head>
-    {% if page.layout == "tag" %}
+    {% if page.layout == "tag" or page.layout == "redirect" %}
       <meta name="robots" content="noindex, follow">
     {% endif %}
     {% include head.html %}
