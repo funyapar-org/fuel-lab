@@ -25,3 +25,9 @@ collections:
     permalink: /category/:name/
 plugins:
   - jekyll-sitemap
+defaults:
+  -
+    scope:
+      path: "tags"
+    values:
+      sitemap: false
