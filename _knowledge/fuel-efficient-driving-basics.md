@@ -1,8 +1,8 @@
 ---
 layout: default
 nav_title: 燃費を意識した運転
-title: 燃費を意識した運転とは？アクセル操作と回転数で差が出る理由
-description: 燃費は「どこを走るか」だけでなく「どう操作するか」でも大きく変わります。アクセルの踏み方、回転数の考え方、CVT車で燃費を落とさない運転の基本を解説します。
+title: 燃費を意識した運転とは？アクセル操作・回転数・CVTの基本を完全解説
+description: 燃費は運転操作で大きく変わります。アクセル操作、回転数の考え方、CVT車の特性まで、実燃費を落とさない運転の基本を体系的に解説します。
 date: 2026-01-31
 category: fuel-economy
 tags:
@@ -15,123 +15,147 @@ tags:
 <div class="text-center mb-5">
   <h1 class="fw-bold">{{ page.title }}</h1>
   <p class="text-muted">
-    低回転型エンジンでも無理をしない、実燃費を落とさない運転の考え方
+    同じ道でも燃費が変わる理由は「操作」にあります
   </p>
 </div>
 
 <div class="alert alert-primary shadow-sm">
-  燃費改善というと「渋滞を避ける」「経路を工夫する」といった話が多いですが、  
-  <strong>同じ道・同じ条件でも、運転操作だけで燃費は確実に変わります。</strong>
+  <strong>燃費は環境だけで決まるものではありません。</strong><br>
+  同じ車・同じ道路でも、アクセル操作ひとつで燃費は大きく変わります。
 </div>
 
 <p>
-  このページでは、<strong>アクセル操作・回転数・CVTの特性</strong>に焦点を当てて、  
-  「燃費を意識した運転」とは何かを整理します。
+  このページでは、燃費を意識した運転の基本として
+  <strong>アクセル操作・回転数・CVTの特性</strong>を体系的に解説します。
 </p>
 
 <hr>
 
-<!-- セクション1 -->
-<div class="card shadow-sm mb-4">
-  <div class="card-body">
-    <h2 class="h5 fw-bold mb-3">燃費を左右するのは「アクセルの踏み方」</h2>
+<h2 class="h4 fw-bold mb-3">燃費が悪化する根本原因</h2>
 
-    <p>
-      燃費が悪化しやすい運転の多くは、<strong>アクセル操作が一定でない</strong>ことが原因です。
-    </p>
+<p>
+  燃費が悪化する最大の原因は、<strong>不要なエネルギーの出し入れ</strong>です。
+</p>
 
-    <ul class="mb-0">
-      <li>必要以上に踏み込む</li>
-      <li>踏んでは戻すを繰り返す</li>
-      <li>発進時に一気に踏みすぎる</li>
-    </ul>
-  </div>
-</div>
+<ul>
+  <li>加速しすぎる（余計な燃料消費）</li>
+  <li>すぐ減速する（エネルギー損失）</li>
+  <li>再加速する（再び燃料消費）</li>
+</ul>
+
+<p>
+  この「加速→減速→再加速」の繰り返しが、燃費を悪化させる本質です。
+</p>
+
+<hr>
+
+<h2 class="h4 fw-bold mb-3">アクセル操作の基本（最重要）</h2>
+
+<p>
+  燃費を左右する最大の要素は<strong>アクセルの踏み方</strong>です。
+</p>
+
+<h3 class="h6 fw-bold">NGパターン</h3>
+<ul>
+  <li>必要以上に踏み込む</li>
+  <li>踏んでは戻すを繰り返す</li>
+  <li>発進で一気に踏む</li>
+</ul>
+
+<h3 class="h6 fw-bold">理想の操作</h3>
+<ul>
+  <li>踏む量を決めたら一定に保つ</li>
+  <li>不要になったらスッと戻す</li>
+  <li>急激な変化を作らない</li>
+</ul>
 
 <div class="alert alert-warning">
-  燃費を意識する＝「常に弱く踏む」ではありません。  
-  <strong>必要な分だけ踏み、不要になったら戻す</strong>ことが重要です。
+  燃費運転＝ゆっくりではありません。<br>
+  <strong>「無駄な操作をしない」ことが本質です。</strong>
 </div>
 
 <hr>
 
-<!-- セクション2 -->
-<div class="card shadow-sm mb-4">
-  <div class="card-body">
-    <h2 class="h5 fw-bold mb-3">低回転を怖がらなくていい理由</h2>
+<h2 class="h4 fw-bold mb-3">回転数の考え方</h2>
 
-    <p>
-      「低回転で走るとエンジンが汚れる」という話を聞くことがありますが、
-      通常の街乗りレベルの低回転域であれば過度に気にする必要はありません。
-      現代のガソリンエンジンは、低〜中回転域で効率よく走行できるように設計されており、
-      無理に回転数を上げ続けることが必ずしも良いとは限りません。
-    </p>
+<p>
+  燃費を意識する上で重要なのは、回転数の高さではなく
+  <strong>負荷と効率のバランス</strong>です。
+</p>
 
-    <p class="mb-0">
-      重要なのは回転数の高さではなく、
-      「エンジンに無理な負荷がかかっていないか」です。
-      適切なギアとアクセル操作で、
-      エンジンがスムーズに回る回転域を維持する方が、
-      燃費的にも機械的にも負担の少ない運転になります。
-    </p>
-  </div>
-</div>
+<ul>
+  <li>低すぎる → エンジンに負荷</li>
+  <li>高すぎる → 燃料消費増加</li>
+</ul>
+
+<p>
+  現代のエンジンは低〜中回転域で効率が良くなるよう設計されています。
+  無理に回すよりも、<strong>スムーズに回る領域を使う</strong>ことが重要です。
+</p>
 
 <div class="alert alert-info">
-  関連ページ：  
+  関連：  
   <a href="{{ site.baseurl }}/solio/k12c-low-rpm-carbon-myth/" class="alert-link">
-    低回転＝汚れるは誤解？ソリオK12Cが低回転前提でも問題ない理由
+    低回転＝汚れるは誤解？の詳細解説
   </a>
 </div>
 
 <hr>
 
-<!-- セクション3 -->
-<div class="card shadow-sm mb-4">
-  <div class="card-body">
-    <h2 class="h5 fw-bold mb-3">CVT車で燃費を落としやすい操作</h2>
+<h2 class="h4 fw-bold mb-3">CVT車で燃費が落ちる理由</h2>
 
-    <p>
-      CVT車はアクセル操作に対してエンジン回転数が敏感に変化します。
-    </p>
+<p>
+  CVT車はアクセル操作に対して回転数が大きく変化します。
+</p>
 
-    <ul>
-      <li>強く踏む → 回転数だけが上がる</li>
-      <li>すぐ戻す → 回転が落ちきらない</li>
-      <li>結果として燃料を余計に消費</li>
-    </ul>
+<ul>
+  <li>強く踏む → 回転数だけ上昇</li>
+  <li>すぐ戻す → 回転が残る</li>
+</ul>
 
-    <p class="mb-0">
-      <strong>「踏む量を決めたら、しばらく維持する」</strong>  
-      これだけで燃費のブレはかなり減ります。
-    </p>
-  </div>
-</div>
+<p>
+  この挙動が「無駄な燃料消費」を生みます。
+</p>
+
+<p>
+  対策はシンプルで、<strong>アクセル開度を安定させること</strong>です。
+</p>
 
 <hr>
 
-<!-- セクション4 -->
-<div class="card shadow-sm mb-4">
-  <div class="card-body">
-    <h2 class="h5 fw-bold mb-3">燃費を意識した運転のチェックリスト</h2>
+<h2 class="h4 fw-bold mb-3">シーン別の燃費運転</h2>
 
-    <ul class="mb-0">
-      <li>発進時にアクセルを踏みすぎていないか</li>
-      <li>回転数を無理に上げ続けていないか</li>
-      <li>不要な加減速を繰り返していないか</li>
-      <li>CVTの特性を理解して操作しているか</li>
-    </ul>
-  </div>
-</div>
+<h3 class="h6 fw-bold">発進時</h3>
+<p>
+  ゆっくりすぎず、強すぎず。一定の踏み込みでスムーズに加速。
+</p>
+
+<h3 class="h6 fw-bold">巡航時</h3>
+<p>
+  アクセル開度を固定し、速度のブレを減らす。
+</p>
+
+<h3 class="h6 fw-bold">減速時</h3>
+<p>
+  早めにアクセルを戻し、惰性を活かす。
+</p>
+
+<hr>
+
+<h2 class="h4 fw-bold mb-3">チェックリスト</h2>
+
+<ul>
+  <li>アクセル操作が安定しているか</li>
+  <li>無駄な加減速をしていないか</li>
+  <li>回転数に無理がないか</li>
+</ul>
 
 <div class="alert alert-success">
-  燃費を意識した運転は、  
-  <strong>エンジン・CVT・タイヤすべての負担を減らす運転</strong>でもあります。
+  燃費運転とは、<strong>エネルギーを無駄にしない運転</strong>です。
 </div>
 
 <hr>
 
-<!-- 関連ページ -->
 <h2 class="h4 fw-bold mb-3">関連ページ</h2>
 
 <div class="row g-3 mb-5">
@@ -139,12 +163,12 @@ tags:
   <div class="col-md-6">
     <div class="card h-100 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title fw-bold">街乗りでも燃費を諦めたくない人におすすめの燃費対策</h5>
+        <h5 class="card-title fw-bold">街乗りでの燃費対策</h5>
         <p class="card-text">
-          経路選び・渋滞回避・街乗り特有の燃費悪化要因にフォーカスしたページです。
+          環境要因から燃費を改善する方法
         </p>
         <a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/" class="btn btn-outline-primary">
-          ページを見る
+          詳細を見る
         </a>
       </div>
     </div>
@@ -153,12 +177,12 @@ tags:
   <div class="col-md-6">
     <div class="card h-100 shadow-sm border-warning">
       <div class="card-body">
-        <h5 class="card-title fw-bold">燃費が徐々に悪化する原因とは？</h5>
+        <h5 class="card-title fw-bold">燃費が悪化する原因</h5>
         <p class="card-text">
-          運転以外に、燃費が落ちていく代表的な原因を整理しています。
+          運転以外の要因を整理
         </p>
         <a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/" class="btn btn-warning fw-bold">
-          原因を確認する
+          確認する
         </a>
       </div>
     </div>
