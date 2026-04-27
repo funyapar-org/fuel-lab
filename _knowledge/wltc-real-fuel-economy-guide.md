@@ -1,204 +1,198 @@
 ---
 layout: default
-title: WLTC燃費はどれくらい当てになる？実燃費との関係を解説
-nav_title: WLTCと実燃費の関係
-description: WLTCモード燃費はどれくらい実燃費の参考になるのかを解説。達成率の考え方や市街地・郊外・高速モードの使い分けまで、実用的な見方をわかりやすく整理します。
+title: WLTC燃費はどれくらい当てになる？実燃費の予測方法まで解説
+nav_title: WLTCと実燃費
+description: WLTC燃費から実燃費を予測する方法を解説。達成率の考え方だけでなく、市街地・郊外・高速モードの使い分けや実用的な計算方法までまとめています。
 category: fuel-economy
 tags:
 - fuel-economy
 - real-fuel-economy
-- catalog-fuel-economy
 - wltc
 - fuel-consumption
-- driving-condition
 date: 2026-04-04 00:30:00 +0900
 ---
 
 <div class="container my-4">
 
-  <h1 class="mb-4">WLTC燃費はどれくらい当てになる？</h1>
+<h1 class="mb-4">WLTC燃費はどれくらい当てになる？</h1>
 
-  <p class="lead">
-    カタログに載っている「WLTCモード燃費」。
-    これは実際の燃費の目安になるのでしょうか？
-  </p>
+<div class="alert alert-primary">
+  結論：<br>
+  <strong>目安にはなるが、そのままの数値はほぼ出ない</strong><br>
+  → ただし「使い方」を理解すれば実燃費はかなり予測できる
+</div>
 
-  <div class="alert alert-success">
-    結論：<br>
-    <strong>目安にはなるが、そのまま当てはまるわけではない</strong><br>
-    → 使い方によって大きくズレる
-  </div>
+<p class="lead">
+  WLTC燃費は「当てにならない」と言われがちですが、  
+  実は<strong>見方を理解すればかなり有用な指標</strong>です。
+</p>
 
-  <h2 class="mt-5">WLTCモードとは何か</h2>
+<hr class="my-5">
 
-  <p>
-    WLTCモードは実際の走行に近い条件を再現した燃費測定方法で、
-    以下の3つのモードで構成されています。
-  </p>
+<h2 class="mb-4">WLTCモードの正体</h2>
 
-  <ul>
-    <li>市街地モード（低速・ストップ＆ゴー）</li>
-    <li>郊外モード（中速・流れあり）</li>
-    <li>高速モード（定速巡航）</li>
-  </ul>
+<p>
+  WLTCは以下3つの走行条件を合成した燃費です。
+</p>
 
-  <p>
-    これらを合成したものが「WLTC燃費」です。
-  </p>
+<ul>
+  <li>市街地（低速・ストップ＆ゴー）</li>
+  <li>郊外（中速・流れあり）</li>
+  <li>高速（定速巡航）</li>
+</ul>
 
-  <h2 class="mt-5">実燃費との関係（達成率）</h2>
+<p>
+  つまりWLTCは<strong>平均値</strong>です。
+</p>
 
-  <p>
-    実燃費は一般的に、以下のように考えられます。
-  </p>
+<div class="alert alert-warning">
+  自分の使い方と一致しない限り、そのままの数値にはならない
+</div>
 
-  <div class="alert alert-info">
-    実燃費 ≒ WLTC燃費 × 達成率
-  </div>
+<hr class="my-5">
 
-  <p>
-    例えば、WLTCが20km/Lで達成率80%の場合：
-  </p>
+<h2 class="mb-4">基本式：実燃費はこう考える</h2>
 
-  <ul>
-    <li>→ 実燃費：約16km/L</li>
-  </ul>
+<div class="alert alert-info">
+  実燃費 ≒ WLTC燃費 × 達成率
+</div>
 
-  <h2 class="mt-5">達成率の目安</h2>
+<p>
+  例：WLTC 20km/L × 0.8 → 約16km/L
+</p>
 
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>使用条件</th>
-          <th>達成率の目安</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>街乗り中心</td>
-          <td>70〜85%</td>
-        </tr>
-        <tr>
-          <td>混合（街＋郊外）</td>
-          <td>80〜95%</td>
-        </tr>
-        <tr>
-          <td>高速多め</td>
-          <td>90〜110%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<hr class="my-5">
 
-  <p>
-    つまり、同じ車でも使い方次第で燃費は大きく変わります。
-  </p>
+<h2 class="mb-4">達成率のリアルな目安</h2>
 
-  <h2 class="mt-5">重要：達成率は固定ではない</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>使用環境</th>
+<th>達成率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>短距離・街乗り中心</td>
+<td>60〜80%</td>
+</tr>
+<tr>
+<td>一般的な混合走行</td>
+<td>75〜95%</td>
+</tr>
+<tr>
+<td>郊外・高速多め</td>
+<td>90〜110%</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-  <div class="alert alert-warning">
-    <strong>達成率は一定の数値ではありません</strong>
-  </div>
+<div class="alert alert-warning">
+  特に短距離は想像以上に燃費が落ちる
+</div>
 
-  <p>
-    以下の要因で大きく変動します。
-  </p>
+<hr class="my-5">
 
-  <ul>
-    <li>信号の多さ</li>
-    <li>渋滞</li>
-    <li>気温（特に冬）</li>
-    <li>走行距離（短距離か長距離か）</li>
-  </ul>
+<h2 class="mb-4">【重要】達成率がズレる本当の理由</h2>
 
-  <p>
-    そのため「WLTCの何%」と固定的に考えるのは正確ではありません。
-  </p>
+<ul>
+  <li>暖機前に走行が終わる（短距離）</li>
+  <li>渋滞による停止時間</li>
+  <li>エアコン負荷</li>
+  <li>外気温（冬は特に悪化）</li>
+</ul>
 
-  <h2 class="mt-5">実用的な見方：モードを使い分ける</h2>
+<p>
+  関連：<a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact/">エアコンと燃費</a>
+</p>
 
-  <p>
-    精度を上げるには、単純なWLTC値ではなく
-    <strong>自分の使用環境に近いモードを参考にする</strong>のが有効です。
-  </p>
+<hr class="my-5">
 
-  <h3 class="mt-4">例：街乗り中心の場合</h3>
+<h2 class="mb-4">実用テク：WLTCを分解して使う</h2>
 
-  <ul>
-    <li>市街地モードを基準にする</li>
-  </ul>
+<p>
+  精度を上げるには、WLTCではなく
+  <strong>各モードを使い分ける</strong>のが重要です。
+</p>
 
-  <p>
-    ただし実際は完全一致しないため、
-    <strong>少し下振れする前提で見る</strong>のがポイントです。
-  </p>
+<h3 class="mt-4">例：街乗り中心の場合</h3>
 
-  <h3 class="mt-4">さらに精度を上げる方法</h3>
+<ul>
+  <li>市街地モードをベースにする</li>
+  <li>そこからさらに10〜20%下げる</li>
+</ul>
 
-  <ul>
-    <li>市街地：80%</li>
-    <li>郊外：20%</li>
-  </ul>
+<hr class="my-4">
 
-  <p>
-    のように、自分の使用割合で考えるとより現実に近づきます。
-  </p>
+<h3>さらに精度を上げる方法</h3>
 
-  <h2 class="mt-5">なぜ実燃費は下振れしやすいのか</h2>
+<p>
+  自分の走行割合で加重平均します。
+</p>
 
-  <p>
-    WLTCはあくまで試験条件のため、
-    実際の環境では不利な要素が多くなります。
-  </p>
+<ul>
+  <li>市街地：70%</li>
+  <li>郊外：20%</li>
+  <li>高速：10%</li>
+</ul>
 
-  <ul>
-    <li>短距離走行（暖機前終了）</li>
-    <li>渋滞による停止時間増加</li>
-    <li>エアコン使用</li>
-  </ul>
+<p>
+  → この比率で燃費をイメージするとかなり近づきます
+</p>
 
-  <p>
-    特に短距離運転は燃費悪化の大きな要因です。
-  </p>
+<hr class="my-5">
 
-  <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が悪化する理由</a>
-  </p>
+<h2 class="mb-4">ありがちな誤解</h2>
 
-  <h2 class="mt-5">実燃費を正しく把握するには</h2>
+<h3 class="mt-4">「WLTCより悪い＝車が悪い」</h3>
 
-  <p>
-    最も正確なのは「実測」です。
-  </p>
+<p>
+  これは誤解です。
+</p>
 
-  <ul>
-    <li>満タン法で計測する</li>
-    <li>条件を揃えて比較する</li>
-  </ul>
+<p>
+  WLTCは理想条件寄りなので、
+  実燃費が下振れするのは正常です。
+</p>
 
-  <p>
-    関連：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法のやり方</a>
-  </p>
+<hr class="my-5">
 
-  <h2 class="mt-5">結論</h2>
+<h2 class="mb-4">最終的に一番正確な方法</h2>
 
-  <div class="alert alert-success">
-    <ul class="mb-0">
-      <li>WLTC燃費は目安としては有効</li>
-      <li>達成率は条件によって大きく変わる</li>
-      <li>最も近いモードを基準にするのが実用的</li>
-      <li>最終的には実測が最も信頼できる</li>
-    </ul>
-  </div>
+<ul>
+  <li>満タン法で実測する</li>
+  <li>同じ条件で比較する</li>
+</ul>
 
-  <h2 class="mt-5">関連ページ</h2>
+<p>
+  関連：<a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法のやり方</a>
+</p>
 
-  <ul>
-    <li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">実燃費の考え方</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/highway-vs-city-fuel-economy/">高速道路と街乗りの燃費差</a></li>
-    <li><a href="{{ site.baseurl }}/knowledge/fuel-economy-worsens/">燃費が悪くなる原因まとめ</a></li>
-    <li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">ソリオ実燃費ログ</a></li>
-  </ul>
+<hr class="my-5">
+
+<h2 class="mb-4">まとめ</h2>
+
+<div class="alert alert-success">
+<ul class="mb-0">
+<li>WLTCは「平均値」なのでそのままは出ない</li>
+<li>達成率は60〜110%まで大きくブレる</li>
+<li>モード別に見ると精度が上がる</li>
+<li>最終的には実測が最も正確</li>
+</ul>
+</div>
+
+<hr class="my-5">
+
+<h2 class="mb-4">関連ページ</h2>
+
+<ul>
+<li><a href="{{ site.baseurl }}/knowledge/real-fuel-economy-thinking/">実燃費の考え方</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/highway-vs-city-fuel-economy/">高速と街乗りの違い</a></li>
+<li><a href="{{ site.baseurl }}/knowledge/short-trip-poor-fuel-economy/">短距離で燃費が落ちる理由</a></li>
+<li><a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">実燃費ログ</a></li>
+</ul>
 
 </div>
