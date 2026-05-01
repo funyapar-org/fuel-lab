@@ -169,6 +169,12 @@ tags:
         </tbody>
       </table>
     </div>
+
+    <div class="alert alert-info mt-4">
+      <strong>今回選定したタイヤ</strong><br>
+      ヨコハマ BluEarth AE-01F（165/70R14）<br>
+      <a href="https://amzn.to/48BazCS" target="_blank" rel="noopener sponsored">Amazonで価格を見る</a>
+    </div>
   </section>
 
   <hr>
@@ -239,6 +245,12 @@ tags:
     <p class="mt-3">
       燃費面では差が出にくいが、街乗りでの操舵安定性やふらつき感を抑えたいという判断からである。
     </p>
+
+    <div class="alert alert-info mt-4">
+      <strong>今回選定したホイール</strong><br>
+      G-SPEED G-08（14インチ 4.5J +45）<br>
+      <a href="https://amzn.to/427H4Fc" target="_blank" rel="noopener sponsored">Amazonで価格を見る</a>
+    </div>
 
     <p class="mt-3">
       バネ下で合計 <strong>約2.8kgの軽量化</strong>。
