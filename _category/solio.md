@@ -60,11 +60,11 @@ description: スズキ ソリオ（MA26S）1.2L NAモデルを用いた燃費実
 
     {% assign pages = "" | split: "" %}
 
-    {% for tmp_page in site.knowledge %}
+    {% for tmp_page in site.knowledge | where_exp: "item", "item.published != false" %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
-    {% for tmp_page in site.solio %}
+    {% for tmp_page in site.solio | where_exp: "item", "item.published != false" %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
