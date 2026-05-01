@@ -61,11 +61,11 @@ description: タイヤの転がり抵抗、空気圧管理、サイズ変更に�
 
     {% assign pages = "" | split: "" %}
 
-    {% for tmp_page in site.knowledge %}
+    {% for tmp_page in site.knowledge | where_exp: "item", "item.published != false" %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
-    {% for tmp_page in site.solio %}
+    {% for tmp_page in site.solio | where_exp: "item", "item.published != false" %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
