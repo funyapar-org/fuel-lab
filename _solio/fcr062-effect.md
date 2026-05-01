@@ -179,6 +179,8 @@ tags:
     ※ 燃費改善は添加剤以外の要因（気温・走行条件など）にも影響されます。
   </p>
   
+  <hr>
+  
   <h2 class="mt-5">現在の運用（追記）</h2>
 
   <div class="alert alert-secondary">
@@ -205,6 +207,8 @@ tags:
     <li>旧：定期添加 → コスト高め</li>
     <li>現：必要時のみ → コスパ最適化</li>
   </ul>
+  
+  <hr>
 
   <!-- CTA -->
   {% include fcr062-affiliate.html
