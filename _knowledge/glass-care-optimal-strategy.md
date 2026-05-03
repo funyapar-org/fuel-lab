@@ -5,12 +5,12 @@ nav_title: "ガラスケア最適解"
 description: "車のガラスケアの最適解を解説。油膜除去・撥水コーティング・ワイパー管理のバランスをコスパ・タイパ重視で解説します。"
 category: maintenance
 tags:
-- glass-care
-- windshield
-- water-repellent
-- oil-film
-- wiper
-- car-maintenance
+  - glass-care
+  - windshield
+  - water-repellent
+  - oil-film
+  - wiper
+  - car-maintenance
 date: 2026-04-30 11:00:00 +0900
 published: false
 ---
