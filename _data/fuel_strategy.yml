@@ -1,0 +1,55 @@
+goal:
+  target_kml: 16.0
+  baseline_kml: 14.02
+
+phases:
+
+  - id: baseline
+    title: ベースライン計測
+    description: 購入直後の純正状態を測定
+    status: completed
+
+    strategies:
+
+      - id: stock_measure
+        title: 純正状態燃費測定
+        effect_estimate: 0
+        effect_actual: 0
+        status: completed
+        link: /solio/baseline/
+
+  - id: engine_recovery
+    title: エンジンコンディション改善
+    description: 燃焼状態の正常化
+    status: active
+
+    strategies:
+
+      - id: fcr062
+        title: FCR-062 添加
+        effect_estimate: 0.3
+        effect_actual: 0.4
+        status: verified
+        link: /solio/fcr062-effect/
+
+      - id: oil_management
+        title: オイル交換最適化
+        effect_estimate: 0.1
+        status: testing
+
+  - id: rolling_resistance
+    title: 転がり抵抗低減
+    status: planned
+
+    strategies:
+
+      - id: aaa_tire
+        title: AAAタイヤ化
+        effect_estimate: 0.5
+        status: planned
+        link: /solio/tire-plan/
+
+      - id: lightweight_wheel
+        title: 軽量ホイール化
+        effect_estimate: 0.3
+        status: planned
