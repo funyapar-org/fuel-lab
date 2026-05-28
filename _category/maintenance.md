@@ -60,11 +60,11 @@ description: エンジンオイル交換、エアフィルター交換、タイ�
 
     {% assign pages = "" | split: "" %}
 
-    {% for tmp_page in site.knowledge | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.knowledge %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
-    {% for tmp_page in site.solio | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.solio %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 

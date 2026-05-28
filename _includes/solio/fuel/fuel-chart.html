@@ -1,0 +1,349 @@
+<div class="card shadow-sm my-5">
+
+  <div class="card-body">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+
+      <div>
+
+        <h3 class="mb-1">
+          実燃費研究グラフ
+        </h3>
+
+        <div class="text-muted small">
+          季節補正後の燃費推移と改善施策タイムライン
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="chart-wrapper mb-5">
+      <canvas id="fuelChart"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+
+
+<script>
+
+const actualData = [
+  {{ actual_chart_points | remove_first: "," }}
+];
+
+const normalizedData = [
+  {{ normalized_chart_points | remove_first: "," }}
+];
+
+const predictionMinData = [
+  {{ prediction_min_points | remove_first: "," }}
+];
+
+const predictionMaxData = [
+  {{ prediction_max_points | remove_first: "," }}
+];
+
+const experiments =
+  {{ site.data.solio_experiments.experiment_log | jsonify }};
+
+const vehicleStates =
+  {{ site.data.fuel_model.vehicle_states | jsonify }};
+
+const futureMaxDate = new Date(
+  Math.max(
+    ...predictionMaxData.map(p => new Date(p.x))
+  )
+);
+
+futureMaxDate.setDate(
+  futureMaxDate.getDate() + 30
+);
+
+
+
+/*
+|--------------------------------------------------------------------------
+| annotation生成
+|--------------------------------------------------------------------------
+*/
+
+const annotations = {};
+
+
+
+/*
+|--------------------------------------------------------------------------
+| 施策イベント線
+|--------------------------------------------------------------------------
+*/
+
+experiments.forEach((exp, index) => {
+
+  const eventDate =
+    exp.date || exp.scheduled_date;
+
+  if (!eventDate) return;
+
+  let borderColor = '#198754';
+
+  if (exp.type === 'problem') {
+    borderColor = '#dc3545';
+  }
+
+  if (exp.phase === 'planned') {
+    borderColor = '#fd7e14';
+  }
+
+  annotations['event_' + index] = {
+
+    type: 'line',
+
+    xMin: eventDate,
+    xMax: eventDate,
+
+    borderColor: borderColor,
+
+    borderWidth: 2,
+
+    borderDash:
+      exp.phase === 'planned'
+      ? [6, 6]
+      : [],
+
+    label: {
+
+      display: true,
+
+      content: exp.title,
+
+      position: 'start',
+
+      rotation: -90,
+
+      yAdjust: -10,
+
+      font: {
+        size: 10
+      }
+
+    }
+
+  };
+
+});
+
+
+
+/*
+|--------------------------------------------------------------------------
+| vehicle_state 背景帯
+|--------------------------------------------------------------------------
+*/
+
+Object.entries(vehicleStates).forEach(([key, state], index) => {
+
+  annotations['state_' + index] = {
+
+    type: 'box',
+
+    xMin: state.start,
+    xMax: state.end,
+
+    backgroundColor:
+      index % 2 === 0
+      ? 'rgba(13,110,253,0.04)'
+      : 'rgba(25,135,84,0.04)',
+
+    borderWidth: 0,
+
+    label: {
+
+      display: true,
+
+      content: key,
+
+      position: 'start',
+
+      yAdjust: 10,
+
+      font: {
+        size: 10
+      }
+
+    }
+
+  };
+
+});
+
+
+
+const ctx =
+  document.getElementById('fuelChart');
+
+
+
+new Chart(ctx, {
+
+  type: 'line',
+
+  data: {
+
+    datasets: [
+
+      {
+        label: '春秋換算燃費 (km/L)',
+
+        data: normalizedData,
+
+        tension: 0.3,
+
+        borderWidth: 3,
+
+        pointRadius: 3
+      },
+
+      {
+        label: '実燃費 (km/L)',
+
+        data: actualData,
+
+        tension: 0.3,
+
+        borderDash: [6, 6],
+
+        borderWidth: 1.5,
+
+        pointRadius: 2
+      },
+
+      {
+        label: '理論改善予測 MIN',
+
+        data: predictionMinData,
+
+        stepped: 'before',
+
+        borderDash: [2, 4],
+
+        borderWidth: 2,
+
+        pointRadius: 0
+      },
+
+      {
+        label: '理論改善予測 MAX',
+
+        data: predictionMaxData,
+
+        stepped: 'before',
+
+        borderDash: [2, 4],
+
+        borderWidth: 2,
+
+        pointRadius: 0,
+
+        fill: '-1'
+      }
+
+    ]
+
+  },
+
+  options: {
+
+    responsive: true,
+
+    maintainAspectRatio: false,
+
+    interaction: {
+
+      mode: 'nearest',
+
+      intersect: false
+
+    },
+
+    plugins: {
+
+      legend: {
+
+        display: true,
+
+        position: 'bottom',
+
+        boxWidth: 10,
+
+        font: {
+          size: 10
+        }
+
+      },
+
+      annotation: {
+
+        annotations: annotations
+
+      }
+
+    },
+
+    scales: {
+
+      x: {
+
+        type: 'time',
+
+        suggestedMax: futureMaxDate,
+
+        time: {
+
+          unit: 'month',
+
+          tooltipFormat: 'yyyy-MM-dd'
+
+        },
+
+        title: {
+
+          display: true,
+
+          text: '日付'
+
+        }
+
+      },
+
+      y: {
+
+        beginAtZero: false,
+
+        title: {
+
+          display: true,
+
+          text: '燃費 (km/L)'
+
+        }
+
+      }
+
+    }
+
+  }
+
+});
+
+</script>

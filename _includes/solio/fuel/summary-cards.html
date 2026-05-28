@@ -1,0 +1,62 @@
+<div class="row g-4">
+
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">総平均実燃費</h6>
+        <div class="display-6 fw-bold">
+          {{ avg_economy }}
+        </div>
+        <div>km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">
+          直近1年平均
+        </h6>
+
+        <div class="display-6 fw-bold">
+          {{ recent_avg_economy }}
+        </div>
+
+        <div>km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm border-success">
+      <div class="card-body">
+        <h6 class="text-muted">
+          春秋換算
+        </h6>
+
+        <div class="display-6 fw-bold text-success">
+          {{ normalized_recent_avg_economy }}
+        </div>
+
+        <div>km/L</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">
+          進捗率
+        </h6>
+
+        <div class="display-6 fw-bold">
+          {{ progress_percent }}%
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

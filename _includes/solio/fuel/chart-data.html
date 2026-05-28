@@ -1,0 +1,296 @@
+{% assign actual_chart_points = "" %}
+{% assign normalized_chart_points = "" %}
+
+{% assign prediction_min_points = "" %}
+{% assign prediction_max_points = "" %}
+
+{% assign prev_odometer =
+  site.data.solio_meta.purchase.odometer %}
+
+{% assign baseline_economy = nil %}
+
+{% assign experiments =
+  site.data.solio_experiments.experiment_log %}
+
+
+
+{% comment %}
+|------------------------------------------------------------
+| 実燃費ログ
+|------------------------------------------------------------
+{% endcomment %}
+
+{% for log in sorted_logs %}
+
+  {% assign distance =
+    log.odometer | minus: prev_odometer %}
+
+  {% assign economy =
+    distance | divided_by: log.fuel %}
+
+  {% capture factor %}
+    {% include
+      solio/fuel/calc-seasonal-factor.html
+      date=log.date %}
+  {% endcapture %}
+
+  {% assign factor =
+    factor | strip | plus: 0 %}
+
+  {% assign normalized_economy =
+    economy | divided_by: factor %}
+
+  {% if baseline_economy == nil %}
+
+    {% assign baseline_economy =
+      normalized_economy %}
+
+  {% endif %}
+
+
+
+  {% capture actual_chart_points %}
+    {{ actual_chart_points }},
+    {
+      x: "{{ log.date | date: "%Y-%m-%d" }}",
+      y: {{ economy | round: 2 }}
+    }
+  {% endcapture %}
+
+
+
+  {% capture normalized_chart_points %}
+    {{ normalized_chart_points }},
+    {
+      x: "{{ log.date | date: "%Y-%m-%d" }}",
+      y: {{ normalized_economy | round: 2 }}
+    }
+  {% endcapture %}
+
+  {% assign prev_odometer = log.odometer %}
+
+{% endfor %}
+
+
+
+{% comment %}
+|------------------------------------------------------------
+| 理論改善予測線
+| planned施策を未来まで累積適用
+|------------------------------------------------------------
+{% endcomment %}
+
+{% assign prediction_dates = "" %}
+
+{% for log in sorted_logs %}
+
+  {% capture prediction_dates %}{{ prediction_dates }},{{ log.date | date: "%Y-%m-%d" }}{% endcapture %}
+
+{% endfor %}
+
+
+
+{% for exp in experiments %}
+
+  {% if exp.phase == "planned" %}
+
+    {% assign exp_date =
+      exp.scheduled_date
+      | default: exp.date %}
+
+    {% capture prediction_dates %}{{ prediction_dates }},{{ exp_date | strip }}{% endcapture %}
+
+  {% endif %}
+
+{% endfor %}
+
+
+
+{% assign prediction_dates_array =
+  prediction_dates
+  | remove_first: ","
+  | split: ","
+  | uniq %}
+
+{% assign predicted_min_factor = 1.0 %}
+{% assign predicted_max_factor = 1.0 %}
+
+
+
+{% for raw_date in prediction_dates_array %}
+
+  {% assign target_date = raw_date | strip %}
+
+  {% assign target_ts =
+    target_date | date: "%s" %}
+
+
+
+  {% for exp in experiments %}
+
+    {% if exp.phase == "planned" %}
+
+      {% assign exp_date =
+        exp.scheduled_date
+        | default: exp.date %}
+
+      {% assign exp_ts =
+        exp_date | strip | date: "%s" %}
+
+      {% if exp_ts == target_ts %}
+
+        {% if exp.fuel_economy_factor_estimate_min %}
+
+          {% assign predicted_min_factor =
+            predicted_min_factor
+            | times:
+            exp.fuel_economy_factor_estimate_min %}
+
+        {% endif %}
+
+        {% if exp.fuel_economy_factor_estimate_max %}
+
+          {% assign predicted_max_factor =
+            predicted_max_factor
+            | times:
+            exp.fuel_economy_factor_estimate_max %}
+
+        {% endif %}
+
+      {% endif %}
+
+    {% endif %}
+
+  {% endfor %}
+
+
+
+  {% assign prediction_min =
+    baseline_economy
+    | times: predicted_min_factor %}
+
+  {% assign prediction_max =
+    baseline_economy
+    | times: predicted_max_factor %}
+
+
+
+  {% capture prediction_min_points %}
+    {{ prediction_min_points }},
+    {
+      x: "{{ target_date }}",
+      y: {{ prediction_min | round: 2 }}
+    }
+  {% endcapture %}
+
+
+
+  {% capture prediction_max_points %}
+    {{ prediction_max_points }},
+    {
+      x: "{{ target_date }}",
+      y: {{ prediction_max | round: 2 }}
+    }
+  {% endcapture %}
+
+{% endfor %}
+
+
+
+{% comment %}
+|------------------------------------------------------------
+| 同日イベントグループ化
+|------------------------------------------------------------
+{% endcomment %}
+
+{% assign grouped_event_dates = "" %}
+{% assign grouped_annotations_json = "" %}
+
+{% for exp in experiments %}
+
+  {% assign event_date =
+    exp.date | default: exp.scheduled_date %}
+
+  {% unless event_date %}
+    {% continue %}
+  {% endunless %}
+
+  {% assign event_key =
+    "|" | append: event_date | append: "|" %}
+
+  {% unless grouped_event_dates contains event_key %}
+
+    {% assign grouped_event_dates =
+      grouped_event_dates
+      | append: event_key %}
+
+    {% assign label_content = "" %}
+    {% assign line_color = "#198754" %}
+    {% assign dashed = false %}
+
+    {% for subexp in experiments %}
+
+      {% assign sub_date =
+        subexp.date | default: subexp.scheduled_date %}
+
+      {% if sub_date == event_date %}
+
+        {% capture label_content %}
+{{ label_content }}• {{ subexp.title }}\n
+        {% endcapture %}
+
+        {% if subexp.type == "problem" %}
+          {% assign line_color = "#dc3545" %}
+        {% endif %}
+
+        {% if subexp.phase == "planned" %}
+          {% assign line_color = "#fd7e14" %}
+          {% assign dashed = true %}
+        {% endif %}
+
+      {% endif %}
+
+    {% endfor %}
+
+    {% capture grouped_annotations_json %}
+{{ grouped_annotations_json }}
+
+"group_{{ event_date | replace: "-", "_" }}": {
+
+  type: "line",
+
+  xMin: "{{ event_date }}",
+  xMax: "{{ event_date }}",
+
+  borderColor: "{{ line_color }}",
+
+  borderWidth: 2,
+
+  {% if dashed %}
+  borderDash: [6, 6],
+  {% endif %}
+
+  label: {
+
+    display: true,
+
+    content: `{{ label_content | strip }}`,
+
+    position: "start",
+
+    rotation: -90,
+
+    yAdjust: -10,
+
+    font: {
+      size: 10
+    }
+
+  }
+
+},
+    {% endcapture %}
+
+  {% endunless %}
+
+{% endfor %}

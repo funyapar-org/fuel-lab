@@ -1,0 +1,42 @@
+<div class="card shadow-sm my-4">
+
+  <div class="card-body">
+
+    <div class="d-flex justify-content-between mb-2">
+
+      <span>
+        燃費改善進捗
+      </span>
+
+      <span>
+        {{ progress_percent }}%
+      </span>
+
+    </div>
+
+    <div class="progress" style="height: 24px;">
+
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        role="progressbar"
+        style="width: {{ progress_percent }}%;">
+
+        {{ normalized_recent_avg_economy }} km/L
+
+      </div>
+
+    </div>
+
+    <div class="small text-muted mt-2">
+
+      初期:
+      {{ baseline }} km/L →
+
+      目標:
+      {{ target }} km/L
+
+    </div>
+
+  </div>
+
+</div>

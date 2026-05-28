@@ -1,4 +1,31 @@
-model: MA26S
+model: DBA-MA26S
+
+engine:
+  name: K12C
+  displacement_cc: 1242
+  transmission: CVT
+  drive: FF
+
 purchase:
   date: 2025-08-23
   odometer: 25263
+
+initial_state:
+  fuel_economy_km_l: 14.02
+  oil_viscosity: 5W-30
+  tire: eg02
+  wheel: oem_steel
+
+usage_environment:
+  main_use: city-driving
+  short_trip_ratio: high
+  passengers: mostly_single
+  cargo_weight_kg: low
+  air_conditioner_usage: high
+
+measurement:
+  fuel_method: full-tank
+  fuel_type: regular
+
+targets:
+  fuel_economy_km_l: 16.0

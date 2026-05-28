@@ -60,11 +60,11 @@ description: 燃費改善の理論、運転方法、空気圧や粘度の影響�
 
     {% assign pages = "" | split: "" %}
 
-    {% for tmp_page in site.knowledge | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.knowledge %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
-    {% for tmp_page in site.solio | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.solio %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 

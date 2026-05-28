@@ -60,11 +60,11 @@ description: 燃料添加剤の洗浄効果や燃費改善効果は本当にあ�
 
     {% assign pages = "" | split: "" %}
 
-    {% for tmp_page in site.knowledge | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.knowledge %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 
-    {% for tmp_page in site.solio | where_exp: "item", "item.published != false" %}
+    {% for tmp_page in site.solio %}
       {% assign pages = pages | push: tmp_page %}
     {% endfor %}
 

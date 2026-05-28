@@ -1,0 +1,12 @@
+fuel_economy:
+  label: 燃費
+combustion_condition:
+  label: 燃焼状態
+durability:
+  label: 耐久性
+cold_start:
+  label: 冷間始動性
+uneven_tire_wear:
+  label: タイヤの偏摩耗
+transmission_condition:
+  label: トランスミッションの状態

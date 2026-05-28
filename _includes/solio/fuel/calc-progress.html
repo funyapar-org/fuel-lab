@@ -1,0 +1,27 @@
+{% assign baseline =
+  site.data.solio_meta.initial_state.fuel_economy_km_l %}
+
+{% assign target =
+  site.data.solio_meta.targets.fuel_economy_km_l %}
+
+{% assign current = normalized_recent_avg_economy %}
+
+{% assign progress_numerator =
+  current | minus: baseline %}
+
+{% assign progress_denominator =
+  target | minus: baseline %}
+
+{% assign progress_percent =
+  progress_numerator
+  | times: 100
+  | divided_by: progress_denominator
+  | round: 0 %}
+
+{% if progress_percent < 0 %}
+  {% assign progress_percent = 0 %}
+{% endif %}
+
+{% if progress_percent > 100 %}
+  {% assign progress_percent = 100 %}
+{% endif %}

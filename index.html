@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Fuel Lab - 燃費・維持費改善研究所
-description: 燃費と維持費を理論と実測で最適化する研究サイト。エンジンオイル、タイヤ、添加剤、運転方法を検証します。
+title: ホーム
+description: 街乗り主体のソリオ（MA26S/K12C）で、タイヤ・オイル・添加剤・運転技術による燃費改善を実測検証する研究サイトです。
 permalink: /
 ---
 
@@ -11,15 +11,27 @@ permalink: /
   <div class="p-5 mb-5 bg-primary rounded-3 border">
     <div class="container-fluid py-3">
       <h1 class="display-6 fw-bold">
-        Fuel Lab - 燃費・維持費改善研究所
+        {{ site.title }}
       </h1>
       <p class="col-lg-10 fs-5 text-muted">
-        燃費改善は感覚ではなく、条件と理屈で決まります。<br>
-        オイル粘度・転がり抵抗・吸気効率・添加剤効果などを、
-        実測データとロジックで検証する実証型サイトです。
+        街乗り中心（約95%以上）という条件下で、
+        ソリオ（DBA-MA26S ガソリン車）の<strong>実燃費16km/L達成</strong>を目標に
+        データを蓄積・検証している燃費改善研究プロジェクトです。
       </p>
     </div>
   </div>
+  
+  <hr class="my-4">
+
+{% include solio/fuel/calc-core.html %}
+{% include solio/fuel/calc-progress.html %}
+
+{% include solio/fuel/chart-data.html %}
+{% include solio/fuel/table-rows.html %}
+
+{% include solio/fuel/summary-cards.html %}
+{% include solio/fuel/progress-gauge.html %}
+{% include solio/fuel/fuel-chart.html %}
 
   <!-- Category Section -->
   <div class="mb-5">

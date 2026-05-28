@@ -1,0 +1,51 @@
+{% assign fuel_model = site.data.fuel_model %}
+
+{% assign target_date = include.date %}
+{% assign target_ts = target_date | date: "%s" %}
+
+{% assign matched_state = nil %}
+
+{% for state_hash in fuel_model.vehicle_states %}
+
+  {% assign state_name = state_hash[0] %}
+  {% assign state = state_hash[1] %}
+
+  {% assign start_ts = state.start | date: "%s" %}
+  {% assign end_ts = state.end | date: "%s" %}
+
+  {% if target_ts >= start_ts and target_ts <= end_ts %}
+    {% assign matched_state = state %}
+    {% break %}
+  {% endif %}
+
+{% endfor %}
+
+{% if matched_state == nil %}
+  1
+{% else %}
+
+  {% assign month = target_date | date: "%m" | plus: 0 %}
+
+  {% assign day = target_date | date: "%d" | plus: 0 %}
+
+  {% assign current_factor = matched_state.monthly_factor[month] %}
+
+  {% assign next_month = month | plus: 1 %}
+
+  {% if next_month > 12 %}
+    {% assign next_month = 1 %}
+  {% endif %}
+
+  {% assign next_factor = matched_state.monthly_factor[next_month] %}
+
+  {% assign progress = day | divided_by: 30.0 %}
+
+  {% assign factor_diff = next_factor | minus: current_factor %}
+
+  {% assign factor_delta = factor_diff | times: progress %}
+
+  {% assign interpolated_factor = current_factor | plus: factor_delta %}
+
+  {{ interpolated_factor }}
+
+{% endif %}

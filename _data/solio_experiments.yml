@@ -1,0 +1,112 @@
+allowed_phases:
+  baseline:
+    - recorded
+  problem:
+    - active
+    - resolved
+  improvement:
+    - planned
+    - testing
+    - verified
+    - abandoned
+  maintenance:
+    - planned
+    - completed
+
+experiment_log:
+  - id: baseline
+    type: baseline
+    title: ベースライン計測
+    description: 購入直後の純正状態を測定
+    date: 2025-09-06
+    phase: recorded
+    targets: []
+    cost_score: 0
+    link: /solio/baseline/
+
+  - id: degradation
+    type: problem
+    title: 燃費悪化
+    description: インジェクターもしくは点火プラグの汚れによる燃費悪化
+    date: 2025-09-20
+    phase: resolved
+    targets:
+      - fuel_economy
+      - combustion_condition
+    cost_score: 0
+    fuel_economy_factor_actual: 0.7838
+    link: /solio/fcr062-effect/
+
+  - id: engine_recovery
+    type: recovery
+    title: FCR-062でエンジンコンディション改善
+    description: FCR-062で燃料経路・燃焼室の洗浄を行い燃焼状態の正常化を図る
+    date: 2025-09-23
+    phase: completed
+    targets:
+      - fuel_economy
+      - combustion_condition
+      - durability
+    confidence_score: 0.9
+    cost_score: 0.1
+    recovery_of: degradation
+    link: /solio/fcr062-effect/
+
+  - id: fcr062_before_engine_oil_change
+    type: maintenance
+    title: エンジンオイル交換前にFCR-062投入
+    description: FCR-062で燃料経路・燃焼室の洗浄を行い、エンジンオイル交換の効果を最大化する
+    date: 2026-05-03
+    phase: completed
+    targets:
+      - combustion_condition
+      - durability
+    confidence_score: 0.9
+    cost_score: 0.1
+    link: /solio/fcr062-effect/
+
+  - id: oil_viscosity
+    type: improvement
+    title: エンジンオイルの粘度変更
+    description: 5W-30から0W-16へ変更しフリクション低減を狙う
+    planned_date: 2026-02-25
+    scheduled_date: 2026-06-15
+    phase: planned
+    targets:
+      - fuel_economy
+      - cold_start
+    confidence_score: 1.0
+    cost_score: 0.5
+    fuel_economy_factor_estimate_min: 1.0100
+    fuel_economy_factor_estimate_max: 1.0300
+    link: /solio/solio-oil-viscosity-fuel-economy/
+
+  - id: tire_rotation
+    type: maintenance
+    title: タイヤローテーション
+    description: タイヤの偏摩耗防止による性能維持
+    planned_date: 2026-02-25
+    scheduled_date: 2026-06-15
+    phase: planned
+    targets:
+      - uneven_tire_wear
+      - durability
+    cost_score: 0.2
+    link: /knowledge/tire-rotation-worth-it/
+
+  - id: cvt_fluid_change
+    type: maintenance
+    title: CVTフルード交換
+    description: 31,000kmでCVTの部分交換を行い、滑り改善と燃費向上を狙う
+    planned_date: 2026-03-04
+    scheduled_date: 2026-09-01
+    phase: planned
+    targets:
+      - fuel_economy
+      - transmission_condition
+      - durability
+    confidence_score: 0.1
+    cost_score: 0.5
+    fuel_economy_factor_estimate_min: 1.0000
+    fuel_economy_factor_estimate_max: 1.0400
+    link: /knowledge/cvtf-change-interval-long-ownership/

@@ -1,0 +1,146 @@
+<div class="card shadow-sm my-5">
+
+  <div class="card-body">
+
+    <h3 class="mb-4">
+      給油毎の実燃費ログ
+    </h3>
+
+    <div class="table-responsive">
+
+      <table id="fuelTable" class="table table-sm table-striped table-hover align-middle small">
+
+        <thead class="table-light">
+
+          <tr>
+            <th data-sort="date" style="cursor:pointer;">日付</th>
+            <th data-sort="number" style="cursor:pointer;">距離 (km)</th>
+            <th data-sort="number" style="cursor:pointer;">給油量 (L)</th>
+            <th data-sort="number" style="cursor:pointer;">実燃費 (km/L)</th>
+            <th data-sort="number" style="cursor:pointer;">春秋換算燃費 (km/L)</th>
+            <th>詳細</th>
+            <th>備考</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          {{ rows }}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- 走行条件モーダル -->
+    <div class="modal fade" id="conditionModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+    
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">
+              詳細情報
+            </h5>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body small">
+            <ul class="mb-0">
+              <li>ガソリン単価: <span id="modalPrice"></span> 円/L</li>
+              <li>オイル粘度: <span id="modalOil"></span></li>
+              <li>ホイール: <span id="modalWheel"></span></li>
+              <li>タイヤ: <span id="modalTire"></span></li>
+              <li>空気圧: <span id="modalPressure"></span> kPa</li>
+              <li>タイヤ溝: フロント <span id="modalTreadF"></span> mm / リア <span id="modalTreadR"></span> mm</li>
+              <li>タイヤローテ回数: <span id="modalRotation"></span> 回</li>
+            </ul>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll("#fuelTable th[data-sort]").forEach(header => {
+  header.addEventListener("click", () => {
+    const table = header.closest("table");
+    const tbody = table.querySelector("tbody");
+    const index = Array.from(header.parentNode.children).indexOf(header);
+    const type = header.dataset.sort;
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const asc = header.classList.toggle("asc");
+    header.classList.toggle("desc", !asc);
+
+    rows.sort((a, b) => {
+      let aVal = a.children[index].dataset.value;
+      let bVal = b.children[index].dataset.value;
+
+      if (type === "number") {
+        return asc ? aVal - bVal : bVal - aVal;
+      } else {
+        return asc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+      }
+    });
+
+    rows.forEach(row => tbody.appendChild(row));
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('conditionModal');
+
+  modal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    
+    const log = JSON.parse(button.getAttribute('data-log'));
+    const prev = JSON.parse(button.getAttribute('data-prev') || "{}");
+    
+    const TIRES = {{ site.data.tires | jsonify }};
+    const WHEELS = {{ site.data.wheels | jsonify }};
+
+    document.getElementById('modalTitle').textContent = "詳細情報（" + log.date + "）";
+
+    document.getElementById('modalPrice').textContent = log.price_per_liter;
+    document.getElementById('modalOil').textContent = log.conditions.oil;
+    document.getElementById('modalTire').textContent = TIRES[log.conditions.tire].model + "(" + TIRES[log.conditions.tire].size + ")";
+    document.getElementById('modalWheel').textContent = WHEELS[log.conditions.wheel].model + "(" + WHEELS[log.conditions.wheel].size + ")";
+    document.getElementById('modalPressure').textContent = log.conditions.pressure_kpa;
+    document.getElementById('modalTreadF').textContent = log.conditions.tread_depth_mm_f;
+    document.getElementById('modalTreadR').textContent = log.conditions.tread_depth_mm_r;
+    document.getElementById('modalRotation').textContent = log.conditions.rotation_count;
+    
+    highlightIfChanged('modalOil', log.conditions.oil, prev.conditions.oil);
+    highlightIfChanged('modalTire', log.conditions.tire, prev.conditions.tire);
+    highlightIfChanged('modalWheel', log.conditions.wheel, prev.conditions.wheel);
+    highlightIfChanged('modalPressure', log.conditions.pressure_kpa, prev.conditions.pressure_kpa);
+    highlightIfChanged('modalTreadF', log.conditions.tread_depth_mm_f, prev.conditions.tread_depth_mm_f);
+    highlightIfChanged('modalTreadR', log.conditions.tread_depth_mm_r, prev.conditions.tread_depth_mm_r);
+    highlightIfChanged('modalRotation', log.conditions.rotation_count, prev.conditions.rotation_count);
+
+  });
+});
+
+function highlightIfChanged(id, current, previous) {
+  const el = document.getElementById(id);
+
+  if (!previous) {
+    el.className = "";
+    return;
+  }
+
+  if (current !== previous) {
+    el.classList.add("text-danger", "fw-bold");
+  } else {
+    el.className = "";
+  }
+}
+</script>

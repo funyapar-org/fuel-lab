@@ -1,5 +1,5 @@
-title: Fuel Lab
-description: 車の燃費や整備情報を扱う実験的サイト
+title: Fuel Lab - ソリオ実燃費研究所
+description: 街乗り主体のソリオ（MA26S/K12C）で、タイヤ・オイル・添加剤・運転技術による燃費改善を実測検証する研究サイトです。
 baseurl: ""
 url: "https://funyapar-fuel-lab.com"
 default_ogp_img: "/assets/ogp/default.png"

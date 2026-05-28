@@ -13,7 +13,10 @@ tags:
 date: 2026-02-26 21:00:00 +0900
 ---
 
-{% include solio-fuel-stats.html %}
+{% include solio/fuel/calc-core.html %}
+{% include solio/fuel/calc-progress.html %}
+
+{% include solio/fuel/chart-data.html %}
 
 <div class="container my-5">
 
@@ -26,58 +29,7 @@ date: 2026-02-26 21:00:00 +0900
     詳細ログはページ下部から確認できます。
   </p>
     
-  <!-- 現在の走行条件 -->
-  {% assign latest_log = sorted_logs | last %}
-  
-  <h2 class="h4 mb-3">現在の走行条件({{ latest_log.date }})</h2>
-  
-  {% if latest_log and latest_log.conditions %}
-
-    {% assign tire_data = site.data.tires[latest_log.conditions.tire] %}
-    {% assign wheel_data = site.data.wheels[latest_log.conditions.wheel] %}
-     
-    <div class="card mb-5">
-      <div class="card-body">
-  
-        <ul class="list-unstyled mb-0">
-          <li>
-            <strong>オイル粘度：</strong>
-            {{ latest_log.conditions.oil | default: "不明" }}
-          </li>
-  
-          <li>
-            <strong>ホイール：</strong>
-            {{ wheel_data.model | default: "不明" }}({{ wheel_data.size | default: "不明" }})
-          </li>
-  
-          <li>
-            <strong>タイヤ：</strong>
-            {{ tire_data.model | default: "不明" }}({{ tire_data.size | default: "不明" }})
-          </li>
-  
-          <li>
-            <strong>空気圧：</strong>
-            {% if latest_log.conditions.pressure_kpa %}
-              {{ latest_log.conditions.pressure_kpa }} kPa
-            {% else %}
-              不明
-            {% endif %}
-          </li>
-
-          <li>
-            <strong>タイヤ溝：</strong>
-            フロント {{ latest_log.conditions.tread_depth_mm_f }} mm / リア {{ latest_log.conditions.tread_depth_mm_r }} mm
-          </li>
-
-          <li>
-            <strong>タイヤローテーション：</strong>
-            {{ latest_log.conditions.rotation_count }} 回
-          </li>
-        </ul>
-  
-      </div>
-    </div>
-  {% endif %}
+  {% include solio/fuel/current-condition.html %}
 
   <!-- 総合統計 -->
   <h2 class="h4 mb-3">実燃費の統計</h2>
@@ -163,11 +115,7 @@ date: 2026-02-26 21:00:00 +0900
 
   </div>
   
-  <h2 class="h4 mb-3">燃費推移</h2>
-
-  <div class="mb-5">
-    <canvas id="fuelChart" height="200"></canvas>
-  </div>
+  {% include solio/fuel/fuel-chart.html %}
 
   <!-- カタログ燃費（参考値） -->
   <h2 class="h4 mb-3">カタログ燃費（参考値）</h2>

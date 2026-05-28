@@ -1,0 +1,128 @@
+{% assign rows = "" %}
+
+{% assign prev_odometer = site.data.solio_meta.purchase.odometer %}
+
+{% assign prev_log = nil %}
+{% assign prev_oil = nil %}
+{% assign prev_tire = nil %}
+{% assign prev_wheel = nil %}
+{% assign prev_pressure = nil %}
+{% assign prev_tread_f = nil %}
+{% assign prev_tread_r = nil %}
+{% assign prev_rotation = nil %}
+
+{% for log in sorted_logs %}
+
+  {% assign distance = log.odometer | minus: prev_odometer %}
+  {% assign economy = distance | divided_by: log.fuel %}
+  {% assign round_economy = economy | round: 2 %}
+
+  {% capture factor %}
+    {% include solio/fuel/calc-seasonal-factor.html date=log.date %}
+  {% endcapture %}
+  {% assign factor = factor | strip | plus: 0 %}
+
+  {% assign normalized_economy = economy | divided_by: factor | round: 2 %}
+
+  {% assign condition_changed = false %}
+
+  {% if prev_oil %}
+
+    {% if log.conditions.oil != prev_oil %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.tire != prev_tire %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.wheel != prev_wheel %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.pressure_kpa != prev_pressure %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.tread_depth_mm_f != prev_tread_f %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.tread_depth_mm_r != prev_tread_r %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.rotation_count != prev_rotation %}
+      {% assign condition_changed = true %}
+    {% endif %}
+
+  {% endif %}
+
+  {% capture row %}
+
+<tr>
+
+  <td data-value="{{ log.date }}">
+    {{ log.date | date: "%Y-%m-%d" }}
+  </td>
+
+  <td data-value="{{ distance }}">
+    {{ distance }}
+  </td>
+
+  <td data-value="{{ log.fuel }}">
+    {{ log.fuel }}
+  </td>
+
+  <td data-value="{{ round_economy }}">
+    {{ round_economy }}
+  </td>
+
+  <td data-value="{{ normalized_economy }}">
+    {{ normalized_economy }}
+  </td>
+
+  <td class="text-center">
+
+    {% if condition_changed %}
+      <span class="badge bg-warning text-dark d-block mb-1">
+        変更
+      </span>
+    {% endif %}
+
+    <button class="btn btn-sm btn-outline-secondary"
+      data-bs-toggle="modal"
+      data-bs-target="#conditionModal"
+      data-log='{{ log | jsonify }}'
+      data-prev='{{ prev_log | jsonify }}'>
+
+      詳細
+
+    </button>
+
+  </td>
+
+  <td>
+
+    {% if log.link %}
+      <a href="{{ log.link }}">
+        {{ log.note }}
+      </a>
+    {% else %}
+      {{ log.note }}
+    {% endif %}
+
+  </td>
+
+</tr>
+
+  {% endcapture %}
+
+  {% assign rows = row | append: rows %}
+
+  {% assign prev_log = log %}
+  {% assign prev_oil = log.conditions.oil %}
+  {% assign prev_tire = log.conditions.tire %}
+  {% assign prev_wheel = log.conditions.wheel %}
+  {% assign prev_pressure = log.conditions.pressure_kpa %}
+  {% assign prev_tread_f = log.conditions.tread_depth_mm_f %}
+  {% assign prev_tread_r = log.conditions.tread_depth_mm_r %}
+  {% assign prev_rotation = log.conditions.rotation_count %}
+
+  {% assign prev_odometer = log.odometer %}
+
+{% endfor %}
