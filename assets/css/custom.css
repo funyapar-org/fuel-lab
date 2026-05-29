@@ -1,18 +1,148 @@
-body { font-family: 'Noto Sans JP', sans-serif; }
-h1, h2, h3 { margin-top: 1em; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 1em;
+}
+
+
+
+/*
+|------------------------------------------------------------
+| 横スクロールヒント
+|------------------------------------------------------------
+*/
+
+.chart-scroll-hint {
+
+  text-align: center;
+
+  opacity: 0.8;
+}
+
+
+
+/*
+|------------------------------------------------------------
+| 固定凡例
+|------------------------------------------------------------
+*/
+
+.chart-legend {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  font-size: 0.9rem;
+}
+
+
+
+.legend-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+
+.legend-line {
+
+  display: inline-block;
+
+  width: 24px;
+
+  height: 0;
+}
+
+
+
+.legend-normalized {
+
+  border-top: 3px solid #0d6efd;
+}
+
+
+
+.legend-actual {
+
+  border-top: 2px dashed #f153bd;
+}
+
+
+
+.legend-prediction {
+
+  border-top: 2px dotted #fdb633;
+}
+
+
+
+/*
+|------------------------------------------------------------
+| グラフ横スクロール
+|------------------------------------------------------------
+*/
+
+.chart-scroll-container {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  border-radius: 8px;
+}
+
+
+
+/*
+|------------------------------------------------------------
+| Chart.js描画領域
+|------------------------------------------------------------
+*/
 
 .chart-wrapper {
 
   position: relative;
 
   height: 420px;
+
+  min-width: 100%;
 }
+
+
+
+/*
+|------------------------------------------------------------
+| スマホ
+|------------------------------------------------------------
+*/
 
 @media (max-width: 576px) {
 
   .chart-wrapper {
 
     height: 520px;
+  }
+
+  .chart-legend {
+
+    font-size: 0.8rem;
+
+    gap: 10px;
   }
 
 }

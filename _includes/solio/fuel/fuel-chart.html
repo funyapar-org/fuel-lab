@@ -2,7 +2,7 @@
 
   <div class="card-body">
 
-    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
 
       <div>
 
@@ -18,8 +18,48 @@
 
     </div>
 
-    <div class="chart-wrapper mb-5">
-      <canvas id="fuelChart"></canvas>
+
+
+    <!-- 横スクロール誘導 -->
+    <div class="chart-scroll-hint small text-muted mb-2">
+      ← 左右にスクロールできます →
+    </div>
+
+
+
+    <!-- 固定凡例 -->
+    <div class="chart-legend mb-3">
+
+      <div class="legend-item">
+        <span class="legend-line legend-normalized"></span>
+        春秋換算燃費
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-line legend-actual"></span>
+        実燃費
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-line legend-prediction"></span>
+        理論改善予測
+      </div>
+
+    </div>
+
+
+
+    <!-- スクロール領域 -->
+    <div
+      class="chart-scroll-container"
+      id="chartScrollContainer">
+
+      <div class="chart-wrapper">
+
+        <canvas id="fuelChart"></canvas>
+
+      </div>
+
     </div>
 
   </div>
@@ -60,9 +100,35 @@ const experiments =
 const vehicleStates =
   {{ site.data.fuel_model.vehicle_states | jsonify }};
 
+
+
+/*
+|------------------------------------------------------------------
+| 最新給油日
+|------------------------------------------------------------------
+*/
+
+const latestFuelDate = new Date(
+  Math.max(
+    ...normalizedData.map(
+      p => new Date(p.x)
+    )
+  )
+);
+
+
+
+/*
+|------------------------------------------------------------------
+| future max
+|------------------------------------------------------------------
+*/
+
 const futureMaxDate = new Date(
   Math.max(
-    ...predictionMaxData.map(p => new Date(p.x))
+    ...predictionMaxData.map(
+      p => new Date(p.x)
+    )
   )
 );
 
@@ -73,9 +139,9 @@ futureMaxDate.setDate(
 
 
 /*
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 | annotation生成
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 */
 
 const annotations = {};
@@ -83,9 +149,9 @@ const annotations = {};
 
 
 /*
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 | 施策イベント線
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 */
 
 experiments.forEach((exp, index) => {
@@ -146,9 +212,9 @@ experiments.forEach((exp, index) => {
 
 
 /*
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 | vehicle_state 背景帯
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------
 */
 
 Object.entries(vehicleStates).forEach(([key, state], index) => {
@@ -186,6 +252,31 @@ Object.entries(vehicleStates).forEach(([key, state], index) => {
   };
 
 });
+
+
+
+/*
+|------------------------------------------------------------------
+| 横幅をデータ数に応じて拡張
+|------------------------------------------------------------------
+*/
+
+const pointCount = Math.max(
+  normalizedData.length,
+  predictionMaxData.length
+);
+
+const dynamicWidth =
+  Math.max(
+    window.innerWidth - 40,
+    pointCount * 90
+  );
+
+const chartWrapper =
+  document.querySelector('.chart-wrapper');
+
+chartWrapper.style.width =
+  `${dynamicWidth}px`;
 
 
 
@@ -280,15 +371,7 @@ new Chart(ctx, {
 
       legend: {
 
-        display: true,
-
-        position: 'bottom',
-
-        boxWidth: 10,
-
-        font: {
-          size: 10
-        }
+        display: false
 
       },
 
@@ -343,6 +426,66 @@ new Chart(ctx, {
     }
 
   }
+
+});
+
+
+
+/*
+|------------------------------------------------------------------
+| 初期スクロール位置
+| 最新給油日を中央寄りに表示
+|------------------------------------------------------------------
+*/
+
+window.addEventListener('load', () => {
+
+  const container =
+    document.getElementById(
+      'chartScrollContainer'
+    );
+
+  const totalRange =
+    futureMaxDate - new Date(normalizedData[0].x);
+
+  const latestOffset =
+    latestFuelDate - new Date(normalizedData[0].x);
+
+  const scrollableWidth =
+    container.scrollWidth - container.clientWidth;
+
+  let targetScroll =
+    (latestOffset / totalRange)
+    * scrollableWidth;
+
+  /*
+  |--------------------------------------------------------------
+  | 少し右余白を見せる
+  |--------------------------------------------------------------
+  */
+
+  targetScroll =
+    targetScroll + (
+      container.clientWidth * 0.2
+    );
+
+  /*
+  |--------------------------------------------------------------
+  | clamp
+  |--------------------------------------------------------------
+  */
+
+  targetScroll =
+    Math.max(0, targetScroll);
+
+  targetScroll =
+    Math.min(
+      targetScroll,
+      scrollableWidth
+    );
+
+  container.scrollLeft =
+    targetScroll;
 
 });
 
