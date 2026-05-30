@@ -33,7 +33,7 @@ date: 2026-02-26 21:00:00 +0900
   {% include solio/fuel/chart-data.html %}
   {% include solio/fuel/table-rows.html %}
 
-  {% include solio/fuel/fuel-chart.html %}
+  {% include solio/fuel/fuel-chart.html hide_link=true %}
   {% include solio/fuel/fuel-log-table.html %}
 
   <!-- 燃費サマリー -->
