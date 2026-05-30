@@ -20,8 +20,6 @@ permalink: /
       </p>
     </div>
   </div>
-  
-  <hr class="my-4">
 
 {% include solio/fuel/calc-core.html %}
 {% include solio/fuel/calc-progress.html %}
@@ -29,8 +27,35 @@ permalink: /
 {% include solio/fuel/chart-data.html %}
 {% include solio/fuel/table-rows.html %}
 
-{% include solio/fuel/summary-cards.html %}
 {% include solio/fuel/progress-gauge.html %}
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+
+    <h2 class="h4 mb-3">この研究の前提条件</h2>
+
+    <ul>
+      <li>車両：DBA-MA26S（ガソリン車）</li>
+      <li>エンジン：K12C 自然吸気</li>
+      <li>使用環境：街乗り約95%以上</li>
+      <li>計測方法：満タン法による実測</li>
+    </ul>
+
+    <p>
+      車両特性やエンジン構造の詳細はこちら：
+    </p>
+
+    <p>
+      👉 <a href="{{ site.baseurl }}/solio/solio-vehicle-characteristics-overview/">
+        ソリオ車両特性まとめ
+      </a>
+    </p>
+
+    </div>
+  </div>
+
+{% include solio/fuel/current-condition.html %}
+
 {% include solio/fuel/fuel-chart.html %}
 
   <!-- Category Section -->
