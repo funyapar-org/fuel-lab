@@ -128,6 +128,7 @@ futureMaxDate.setDate(
 
 const annotations = {};
 
+const experimentLabels = {};
 
 
 /*
@@ -135,6 +136,19 @@ const annotations = {};
 | 施策イベント線
 |------------------------------------------------------------------
 */
+
+experiments.forEach((exp, index) => {
+  const eventDate =
+    exp.date || exp.scheduled_date;
+
+  if (!eventDate) return;
+
+  if (eventDate in experimentLabels) {
+    experimentLabels[eventDate].push(exp.title);
+  } else {
+    experimentLabels[eventDate] = [ exp.title ];
+  }
+});
 
 experiments.forEach((exp, index) => {
 
@@ -173,7 +187,7 @@ experiments.forEach((exp, index) => {
 
       display: true,
 
-      content: exp.title,
+      content: experimentLabels[eventDate],
 
       position: 'start',
 
