@@ -14,13 +14,16 @@ initial_state:
   fuel_economy_km_l: 14.02
   oil_viscosity: 5W-30
   tire: eg02
+  tire_size: 165/70R14
+  tread_depth_mm_f: 6.0
+  tread_depth_mm_r: 6.0
   wheel: oem_steel
 
 usage_environment:
   main_use: city-driving
   short_trip_ratio: high
-  passengers: mostly_single
-  cargo_weight_kg: low
+  passengers: family_of_four
+  cargo_weight_kg: high
   air_conditioner_usage: high
 
 measurement:
