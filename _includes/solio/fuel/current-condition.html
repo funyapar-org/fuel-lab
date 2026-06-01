@@ -1,17 +1,51 @@
-<!-- 現在の走行条件 -->
+<!-- 最新の給油ログ -->
 {% assign latest_log = sorted_logs | last %}
+
+<!-- ひとつ前の給油ログ -->
+{% assign second_last_index = sorted_logs.size | minus: 2 %}
+{% assign previous_log = sorted_logs[second_last_index] %}
 
 {% if latest_log and latest_log.conditions %}
 
   {% assign tire_data = site.data.tires[latest_log.conditions.tire] %}
   {% assign wheel_data = site.data.wheels[latest_log.conditions.wheel] %}
+
+  {% assign distance = latest_log.odometer | minus: previous_log.odometer %}
+  {% assign economy = distance | divided_by: latest_log.fuel %}
+
+  {% capture factor %}
+    {% include solio/fuel/calc-seasonal-factor.html date=latest_log.date %}
+  {% endcapture %}
+  {% assign factor = factor | strip | plus: 0 %}
+
+  {% assign normalized_economy = economy | divided_by: factor %}
     
   <div class="card mb-5">
     <div class="card-body">
 
-      <h2 class="h4 mb-3">現在の走行条件({{ latest_log.date }})</h2>
+      <h2 class="h4 mb-3">直近給油時のコンディション({{ latest_log.date }})</h2>
 
       <ul class="list-unstyled mb-0">
+        <li>
+          <strong>オドメーター：</strong>
+          {{ latest_log.odometer | default: "不明" }}km
+        </li>
+
+        <li>
+          <strong>前回給油時からの走行距離：</strong>
+          {{ distance | default: "不明" }}km
+        </li>
+
+        <li>
+          <strong>実燃費：</strong>
+          {{ economy | round: 2 | default: "不明" }}km/L
+        </li>
+
+        <li>
+          <strong>季節補正後実燃費：</strong>
+          {{ normalized_economy | round: 2 | default: "不明" }}km/L
+        </li>
+
         <li>
           <strong>オイル粘度：</strong>
           {{ latest_log.conditions.oil | default: "不明" }}
