@@ -14,9 +14,9 @@ permalink: /
         {{ site.title }}
       </h1>
       <p class="col-lg-10 fs-5 text-muted">
-        街乗り中心（約95%以上）という条件下で、
-        ソリオ（DBA-MA26S ガソリン車）の<strong>実燃費16km/L達成</strong>を目標に
-        データを蓄積・検証している燃費改善研究プロジェクトです。
+        乗り中心（約95%以上）という条件下で、
+        ソリオ（DBA-MA26S ガソリン車）の実燃費をどこまで向上できるかを検証しています。<br>
+        データを蓄積・検証して<strong>実使用環境における再現可能な改善</strong>を重視しています。
       </p>
     </div>
   </div>
@@ -28,31 +28,6 @@ permalink: /
 {% include solio/fuel/table-rows.html %}
 
 {% include solio/fuel/progress-gauge.html %}
-
-  <div class="card shadow-sm mb-4">
-    <div class="card-body">
-
-    <h2 class="h4 mb-3">この研究の前提条件</h2>
-
-    <ul>
-      <li>車両：DBA-MA26S（ガソリン車）</li>
-      <li>エンジン：K12C 自然吸気</li>
-      <li>使用環境：街乗り約95%以上</li>
-      <li>計測方法：満タン法による実測</li>
-    </ul>
-
-    <p>
-      車両特性やエンジン構造の詳細はこちら：
-    </p>
-
-    <p>
-      👉 <a href="{{ site.baseurl }}/solio/solio-vehicle-characteristics-overview/">
-        ソリオ車両特性まとめ
-      </a>
-    </p>
-
-    </div>
-  </div>
 
 {% include solio/fuel/current-condition.html %}
 
