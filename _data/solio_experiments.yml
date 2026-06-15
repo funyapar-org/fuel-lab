@@ -88,7 +88,7 @@ experiment_log:
     title: エンジンオイルの粘度変更
     description: 5W-30から0W-16へ変更しフリクション低減を狙う
     planned_date: 2026-02-25
-    scheduled_date: 2026-06-15
+    scheduled_date: 2026-07-03
     phase: planned
     targets:
       - fuel_economy
@@ -104,7 +104,7 @@ experiment_log:
     title: タイヤローテーション
     description: タイヤの偏摩耗防止による性能維持
     planned_date: 2026-02-25
-    scheduled_date: 2026-06-15
+    scheduled_date: 2026-07-03
     phase: planned
     targets:
       - uneven_tire_wear
@@ -115,7 +115,7 @@ experiment_log:
   - id: cvt_fluid_change
     type: maintenance
     title: CVTフルード交換
-    description: 31,000kmでCVTの部分交換を行い、滑り改善と燃費向上を狙う
+    description: CVTの部分交換を行い、滑り改善と燃費向上を狙う
     planned_date: 2026-03-04
     scheduled_date: 2026-09-01
     phase: planned
