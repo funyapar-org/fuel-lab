@@ -101,7 +101,7 @@ date: 2026-02-26 21:00:00 +0900
   <ul>
     <li><a href="{{ site.baseurl }}/solio/solio-fuel-summary/">ソリオ 実燃費まとめ</a></li>
     <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法とは？算出方法の解説</a></li>
-    <li><a href="{{ site.baseurl }}/solio/">ソリオ燃費研究トップ</a></li>
+    <li><a href="{{ site.baseurl }}/">ソリオ燃費研究トップ</a></li>
   </ul>
 
 </div>

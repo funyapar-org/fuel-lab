@@ -1,6 +1,9 @@
 allowed_phases:
   baseline:
     - recorded
+  environment_change:
+    - observed
+    - ended
   problem:
     - active
     - resolved
@@ -29,7 +32,7 @@ experiment_log:
     title: 燃費悪化
     description: インジェクターもしくは点火プラグの汚れによる燃費悪化
     date: 2025-09-20
-    phase: resolved
+    phase: active
     targets:
       - fuel_economy
       - combustion_condition
@@ -38,18 +41,18 @@ experiment_log:
     link: /solio/fcr062-effect/
 
   - id: engine_recovery
-    type: recovery
+    type: problem
     title: FCR-062でエンジンコンディション改善
     description: FCR-062で燃料経路・燃焼室の洗浄を行い燃焼状態の正常化を図る
     date: 2025-09-23
-    phase: completed
+    phase: resolved
     targets:
       - fuel_economy
       - combustion_condition
       - durability
     confidence_score: 0.9
     cost_score: 0.1
-    recovery_of: degradation
+    caused_by: degradation
     link: /solio/fcr062-effect/
 
   - id: fcr062_before_engine_oil_change
@@ -64,6 +67,21 @@ experiment_log:
     confidence_score: 0.9
     cost_score: 0.1
     link: /solio/fcr062-effect/
+
+  - id: increased_idle_ac_usage
+    type: environment_change
+    title: アイドリング冷房機会の増加
+    description: >
+      乳児同乗機会の増加により、
+      買い物や待機中にエンジン停止できない場面が増加。
+      停車中のエアコン稼働時間が増え、
+      満タン法燃費に影響した可能性がある。
+    date: 2026-05-17
+    phase: observed
+    targets:
+      - fuel_economy
+    confidence_score: 0.8
+    link: /solio/idle-ac-usage-fuel-economy/
 
   - id: oil_viscosity
     type: improvement

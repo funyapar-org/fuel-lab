@@ -1,4 +1,4 @@
-<div class="card shadow-sm mb-5">
+<div class="card shadow-sm mb-4">
 
   <div class="card-body">
 
@@ -136,6 +136,8 @@ futureMaxDate.setDate(
 
 const annotations = {};
 
+const annotationLinks = {};
+
 const experimentLabels = {};
 
 
@@ -175,7 +177,9 @@ experiments.forEach((exp, index) => {
     borderColor = '#fd7e14';
   }
 
-  annotations['event_' + index] = {
+  const key = 'event_' + index;
+
+  annotations[key] = {
 
     type: 'line',
 
@@ -210,6 +214,8 @@ experiments.forEach((exp, index) => {
     }
 
   };
+
+  annotationLinks[key] = exp.link;
 
 });
 
@@ -287,9 +293,7 @@ chartWrapper.style.width =
 const ctx =
   document.getElementById('fuelChart');
 
-
-
-new Chart(ctx, {
+const chart = new Chart(ctx, {
 
   type: 'line',
 
@@ -433,6 +437,118 @@ new Chart(ctx, {
 
 });
 
+ctx.onclick = function(event) {
+
+  const canvasPosition =
+    Chart.helpers.getRelativePosition(
+      event,
+      chart
+    );
+
+  const xScale =
+    chart.scales.x;
+
+  const clickedTime =
+    xScale.getValueForPixel(
+      canvasPosition.x
+    );
+
+  let nearestExp = null;
+  let nearestDiff = Infinity;
+
+  experiments.forEach(exp => {
+
+    const eventDate =
+      exp.date || exp.scheduled_date;
+
+    if (!eventDate || !exp.link) {
+      return;
+    }
+
+    const eventTime =
+      new Date(eventDate).getTime();
+
+    const diff =
+      Math.abs(
+        clickedTime - eventTime
+      );
+
+    if (diff < nearestDiff) {
+
+      nearestDiff = diff;
+
+      nearestExp = exp;
+
+    }
+
+  });
+
+  const oneDay =
+    24 * 60 * 60 * 1000;
+
+  if (
+    nearestExp &&
+    nearestDiff < oneDay * 3
+  ) {
+
+    window.location.href =
+      '{{ site.baseurl }}' +
+      nearestExp.link;
+
+  }
+
+};
+
+ctx.onmousemove = function(event) {
+
+  const canvasPosition =
+    Chart.helpers.getRelativePosition(
+      event,
+      chart
+    );
+
+  const xScale =
+    chart.scales.x;
+
+  const clickedTime =
+    xScale.getValueForPixel(
+      canvasPosition.x
+    );
+
+  let found = false;
+
+  experiments.forEach(exp => {
+
+    const eventDate =
+      exp.date || exp.scheduled_date;
+
+    if (!eventDate || !exp.link) {
+      return;
+    }
+
+    const diff =
+      Math.abs(
+        clickedTime -
+        new Date(eventDate).getTime()
+      );
+
+    if (
+      diff <
+      3 * 24 * 60 * 60 * 1000
+    ) {
+
+      found = true;
+
+    }
+
+  });
+
+  ctx.style.cursor =
+    found
+    ? 'pointer'
+    : 'default';
+
+};
 
 
 /*

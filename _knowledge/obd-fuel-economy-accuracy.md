@@ -147,7 +147,7 @@ date: 2026-02-22 10:00:00 +0900
       <ul>
         <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法の正しいやり方</a></li>
         <li><a href="{{ site.baseurl }}/knowledge/aluminum-tape-tune-fuel-economy/">アルミテープチューンは燃費向上する？</a></li>
-        <li><a href="{{ site.baseurl }}/solio/">ソリオ燃費改善トップページ</a></li>
+        <li><a href="{{ site.baseurl }}/">ソリオ燃費改善トップページ</a></li>
       </ul>
 
     </div>

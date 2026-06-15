@@ -198,7 +198,7 @@ tags:
   </p>
 
   <p>
-    <a href="{{ site.baseurl }}/solio/" class="link-secondary">
+    <a href="{{ site.baseurl }}/" class="link-secondary">
       ソリオの燃費改善トップページ
     </a>
   </p>

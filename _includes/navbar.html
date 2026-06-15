@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
     <a class="navbar-brand" href="{{ site.baseurl }}/">
-      🚗 Fuel Lab - 燃費・維持費改善研究所
+      🚗 {{ site.title }}
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -13,42 +13,74 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/engine-oil/">
-            エンジンオイル
+          <a class="nav-link" href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">
+            ソリオ実燃費ログ
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/tire/">
-            タイヤ
+          <a class="nav-link" href="{{ site.baseurl }}/solio/solio-improvement-roadmap/">
+            改善ロードマップ
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/fuel-additive/">
-            燃料添加剤
+          <a class="nav-link" href="{{ site.baseurl }}/solio/baseline/">
+            ベースライン
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/fuel-economy/">
-            燃費理論
+          <a class="nav-link" href="{{ site.baseurl }}/solio/fuel-research-assumptions-and-methodology/">
+            研究手法
           </a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/maintenance/">
-            メンテナンス
+        <!-- 車の知識はドロップダウン -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            車の知識
           </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/engine-oil/">
+                エンジンオイル
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/tire/">
+                タイヤ
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/fuel-additive/">
+                燃料添加剤
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/fuel-economy/">
+                燃費理論
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/maintenance/">
+                メンテナンス
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/category/solio/">
+                ソリオ
+              </a>
+            </li>
+          </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/category/solio/">
-            ソリオ
-          </a>
-        </li>
-
-        <!-- ツールのみドロップダウン維持 -->
+        <!-- ツールもドロップダウン -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
             ツール

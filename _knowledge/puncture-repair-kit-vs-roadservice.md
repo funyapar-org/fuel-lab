@@ -150,7 +150,7 @@ date: 2026-02-22 18:30:00 +0900
       <ul>
         <li><a href="{{ site.baseurl }}/knowledge/engine-oil-selection-standards/">エンジンオイルの選び方</a></li>
         <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">満タン法の正しいやり方</a></li>
-        <li><a href="{{ site.baseurl }}/solio/">ソリオ燃費改善トップページ</a></li>
+        <li><a href="{{ site.baseurl }}/">ソリオ燃費改善トップページ</a></li>
       </ul>
 
     </div>

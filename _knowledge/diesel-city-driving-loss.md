@@ -188,7 +188,7 @@ date: 2026-04-13 10:00:00 +0900
   <ul>
     <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りでも燃費を諦めたくない人におすすめの燃費対策</a></li>
     <li><a href="{{ site.baseurl }}/solio/why-choose-solio-gasoline/">なぜソリオのガソリン車を選んだのか</a></li>
-    <li><a href="{{ site.baseurl }}/solio/">ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを目指す</a></li>
+    <li><a href="{{ site.baseurl }}/">ソリオ燃費改善研究トップページ</a></li>
   </ul>
 
 </div>

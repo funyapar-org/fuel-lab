@@ -5,10 +5,10 @@ description: 街乗り主体のソリオ（MA26S/K12C）で、タイヤ・オイ
 permalink: /
 ---
 
-<div class="container my-5">
+<div class="container mb-4">
 
   <!-- Hero -->
-  <div class="p-5 mb-5 bg-primary rounded-3 border">
+  <div class="p-5 mb-4 bg-primary rounded-3 border">
     <div class="container-fluid py-3">
       <h1 class="display-6 fw-bold">
         {{ site.title }}
@@ -33,126 +33,7 @@ permalink: /
 
 {% include solio/fuel/fuel-chart.html %}
 
-  <!-- Category Section -->
-  <div class="mb-5">
-    <h2 class="mb-4">カテゴリから探す</h2>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/engine-oil/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">エンジンオイル</h5>
-              <p class="card-text text-muted small">
-                0W-16、API SP、GF-6Bなどの規格比較とコスト検証。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/tire/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">タイヤ</h5>
-              <p class="card-text text-muted small">
-                転がり抵抗、空気圧、サイズ変更の燃費影響。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/fuel-additive/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">燃料添加剤</h5>
-              <p class="card-text text-muted small">
-                PEA系清浄剤と燃費改善効果の実証。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/fuel-economy/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">燃費理論</h5>
-              <p class="card-text text-muted small">
-                燃費に影響する物理要因の整理と検証。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/maintenance/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">メンテナンス</h5>
-              <p class="card-text text-muted small">
-                維持費と耐久性の最適化。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="{{ site.baseurl }}/category/solio/" class="text-decoration-none">
-          <div class="card h-100 shadow-sm ">
-            <div class="card-body">
-              <h5 class="card-title">ソリオ</h5>
-              <p class="card-text text-muted small">
-                私のソリオの特性や実車データによる燃費検証記録。
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Series Section -->
-  <div class="mb-5">
-    <h2 class="mb-4">燃費改善検証シリーズ</h2>
-
-    {% assign series_pages = site.solio | where: "series", "fuel-economy-verification" | sort: "date" | reverse %}
-
-    <div class="list-group">
-      {% for page in series_pages limit:5 %}
-        <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-          {{ page.title }}
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-
-  <!-- Tools Section -->
-  <div class="mb-5">
-    <h2 class="mb-4">燃費改善ツール</h2>
-
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      {% for page in site.tools %}
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">{{ page.title }}</h5>
-            <p class="card-text text-muted small">{{ page.description }}</p>
-            <a href="{{ page.url | prepend: site.baseurl }}" class="btn btn-outline-primary btn-sm">開く</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+{% include solio/fuel/experiment-summary.html %}
 
   <!-- Latest Articles -->
   <div class="mb-5">
@@ -162,8 +43,17 @@ permalink: /
 
     <div class="list-group">
       {% for page in all_pages limit:6 %}
-        <a href="{{ page.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-          {{ page.title }}
+        <a href="{{ page.url | prepend: site.baseurl }}"
+          class="list-group-item list-group-item-action">
+
+          <div class="fw-semibold">
+            {{ page.title }}
+          </div>
+
+          <div class="small text-muted">
+            {{ page.date | date: "%Y-%m-%d" }}
+          </div>
+
         </a>
       {% endfor %}
     </div>

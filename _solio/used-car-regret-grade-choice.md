@@ -177,7 +177,7 @@ date: 2026-04-13 07:00:00 +0900
   <ul>
     <li><a href="{{ site.baseurl }}/knowledge/air-conditioner-fuel-economy-impact/">エアコンで燃費はどれくらい悪化する？</a></li>
     <li><a href="{{ site.baseurl }}/knowledge/tire-and-fuel-economy/">タイヤサイズと燃費・維持費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/solio/">ソリオ燃費改善研究トップ | 街乗り95%で実燃費16km/Lを目指す</a></li>
+    <li><a href="{{ site.baseurl }}/">ソリオ燃費改善研究トップページ</a></li>
   </ul>
 
   <div class="alert alert-secondary mt-4">

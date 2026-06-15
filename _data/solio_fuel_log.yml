@@ -277,3 +277,19 @@
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.8
     rotation_count: 0
+
+- date: 2026-06-01
+  odometer: 30157
+  fuel: 19.56
+  price_per_liter: 157
+  note: エアコン使用が多かった
+  link: /knowledge/air-conditioner-fuel-economy-impact/
+  conditions:
+    oil: 5w-30
+    tire: eg02
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa: 250
+    tread_depth_mm_f: 5.4
+    tread_depth_mm_r: 5.8
+    rotation_count: 0

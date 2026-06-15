@@ -166,8 +166,8 @@ date: 2026-02-26 21:00:00 +0900
     街乗り中心（約95%以上）という条件下で、 ソリオ（DBA-MA26S ガソリン車）の燃費改善の計画と結果をまとめています。
   </p>
 
-  <a href="{{ site.baseurl }}/solio/" class="btn btn-primary">
-    燃費改善研究を見る
+  <a href="{{ site.baseurl }}/" class="btn btn-primary">
+    燃費改善研究トップページを見る
   </a>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

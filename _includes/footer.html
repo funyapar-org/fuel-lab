@@ -4,44 +4,119 @@
 
     <div class="row">
 
-      <!-- サイト概要 -->
+      <!-- ソリオ研究 -->
       <div class="col-md-4 mb-4">
-        <h6 class="fw-bold">Fuel Lab</h6>
+        <h6 class="fw-bold">
+          ソリオ燃費改善プロジェクト
+        </h6>
+
         <p class="small text-muted">
-          燃費と維持費を理論と実測で最適化する研究サイト。
-          オイル・タイヤ・添加剤・運転方法を検証しています。
+          ソリオ（DBA-MA26S）の燃費と維持費を、
+          理論と実測データで改善していく記録です。
         </p>
+
+        <ul class="list-unstyled small">
+
+          <li>
+            <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/"
+               class="text-decoration-none text-light">
+              実燃費ログ
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/solio/solio-improvement-roadmap/"
+               class="text-decoration-none text-light">
+              改善施策一覧
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/solio/baseline/"
+               class="text-decoration-none text-light">
+              ベースライン計測
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/solio/fuel-research-assumptions-and-methodology/"
+               class="text-decoration-none text-light">
+              研究前提と測定方法
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <!-- カテゴリ -->
+      <!-- 車の知識 -->
       <div class="col-md-4 mb-4">
-        <h6 class="fw-bold">カテゴリ</h6>
+        <h6 class="fw-bold">
+          車の知識
+        </h6>
+
         <ul class="list-unstyled small">
-          <li><a href="{{ site.baseurl }}/category/engine-oil/" class="text-decoration-none text-light">エンジンオイル</a></li>
-          <li><a href="{{ site.baseurl }}/category/tire/" class="text-decoration-none text-light">タイヤ</a></li>
-          <li><a href="{{ site.baseurl }}/category/fuel-additive/" class="text-decoration-none text-light">燃料添加剤</a></li>
-          <li><a href="{{ site.baseurl }}/category/fuel-economy/" class="text-decoration-none text-light">燃費理論</a></li>
-          <li><a href="{{ site.baseurl }}/category/maintenance/" class="text-decoration-none text-light">メンテナンス</a></li>
-          <li><a href="{{ site.baseurl }}/category/solio/" class="text-decoration-none text-light">ソリオ</a></li>
+          <li>
+            <a href="{{ site.baseurl }}/category/engine-oil/"
+               class="text-decoration-none text-light">
+              エンジンオイル
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/category/tire/"
+               class="text-decoration-none text-light">
+              タイヤ
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/category/fuel-additive/"
+               class="text-decoration-none text-light">
+              燃料添加剤
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/category/fuel-economy/"
+               class="text-decoration-none text-light">
+              燃費理論
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ site.baseurl }}/category/maintenance/"
+               class="text-decoration-none text-light">
+              メンテナンス
+            </a>
+          </li>
         </ul>
       </div>
 
       <!-- サイト情報 -->
       <div class="col-md-4 mb-4">
-        <h6 class="fw-bold">サイト情報</h6>
+        <h6 class="fw-bold">
+          サイト情報
+        </h6>
+
         <ul class="list-unstyled small">
+
           {% for page in site.about %}
           <li>
-            <a href="{{ page.url | prepend: site.baseurl }}" class="text-decoration-none text-light">
+            <a href="{{ page.url | prepend: site.baseurl }}"
+               class="text-decoration-none text-light">
               {{ page.title }}
             </a>
           </li>
           {% endfor %}
+
           <li>
-            <a href="https://x.com/FuelLab_MySolio" target="_blank" class="text-decoration-none text-light">
+            <a href="https://x.com/FuelLab_MySolio"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-decoration-none text-light">
               X（@FuelLab_MySolio）
             </a>
           </li>
+
         </ul>
       </div>
 
@@ -50,7 +125,7 @@
     <hr class="border-secondary">
 
     <div class="text-center small text-muted">
-      © 2026 Fuel Lab - 燃費・維持費改善研究所
+      © 2026 {{ site.title }}
     </div>
 
   </div>

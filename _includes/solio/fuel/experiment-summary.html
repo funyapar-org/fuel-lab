@@ -1,0 +1,186 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+
+    <h2 class="h4 mb-3">
+      燃費改善施策サマリ
+    </h2>
+
+    {% assign experiments =
+      site.data.solio_experiments.experiment_log %}
+
+    {% assign improvement_planned = 0 %}
+    {% assign improvement_testing = 0 %}
+    {% assign improvement_verified = 0 %}
+    {% assign improvement_abandoned = 0 %}
+
+    {% assign problem_active = 0 %}
+    {% assign problem_resolved = 0 %}
+
+
+
+    {% comment %}
+    ------------------------------------------------------------
+    改善施策集計
+    ------------------------------------------------------------
+    {% endcomment %}
+
+    {% for exp in experiments %}
+
+      {% if exp.type == "improvement" %}
+
+        {% case exp.phase %}
+
+          {% when "planned" %}
+            {% assign improvement_planned =
+              improvement_planned | plus: 1 %}
+
+          {% when "testing" %}
+            {% assign improvement_testing =
+              improvement_testing | plus: 1 %}
+
+          {% when "verified" %}
+            {% assign improvement_verified =
+              improvement_verified | plus: 1 %}
+
+          {% when "abandoned" %}
+            {% assign improvement_abandoned =
+              improvement_abandoned | plus: 1 %}
+
+        {% endcase %}
+
+      {% endif %}
+
+    {% endfor %}
+
+
+
+    {% comment %}
+    ------------------------------------------------------------
+    問題集計
+    active問題をベースに件数を出す
+    ------------------------------------------------------------
+    {% endcomment %}
+
+    {% assign active_problems =
+      experiments
+      | where: "type", "problem"
+      | where: "phase", "active" %}
+
+    {% for problem in active_problems %}
+
+      {% assign resolved = false %}
+
+      {% for exp in experiments %}
+
+        {% if exp.type == "problem"
+          and exp.phase == "resolved"
+          and exp.caused_by == problem.id %}
+
+          {% assign resolved = true %}
+
+        {% endif %}
+
+      {% endfor %}
+
+      {% if resolved %}
+
+        {% assign problem_resolved =
+          problem_resolved | plus: 1 %}
+
+      {% else %}
+
+        {% assign problem_active =
+          problem_active | plus: 1 %}
+
+      {% endif %}
+
+    {% endfor %}
+
+
+
+    <div class="row g-3">
+
+      <div class="col-md-6">
+
+        <div class="border rounded p-3 h-100">
+
+          <h3 class="h6 mb-3">
+            燃費改善施策
+          </h3>
+
+          <ul class="mb-0">
+
+            <li>
+              計画中：
+              <strong>{{ improvement_planned }}</strong> 件
+            </li>
+
+            <li>
+              検証中：
+              <strong>{{ improvement_testing }}</strong> 件
+            </li>
+
+            <li>
+              検証完了：
+              <strong>{{ improvement_verified }}</strong> 件
+            </li>
+
+            <li>
+              中止：
+              <strong>{{ improvement_abandoned }}</strong> 件
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="col-md-6">
+
+        <div class="border rounded p-3 h-100">
+
+          <h3 class="h6 mb-3">
+            発生した問題
+          </h3>
+
+          <ul class="mb-0">
+
+            <li>
+              発生中：
+              <strong>{{ problem_active }}</strong> 件
+            </li>
+
+            <li>
+              解決済み：
+              <strong>{{ problem_resolved }}</strong> 件
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="mt-3 text-muted small">
+
+      このサマリには環境変化および通常メンテナンスは含まれていません。
+
+    </div>
+
+    {% if include.hide_link != true %}
+    <p>
+      👉 <a href="{{ site.baseurl }}/solio/solio-improvement-roadmap/">
+        燃費改善施策などの詳細はこちら
+      </a>
+    </p>
+    {% endif %}
+
+  </div>
+</div>

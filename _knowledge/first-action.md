@@ -170,7 +170,7 @@ tags:
   <ul>
     <li><a href="{{ site.baseurl }}/knowledge/tank-to-tank-method-guide/">燃費計測の基礎（満タン法）</a></li>
     <li><a href="{{ site.baseurl }}/knowledge/wltc-real-fuel-economy-guide/">WLTCと実燃費の関係</a></li>
-    <li><a href="{{ site.baseurl }}/solio/">ソリオの燃費改善研究</a></li>
+    <li><a href="{{ site.baseurl }}/">ソリオの燃費改善研究</a></li>
   </ul>
 
 </div>
