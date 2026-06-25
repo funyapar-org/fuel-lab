@@ -5,6 +5,13 @@ ae01f:
   weight_each: 5.8
   labeling: AAA / c
 
+eg01:
+  company: グッドイヤー
+  model: EfficientGrip ECO EG01
+  size: 165/70R14
+  weight_each: 6.3
+  labeling: A / c
+
 eg02:
   company: グッドイヤー
   model: EfficientGrip ECO EG02
