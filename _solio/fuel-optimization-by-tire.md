@@ -55,7 +55,7 @@ tags:
           </tr>
           <tr>
             <th>現在のタイヤ</th>
-            <td>GOODYEAR EfficientGrip EG02</td>
+            <td>GOODYEAR EfficientGrip EG01</td>
           </tr>
           <tr>
             <th>サイズ</th>
@@ -75,14 +75,11 @@ tags:
           </tr>
           <tr>
             <th>ホイール</th>
-            <td>純正スチール + ホイールキャップ（約5.1kg/本と推定(※)）</td>
+            <td>純正スチール + ホイールキャップ（1本あたり約5.7kg）</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="mt-3">
-    ※ 同じスズキのスペーシアの同形式(14×4.5J 4H インセット45 PCD100)のホイールが1本約5.1kgとの情報があったので同等の重量と判断。
-    </p>
 
     <p class="mt-3">
       今回はこの状態を <strong>ベースライン</strong>として、
@@ -131,7 +128,7 @@ tags:
         </thead>
         <tbody>
           <tr>
-            <td>EG02</td>
+            <td>GOODYEAR EfficientGrip EG02</td>
             <td>165/70R14</td>
             <td>AA / c</td>
             <td>約6.3kg</td>
@@ -140,7 +137,7 @@ tags:
             <td>5,906円/1本</td>
           </tr>
           <tr>
-            <td>RV03CK</td>
+            <td>ヨコハマタイヤ BluEarth RV03CK</td>
             <td>165/65R14</td>
             <td>A / a</td>
             <td>約6.3kg</td>
@@ -149,7 +146,7 @@ tags:
             <td>8,202円/1本</td>
           </tr>
           <tr>
-            <td>RV03CK</td>
+            <td>ヨコハマタイヤ BluEarth RV03CK</td>
             <td>165/70R14</td>
             <td>A / a</td>
             <td>約6.2kg</td>
@@ -223,7 +220,7 @@ tags:
         <tbody>
           <tr>
             <th>純正スチール + キャップ</th>
-            <td>約5.1kg</td>
+            <td>約5.7kg</td>
           </tr>
           <tr>
             <th>G-SPEED G-07</th>
@@ -253,7 +250,8 @@ tags:
     </div>
 
     <p class="mt-3">
-      バネ下で合計 <strong>約2.8kgの軽量化</strong>。
+      タイヤは約2kgの軽量化。ホイールで約5.2kgの軽量化。
+      バネ下で合計 <strong>約7.2kgの軽量化</strong>。
       発進・加速・惰性走行すべてに効きます。
     </p>
   </section>
