@@ -314,7 +314,7 @@
   odometer: 30813
   fuel: 21.93
   price_per_liter: 155
-  note: エアコン使用が多め。オイル粘度5w-30最後の燃費計測。
+  note: エアコン使用多め。5w-30オイル最後の燃費計測。
   link: /knowledge/air-conditioner-fuel-economy-impact/
   conditions:
     oil: 5w-30
