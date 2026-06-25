@@ -10,7 +10,7 @@ eg01:
   model: EfficientGrip ECO EG01
   size: 165/70R14
   weight_each: 6.3
-  labeling: A / c
+  labeling: AA / c
 
 eg02:
   company: グッドイヤー
