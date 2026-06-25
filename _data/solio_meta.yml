@@ -13,7 +13,7 @@ purchase:
 initial_state:
   fuel_economy_km_l: 14.02
   oil_viscosity: 5W-30
-  tire: eg02
+  tire: eg01
   tire_size: 165/70R14
   tread_depth_mm_f: 6.0
   tread_depth_mm_r: 6.0
