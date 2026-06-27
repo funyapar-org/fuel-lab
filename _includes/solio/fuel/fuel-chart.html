@@ -80,19 +80,26 @@ const latestFuelDate = new Date(
 
 /*
 |------------------------------------------------------------------
-| future max
+| グラフの最小日付と future max (最大日付) の算出
+| （施策の予定日も含めて計算）
 |------------------------------------------------------------------
 */
-const futureMaxDate = new Date(
-  Math.max(
-    ...predictionMaxData.map(
-      p => new Date(p.x)
-    )
-  )
+const minDate = new Date(normalizedData[0].x);
+
+let maxTime = Math.max(
+  ...normalizedData.map(p => new Date(p.x).getTime()),
+  ...predictionMaxData.map(p => new Date(p.x).getTime())
 );
-futureMaxDate.setDate(
-  futureMaxDate.getDate() + 30
-);
+
+experiments.forEach(exp => {
+  const d = exp.date || exp.scheduled_date;
+  if (d) {
+    maxTime = Math.max(maxTime, new Date(d).getTime());
+  }
+});
+
+const futureMaxDate = new Date(maxTime);
+futureMaxDate.setDate(futureMaxDate.getDate() + 30); // 右端に30日分の余白を持たせる
 
 /*
 |------------------------------------------------------------------
@@ -182,25 +189,29 @@ Object.entries(vehicleStates).forEach(([key, state], index) => {
 
 /*
 |------------------------------------------------------------------
-| 横幅をデータ数に応じて拡張
+| 横幅を「時間軸の長さ（日数）」に応じて拡張し密度を維持する
 |------------------------------------------------------------------
 */
-const pointCount = Math.max(
-  normalizedData.length,
-  predictionMaxData.length
+// グラフ全体の期間（日数）を計算
+const totalDays = (futureMaxDate.getTime() - minDate.getTime()) / (1000 * 60 * 60 * 24);
+
+// 1日あたりのピクセル数（※密度を変えたい場合はこの数値を増減させてください）
+const PIXELS_PER_DAY = 3;
+
+// 必要幅を計算
+const dynamicWidth = Math.max(
+  window.innerWidth - 40,
+  totalDays * PIXELS_PER_DAY
 );
 
-const dynamicWidth =
-  Math.max(
-    window.innerWidth - 40,
-    pointCount * 90
-  );
+const chartWrapper = document.querySelector('.chart-wrapper');
+chartWrapper.style.width = `${dynamicWidth}px`;
 
-const chartWrapper =
-  document.querySelector('.chart-wrapper');
-chartWrapper.style.width =
-  `${dynamicWidth}px`;
-
+/*
+|------------------------------------------------------------------
+| Chart.js 描画
+|------------------------------------------------------------------
+*/
 const ctx = document.getElementById('fuelChart');
 const chart = new Chart(ctx, {
   type: 'line',
@@ -279,6 +290,11 @@ const chart = new Chart(ctx, {
   }
 });
 
+/*
+|------------------------------------------------------------------
+| クリック＆ホバー イベント
+|------------------------------------------------------------------
+*/
 ctx.onclick = function(event) {
   const canvasPosition = Chart.helpers.getRelativePosition(event, chart);
   const xScale = chart.scales.x;
@@ -337,9 +353,9 @@ window.addEventListener('load', () => {
   if (!normalizedData.length) return;
 
   // 時間の総範囲（ミリ秒）
-  const totalRange = futureMaxDate - new Date(normalizedData[0].x);
+  const totalRange = futureMaxDate - minDate;
   // データ開始日から最新給油日までの時間（ミリ秒）
-  const latestOffset = latestFuelDate - new Date(normalizedData[0].x);
+  const latestOffset = latestFuelDate - minDate;
 
   // グラフ全体の幅（ピクセル）
   const totalPixelWidth = container.scrollWidth;
