@@ -9,3 +9,10 @@ oem_steel:
   model: 純正スチール
   weight_each: 7.0
   size: 14×4.5J PCD100 45
+
+valette_ankray:
+  company: ホットスタッフ
+  model: ヴァレット アンクレイ
+  weight_each: 4.29
+  size: 14×4.5J PCD100 45
+  memo: 2026年Webカタログに重量記載

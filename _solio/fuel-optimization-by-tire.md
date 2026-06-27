@@ -226,32 +226,33 @@ tags:
             <th>G-SPEED G-07</th>
             <td><strong>約4.4kg</strong></td>
           </tr>
-          <tr class="table-success">
+          <tr>
             <th>G-SPEED G-08</th>
             <td><strong>約4.4kg</strong></td>
+          </tr>
+          <tr class="table-success">
+            <th>ヴァレット アンクレイ</th>
+            <td><strong>約4.29kg</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p class="mt-3">
-      今回は同重量の2種類の軽量ホイール（G-07 / G-08）で迷ったが、
-      最終的には スポークが太く横剛性が出やすい設計 の G-08 を選択した。
-    </p>
-
-    <p class="mt-3">
-      燃費面では差が出にくいが、街乗りでの操舵安定性やふらつき感を抑えたいという判断からである。
+      ホットスタッフの2026年Webカタログに重量が載っていたので、
+      ヴァレット アンクレイを選択した。
     </p>
 
     <div class="alert alert-info mt-4">
       <strong>今回選定したホイール</strong><br>
-      G-SPEED G-08（14インチ 4.5J +45）<br>
-      <a href="https://amzn.to/427H4Fc" target="_blank" rel="noopener sponsored">Amazonで価格を見る</a>
+      ホットスタッフ G-SPEED G-08（14インチ 4.5J +45）<br>
+      <a href="https://amzn.to/4g9DCC2" target="_blank" rel="noopener sponsored">Amazonで価格を見る</a>
     </div>
 
     <p class="mt-3">
-      タイヤは約2kgの軽量化。ホイールで約5.2kgの軽量化。
-      バネ下で合計 <strong>約7.2kgの軽量化</strong>。
+      タイヤは約2kgの軽量化。
+      ホイールで約5.31kgの軽量化。
+      バネ下で合計 <strong>約7.31kgの軽量化</strong>。
       発進・加速・惰性走行すべてに効きます。
     </p>
   </section>
