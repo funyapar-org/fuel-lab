@@ -133,7 +133,7 @@ experiment_log:
     type: improvement
     title: タイヤ・ホイール変更
     description: 軽量ホイールと転がり抵抗AAAタイヤに変更し、燃費向上を狙う
-    planned_date: 2026-03-04
+    planned_date: 2026-02-03
     scheduled_date: 2028-12-25
     phase: planned
     targets:
