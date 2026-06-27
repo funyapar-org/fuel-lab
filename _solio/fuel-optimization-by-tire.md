@@ -240,12 +240,12 @@ tags:
 
     <p class="mt-3">
       ホットスタッフの2026年Webカタログに重量が載っていたので、
-      ヴァレット アンクレイを選択した。
+      ヴァレットアンクレイを選択した。
     </p>
 
     <div class="alert alert-info mt-4">
       <strong>今回選定したホイール</strong><br>
-      ホットスタッフ G-SPEED G-08（14インチ 4.5J +45）<br>
+      ホットスタッフ ヴァレットアンクレイ（14インチ 4.5J +45）<br>
       <a href="https://amzn.to/4g9DCC2" target="_blank" rel="noopener sponsored">Amazonで価格を見る</a>
     </div>
 
