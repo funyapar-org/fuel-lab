@@ -1,47 +1,30 @@
 <div class="card shadow-sm mb-4">
-
   <div class="card-body">
-
     <h2 class="h4 mb-3">燃費推移と改善施策</h2>
 
-    <!-- 横スクロール誘導 -->
     <div class="chart-scroll-hint small text-muted mb-2">
       ← 左右にスクロールできます →
     </div>
 
-    <!-- 固定凡例 -->
     <div class="chart-legend mb-3">
-
       <div class="legend-item">
         <span class="legend-line legend-normalized"></span>
         季節補正後燃費
       </div>
-
       <div class="legend-item">
         <span class="legend-line legend-actual"></span>
         実燃費
       </div>
-
       <div class="legend-item">
         <span class="legend-line legend-prediction"></span>
         理論改善予測
       </div>
-
     </div>
 
-
-
-    <!-- スクロール領域 -->
-    <div
-      class="chart-scroll-container"
-      id="chartScrollContainer">
-
+    <div class="chart-scroll-container" id="chartScrollContainer">
       <div class="chart-wrapper">
-
         <canvas id="fuelChart"></canvas>
-
       </div>
-
     </div>
 
     {% if include.hide_link != true %}
@@ -51,23 +34,14 @@
       </a>
     </p>
     {% endif %}
-
   </div>
-
 </div>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 
-
-
 <script>
-
 const actualData = [
   {{ actual_chart_points | remove_first: "," }}
 ];
@@ -91,13 +65,11 @@ const vehicleStates =
   {{ site.data.fuel_model.vehicle_states | jsonify }};
 
 
-
 /*
 |------------------------------------------------------------------
 | 最新給油日
 |------------------------------------------------------------------
 */
-
 const latestFuelDate = new Date(
   Math.max(
     ...normalizedData.map(
@@ -106,14 +78,11 @@ const latestFuelDate = new Date(
   )
 );
 
-
-
 /*
 |------------------------------------------------------------------
 | future max
 |------------------------------------------------------------------
 */
-
 const futureMaxDate = new Date(
   Math.max(
     ...predictionMaxData.map(
@@ -121,36 +90,26 @@ const futureMaxDate = new Date(
     )
   )
 );
-
 futureMaxDate.setDate(
   futureMaxDate.getDate() + 30
 );
-
-
 
 /*
 |------------------------------------------------------------------
 | annotation生成
 |------------------------------------------------------------------
 */
-
 const annotations = {};
-
 const annotationLinks = {};
-
 const experimentLabels = {};
-
 
 /*
 |------------------------------------------------------------------
 | 施策イベント線
 |------------------------------------------------------------------
 */
-
 experiments.forEach((exp, index) => {
-  const eventDate =
-    exp.date || exp.scheduled_date;
-
+  const eventDate = exp.date || exp.scheduled_date;
   if (!eventDate) return;
 
   if (eventDate in experimentLabels) {
@@ -161,116 +120,71 @@ experiments.forEach((exp, index) => {
 });
 
 experiments.forEach((exp, index) => {
-
-  const eventDate =
-    exp.date || exp.scheduled_date;
-
+  const eventDate = exp.date || exp.scheduled_date;
   if (!eventDate) return;
 
   let borderColor = '#198754';
-
   if (exp.type === 'problem') {
     borderColor = '#dc3545';
   }
-
   if (exp.phase === 'planned') {
     borderColor = '#fd7e14';
   }
 
   const key = 'event_' + index;
-
   annotations[key] = {
-
     type: 'line',
-
     xMin: eventDate,
     xMax: eventDate,
-
     borderColor: borderColor,
-
     borderWidth: 2,
-
-    borderDash:
-      exp.phase === 'planned'
-      ? [6, 6]
-      : [],
-
+    borderDash: exp.phase === 'planned' ? [6, 6] : [],
     label: {
-
       display: true,
-
       content: experimentLabels[eventDate],
-
       position: 'start',
-
       rotation: -90,
-
       yAdjust: -10,
-
       font: {
         size: 10
       }
-
     }
-
   };
-
   annotationLinks[key] = exp.link;
-
 });
-
-
 
 /*
 |------------------------------------------------------------------
 | vehicle_state 背景帯
 |------------------------------------------------------------------
 */
-
 Object.entries(vehicleStates).forEach(([key, state], index) => {
-
   annotations['state_' + index] = {
-
     type: 'box',
-
     xMin: state.start,
     xMax: state.end,
-
     backgroundColor:
       index % 2 === 0
       ? 'rgba(13,110,253,0.04)'
       : 'rgba(25,135,84,0.04)',
-
     borderWidth: 0,
-
     label: {
-
       display: true,
-
       content: key,
-
       position: 'start',
-
       yAdjust: 10,
-
       font: {
         size: 10
       }
-
     }
-
   };
-
 });
-
-
 
 /*
 |------------------------------------------------------------------
 | 横幅をデータ数に応じて拡張
 |------------------------------------------------------------------
 */
-
 const pointCount = Math.max(
   normalizedData.length,
   predictionMaxData.length
@@ -284,329 +198,165 @@ const dynamicWidth =
 
 const chartWrapper =
   document.querySelector('.chart-wrapper');
-
 chartWrapper.style.width =
   `${dynamicWidth}px`;
 
-
-
-const ctx =
-  document.getElementById('fuelChart');
-
+const ctx = document.getElementById('fuelChart');
 const chart = new Chart(ctx, {
-
   type: 'line',
-
   data: {
-
     datasets: [
-
       {
         label: '季節補正後燃費 (km/L)',
-
         data: normalizedData,
-
         tension: 0.3,
-
         borderWidth: 3,
-
         pointRadius: 3
       },
-
       {
         label: '実燃費 (km/L)',
-
         data: actualData,
-
         tension: 0.3,
-
         borderDash: [6, 6],
-
         borderWidth: 1.5,
-
         pointRadius: 2
       },
-
       {
         label: '理論改善予測 MIN',
-
         data: predictionMinData,
-
         stepped: 'before',
-
         borderDash: [2, 4],
-
         borderWidth: 2,
-
         pointRadius: 0
       },
-
       {
         label: '理論改善予測 MAX',
-
         data: predictionMaxData,
-
         stepped: 'before',
-
         borderDash: [2, 4],
-
         borderWidth: 2,
-
         pointRadius: 0,
-
         fill: '-1'
       }
-
     ]
-
   },
-
   options: {
-
     responsive: true,
-
     maintainAspectRatio: false,
-
     interaction: {
-
       mode: 'nearest',
-
       intersect: false
-
     },
-
     plugins: {
-
       legend: {
-
         display: false
-
       },
-
       annotation: {
-
         annotations: annotations
-
       }
-
     },
-
     scales: {
-
       x: {
-
         type: 'time',
-
         suggestedMax: futureMaxDate,
-
         time: {
-
           unit: 'month',
-
           tooltipFormat: 'yyyy-MM-dd'
-
         },
-
         title: {
-
           display: true,
-
           text: '日付'
-
         }
-
       },
-
       y: {
-
         beginAtZero: false,
-
         title: {
-
           display: true,
-
           text: '燃費 (km/L)'
-
         }
-
       }
-
     }
-
   }
-
 });
 
 ctx.onclick = function(event) {
-
-  const canvasPosition =
-    Chart.helpers.getRelativePosition(
-      event,
-      chart
-    );
-
-  const xScale =
-    chart.scales.x;
-
-  const clickedTime =
-    xScale.getValueForPixel(
-      canvasPosition.x
-    );
+  const canvasPosition = Chart.helpers.getRelativePosition(event, chart);
+  const xScale = chart.scales.x;
+  const clickedTime = xScale.getValueForPixel(canvasPosition.x);
 
   let nearestExp = null;
   let nearestDiff = Infinity;
 
   experiments.forEach(exp => {
+    const eventDate = exp.date || exp.scheduled_date;
+    if (!eventDate || !exp.link) return;
 
-    const eventDate =
-      exp.date || exp.scheduled_date;
-
-    if (!eventDate || !exp.link) {
-      return;
-    }
-
-    const eventTime =
-      new Date(eventDate).getTime();
-
-    const diff =
-      Math.abs(
-        clickedTime - eventTime
-      );
+    const eventTime = new Date(eventDate).getTime();
+    const diff = Math.abs(clickedTime - eventTime);
 
     if (diff < nearestDiff) {
-
       nearestDiff = diff;
-
       nearestExp = exp;
-
     }
-
   });
 
-  const oneDay =
-    24 * 60 * 60 * 1000;
-
-  if (
-    nearestExp &&
-    nearestDiff < oneDay * 3
-  ) {
-
-    window.location.href =
-      '{{ site.baseurl }}' +
-      nearestExp.link;
-
+  const oneDay = 24 * 60 * 60 * 1000;
+  if (nearestExp && nearestDiff < oneDay * 3) {
+    window.location.href = '{{ site.baseurl }}' + nearestExp.link;
   }
-
 };
 
 ctx.onmousemove = function(event) {
-
-  const canvasPosition =
-    Chart.helpers.getRelativePosition(
-      event,
-      chart
-    );
-
-  const xScale =
-    chart.scales.x;
-
-  const clickedTime =
-    xScale.getValueForPixel(
-      canvasPosition.x
-    );
-
+  const canvasPosition = Chart.helpers.getRelativePosition(event, chart);
+  const xScale = chart.scales.x;
+  const clickedTime = xScale.getValueForPixel(canvasPosition.x);
   let found = false;
 
   experiments.forEach(exp => {
+    const eventDate = exp.date || exp.scheduled_date;
+    if (!eventDate || !exp.link) return;
 
-    const eventDate =
-      exp.date || exp.scheduled_date;
-
-    if (!eventDate || !exp.link) {
-      return;
-    }
-
-    const diff =
-      Math.abs(
-        clickedTime -
-        new Date(eventDate).getTime()
-      );
-
-    if (
-      diff <
-      3 * 24 * 60 * 60 * 1000
-    ) {
-
+    const diff = Math.abs(clickedTime - new Date(eventDate).getTime());
+    if (diff < 3 * 24 * 60 * 60 * 1000) {
       found = true;
-
     }
-
   });
 
-  ctx.style.cursor =
-    found
-    ? 'pointer'
-    : 'default';
-
+  ctx.style.cursor = found ? 'pointer' : 'default';
 };
-
 
 /*
 |------------------------------------------------------------------
 | 初期スクロール位置
-| 最新給油日を中央寄りに表示
+| 最新給油日を中央に表示
 |------------------------------------------------------------------
 */
-
 window.addEventListener('load', () => {
+  const container = document.getElementById('chartScrollContainer');
+  
+  if (!normalizedData.length) return;
 
-  const container =
-    document.getElementById(
-      'chartScrollContainer'
-    );
+  // 時間の総範囲（ミリ秒）
+  const totalRange = futureMaxDate - new Date(normalizedData[0].x);
+  // データ開始日から最新給油日までの時間（ミリ秒）
+  const latestOffset = latestFuelDate - new Date(normalizedData[0].x);
 
-  const totalRange =
-    futureMaxDate - new Date(normalizedData[0].x);
+  // グラフ全体の幅（ピクセル）
+  const totalPixelWidth = container.scrollWidth;
+  
+  // 最新給油日のグラフ左端からのピクセル座標
+  const latestPixelPosition = (latestOffset / totalRange) * totalPixelWidth;
 
-  const latestOffset =
-    latestFuelDate - new Date(normalizedData[0].x);
+  // 最新給油日を画面の中央に持ってくるためのスクロール量
+  // 座標から、表示領域の半分を引く
+  let targetScroll = latestPixelPosition - (container.clientWidth / 2);
 
-  const scrollableWidth =
-    container.scrollWidth - container.clientWidth;
+  // クランプ処理（0 ～ 最大スクロール可能幅の間に収める）
+  const maxScroll = container.scrollWidth - container.clientWidth;
+  targetScroll = Math.max(0, targetScroll);
+  targetScroll = Math.min(targetScroll, maxScroll);
 
-  let targetScroll =
-    (latestOffset / totalRange)
-    * scrollableWidth;
-
-  /*
-  |--------------------------------------------------------------
-  | 少し右余白を見せる
-  |--------------------------------------------------------------
-  */
-
-  targetScroll =
-    targetScroll + (
-      container.clientWidth * 0.2
-    );
-
-  /*
-  |--------------------------------------------------------------
-  | clamp
-  |--------------------------------------------------------------
-  */
-
-  targetScroll =
-    Math.max(0, targetScroll);
-
-  targetScroll =
-    Math.min(
-      targetScroll,
-      scrollableWidth
-    );
-
-  container.scrollLeft =
-    targetScroll;
-
+  // スクロール位置を適用
+  container.scrollLeft = targetScroll;
 });
-
 </script>
