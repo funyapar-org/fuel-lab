@@ -88,7 +88,7 @@ experiment_log:
     title: エンジンオイルの粘度変更
     description: 5W-30から0W-16へ変更しフリクション低減を狙う
     planned_date: 2026-02-25
-    scheduled_date: 2026-06-25
+    date: 2026-06-25
     phase: testing
     targets:
       - fuel_economy
@@ -104,7 +104,7 @@ experiment_log:
     title: タイヤローテーション
     description: タイヤの偏摩耗防止による性能維持
     planned_date: 2026-02-25
-    scheduled_date: 2026-06-25
+    date: 2026-06-25
     phase: completed
     targets:
       - uneven_tire_wear
