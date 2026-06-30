@@ -132,7 +132,7 @@ date: 2026-02-20 09:00:00 +0900
 
       <hr class="my-5">
 
-      <h2 class="mb-3">Fuel Labとしての推奨測定方法</h2>
+      <h2 class="mb-3">推奨測定方法</h2>
 
       <ul class="list-group mb-4">
         <li class="list-group-item">最低3回以上の平均を取る</li>

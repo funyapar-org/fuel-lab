@@ -130,7 +130,7 @@ date: 2026-02-22 18:30:00 +0900
 
       <hr class="my-5">
 
-      <h2 class="mb-3">Fuel Lab的結論</h2>
+      <h2 class="mb-3">結論</h2>
 
       <ul class="list-group mb-4">
         <li class="list-group-item">軽量化目的で外すメリットは小さい</li>

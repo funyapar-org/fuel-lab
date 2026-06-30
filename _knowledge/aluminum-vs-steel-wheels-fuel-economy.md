@@ -140,7 +140,7 @@ date: 2026-02-22 21:40:00 +0900
 
       <hr class="my-5">
 
-      <h2 class="mb-3">Fuel Lab的結論</h2>
+      <h2 class="mb-3">結論</h2>
 
       <ul class="list-group mb-4">
         <li class="list-group-item">素材よりも重量が本質</li>
