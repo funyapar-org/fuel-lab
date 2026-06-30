@@ -2,7 +2,7 @@
 layout: default
 title: お問い合わせ
 nav_title: お問い合わせ
-description: fuel-labへのお問い合わせはこちらから。ご質問・ご意見などお気軽にご連絡ください。
+description: ソリオ燃費・維持費研究所へのお問い合わせはこちらから。ご質問・ご意見などお気軽にご連絡ください。
 date: 2026-03-18 07:00:00 +0900
 ---
 
@@ -13,13 +13,13 @@ date: 2026-03-18 07:00:00 +0900
       <h1 class="mb-4">お問い合わせ</h1>
 
       <p class="mb-4">
-        当サイト「fuel-lab」へのご質問・ご意見などは、以下の方法でご連絡ください。
+        当サイト「ソリオ燃費・維持費研究所」へのご質問・ご意見などは、以下の方法でご連絡ください。
       </p>
 
       <div class="card mb-4">
         <div class="card-body">
           <h5 class="card-title">メールでのお問い合わせ</h5>
-          <p class="card-text">
+          <p class="card-text fw-bold">
             contact.funyapar.fuel.lab@gmail.com
           </p>
           <p class="text-muted small mb-0">
