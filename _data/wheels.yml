@@ -7,7 +7,7 @@ g08:
 oem_steel:
   company: スズキ
   model: 純正スチール
-  weight_each: 7.0
+  weight_each: 5.7
   size: 14×4.5J PCD100 45
 
 valette_ankray:

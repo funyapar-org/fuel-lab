@@ -15,6 +15,10 @@ date: 2025-09-06T09:00:00+09:00
 
 ---
 
+{% assign initial_state = site.data.solio_meta.initial_state %}
+{% assign tire_data = site.data.tires[initial_state.tire] %}
+{% assign wheel_data = site.data.wheels[initial_state.wheel] %}
+
 <div class="col-lg-8">
 
   <div class="card shadow-sm mb-4">
@@ -50,32 +54,32 @@ date: 2025-09-06T09:00:00+09:00
 
           <tr>
             <th style="width: 220px;">車種</th>
-            <td>スズキ ソリオ DBA-MA26S</td>
+            <td>スズキ ソリオ {{ site.data.solio_meta.model }}</td>
           </tr>
 
           <tr>
             <th>エンジン</th>
-            <td>K12C 1.2L 自然吸気</td>
+            <td>{{ site.data.solio_meta.engine.name }} 1.2L 自然吸気</td>
           </tr>
 
           <tr>
             <th>トランスミッション</th>
-            <td>CVT</td>
+            <td>{{ site.data.solio_meta.engine.transmission }}</td>
           </tr>
 
           <tr>
             <th>駆動方式</th>
-            <td>FF</td>
+            <td>{{ site.data.solio_meta.engine.drive }}</td>
           </tr>
 
           <tr>
             <th>購入日</th>
-            <td>2025-08-23</td>
+            <td>{{ site.data.solio_meta.purchase.date }}</td>
           </tr>
 
           <tr>
             <th>購入時走行距離</th>
-            <td>25,263 km</td>
+            <td>{{ site.data.solio_meta.purchase.odometer }} km</td>
           </tr>
 
         </tbody>
@@ -100,37 +104,42 @@ date: 2025-09-06T09:00:00+09:00
 
           <tr>
             <th style="width: 220px;">基準燃費</th>
-            <td>14.02 km/L</td>
+            <td>{{ initial_state.fuel_economy_km_l }} km/L</td>
           </tr>
 
           <tr>
             <th>エンジンオイル</th>
-            <td>5W-30</td>
+            <td>{{ initial_state.oil_viscosity }}</td>
           </tr>
 
           <tr>
             <th>タイヤ</th>
-            <td>EG02</td>
+            <td>{{ tire_data.company }} {{ tire_data.model }}(重量: {{ tire_data.weight_each }} kg)</td>
           </tr>
 
           <tr>
             <th>タイヤサイズ</th>
-            <td>165/70R14</td>
+            <td>{{ tire_data.size }}</td>
           </tr>
 
           <tr>
             <th>前輪残溝</th>
-            <td>6.0 mm</td>
+            <td>{{ initial_state.tread_depth_mm_f }} mm</td>
           </tr>
 
           <tr>
             <th>後輪残溝</th>
-            <td>6.0 mm</td>
+            <td>{{ initial_state.tread_depth_mm_r }} mm</td>
           </tr>
 
           <tr>
             <th>ホイール</th>
-            <td>純正スチールホイール</td>
+            <td>{{ wheel_data.compony }} {{ wheel_data.model }}(重量: {{ wheel_data.weight_each }} kg)</td>
+          </tr>
+
+          <tr>
+            <th>ホイールサイズ</th>
+            <td>{{ wheel_data.size }}</td>
           </tr>
 
         </tbody>
@@ -222,7 +231,7 @@ date: 2025-09-06T09:00:00+09:00
             </div>
 
             <div class="display-6">
-              14.02
+              {{ initial_state.fuel_economy_km_l }}
             </div>
 
             <div>
@@ -242,7 +251,7 @@ date: 2025-09-06T09:00:00+09:00
             </div>
 
             <div class="display-6">
-              16.0
+              {{ site.data.solio_meta.targets.fuel_economy_km_l }}
             </div>
 
             <div>
