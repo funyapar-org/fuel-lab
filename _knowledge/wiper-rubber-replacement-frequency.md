@@ -12,7 +12,7 @@ tags:
   - glass-water-repellent
   - oil-film
 date: 2026-05-01 11:30:00 +0900
-published: false
+published: true
 ---
 
 <div class="container my-4">

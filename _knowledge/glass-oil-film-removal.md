@@ -12,7 +12,7 @@ tags:
   - water-repellent
   - wiper
 date: 2026-05-01 11:20:00 +0900
-published: false
+published: true
 ---
 
 <div class="container my-4">

@@ -12,7 +12,7 @@ tags:
   - wiper
   - oil-film
 date: 2026-05-01 11:10:00 +0900
-published: false
+published: true
 ---
 
 <div class="container my-4">

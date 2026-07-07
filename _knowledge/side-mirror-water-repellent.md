@@ -12,7 +12,7 @@ tags:
   - rain-visibility
   - windshield
 date: 2026-04-18 11:50:00 +0900
-published: false
+published: true
 ---
 
 <div class="container my-4">

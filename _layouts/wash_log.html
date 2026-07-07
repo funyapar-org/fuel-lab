@@ -1,0 +1,168 @@
+---
+layout: default
+---
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <div class="mb-4 border-bottom pb-3">
+        <span class="badge bg-info text-dark mb-2">洗車研究ログ</span>
+        <h1 class="fw-bold mb-2">{{ page.title }}</h1>
+        <div class="d-flex text-body-secondary small gap-4 flex-wrap">
+          <span>📅 実施日: {{ page.date | date: "%Y年%m月%d日" }}</span>
+          <span>🌡️ 最高気温: {{ page.temp_max }}℃</span>
+          <span>⏱️ 総時間: {{ page.total_time }}分</span>
+          <span class="text-danger fw-bold">💰 総コスト: {{ page.cost }}円</span>
+        </div>
+      </div>
+
+      <div class="card mb-4 text-center bg-body-tertiary border-0 shadow-sm">
+        <div class="card-body py-3">
+          <div class="row">
+            <div class="col-4 border-end">
+              <div class="small text-body-secondary fw-bold">ボディの艶・仕上がり</div>
+              <div class="text-warning fs-5">{{ page.score_body }}</div>
+            </div>
+            <div class="col-4 border-end">
+              <div class="small text-body-secondary fw-bold">ガラスのクリアさ</div>
+              <div class="text-warning fs-5">{{ page.score_glass }}</div>
+            </div>
+            <div class="col-4">
+              <div class="small text-body-secondary fw-bold">足回りの黒艶</div>
+              <div class="text-warning fs-5">{{ page.score_wheel }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card h-100 border-primary">
+            <div class="card-header bg-primary text-white fw-bold">💡 今回の気づき・反省点</div>
+            <div class="card-body bg-body">
+              <ul class="mb-0 ps-3">
+                {% for item in page.findings %}
+                  <li class="mb-1">{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 border-success">
+            <div class="card-header bg-success text-white fw-bold">🚀 次回への改善アクション</div>
+            <div class="card-body bg-body">
+              <ul class="mb-0 ps-3">
+                {% for action in page.next_actions %}
+                  <li class="mb-1">{{ action }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-7">
+          <div class="card h-100 border-secondary-subtle">
+            <div class="card-header bg-secondary-subtle text-body fw-bold small">🧪 使用ケミカル</div>
+            <table class="table table-sm table-hover mb-0 small h-100">
+              <tbody>
+                {% for chem in page.chemicals %}
+                <tr>
+                  <th class="table-active text-nowrap border-secondary-subtle" style="width: 30%;">{{ chem.category }}</th>
+                  <td class="border-secondary-subtle">{{ chem.name }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card h-100 border-secondary-subtle">
+            <div class="card-header bg-secondary-subtle text-body fw-bold small">🧰 使用ツール</div>
+            <div class="card-body py-2 bg-body">
+              <ul class="mb-0 ps-3 small text-body-secondary">
+                {% for tool in page.tools %}
+                  <li>{{ tool }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% if page.menu %}
+      <div class="card mb-5 border-secondary-subtle">
+        <div class="card-header bg-secondary-subtle text-body fw-bold small">💵 洗車メニュー・料金明細</div>
+        <div class="table-responsive">
+          <table class="table table-sm table-hover mb-0 small">
+            <thead>
+              <tr class="table-active text-body-secondary">
+                <th style="width: 75%;" class="ps-3 border-secondary-subtle">メニュー名</th>
+                <th style="width: 25%;" class="text-end pe-3 border-secondary-subtle">料金</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in page.menu %}
+              <tr>
+                <td class="ps-3 border-secondary-subtle">{{ item.name }}</td>
+                <td class="text-end pe-3 fw-bold border-secondary-subtle">{{ item.price }} 円</td>
+              </tr>
+              {% endfor %}
+              <tr class="table-active fw-bold">
+                <td class="ps-3 border-secondary-subtle">合計金額</td>
+                <td class="text-end pe-3 text-danger border-secondary-subtle">{{ page.cost }} 円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card h-100 border-secondary-subtle">
+            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom">⏱️ タイムライン</div>
+            <ul class="list-group list-group-flush small">
+              {% for time_entry in page.timeline %}
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-body border-secondary-subtle">
+                <span>{{ time_entry.label }}</span>
+                <span class="badge bg-body-secondary text-body-secondary border">{{ time_entry.time }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-secondary-subtle">
+            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom">📊 工程ごとの所要時間</div>
+            <ul class="list-group list-group-flush small">
+              {% for step in page.steps %}
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-body border-secondary-subtle">
+                <span>{{ step.name }}</span>
+                <span class="text-body-secondary">{{ step.duration }} 分</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {% if content contains "p>" or content contains "h" or content contains "li>" %}
+      <div class="wash-log-details mt-5 border-top border-secondary-subtle pt-4">
+        <h4 class="fw-bold mb-4">📝 詳細メモ・写真</h4>
+        {{ content }}
+      </div>
+      {% endif %}
+
+      <div class="mt-5 pt-3 border-top border-secondary-subtle text-center">
+        <a href="{{ site.baseurl }}/solio/solio-car-wash-log/" class="btn btn-outline-secondary btn-sm">
+          ← 洗車ログ一覧へ戻る
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
