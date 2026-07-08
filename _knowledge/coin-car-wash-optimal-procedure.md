@@ -78,7 +78,7 @@ published: true
         バケツを2つ（シャンプー用・すすぎ用の清水）用意する<strong>「2バケツ洗車」</strong>を推奨します。
       </p>
 
-      <div class="card mb-4 border-info">
+      <div class="card mb-4 border-primary">
         <div class="card-header bg-primary text-white fw-bold">
           手洗いの鉄則（傷防止の最重要ポイント）
         </div>
@@ -121,7 +121,7 @@ published: true
         <strong>🚫 洗車ブースでの拭き上げはマナー違反です</strong><br>
         すすぎが終わったら、速やかに「拭き上げ専用スペース」へ車を移動させてから作業を開始してください。他の利用者とのトラブル防止に繋がります。
       </div>
-bg
+
       <p>
         水滴は放置するとすぐにシミになります。大判のマイクロファイバータオルなどを使い、<strong>「擦らずに押し当てるように」</strong>優しく吸水させます。
       </p>
@@ -181,6 +181,9 @@ bg
           </a>
           <a href="{{ site.baseurl }}/knowledge/car-wax-necessary/" class="list-group-item list-group-item-action">
             ワックスは必要？
+          </a>
+          <a href="{{ site.baseurl }}/knowledge/tire-care-optimization/" class="list-group-item list-group-item-action">
+            タイヤ保護の最適化
           </a>
         </div>
       </div>
