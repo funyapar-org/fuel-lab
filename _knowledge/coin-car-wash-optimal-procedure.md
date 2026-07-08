@@ -79,7 +79,7 @@ published: true
       </p>
 
       <div class="card mb-4 border-info">
-        <div class="card-header bg-info text-white fw-bold">
+        <div class="card-header bg-primary text-white fw-bold">
           手洗いの鉄則（傷防止の最重要ポイント）
         </div>
         <div class="card-body">
@@ -126,14 +126,14 @@ bg
         水滴は放置するとすぐにシミになります。大判のマイクロファイバータオルなどを使い、<strong>「擦らずに押し当てるように」</strong>優しく吸水させます。
       </p>
 
-      <div class="card mb-4 bg-info">
+      <div class="card mb-4 bg-primary">
         <div class="card-body">
           <h5 class="card-title fw-bold">✨ コスパ・タイパ重視のコーティング術</h5>
           <p class="card-text">
             時間がないコイン洗車では、拭き上げと同時に施工できる<strong>「濡れたボディに使える簡易コーティング剤（スプレータイプ）」</strong>を使用するのが最もタイパが良いです。<br>
             時間がある方や、艶・防護力にこだわりたい方は固形ワックスも選択肢に入ります。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/car-wax-necessary/" class="btn btn-sm btn-outline-primary">ワックスは必要？についての考察はこちら</a>
+          <a href="{{ site.baseurl }}/knowledge/car-wax-necessary/" class="btn btn-sm btn-outline-success">ワックスは必要？についての考察はこちら</a>
         </div>
       </div>
 
