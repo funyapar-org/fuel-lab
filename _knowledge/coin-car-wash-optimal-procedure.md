@@ -133,7 +133,7 @@ bg
             時間がないコイン洗車では、拭き上げと同時に施工できる<strong>「濡れたボディに使える簡易コーティング剤（スプレータイプ）」</strong>を使用するのが最もタイパが良いです。<br>
             時間がある方や、艶・防護力にこだわりたい方は固形ワックスも選択肢に入ります。
           </p>
-          <a href="{{ site.baseurl }}/knowledge/car-wax-necessary/" class="btn btn-sm btn-outline-success">ワックスは必要？についての考察はこちら</a>
+          <a href="{{ site.baseurl }}/knowledge/car-wax-necessary/" class="btn btn-sm btn-outline-warning">ワックスは必要？についての考察はこちら</a>
         </div>
       </div>
 
