@@ -12,7 +12,7 @@ layout: default
           <span>📅 実施日: {{ page.date | date: "%Y年%m月%d日" }}</span>
           <span>🌡️ 最高気温: {{ page.temp_max }}℃</span>
           <span>⏱️ 総時間: {{ page.total_time }}分</span>
-          <span class="text-danger fw-bold">💰 総コスト: {{ page.cost }}円</span>
+          <span class="text-danger fw-bold">💰 コイン洗車場料金: {{ page.cost }}円</span>
         </div>
       </div>
 
@@ -24,16 +24,27 @@ layout: default
               <div class="text-warning fs-5">{{ page.score_body }}</div>
             </div>
             <div class="col-4 border-end">
-              <div class="small text-body-secondary fw-bold">ガラスのクリアさ</div>
+              <div class="small text-body-secondary fw-bold">ガラスのクリアさ・撥水力</div>
               <div class="text-warning fs-5">{{ page.score_glass }}</div>
             </div>
             <div class="col-4">
-              <div class="small text-body-secondary fw-bold">足回りの黒艶</div>
+              <div class="small text-body-secondary fw-bold">タイヤ・ホイールの艶・仕上がり</div>
               <div class="text-warning fs-5">{{ page.score_wheel }}</div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- 今回の洗車コンセプト（追加部分） -->
+      {% if page.concept %}
+      <div class="card mb-4 border-info">
+        <div class="card-header bg-info text-dark fw-bold">🎯 今回の洗車コンセプト</div>
+        <div class="card-body bg-body">
+          <p class="mb-0">{{ page.concept | newline_to_br }}</p>
+        </div>
+      </div>
+      {% endif %}
+      <!-- /今回の洗車コンセプト -->
 
       <div class="row g-4 mb-5">
         <div class="col-md-6">
