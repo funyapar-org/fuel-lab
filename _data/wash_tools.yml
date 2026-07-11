@@ -46,7 +46,7 @@ cloth:
   dcm_big_microfiber_cloth:
     company: DCM
     name: マイクロファイバークロス
-    comment: "マイクロファイバー素材のクロス。大きめで厚手なので、ルーフの水滴拭き取りに向いている。"
+    comment: "マイクロファイバー素材のクロス。3枚セット。大きめで厚手なので、ルーフの水滴拭き取りに向いている。"
 blower:
   aal_mini_blower:
     company: AAL
