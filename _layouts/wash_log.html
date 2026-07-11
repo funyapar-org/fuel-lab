@@ -35,7 +35,7 @@ layout: default
         </div>
       </div>
 
-      <!-- 今回の洗車コンセプト（追加部分） -->
+      <!-- 今回の洗車コンセプト -->
       {% if page.concept %}
       <div class="card mb-4 border-info">
         <div class="card-header bg-info text-dark fw-bold">🎯 今回の洗車コンセプト</div>
@@ -44,7 +44,6 @@ layout: default
         </div>
       </div>
       {% endif %}
-      <!-- /今回の洗車コンセプト -->
 
       <div class="row g-4 mb-5">
         <div class="col-md-6">
@@ -73,31 +72,100 @@ layout: default
         </div>
       </div>
 
+      <!-- 使用ケミカル & 使用ツール エリア -->
       <div class="row g-4 mb-5">
-        <div class="col-md-7">
+        <!-- 🧪 使用ケミカル -->
+        <div class="col-md-6">
           <div class="card h-100 border-secondary-subtle">
             <div class="card-header bg-secondary-subtle text-body fw-bold small">🧪 使用ケミカル</div>
-            <table class="table table-sm table-hover mb-0 small h-100">
-              <tbody>
-                {% for chem in page.chemicals %}
-                <tr>
-                  <th class="table-active text-nowrap border-secondary-subtle" style="width: 30%;">{{ chem.category }}</th>
-                  <td class="border-secondary-subtle">{{ chem.name }}</td>
-                </tr>
+            <div class="card-body bg-body py-3">
+              {% if page.chemicals and page.chemicals.size > 0 %}
+                {% for item in page.chemicals %}
+                  {% assign id_parts = item.id | split: '.' %}
+                  {% assign category_key = id_parts[0] %}
+                  {% assign item_key = id_parts[1] %}
+                  {% assign chem_data = site.data.wash_chemicals[category_key][item_key] %}
+                  
+                  <div class="mb-3 {% unless forloop.last %}border-bottom pb-3 border-secondary-subtle{% endunless %}">
+                    <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                      <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
+                      <span class="fw-bold text-primary">{{ chem_data.company }} {{ chem_data.name }}</span>
+                    </div>
+                    
+                    <!-- 共通仕様コメント（アコーディオン） -->
+                    {% if chem_data.comment %}
+                    <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
+                      <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
+                        🔍 製品特徴を見る（開閉）
+                      </summary>
+                      <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
+                        {{ chem_data.comment }}
+                        {% if chem_data.link %}
+                          <div class="mt-1 text-end"><a href="{{ chem_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                        {% endif %}
+                      </div>
+                    </details>
+                    {% endif %}
+                    
+                    <!-- md側の特記事項（常に表示） -->
+                    {% if item.note %}
+                    <div class="small text-body-secondary ps-2 border-start border-2 border-info mt-1">
+                      <strong>🗣️ メモ:</strong> {{ item.note }}
+                    </div>
+                    {% endif %}
+                  </div>
                 {% endfor %}
-              </tbody>
-            </table>
+              {% else %}
+                <p class="text-body-secondary small mb-0">使用したケミカルの登録はありません。</p>
+              {% endif %}
+            </div>
           </div>
         </div>
-        <div class="col-md-5">
+
+        <!-- 🧰 使用ツール -->
+        <div class="col-md-6">
           <div class="card h-100 border-secondary-subtle">
             <div class="card-header bg-secondary-subtle text-body fw-bold small">🧰 使用ツール</div>
-            <div class="card-body py-2 bg-body">
-              <ul class="mb-0 ps-3 small text-body-secondary">
-                {% for tool in page.tools %}
-                  <li>{{ tool }}</li>
+            <div class="card-body bg-body py-3">
+              {% if page.tools and page.tools.size > 0 %}
+                {% for item in page.tools %}
+                  {% assign id_parts = item.id | split: '.' %}
+                  {% assign category_key = id_parts[0] %}
+                  {% assign item_key = id_parts[1] %}
+                  {% assign tool_data = site.data.wash_tools[category_key][item_key] %}
+                  
+                  <div class="mb-3 {% unless forloop.last %}border-bottom pb-3 border-secondary-subtle{% endunless %}">
+                    <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                      <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
+                      <span class="fw-bold text-success">{{ tool_data.company }} {{ tool_data.name }}</span>
+                    </div>
+                    
+                    <!-- 共通仕様コメント（アコーディオン） -->
+                    {% if tool_data.comment %}
+                    <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
+                      <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
+                        🔍 ツール特徴を見る（開閉）
+                      </summary>
+                      <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
+                        {{ tool_data.comment }}
+                        {% if tool_data.link %}
+                          <div class="mt-1 text-end"><a href="{{ tool_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                        {% endif %}
+                      </div>
+                    </details>
+                    {% endif %}
+                    
+                    <!-- md側の特記事項（常に表示） -->
+                    {% if item.note %}
+                    <div class="small text-body-secondary ps-2 border-start border-2 border-success mt-1">
+                      <strong>🗣️ メモ:</strong> {{ item.note }}
+                    </div>
+                    {% endif %}
+                  </div>
                 {% endfor %}
-              </ul>
+              {% else %}
+                <p class="text-body-secondary small mb-0">使用したツールの登録はありません。</p>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -134,12 +202,12 @@ layout: default
       <div class="row g-4 mb-5">
         <div class="col-md-6">
           <div class="card h-100 border-secondary-subtle">
-            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom">⏱️ タイムライン</div>
+            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom border-secondary-subtle">⏱️ タイムライン</div>
             <ul class="list-group list-group-flush small">
               {% for time_entry in page.timeline %}
               <li class="list-group-item d-flex justify-content-between align-items-center bg-body border-secondary-subtle">
                 <span>{{ time_entry.label }}</span>
-                <span class="badge bg-body-secondary text-body-secondary border">{{ time_entry.time }}</span>
+                <span class="badge bg-body-secondary text-body-secondary border border-secondary-subtle">{{ time_entry.time }}</span>
               </li>
               {% endfor %}
             </ul>
@@ -148,7 +216,7 @@ layout: default
         
         <div class="col-md-6">
           <div class="card h-100 border-secondary-subtle">
-            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom">📊 工程ごとの所要時間</div>
+            <div class="card-header bg-body-tertiary text-body fw-bold small border-bottom border-secondary-subtle">📊 工程ごとの所要時間</div>
             <ul class="list-group list-group-flush small">
               {% for step in page.steps %}
               <li class="list-group-item d-flex justify-content-between align-items-center bg-body border-secondary-subtle">

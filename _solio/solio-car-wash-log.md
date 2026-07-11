@@ -40,12 +40,29 @@ tags:
             <span class="text-danger">💰 {{ log.cost }}円</span>
           </div>
           <div class="small log-chemicals">
-            {% assign coatings = log.chemicals | where: "category", "コーティング剤" %}
-            {% if coatings.size > 0 %}
+            {% assign coating_output = "" %}
+            {% if log.chemicals %}
+              {% assign first_coat = true %}
+              {% for chem in log.chemicals %}
+                {% assign id_parts = chem.id | split: '.' %}
+                {% assign category_key = id_parts[0] %}
+                {% assign item_key = id_parts[1] %}
+                
+                {% if category_key == 'coating' %}
+                  {% assign coat_name = site.data.wash_chemicals[category_key][item_key].name %}
+                  {% if first_coat %}
+                    {% assign coating_output = coat_name %}
+                    {% assign first_coat = false %}
+                  {% else %}
+                    {% assign coating_output = coating_output | append: ", " | append: coat_name %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+            {% if coating_output != "" %}
               <span class="badge bg-primary text-white">コート</span>
-              <span class="text-body-secondary ms-1">
-                {% for coat in coatings %}{{ coat.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-              </span>
+              <span class="text-body-secondary ms-1">{{ coating_output }}</span>
             {% else %}
               <span class="badge bg-body-secondary text-body-secondary border">コートなし</span>
             {% endif %}
