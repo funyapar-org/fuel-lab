@@ -185,19 +185,27 @@ layout: default
             <tbody>
               {% for item in page.menu %}
               <tr>
-                <td class="ps-3 border-secondary-subtle">{{ item.name }}</td>
-                <td class="text-end pe-3 fw-bold border-secondary-subtle">{{ item.price }} 円</td>
+                <td class="ps-3 border-secondary-subtle py-2">
+                  <span class="fw-bold">{{ item.name }}</span>
+                  {% if item.note %}
+                  <div class="text-body-secondary mt-1" style="font-size: 0.8rem;">
+                    <strong>🗣️ メモ:</strong> {{ item.note }}
+                  </div>
+                  {% endif %}
+                </td>
+                <td class="text-end pe-3 fw-bold border-secondary-subtle align-middle">{{ item.price }} 円</td>
               </tr>
               {% endfor %}
               <tr class="table-active fw-bold">
-                <td class="ps-3 border-secondary-subtle">合計金額</td>
-                <td class="text-end pe-3 text-danger border-secondary-subtle">{{ page.cost }} 円</td>
+                <td class="ps-3 border-secondary-subtle py-2">合計金額</td>
+                <td class="text-end pe-3 text-danger border-secondary-subtle align-middle">{{ page.cost }} 円</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
       {% endif %}
+
 
       <div class="row g-4 mb-5">
         <div class="col-md-6">
