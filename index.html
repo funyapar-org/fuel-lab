@@ -35,6 +35,16 @@ permalink: /
 
 {% include solio/fuel/experiment-summary.html %}
 
+<!-- Latest wash log -->
+{% assign latest_wash = site.wash_logs | last %}
+<div class="list-group mb-3">
+  {% include wash_log_item.html log=latest_wash %}
+</div>
+<div class="text-center">
+  <a href="{{ '/solio/solio-car-wash-log/' | relative_url }}" class="btn btn-outline-info">洗車ログ一覧へ進む</a>
+</div>
+
+
   <!-- Latest Articles -->
   <div class="mb-5">
     <h2 class="mb-4">最新記事</h2>
