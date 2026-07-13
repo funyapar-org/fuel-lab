@@ -1,0 +1,49 @@
+<!-- _includes/wash_log_item.html -->
+<a href="{{ include.log.url | relative_url }}" class="list-group-item list-group-item-action p-4 log-item">
+  <div class="row align-items-center g-3">
+    <div class="col-md-5">
+      <div class="text-body-secondary small mb-1 fw-bold">{{ include.log.date | date: "%Y年%m月%d日" }}</div>
+      <h5 class="fw-bold mb-0 log-title">{{ include.log.title }}</h5>
+    </div>
+
+    <div class="col-md-4 border-start-md border-secondary-subtle">
+      <div class="d-flex gap-3 mb-2 small fw-bold">
+        <span class="text-body-secondary">⏱️ {{ include.log.total_time }}分</span>
+        <span class="text-danger">💰 {{ include.log.cost }}円</span>
+      </div>
+      <div class="small log-chemicals">
+        <!-- コーティング剤抽出ロジック -->
+        {% assign coating_output = "" %}
+        {% for chem in include.log.chemicals %}
+          {% assign id_parts = chem.id | split: '.' %}
+          {% if id_parts[0] == 'coating' %}
+            {% assign coat_name = site.data.wash_chemicals[id_parts[0]][id_parts[1]].name %}
+            {% assign coating_output = coating_output | append: coat_name | append: ", " %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if coating_output != "" %}
+          <span class="badge bg-primary text-white">コート</span>
+          <span class="text-body-secondary ms-1">{{ coating_output | remove_last: ", " }}</span>
+        {% else %}
+          <span class="badge bg-body-secondary text-body-secondary border">コートなし</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-md-3 border-start-md border-secondary-subtle">
+      <div class="d-flex justify-content-between align-items-center small mb-1">
+        <span class="text-body-secondary">ボディ</span>
+        <span class="text-warning fs-6">{{ include.log.score_body | default: "-" }}</span>
+      </div>
+      <div class="d-flex justify-content-between align-items-center small mb-1">
+        <span class="text-body-secondary">ガラス</span>
+        <span class="text-warning fs-6">{{ include.log.score_glass | default: "-" }}</span>
+      </div>
+      <div class="d-flex justify-content-between align-items-center small">
+        <span class="text-body-secondary">足回り</span>
+        <span class="text-warning fs-6">{{ include.log.score_wheel | default: "-" }}</span>
+      </div>
+    </div>
+  </div>
+</a>
