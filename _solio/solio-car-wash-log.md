@@ -25,71 +25,9 @@ tags:
 
   <div class="list-group" id="washLogList">
     {% for log in site.wash_logs reversed %}
-    
-    <a href="{{ log.url | relative_url }}" class="list-group-item list-group-item-action p-4 log-item">
-      <div class="row align-items-center g-3">
-        
-        <div class="col-md-5">
-          <div class="text-body-secondary small mb-1 fw-bold">{{ log.date | date: "%Y年%m月%d日" }}</div>
-          <h5 class="fw-bold mb-0 log-title">{{ log.title }}</h5>
-        </div>
-
-        <div class="col-md-4 border-start-md border-secondary-subtle">
-          <div class="d-flex gap-3 mb-2 small fw-bold">
-            <span class="text-body-secondary">⏱️ {{ log.total_time }}分</span>
-            <span class="text-danger">💰 {{ log.cost }}円</span>
-          </div>
-          <div class="small log-chemicals">
-            {% assign coating_output = "" %}
-            {% if log.chemicals %}
-              {% assign first_coat = true %}
-              {% for chem in log.chemicals %}
-                {% assign id_parts = chem.id | split: '.' %}
-                {% assign category_key = id_parts[0] %}
-                {% assign item_key = id_parts[1] %}
-                
-                {% if category_key == 'coating' %}
-                  {% assign coat_name = site.data.wash_chemicals[category_key][item_key].name %}
-                  {% if first_coat %}
-                    {% assign coating_output = coat_name %}
-                    {% assign first_coat = false %}
-                  {% else %}
-                    {% assign coating_output = coating_output | append: ", " | append: coat_name %}
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-
-            {% if coating_output != "" %}
-              <span class="badge bg-primary text-white">コート</span>
-              <span class="text-body-secondary ms-1">{{ coating_output }}</span>
-            {% else %}
-              <span class="badge bg-body-secondary text-body-secondary border">コートなし</span>
-            {% endif %}
-          </div>
-        </div>
-
-        <div class="col-md-3 border-start-md border-secondary-subtle">
-          <div class="d-flex justify-content-between align-items-center small mb-1">
-            <span class="text-body-secondary">ボディ</span>
-            <span class="text-warning fs-6">{{ log.score_body | default: "-" }}</span>
-          </div>
-          <div class="d-flex justify-content-between align-items-center small mb-1">
-            <span class="text-body-secondary">ガラス</span>
-            <span class="text-warning fs-6">{{ log.score_glass | default: "-" }}</span>
-          </div>
-          <div class="d-flex justify-content-between align-items-center small">
-            <span class="text-body-secondary">足回り</span>
-            <span class="text-warning fs-6">{{ log.score_wheel | default: "-" }}</span>
-          </div>
-        </div>
-
-      </div>
-    </a>
-    
+      {% include wash_log_item.html log=log %}
     {% endfor %}
   </div>
-
 </div>
 
 <script>

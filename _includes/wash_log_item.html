@@ -12,19 +12,35 @@
         <span class="text-danger">💰 {{ include.log.cost }}円</span>
       </div>
       <div class="small log-chemicals">
-        <!-- コーティング剤抽出ロジック -->
-        {% assign coating_output = "" %}
-        {% for chem in include.log.chemicals %}
-          {% assign id_parts = chem.id | split: '.' %}
-          {% if id_parts[0] == 'coating' %}
-            {% assign coat_name = site.data.wash_chemicals[id_parts[0]][id_parts[1]].name %}
-            {% assign coating_output = coating_output | append: coat_name | append: ", " %}
-          {% endif %}
-        {% endfor %}
-        
-        {% if coating_output != "" %}
+        <!-- コーティング剤抽出ロジック（文字列パース修正版） -->
+        {% assign coating_names = "" | split: "," %}
+
+        {% if include.log.chemicals %}
+          {% assign chem_blocks = include.log.chemicals | split: '"id"=>"' %}
+          
+          {% for block in chem_blocks %}
+            {% if forloop.first %}{% continue %}{% endif %}
+            
+            {% comment %} blockの先頭はすでにIDが始まっているので、次の「"」までを取得すれば純粋なIDになります {% endcomment %}
+            {% assign current_id = block | split: '"' | first | strip %}
+            
+            {% assign id_parts = current_id | split: '.' %}
+            {% assign chemical_category = id_parts[0] | trim %}
+            {% assign chemical_id = id_parts[1] | trim %}
+            {% if chemical_category == 'coating' %}
+              {% assign coat_name = site.data.wash_chemicals[chemical_category][chemical_id].name %}
+              {% if coat_name %}
+                {% assign coating_names = coating_names | push: coat_name %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% if coating_names.size > 0 %}
           <span class="badge bg-primary text-white">コート</span>
-          <span class="text-body-secondary ms-1">{{ coating_output | remove_last: ", " }}</span>
+          <span class="text-body-secondary ms-1">
+            {{ coating_names | join: ", " }}
+          </span>
         {% else %}
           <span class="badge bg-body-secondary text-body-secondary border">コートなし</span>
         {% endif %}
