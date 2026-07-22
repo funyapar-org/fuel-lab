@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - "_knowledge/*.md"
-      - "_solio/*.md"
+      - "_knowledge/**/*.md"
+      - "_solio/**/*.md"
 
 permissions:
   contents: write
@@ -33,8 +33,9 @@ jobs:
 
           mkdir -p _tags
 
+          # findコマンドを使用してサブディレクトリ含めて.mdファイルを検索し、awkに渡す
           tags=$(
-            awk '
+            find _knowledge _solio -type f -name "*.md" 2>/dev/null -exec awk '
               /^---$/ { fm = !fm; next }
               fm && /^tags:/ { in_tags = 1; next }
               fm && in_tags && /^[[:space:]]*-[[:space:]]*/ {
@@ -43,11 +44,11 @@ jobs:
                 next
               }
               fm && in_tags && !/^[[:space:]]*-/ { in_tags = 0 }
-            ' _knowledge/*.md _solio/*.md \
+            ' {} + \
             | grep -E '^[a-z0-9-]+$' \
             | sort -u
           )
-      
+        
           echo "Detected tags:"
           echo "$tags"
 
