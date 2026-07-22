@@ -75,6 +75,10 @@ jobs:
 
             git add _tags
             git commit -m "chore: auto-generate tag pages"
+            
+            # リモートの最新状態をリベースして取り込む（競合回避）
+            git pull --rebase origin main
+            
             git push --verbose
           else
             echo "No changes to commit"
