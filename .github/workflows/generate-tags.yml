@@ -72,12 +72,15 @@ jobs:
           if git status --porcelain | grep .; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
+            
+            # pullのデフォルト動作をrebaseに設定（警告回避）
+            git config pull.rebase true
 
             git add _tags
             git commit -m "chore: auto-generate tag pages"
             
-            # リモートの最新状態をリベースして取り込む（競合回避）
-            git pull --rebase origin main
+            # プッシュする直前に、リモートの最新の main を取り込んで合流させる
+            git pull origin main
             
             git push --verbose
           else
