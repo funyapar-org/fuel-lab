@@ -8,8 +8,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 6.0
     tread_depth_mm_r: 6.0
     rotation_count: 0
@@ -24,8 +24,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.9
     tread_depth_mm_r: 6.0
     rotation_count: 0
@@ -41,8 +41,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.9
     tread_depth_mm_r: 6.0
     rotation_count: 0
@@ -57,8 +57,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.8
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -73,8 +73,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.8
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -88,8 +88,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.8
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -103,8 +103,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.7
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -120,8 +120,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.7
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -137,8 +137,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.7
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -154,8 +154,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.7
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -171,8 +171,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.6
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -188,8 +188,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.6
     tread_depth_mm_r: 5.9
     rotation_count: 0
@@ -205,8 +205,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.5
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -222,8 +222,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.5
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -239,8 +239,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.5
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -256,8 +256,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.5
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -273,8 +273,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -290,8 +290,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -307,8 +307,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.8
     rotation_count: 0
@@ -324,8 +324,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.7
     rotation_count: 0
@@ -341,8 +341,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.7
     rotation_count: 0
@@ -358,8 +358,8 @@
     tire: eg01
     tire_size: 165/70R14
     wheel: oem_steel
-    pressure_kpa_f: 250
-    pressure_kpa_r: 250
+    pressure_kpa_f: 約230
+    pressure_kpa_r: 約240
     tread_depth_mm_f: 5.7
     tread_depth_mm_r: 5.4
     rotation_count: 1
