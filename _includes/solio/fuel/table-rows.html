@@ -6,7 +6,8 @@
 {% assign prev_oil = nil %}
 {% assign prev_tire = nil %}
 {% assign prev_wheel = nil %}
-{% assign prev_pressure = nil %}
+{% assign prev_pressure_f = nil %}
+{% assign prev_pressure_r = nil %}
 {% assign prev_tread_f = nil %}
 {% assign prev_tread_r = nil %}
 {% assign prev_rotation = nil %}
@@ -37,7 +38,10 @@
     {% elsif log.conditions.wheel != prev_wheel %}
       {% assign condition_changed = true %}
 
-    {% elsif log.conditions.pressure_kpa != prev_pressure %}
+    {% elsif log.conditions.pressure_kpa_f != prev_pressure_f %}
+      {% assign condition_changed = true %}
+
+    {% elsif log.conditions.pressure_kpa_r != prev_pressure_r %}
       {% assign condition_changed = true %}
 
     {% elsif log.conditions.tread_depth_mm_f != prev_tread_f %}
@@ -118,7 +122,8 @@
   {% assign prev_oil = log.conditions.oil %}
   {% assign prev_tire = log.conditions.tire %}
   {% assign prev_wheel = log.conditions.wheel %}
-  {% assign prev_pressure = log.conditions.pressure_kpa %}
+  {% assign prev_pressure_f = log.conditions.pressure_kpa_f %}
+  {% assign prev_pressure_r = log.conditions.pressure_kpa_r %}
   {% assign prev_tread_f = log.conditions.tread_depth_mm_f %}
   {% assign prev_tread_r = log.conditions.tread_depth_mm_r %}
   {% assign prev_rotation = log.conditions.rotation_count %}

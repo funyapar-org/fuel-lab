@@ -63,8 +63,14 @@
 
         <li>
           <strong>空気圧：</strong>
-          {% if latest_log.conditions.pressure_kpa %}
-            {{ latest_log.conditions.pressure_kpa }} kPa
+          {% if latest_log.conditions.pressure_kpa_f %}
+            フロント {{ latest_log.conditions.pressure_kpa_f }} kPa
+          {% else %}
+            不明
+          {% endif %}
+          /
+          {% if latest_log.conditions.pressure_kpa_r %}
+            リア {{ latest_log.conditions.pressure_kpa_r }} kPa
           {% else %}
             不明
           {% endif %}
