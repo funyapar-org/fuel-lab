@@ -87,32 +87,46 @@ layout: default
                   {% assign chem_data = site.data.wash_chemicals[category_key][item_key] %}
                   
                   <div class="mb-3 {% unless forloop.last %}border-bottom pb-3 border-secondary-subtle{% endunless %}">
-                    <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
-                      <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
-                      <span class="fw-bold text-primary">{{ chem_data.company }} {{ chem_data.name }}</span>
-                    </div>
-                    
-                    <!-- 共通仕様コメント（アコーディオン） -->
-                    {% if chem_data.comment %}
-                    <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
-                      <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
-                        🔍 製品特徴を見る（開閉）
-                      </summary>
-                      <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
-                        {{ chem_data.comment }}
-                        {% if chem_data.link %}
-                          <div class="mt-1 text-end"><a href="{{ chem_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                    <div class="d-flex gap-3 align-items-start">
+                      
+                      <!-- サムネイル画像（ある場合のみ） -->
+                      {% if chem_data.img and chem_data.img != "" %}
+                      <div class="flex-shrink-0">
+                        <img src="{{ site.baseurl }}/assets/img/car_wash/{{ chem_data.img }}" alt="{{ chem_data.name }}" class="img-thumbnail bg-white" style="width: 70px; height: 70px; object-fit: contain;">
+                      </div>
+                      {% endif %}
+
+                      <!-- テキストコンテンツ -->
+                      <div class="flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                          <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
+                          <span class="fw-bold text-primary">{{ chem_data.company }} {{ chem_data.name }}</span>
+                        </div>
+                        
+                        <!-- 共通仕様コメント（アコーディオン） -->
+                        {% if chem_data.comment %}
+                        <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
+                          <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
+                            🔍 製品特徴を見る（開閉）
+                          </summary>
+                          <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
+                            {{ chem_data.comment }}
+                            {% if chem_data.link %}
+                              <div class="mt-1 text-end"><a href="{{ chem_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                            {% endif %}
+                          </div>
+                        </details>
+                        {% endif %}
+                        
+                        <!-- md側の特記事項（常に表示） -->
+                        {% if item.note %}
+                        <div class="small text-body-secondary ps-2 border-start border-2 border-info mt-1">
+                          <strong>🗣️ メモ:</strong> {{ item.note }}
+                        </div>
                         {% endif %}
                       </div>
-                    </details>
-                    {% endif %}
-                    
-                    <!-- md側の特記事項（常に表示） -->
-                    {% if item.note %}
-                    <div class="small text-body-secondary ps-2 border-start border-2 border-info mt-1">
-                      <strong>🗣️ メモ:</strong> {{ item.note }}
+
                     </div>
-                    {% endif %}
                   </div>
                 {% endfor %}
               {% else %}
@@ -135,32 +149,46 @@ layout: default
                   {% assign tool_data = site.data.wash_tools[category_key][item_key] %}
                   
                   <div class="mb-3 {% unless forloop.last %}border-bottom pb-3 border-secondary-subtle{% endunless %}">
-                    <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
-                      <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
-                      <span class="fw-bold text-success">{{ tool_data.company }} {{ tool_data.name }}</span>
-                    </div>
-                    
-                    <!-- 共通仕様コメント（アコーディオン） -->
-                    {% if tool_data.comment %}
-                    <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
-                      <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
-                        🔍 ツール特徴を見る（開閉）
-                      </summary>
-                      <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
-                        {{ tool_data.comment }}
-                        {% if tool_data.link %}
-                          <div class="mt-1 text-end"><a href="{{ tool_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                    <div class="d-flex gap-3 align-items-start">
+                      
+                      <!-- サムネイル画像（ある場合のみ） -->
+                      {% if tool_data.img and tool_data.img != "" %}
+                      <div class="flex-shrink-0">
+                        <img src="{{ site.baseurl }}/assets/img/car_wash/{{ tool_data.img }}" alt="{{ tool_data.name }}" class="img-thumbnail bg-white" style="width: 70px; height: 70px; object-fit: contain;">
+                      </div>
+                      {% endif %}
+
+                      <!-- テキストコンテンツ -->
+                      <div class="flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                          <span class="badge bg-secondary text-wrap small">{{ category_key | upcase }}</span>
+                          <span class="fw-bold text-success">{{ tool_data.company }} {{ tool_data.name }}</span>
+                        </div>
+                        
+                        <!-- 共通仕様コメント（アコーディオン） -->
+                        {% if tool_data.comment %}
+                        <details class="mb-2 bg-body-tertiary rounded-2 border border-secondary-subtle">
+                          <summary class="small fw-bold text-body p-2" style="cursor: pointer; list-style: none;">
+                            🔍 ツール特徴を見る（開閉）
+                          </summary>
+                          <div class="small text-body-secondary p-2 border-top border-secondary-subtle bg-body rounded-bottom-2">
+                            {{ tool_data.comment }}
+                            {% if tool_data.link %}
+                              <div class="mt-1 text-end"><a href="{{ tool_data.link }}" target="_blank" rel="noopener" class="text-decoration-none" style="font-size: 0.8rem;">🛒 Amazonリンク ↗</a></div>
+                            {% endif %}
+                          </div>
+                        </details>
+                        {% endif %}
+                        
+                        <!-- md側の特記事項（常に表示） -->
+                        {% if item.note %}
+                        <div class="small text-body-secondary ps-2 border-start border-2 border-success mt-1">
+                          <strong>🗣️ メモ:</strong> {{ item.note }}
+                        </div>
                         {% endif %}
                       </div>
-                    </details>
-                    {% endif %}
-                    
-                    <!-- md側の特記事項（常に表示） -->
-                    {% if item.note %}
-                    <div class="small text-body-secondary ps-2 border-start border-2 border-success mt-1">
-                      <strong>🗣️ メモ:</strong> {{ item.note }}
+                      
                     </div>
-                    {% endif %}
                   </div>
                 {% endfor %}
               {% else %}
