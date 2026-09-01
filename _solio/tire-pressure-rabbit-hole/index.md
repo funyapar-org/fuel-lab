@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "たかが空気圧、されど空気圧。私が「空気圧の沼」にハマって理想の燃費と走りを手に入れるまでの全記録"
-nav_title: "【連載トップ】空気圧沼"
+title: "【連載】たかが空気圧、されど空気圧。私が「空気圧の沼」にハマって理想の燃費と走りを手に入れるまでの全記録"
+nav_title: "【連載】空気圧沼"
 description: "ガソリンスタンドで指定通りに入れているから大丈夫、と思っていませんか？愛車ソリオの燃費と走りを劇的に変えた、私の「タイヤ空気圧沼」全記録まとめページです。"
 category: tire
 tags:
@@ -12,6 +12,7 @@ tags:
   - routine
 date: 2026-07-17 23:00:00 +0900
 permalink: /solio/tire-pressure-rabbit-hole/
+is_project_top: true
 ---
 
 

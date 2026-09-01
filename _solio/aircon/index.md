@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "【連載】ソリオ エアコン燃費改善プロジェクト"
-nav_title: "エアコン燃費改善"
+nav_title: "【連載】エアコン燃費改善"
 description: "夏のエアコン使用による急激な燃費悪化を防ぐため、遮熱・排熱・DIYなど様々なアプローチでソリオの燃費改善に挑む連載企画です。"
 category: fuel-economy
 tags:
@@ -10,6 +10,7 @@ tags:
   - project
 date: 2026-08-27 12:00:00 +0900
 permalink: /solio/aircon/
+is_project_top: true
 ---
 
 <div class="container my-4">

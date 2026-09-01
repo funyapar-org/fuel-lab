@@ -29,7 +29,10 @@ permalink: /
 
 {% include solio/fuel/progress-gauge.html %}
 
+{% comment %}
+// スペース取る割に面白みが少ないのでコメントアウト
 {% include solio/fuel/current-condition.html %}
+{% endcomment %}
 
 {% include solio/fuel/fuel-chart.html %}
 
@@ -49,6 +52,28 @@ permalink: /
       <div class="text-center">
         <a href="{{ '/solio/solio-car-wash-log/' | relative_url }}" class="btn btn-outline-info">洗車ログ一覧へ進む</a>
       </div>
+    </div>
+  </div>
+
+  <!-- _includes/featured-projects.html -->
+  <div class="card bg-dark border-secondary shadow-sm mb-4">
+    <div class="card-header bg-black border-secondary d-flex align-items-center">
+      <i class="bi bi-collection-play text-warning me-2 fs-5"></i>
+      <h3 class="h5 text-light mb-0">検証・DIYプロジェクト連載記事トップ</h3>
+    </div>
+    <div class="list-group list-group-flush">
+      {% assign projects = site.knowledge | concat: site.solio | where: "is_project_top", true %}
+      {% for project in projects %}
+        <a href="{{ project.url | relative_url }}" class="list-group-item list-group-item-action bg-transparent text-light border-secondary d-flex justify-content-between align-items-center p-3">
+          <div>
+            {% if project.project_icon %}
+              <i class="bi {{ project.project_icon }} text-info me-2"></i>
+            {% endif %}
+            <strong class="text-warning">{{ project.title | default: project.nav_title }}</strong>
+            <div class="small text-secondary mt-1">{{ project.description }}</div>
+          </div>
+        </a>
+      {% endfor %}
     </div>
   </div>
 
