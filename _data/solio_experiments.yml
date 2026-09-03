@@ -112,12 +112,68 @@ experiment_log:
     cost_score: 0.2
     link: /knowledge/tire-rotation-worth-it/
 
+  - id: ac_filter_change
+    type: maintenance
+    title: エアコンフィルタ交換
+    description: エアコンフィルタを交換し、エアコンの効き改善と燃費向上を狙う
+    planned_date: 2026-07-13
+    date: 2026-07-30
+    phase: completed
+    targets:
+      - fuel_economy
+    cost_score: 0.1
+    fuel_economy_factor_estimate_min: 1.0
+    fuel_economy_factor_estimate_max: 1.00001
+    link: /solio/aircon/
+
+  - id: ac_evaporator_cleaning
+    type: maintenance
+    title: エアコンエバポレーター清掃
+    description: エアコンエバポレーターを清掃し、エアコンの効き改善と燃費向上を狙う
+    planned_date: 2026-07-13
+    date: 2026-07-30
+    phase: completed
+    targets:
+      - fuel_economy
+    cost_score: 0.2
+    fuel_economy_factor_estimate_min: 1.0
+    fuel_economy_factor_estimate_max: 1.00001
+    link: /solio/aircon/
+
+  - id: ac_additive_injection
+    type: maintenance
+    title: エアコン添加剤注入
+    description: エアコンに添加剤を注入し、エアコンの効き改善と燃費向上を狙う
+    planned_date: 2026-07-13
+    date: 2026-07-30
+    phase: completed
+    targets:
+      - fuel_economy
+    cost_score: 0.1
+    fuel_economy_factor_estimate_min: 1.01
+    fuel_economy_factor_estimate_max: 1.02
+    link: /solio/aircon/
+
+  - id: window_film_application
+    type: improvement
+    title: ウィンドウフィルム施工
+    description: ウィンドウフィルムを施工し、車内温度上昇抑制によるエアコン負荷低減と燃費向上を狙う
+    planned_date: 2026-07-13
+    date: 2026-08-27
+    phase: completed
+    targets:
+      - fuel_economy
+    cost_score: 1.0
+    fuel_economy_factor_estimate_min: 1.01
+    fuel_economy_factor_estimate_max: 1.01
+    link: /solio/aircon/
+
   - id: cvt_fluid_change
     type: maintenance
     title: CVTフルード交換
     description: CVTの部分交換を行い、滑り改善と燃費向上を狙う
     planned_date: 2026-03-04
-    scheduled_date: 2026-09-01
+    scheduled_date: 2026-11-01
     phase: planned
     targets:
       - fuel_economy

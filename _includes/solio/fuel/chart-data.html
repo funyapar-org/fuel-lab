@@ -92,7 +92,7 @@
 
 {% for exp in experiments %}
 
-  {% if exp.phase == "planned" %}
+  
 
     {% assign exp_date =
       exp.scheduled_date
@@ -100,7 +100,6 @@
 
     {% capture prediction_dates %}{{ prediction_dates }},{{ exp_date | strip }}{% endcapture %}
 
-  {% endif %}
 
 {% endfor %}
 
@@ -128,7 +127,6 @@
 
   {% for exp in experiments %}
 
-    {% if exp.phase == "planned" %}
 
       {% assign exp_date =
         exp.scheduled_date
@@ -158,8 +156,6 @@
         {% endif %}
 
       {% endif %}
-
-    {% endif %}
 
   {% endfor %}
 
