@@ -69,6 +69,25 @@
           </ul>
         </li>
 
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-tools me-1"></i>連載企画
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end border-secondary" aria-labelledby="projectDropdown">
+          {% assign projects = site.knowledge | concat: site.solio | where: "is_project_top", true %}
+          {% for project in projects %}
+            <li>
+              <a class="dropdown-item" href="{{ project.url | relative_url }}">
+                {% if project.project_icon %}
+                  <i class="bi {{ project.project_icon }} me-2 text-warning"></i>
+                {% endif %}
+                {{ project.nav_title | default: project.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+
         <!-- 車の知識はドロップダウン -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
