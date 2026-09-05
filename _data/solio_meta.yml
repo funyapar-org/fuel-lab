@@ -6,6 +6,10 @@ engine:
   transmission: CVT
   drive: FF
 
+tire_air_pressure_kpa:
+  f: 250
+  r: 220
+
 purchase:
   date: 2025-08-23
   odometer: 25263
