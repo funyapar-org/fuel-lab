@@ -81,9 +81,45 @@ tags:
       </table>
     </div>
 
-    <p class="mt-3">
-      今回はこの状態を <strong>ベースライン</strong>として、
-      タイヤ交換・ホイール交換による変化を考えます。
+    <div class="mt-5">
+      <h3 class="h5 fw-bold mb-3">比較基準となる「純正ホイール（約5.7kg）」の根拠</h3>
+      <p>
+        比較の精度を上げるため、現在装着しているタイヤ＋ホイールを実測し、基準となる重量を算出しました。
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-6 mb-3">
+          <figure class="figure w-100">
+            <img src="/assets/img/tire-wheel-weight-11600g.jpg" class="figure-img img-fluid rounded border w-100" alt="タイヤ付きホイールの重量測定（11600g）">
+            <figcaption class="figure-caption text-center">純正スチールホイール＋EG01 実測：11,600g</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 mb-3">
+          <figure class="figure w-100">
+            <img src="/assets/img/wheel-cap-weight-355g.jpg" class="figure-img img-fluid rounded border w-100" alt="ホイールキャップの重量測定（355g）">
+            <figcaption class="figure-caption text-center">純正ホイールキャップ 実測：355g</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- ダークテーマでも同化しないように bg-light を外し、枠線のみで囲うように修正 -->
+      <div class="p-4 border rounded mt-2">
+        <p>
+          現在装着しているタイヤ（GOODYEAR EfficientGrip EG01）の重量は、後継モデルであるEG02と同等と想定して<strong>約6.3kg（6,300g）</strong>として計算します。
+        </p>
+        <ul class="mb-3">
+          <li>タイヤ＋ホイール実測値：11,600g</li>
+          <li>ホイールキャップ実測値：355g</li>
+          <li>タイヤ単体想定重量：約6,300g</li>
+        </ul>
+        <p class="fs-5 fw-bold text-danger mb-0">
+          (11,600g ＋ 355g) － 6,300g ＝ 5,655g ≒ 約5.7kg
+        </p>
+      </div>
+    </div>
+
+    <p class="mt-4">
+      今回はこの <strong>純正スチールホイール＋キャップ（約5.7kg）</strong> と <strong>EG01（約6.3kg）</strong> の状態をベースラインとして、タイヤ交換・ホイール交換による変化を考えます。
     </p>
   </section>
 
