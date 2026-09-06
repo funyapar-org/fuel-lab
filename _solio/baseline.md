@@ -1,5 +1,4 @@
 ---
-
 layout: default
 title: ベースライン計測
 nav_title: ベースライン
@@ -12,7 +11,6 @@ tags:
   - k12c
   - research
 date: 2025-09-06T09:00:00+09:00
-
 ---
 
 {% assign initial_state = site.data.solio_meta.initial_state %}
@@ -98,7 +96,7 @@ date: 2025-09-06T09:00:00+09:00
         初期状態
       </h2>
 
-      <table class="table table-sm align-middle">
+      <table class="table table-sm align-middle mb-4">
 
         <tbody>
 
@@ -145,6 +143,44 @@ date: 2025-09-06T09:00:00+09:00
         </tbody>
 
       </table>
+
+      <!-- 重量データ算出根拠の追記部分 -->
+      <div class="mt-4 pt-3 border-top">
+        <h3 class="h5 fw-bold mb-3">タイヤ・ホイール重量の算出根拠</h3>
+        <p class="text-muted mb-3">
+          初期状態における重量データは、以下の実測値をもとに算出しています。
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <figure class="figure w-100">
+              <img src="/assets/img/tire-wheel-weight-11600g.jpg" class="figure-img img-fluid rounded border w-100" alt="タイヤ付きホイールの重量測定（11600g）">
+              <figcaption class="figure-caption text-center">純正スチールホイール＋EG01 実測：11,600g</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 mb-3">
+            <figure class="figure w-100">
+              <img src="/assets/img/wheel-cap-weight-355g.jpg" class="figure-img img-fluid rounded border w-100" alt="ホイールキャップの重量測定（355g）">
+              <figcaption class="figure-caption text-center">純正ホイールキャップ 実測：355g</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="p-3 border rounded mt-2">
+          <p class="mb-2">
+            初期装着タイヤ（GOODYEAR EfficientGrip EG01）の重量は、後継モデルであるEG02と同等と想定し、<strong>約6.3kg（6,300g）</strong>として計算しています。
+          </p>
+          <ul class="mb-2">
+            <li>タイヤ＋ホイール実測値：11,600g</li>
+            <li>ホイールキャップ実測値：355g</li>
+            <li>タイヤ単体想定重量：約6,300g</li>
+          </ul>
+          <p class="fw-bold text-danger mb-0">
+            (11,600g ＋ 355g) － 6,300g ＝ 5,655g ≒ 純正ホイール重量 約5.7kg
+          </p>
+        </div>
+      </div>
+      <!-- /重量データ算出根拠の追記部分 -->
 
     </div>
   </div>
