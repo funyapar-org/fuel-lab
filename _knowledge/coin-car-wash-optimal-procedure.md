@@ -38,9 +38,9 @@ published: true
         </p>
         <hr>
         <ol class="mb-0">
-          <li><strong>高圧洗浄（200円 / 約2分）</strong>：徹底的な予洗い</li>
+          <li><strong>高圧洗浄（300円 / 約3分）</strong>：徹底的な予洗い</li>
           <li><strong>バケツ手洗い（時間無制限）</strong>：機械を止めて丁寧に洗う</li>
-          <li><strong>高圧洗浄（200円 / 約2分）</strong>：泡のすすぎ</li>
+          <li><strong>高圧洗浄（300円 / 約3分）</strong>：泡のすすぎ</li>
         </ol>
       </div>
 
