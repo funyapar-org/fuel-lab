@@ -436,7 +436,7 @@
   odometer: 32019
   fuel: 20.77
   price_per_liter: 156
-  note: アイドリング中のエアコン使用は少し減ってきた。
+  note: アイドリング中のエアコン使用多め。
   link: /knowledge/air-conditioner-fuel-economy-impact/
   conditions:
     oil: 0w-16
