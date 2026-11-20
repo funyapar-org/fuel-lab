@@ -1,0 +1,124 @@
+{% comment %}
+  ====================================================================
+  1. コレクション（knowledge, solio, posts）を横断してDIYタグを持つ記事を収集
+  ====================================================================
+{% endcomment %}
+{% assign target_tag = "DIY" %}
+{% assign diy_posts_unsorted = "" | split: "" %}
+
+{% for tmp_page in site.solio %}
+  {% if tmp_page.tags contains target_tag or tmp_page.tags contains "diy" %}
+    {% assign diy_posts_unsorted = diy_posts_unsorted | push: tmp_page %}
+  {% endif %}
+{% endfor %}
+
+{% assign diy_posts = diy_posts_unsorted | sort: 'date' | reverse %}
+{% assign total_posts = diy_posts.size %}
+{% assign per_page = 10 %}
+
+{% comment %}
+  ====================================================================
+  2. 現在表示中の記事が何番目のページグループ（1スタート）に含まれるか判定
+  ====================================================================
+{% endcomment %}
+{% assign current_page_num = 1 %}
+{% for post in diy_posts %}
+  {% if post.url == page.url %}
+    {% assign current_post_index = forloop.index0 %}
+    {% assign current_page_num = current_post_index | divided_by: per_page | plus: 1 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if total_posts > 0 %}
+  {% assign total_pages = total_posts | minus: 1 | divided_by: per_page | plus: 1 %}
+{% else %}
+  {% assign total_pages = 1 %}
+{% endif %}
+
+<div class="card mb-4 shadow-sm diy-navigation" aria-label="DIY記事ナビゲーション">
+  <div class="card-header d-flex justify-content-between align-items-center py-3">
+    <h3 class="h5 mb-0 fw-bold">🔧 ソリオDIYメンテナンス記録一覧</h3>
+    <span class="badge bg-secondary">全 {{ total_posts }} 件</span>
+  </div>
+
+  <div class="card-body">
+    {% comment %} 3. 10記事ごとのページ切替タブ（Bootstrapボタン） {% endcomment %}
+    {% if total_pages > 1 %}
+      <div class="d-flex flex-wrap gap-2 mb-3" role="group" aria-label="ページ選択タブ">
+        {% for p in (1..total_pages) %}
+          {% assign start_num = p | minus: 1 | times: per_page | plus: 1 %}
+          {% assign end_num = p | times: per_page %}
+          {% if end_num > total_posts %}{% assign end_num = total_posts %}{% endif %}
+          
+          <button type="button" 
+                  class="btn btn-sm {% if p == current_page_num %}btn-primary{% else %}btn-outline-secondary{% endif %} diy-tab-btn"
+                  onclick="switchDiyPage({{ p }})"
+                  id="diy-tab-{{ p }}">
+            {{ start_num }}〜{{ end_num }}件
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% comment %} 4. 記事リスト表示部分（Bootstrap List Group） {% endcomment %}
+    <div class="diy-nav-content">
+      {% for p in (1..total_pages) %}
+        {% assign page_start = p | minus: 1 | times: per_page %}
+        <ul class="list-group list-group-flush diy-post-list {% if p == current_page_num %}active{% endif %}" id="diy-page-{{ p }}">
+          {% for post in diy_posts limit: per_page offset: page_start %}
+            <li class="list-group-item d-flex align-items-center justify-content-between py-2 px-3 {% if post.url == page.url %}current-item-highlight{% endif %}">
+              {% if post.url == page.url %}
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-primary">閲覧中</span>
+                  <span class="fw-bold">{{ post.title }}</span>
+                </div>
+                <small class="text-muted text-nowrap ms-2">{{ post.date | date: "%Y/%m/%d" }}</small>
+              {% else %}
+                <a href="{{ post.url | prepend: site.baseurl }}" class="text-decoration-none d-flex align-items-center justify-content-between w-100">
+                  <span class="text-body">{{ post.title }}</span>
+                  <small class="text-muted text-nowrap ms-2">{{ post.date | date: "%Y/%m/%d" }}</small>
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .diy-post-list {
+    display: none;
+  }
+  .diy-post-list.active {
+    display: block;
+  }
+  /* ダークテーマ(data-bs-theme="dark")でもBootstrapの変数で自然に馴染むハイライト */
+  .current-item-highlight {
+    background-color: var(--bs-tertiary-bg) !important;
+    border-left: 4px solid var(--bs-primary) !important;
+  }
+</style>
+
+<script>
+function switchDiyPage(pageNum) {
+  document.querySelectorAll('.diy-tab-btn').forEach(btn => {
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-outline-secondary');
+  });
+  document.querySelectorAll('.diy-post-list').forEach(list => list.classList.remove('active'));
+  
+  const targetTab = document.getElementById('diy-tab-' + pageNum);
+  const targetPage = document.getElementById('diy-page-' + pageNum);
+  
+  if(targetTab) {
+    targetTab.classList.remove('btn-outline-secondary');
+    targetTab.classList.add('btn-primary');
+  }
+  if(targetPage) {
+    targetPage.classList.add('active');
+  }
+}
+</script>
