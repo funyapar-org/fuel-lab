@@ -15,10 +15,6 @@
         <span class="legend-line legend-actual"></span>
         実燃費
       </div>
-      <div class="legend-item">
-        <span class="legend-line legend-prediction"></span>
-        理論改善予測
-      </div>
     </div>
 
     <div class="chart-scroll-container" id="chartScrollContainer">
@@ -231,23 +227,6 @@ const chart = new Chart(ctx, {
         borderDash: [6, 6],
         borderWidth: 1.5,
         pointRadius: 2
-      },
-      {
-        label: '理論改善予測 MIN',
-        data: predictionMinData,
-        stepped: 'before',
-        borderDash: [2, 4],
-        borderWidth: 2,
-        pointRadius: 0
-      },
-      {
-        label: '理論改善予測 MAX',
-        data: predictionMaxData,
-        stepped: 'before',
-        borderDash: [2, 4],
-        borderWidth: 2,
-        pointRadius: 0,
-        fill: '-1'
       }
     ]
   },

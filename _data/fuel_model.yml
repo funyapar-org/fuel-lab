@@ -25,7 +25,7 @@ vehicle_states:
   low_viscosity_oil:
 
     start: 2026-06-15
-    end: 2026-09-01
+    end: 2027-09-01
 
     monthly_factor:
       1: 0.980
