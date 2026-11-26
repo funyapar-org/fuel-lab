@@ -516,3 +516,34 @@
     tread_depth_mm_f: 5.4
     tread_depth_mm_r: 5.2
     rotation_count: 1
+
+- date: 2026-11-12
+  odometer: 33080
+  fuel: 18.86
+  price_per_liter: 153
+  conditions:
+    oil: 0w-16
+    tire: eg01
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa_f: 270
+    pressure_kpa_r: 240
+    tread_depth_mm_f: 5.4
+    tread_depth_mm_r: 5.2
+    rotation_count: 1
+
+- date: 2026-11-26
+  odometer: 33316
+  fuel: 18.90
+  price_per_liter: 154
+  note: アイドリング中の暖房使用が増加。加えて相方が暖房には不要なACをONにしてさらに燃費が低下する。
+  conditions:
+    oil: 0w-16
+    tire: eg01
+    tire_size: 165/70R14
+    wheel: oem_steel
+    pressure_kpa_f: 270
+    pressure_kpa_r: 240
+    tread_depth_mm_f: 5.3
+    tread_depth_mm_r: 5.2
+    rotation_count: 1
