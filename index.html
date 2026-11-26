@@ -21,6 +21,8 @@ permalink: /
     </div>
   </div>
 
+{% include interactive_garage.html %}
+
 {% include solio/fuel/calc-core.html %}
 {% include solio/fuel/calc-progress.html %}
 
@@ -81,7 +83,7 @@ permalink: /
   <div class="mb-5">
     <h2 class="mb-4">最新記事</h2>
 
-    {% assign all_pages = site.knowledge | concat: site.solio | sort: "date" | reverse | where_exp: "item", "item.published != false" %}
+    {% assign all_pages = site.knowledge | concat: site.solio | sort: "date" | reverse | where_exp: "item", "item.published != false and item.sitemap != false" %}
 
     <div class="list-group">
       {% for page in all_pages limit:6 %}

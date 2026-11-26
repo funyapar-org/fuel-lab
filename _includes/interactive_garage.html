@@ -1,0 +1,561 @@
+<!-- _includes/interactive_garage.html -->
+<div id="solio-garage-viewer" class="card bg-dark border-0 overflow-hidden my-4">
+
+  <!-- メインビューポート（画像重ね合わせエリア） -->
+  <div class="position-relative mx-auto" style="width: 100%; max-width: 600px; aspect-ratio: 1 / 1; background: #111;">
+
+    <!-- 1. 初期状態：フロント（消灯） -->
+    <img id="img-front-off"
+         src="/assets/img/garage/front-off.jpg"
+         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+         alt="ソリオ フロント（消灯）">
+
+    <!-- 2. パッシング状態：フロント（点灯） -->
+    <img id="img-front-on"
+         src="/assets/img/garage/front-on.jpg"
+         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 opacity-0"
+         style="transition: opacity 0.08s linear; pointer-events: none;"
+         alt="ソリオ フロント（パッシング）">
+
+    <!-- 3. 中間状態：ボンネットオープン -->
+    <img id="img-bonnet-open"
+         src="/assets/img/garage/bonnet-open.jpg"
+         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 opacity-0"
+         style="transition: opacity 0.35s ease; pointer-events: none;"
+         alt="ボンネットオープン">
+
+    <!-- 4. 詳細ビュー＆ピン配置コンテナ（初期状態は非表示） -->
+    <div id="detail-stage" class="w-100 h-100 position-absolute top-0 start-0 d-none">
+      <img id="detail-bg-img"
+           src=""
+           class="w-100 h-100 object-fit-contain"
+           alt="整備エリア">
+
+      <!-- ピン（スポット）の描画領域 -->
+      <div id="pins-container" class="w-100 h-100 position-absolute top-0 start-0"></div>
+
+      <!-- ピンの上下（広い方）に出現するフローティングダイアログ -->
+      <div id="spot-dialog"
+           role="dialog"
+           aria-modal="false"
+           aria-labelledby="spot-title"
+           class="garage-spot-dialog card bg-dark text-light border border-secondary shadow-lg d-none">
+        <div class="card-body p-3">
+          <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+            <div class="d-flex flex-wrap align-items-center gap-1">
+              <span id="spot-category" class="badge bg-info text-dark">カテゴリー</span>
+              <span id="spot-new-badge" class="badge bg-warning text-dark d-none">New maintenance!</span>
+              <small id="spot-date" class="text-secondary">2026-XX-XX</small>
+            </div>
+            <button type="button"
+                    id="btn-close-dialog"
+                    class="btn-close btn-close-white flex-shrink-0"
+                    aria-label="ダイアログを閉じる"></button>
+          </div>
+          <h6 id="spot-title" class="card-title fw-bold mb-1">整備タイトル</h6>
+          <p id="spot-summary" class="card-text small text-body-secondary mb-2">概要テキスト</p>
+          <div class="d-flex justify-content-end">
+            <a id="spot-link" href="#" class="btn btn-primary btn-sm">記事を読む ＞</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 初期状態の「touch me!」オーバーレイ -->
+    <div id="touch-trigger"
+         role="button"
+         tabindex="0"
+         aria-label="タップしてボンネットを開ける"
+         class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+         style="cursor: pointer; z-index: 10;">
+      <span class="badge rounded-pill bg-primary px-4 py-2 fs-5 shadow-lg garage-touch-badge">
+        touch me !
+      </span>
+      <small class="text-light mt-2 bg-dark bg-opacity-75 px-2 py-1 rounded">
+        タップしてボンネットを開ける
+      </small>
+    </div>
+
+    <!-- ボンネット開放時の「閉じる」ボタン（写真右下に重ねて配置） -->
+    <button type="button"
+            id="btn-close-bonnet"
+            class="btn btn-sm btn-dark bg-dark bg-opacity-75 text-light border border-secondary shadow position-absolute bottom-0 end-0 m-2 d-none"
+            style="z-index: 15; backdrop-filter: blur(4px);"
+            aria-label="ボンネットを閉じる">
+      閉じる ×
+    </button>
+
+  </div>
+
+  <!-- 視点切替ナビゲーション（全文表示・等間隔3列） -->
+  <div id="garage-controls" class="border-0 px-2 pb-2 pt-1 d-none" style="background: transparent;">
+    <div class="mx-auto bg-body-tertiary rounded-3 p-2" style="max-width: 600px;">
+      <div class="row g-2">
+        <div class="col-4">
+          <button type="button"
+                  class="btn btn-outline-light w-100 px-1 px-sm-2 py-2 garage-view-btn"
+                  data-view="b_pillar">
+            運転席Bピラー
+          </button>
+        </div>
+        <div class="col-4">
+          <button type="button"
+                  class="btn btn-outline-light w-100 px-1 px-sm-2 py-2 garage-view-btn"
+                  data-view="engine_zoom">
+            エンジンルーム
+          </button>
+        </div>
+        <div class="col-4">
+          <button type="button"
+                  class="btn btn-outline-light w-100 px-1 px-sm-2 py-2 garage-view-btn"
+                  data-view="dashboard_side">
+            助手席ダッシュB
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- タップしたピンの詳細カード表示エリア -->
+  <div id="spot-info-panel" class="card-body border-top border-secondary d-none">
+    <div class="d-flex justify-content-between align-items-start gap-3">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-1">
+          <span id="spot-category" class="badge bg-info text-dark">カテゴリー</span>
+          <span id="spot-new-badge" class="badge bg-warning text-dark d-none">New maintenance!</span>
+          <small id="spot-date" class="text-secondary">2026-XX-XX</small>
+        </div>
+        <h5 id="spot-title" class="card-title mb-1">整備タイトル</h5>
+        <p id="spot-summary" class="card-text small text-body-secondary mb-0">概要テキスト</p>
+      </div>
+      <a id="spot-link" href="#" class="btn btn-primary btn-sm text-nowrap">記事を読む ＞</a>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  @keyframes garageTouchPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  .garage-touch-badge {
+    animation: garageTouchPulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes garageNewPulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 0 0 2px rgba(255, 193, 7, 0.8);
+    }
+    70% {
+      transform: translate(-50%, -50%) scale(1.15);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 0 0 12px rgba(255, 193, 7, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 0 0 2px rgba(255, 193, 7, 0);
+    }
+  }
+
+  .pulse-new {
+    animation: garageNewPulse 1.8s infinite;
+    z-index: 5 !important;
+  }
+
+  .garage-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+    /* 白いシール上でも黒いパーツ上でも輪郭を浮かせる二重の縁取り */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.9);
+    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  /* 中央のドットにも黒い縁取りを入れて白背景で消えないようにする */
+  .garage-pin::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: currentColor;
+    box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.85);
+  }
+
+  /* 公開済み：半透明ブルー */
+  .garage-pin-ready {
+    background-color: rgba(13, 110, 253, 0.32);
+    border: 2px solid #6ea8fe;
+    color: #cfe2ff;
+  }
+  .garage-pin-ready:hover,
+  .garage-pin-ready.is-active {
+    background-color: rgba(13, 110, 253, 0.8);
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+
+  /* Coming Soon：白シール上でも視認できるアンバー/オレンジ系の破線リング（点滅なし） */
+  .garage-pin-soon {
+    background-color: rgba(253, 126, 20, 0.28);
+    border: 2px dashed #fd7e14;
+    color: #ff922b;
+    opacity: 0.95;
+  }
+  .garage-pin-soon:hover,
+  .garage-pin-soon.is-active {
+    background-color: rgba(253, 126, 20, 0.75);
+    color: #fff;
+    opacity: 1;
+  }
+
+  /* New maintenance!：半透明イエロー＋光彩アニメーション */
+  .garage-pin-new {
+    background-color: rgba(255, 193, 7, 0.35);
+    border: 2px solid #ffc107;
+    color: #fff3cd;
+    animation: garageNewPulse 1.8s infinite;
+    z-index: 5 !important;
+  }
+  .garage-pin-new:hover,
+  .garage-pin-new.is-active {
+    background-color: rgba(255, 193, 7, 0.85);
+    color: #111;
+  }
+
+  .garage-spot-dialog {
+    position: absolute;
+    z-index: 20;
+    width: min(320px, calc(100% - 24px));
+    max-height: 52%;
+    overflow-y: auto;
+    background-color: rgba(24, 27, 31, 0.96) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 0.5rem;
+    transition: opacity 0.15s ease;
+  }
+
+  .garage-view-btn {
+    font-size: clamp(0.65rem, 2.1vw, 0.875rem);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+(() => {
+  const GARAGE_DATA = {{ site.data.garage_spots | jsonify }};
+  const STORAGE_KEY = 'solio_garage_last_visit';
+
+  const imgFrontOff = document.getElementById('img-front-off');
+  const imgFrontOn = document.getElementById('img-front-on');
+  const imgBonnetOpen = document.getElementById('img-bonnet-open');
+  const detailStage = document.getElementById('detail-stage');
+  const detailBgImg = document.getElementById('detail-bg-img');
+  const pinsContainer = document.getElementById('pins-container');
+  const touchTrigger = document.getElementById('touch-trigger');
+  const garageControls = document.getElementById('garage-controls');
+  const spotInfoPanel = document.getElementById('spot-info-panel');
+  const btnCloseBonnet = document.getElementById('btn-close-bonnet');
+  const viewButtons = garageControls.querySelectorAll('[data-view]');
+
+  let passingTimer = null;
+  let isOpened = false;
+  let currentLastVisit = getLastVisit();
+
+  function getLastVisit() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = new Date(saved);
+      if (!Number.isNaN(parsed.getTime())) return parsed;
+    }
+    // 初回訪問時は30日前を基準にし、直近の更新スポットをNew扱いにする
+    return new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  }
+
+  function updateLastVisit() {
+    localStorage.setItem(STORAGE_KEY, new Date().toISOString());
+  }
+
+  // ハイビームパッシング（2回点滅を一定間隔で繰り返し）
+  function triggerPassingOnce() {
+    if (!imgFrontOn || isOpened) return;
+    imgFrontOn.classList.remove('opacity-0');
+    setTimeout(() => {
+      imgFrontOn.classList.add('opacity-0');
+      setTimeout(() => {
+        if (isOpened) return;
+        imgFrontOn.classList.remove('opacity-0');
+        setTimeout(() => {
+          imgFrontOn.classList.add('opacity-0');
+        }, 110);
+      }, 110);
+    }, 110);
+  }
+
+  function startPassingLoop() {
+    stopPassingLoop();
+    triggerPassingOnce();
+    passingTimer = setInterval(() => {
+      if (!isOpened) triggerPassingOnce();
+    }, 3200);
+  }
+
+  function stopPassingLoop() {
+    if (passingTimer) {
+      clearInterval(passingTimer);
+      passingTimer = null;
+    }
+    if (imgFrontOn) {
+      imgFrontOn.classList.add('opacity-0');
+    }
+  }
+
+  function setActiveViewButton(viewKey) {
+    viewButtons.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.view === viewKey);
+    });
+  }
+
+  function renderSpots(viewKey, lastVisitDate) {
+    closeSpotDialog();
+    const viewConfig = GARAGE_DATA && GARAGE_DATA[viewKey];
+    pinsContainer.innerHTML = '';
+    spotInfoPanel.classList.add('d-none');
+
+    if (!viewConfig) return;
+
+    if (viewConfig.image) {
+      detailBgImg.src = viewConfig.image;
+      detailBgImg.alt = `${viewKey} の整備スポット`;
+    }
+
+    const spots = Array.isArray(viewConfig.spots) ? viewConfig.spots : [];
+
+    spots.forEach((spot) => {
+      const isReady = Boolean(spot.url && String(spot.url).trim() !== '');
+      const spotDate = spot.date ? new Date(spot.date) : null;
+      const isNew = Boolean(
+        spotDate &&
+        !Number.isNaN(spotDate.getTime()) &&
+        spotDate > lastVisitDate
+      );
+
+      const pin = document.createElement('button');
+      pin.type = 'button';
+
+      let stateClass = 'garage-pin-soon';
+      if (isNew) {
+        stateClass = 'garage-pin-new';
+      } else if (isReady) {
+        stateClass = 'garage-pin-ready';
+      }
+
+      pin.className = `garage-pin ${stateClass}`;
+      pin.style.top = `${spot.top}%`;
+      pin.style.left = `${spot.left}%`;
+      pin.setAttribute('aria-label', `${spot.title}${isNew ? '（New maintenance!）' : ''}`);
+
+      if (isNew) {
+        const badge = document.createElement('span');
+        badge.className = 'position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark';
+        badge.style.fontSize = '9px';
+        badge.style.opacity = '0.9';
+        badge.textContent = 'NEW';
+        pin.appendChild(badge);
+      }
+
+      pin.addEventListener('click', (e) => {
+        e.stopPropagation();
+        pinsContainer.querySelectorAll('.garage-pin').forEach((el) => el.classList.remove('is-active'));
+        pin.classList.add('is-active');
+        showSpotDetail(spot, isReady, isNew, pin);
+      });
+
+      pinsContainer.appendChild(pin);
+    });
+  }
+
+const spotDialog = document.getElementById('spot-dialog');
+  const btnCloseDialog = document.getElementById('btn-close-dialog');
+  let activeSpotPin = null;
+  let activeSpotData = null;
+
+  function closeSpotDialog() {
+    spotDialog.classList.add('d-none');
+    activeSpotPin = null;
+    activeSpotData = null;
+    pinsContainer.querySelectorAll('.garage-pin').forEach((el) => el.classList.remove('is-active'));
+  }
+
+  function positionDialogNearPin(pinEl) {
+    if (!pinEl || !detailStage) return;
+
+    const stageRect = detailStage.getBoundingClientRect();
+    const pinRect = pinEl.getBoundingClientRect();
+
+    // detailStage 内のピン中心座標
+    const pinCenterX = pinRect.left - stageRect.left + pinRect.width / 2;
+    const pinCenterY = pinRect.top - stageRect.top + pinRect.height / 2;
+    const pinHalfHeight = pinRect.height / 2 + 10; // ピンとダイアログの余白
+
+    // 一旦表示してダイアログの実サイズを取得
+    spotDialog.style.left = '0px';
+    spotDialog.style.top = '0px';
+    spotDialog.classList.remove('d-none');
+
+    const dialogWidth = spotDialog.offsetWidth;
+    const dialogHeight = spotDialog.offsetHeight;
+    const margin = 12;
+
+    // 上下の空きスペースを計算
+    const spaceAbove = pinCenterY - pinHalfHeight - margin;
+    const spaceBelow = stageRect.height - (pinCenterY + pinHalfHeight) - margin;
+
+    // 広い方に配置（上下どちらも狭い場合は、より広い方を選びつつ枠内に収める）
+    let topPos;
+    if (spaceAbove >= spaceBelow) {
+      topPos = pinCenterY - pinHalfHeight - 8 - dialogHeight;
+    } else {
+      topPos = pinCenterY + pinHalfHeight + 8;
+    }
+
+    // 上下はみ出し防止クランプ
+    const maxTop = Math.max(margin, stageRect.height - dialogHeight - margin);
+    topPos = Math.min(Math.max(margin, topPos), maxTop);
+
+    // 横方向はピン中心に寄せつつ左右枠内に収める
+    let leftPos = pinCenterX - dialogWidth / 2;
+    const maxLeft = Math.max(margin, stageRect.width - dialogWidth - margin);
+    leftPos = Math.min(Math.max(margin, leftPos), maxLeft);
+
+    spotDialog.style.left = `${Math.round(leftPos)}px`;
+    spotDialog.style.top = `${Math.round(topPos)}px`;
+  }
+
+  function showSpotDetail(spot, isReady, isNew, pinEl) {
+    const categoryEl = document.getElementById('spot-category');
+    const newBadgeEl = document.getElementById('spot-new-badge');
+    const dateEl = document.getElementById('spot-date');
+    const titleEl = document.getElementById('spot-title');
+    const summaryEl = document.getElementById('spot-summary');
+    const linkEl = document.getElementById('spot-link');
+
+    categoryEl.textContent = spot.category || '整備';
+    dateEl.textContent = spot.date || '';
+    titleEl.textContent = spot.title || '';
+    summaryEl.textContent = spot.summary || '';
+
+    if (newBadgeEl) {
+      newBadgeEl.classList.toggle('d-none', !isNew);
+    }
+
+    if (isReady) {
+      linkEl.href = spot.url;
+      linkEl.textContent = '記事を読む ＞';
+      linkEl.className = 'btn btn-primary btn-sm';
+      linkEl.removeAttribute('aria-disabled');
+      linkEl.removeAttribute('tabindex');
+    } else {
+      linkEl.removeAttribute('href');
+      linkEl.textContent = 'Coming Soon';
+      linkEl.className = 'btn btn-outline-secondary btn-sm disabled';
+      linkEl.setAttribute('aria-disabled', 'true');
+      linkEl.setAttribute('tabindex', '-1');
+    }
+
+    activeSpotPin = pinEl;
+    activeSpotData = { spot, isReady, isNew };
+    positionDialogNearPin(pinEl);
+  }
+
+  // 「×」ボタンで閉じる
+  btnCloseDialog.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeSpotDialog();
+  });
+
+  // ダイアログ内部をクリックしたときは閉じない
+  spotDialog.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // detailStage（ダイアログやピン以外のエリア）をタップしたら閉じる
+  detailStage.addEventListener('click', () => {
+    if (!spotDialog.classList.contains('d-none')) {
+      closeSpotDialog();
+    }
+  });
+
+  // 画面リサイズ時にダイアログが開いていれば位置を再計算
+  window.addEventListener('resize', () => {
+    if (!spotDialog.classList.contains('d-none') && activeSpotPin) {
+      positionDialogNearPin(activeSpotPin);
+    }
+  });
+
+  function openBonnet() {
+    if (isOpened) return;
+    isOpened = true;
+    stopPassingLoop();
+    touchTrigger.classList.add('d-none');
+    btnCloseBonnet.classList.remove('d-none')
+
+    // 前回訪問日時との比較でNew判定を行い、その後現在時刻で更新する
+    const visitBaseline = currentLastVisit;
+    updateLastVisit();
+    currentLastVisit = new Date();
+
+    // 中間画像（ボンネットオープン）を表示して切り替え
+    imgBonnetOpen.classList.remove('opacity-0');
+
+    setTimeout(() => {
+      setActiveViewButton('engine_zoom');
+      renderSpots('engine_zoom', visitBaseline);
+      detailStage.classList.remove('d-none');
+      garageControls.classList.remove('d-none');
+      imgBonnetOpen.classList.add('opacity-0');
+    }, 360);
+  }
+
+  function closeBonnet() {
+    isOpened = false;
+    detailStage.classList.add('d-none');
+    garageControls.classList.add('d-none');
+    spotInfoPanel.classList.add('d-none');
+    imgBonnetOpen.classList.add('opacity-0');
+    touchTrigger.classList.remove('d-none');
+    btnCloseBonnet.classList.add('d-none')
+    closeSpotDialog();
+    startPassingLoop();
+  }
+
+  touchTrigger.addEventListener('click', openBonnet);
+  touchTrigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openBonnet();
+    }
+  });
+
+  viewButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetView = btn.dataset.view;
+      setActiveViewButton(targetView);
+      renderSpots(targetView, currentLastVisit);
+    });
+  });
+
+  btnCloseBonnet.addEventListener('click', closeBonnet);
+
+  // 初期起動
+  startPassingLoop();
+})();
+</script>

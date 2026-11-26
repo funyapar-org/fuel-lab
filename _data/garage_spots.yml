@@ -1,0 +1,85 @@
+# _data/garage_spots.yml
+
+# エンジンルーム近景のピン
+engine_zoom:
+  image: "/assets/img/garage/engine-zoom.jpg"
+  spots:
+    - id: "throttle"
+      title: "スロットルバタフライ洗浄"
+      category: "吸気系"
+      date: "2026-01-10"
+      summary: "アイドリング安定化とレスポンス改善のためのDIY清掃記録。"
+      url: "/solio/diy/intake/solio-throttle-body-cleaning/"
+      top: 55   # 上からの位置 (%)
+      left: 60  # 左からの位置 (%)
+
+    - id: "aircleaner"
+      title: "エアクリーナーフィルター交換"
+      category: "吸気系"
+      date: "2026-10-23"
+      summary: "純正同等品への交換手順と燃費変化の検証。"
+      url: "/solio/diy/intake/air-cleaner-filter-replacement/"
+      top: 52
+      left: 39
+
+    - id: "plug"
+      title: "イグニッションコイル・プラグホール点検"
+      category: "点火系"
+      date: "2026-10-30"
+      summary: "【Coming Soon】タペットカバー周りのオイル滲み確認と締め付けトルク管理。"
+      url: ""
+      top: 62
+      left: 41
+
+# Bピラー（タイヤ空気圧・メンテナンスシール）
+b_pillar:
+  image: "/assets/img/garage/b-pillar.jpg"
+  spots:
+    - id: "tire_pressure"
+      title: "タイヤ空気圧の沼"
+      category: "足回り"
+      date: "2026-07-17"
+      summary: "私が「空気圧の沼」にハマって理想の燃費と走りを手に入れるまでの全記録。"
+      url: "/solio/tire-pressure-rabbit-hole/"
+      top: 10
+      left: 45
+
+    - id: "oil_change"
+      title: "ディーラーでのオイル交換記録"
+      category: "エンジン系"
+      date: "2026-06-26"
+      summary: "5W-30から0W-16へ変更。フィルターも交換。次はDIY交換に挑戦する。"
+      url: ""
+      top: 30
+      left: 54
+
+    - id: "coating"
+      title: "DIYDetailグラフェンコーティング3年耐久の施工記録"
+      category: "外装系"
+      date: "2026-11-13"
+      summary: "【Coming Soon】DIYDetailのグラフェンコーティングをDIYで施工した記録。"
+      url: ""
+      top: 77
+      left: 55
+
+# 助手席側ダッシュボード横（エアコンフィルター等）
+dashboard_side:
+  image: "/assets/img/garage/dashboard-side.jpg"
+  spots:
+    - id: "aircon_filter"
+      title: "エアコンフィルター交換"
+      category: "空調系"
+      date: "2026-07-30"
+      summary: "【Coming Soon】グローブボックス奥のフィルター交換と燃費への影響。"
+      url: ""
+      top: 43
+      left: 58
+
+    - id: "evap_cleaning"
+      title: "エバポレーター洗浄"
+      category: "空調系"
+      date: "2026-07-30"
+      summary: "【Coming Soon】エアコンの効き改善のためのエバポレーター洗浄と消臭作業。"
+      url: ""
+      top: 55
+      left: 54

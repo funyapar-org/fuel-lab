@@ -7,6 +7,9 @@
 {% assign diy_posts_unsorted = "" | split: "" %}
 
 {% for tmp_page in site.solio %}
+  {% if tmp_page.sitemap == false %}
+    {% continue %}
+  {% endif %}
   {% if tmp_page.tags contains target_tag or tmp_page.tags contains "diy" %}
     {% assign diy_posts_unsorted = diy_posts_unsorted | push: tmp_page %}
   {% endif %}

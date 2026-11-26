@@ -81,7 +81,7 @@ experiment_log:
     targets:
       - fuel_economy
     confidence_score: 0.8
-    link: /solio/idle-ac-usage-fuel-economy/
+    link: /knowledge/air-conditioner-fuel-economy-impact/
 
   - id: oil_viscosity
     type: improvement
@@ -120,7 +120,7 @@ experiment_log:
     targets:
       - fuel_economy
     cost_score: 0.1
-    link: /solio/aircon/
+    link: /solio/diy/aircon/
 
   - id: ac_evaporator_cleaning
     type: maintenance
@@ -132,7 +132,7 @@ experiment_log:
     targets:
       - fuel_economy
     cost_score: 0.2
-    link: /solio/aircon/
+    link: /solio/diy/aircon/
 
   - id: ac_additive_injection
     type: maintenance
@@ -144,7 +144,7 @@ experiment_log:
     targets:
       - fuel_economy
     cost_score: 0.1
-    link: /solio/aircon/
+    link: /solio/diy/aircon/
 
   - id: window_film_application
     type: improvement
@@ -156,7 +156,7 @@ experiment_log:
     targets:
       - fuel_economy
     cost_score: 1.0
-    link: /solio/aircon/
+    link: /solio/diy/aircon/
 
   - id: paper_driver_begins_practicing
     type: environment_change
@@ -181,7 +181,7 @@ experiment_log:
     targets:
       - fuel_economy
     confidence_score: 1.0
-    link: /solio/idle-ac-usage-fuel-economy/
+    link: /knowledge/air-conditioner-fuel-economy-impact/
 
   - id: air_cleaner_fileter_replacement
     type: maintenance
@@ -193,7 +193,7 @@ experiment_log:
     targets:
       - fuel_economy
     cost_score: 0.1
-    link: /solio/diy/air-cleaner-filter-replacement/
+    link: /solio/diy/intake/air-cleaner-filter-replacement/
 
   - id: cvt_fluid_change
     type: maintenance
