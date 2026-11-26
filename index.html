@@ -83,10 +83,14 @@ permalink: /
   <div class="mb-5">
     <h2 class="mb-4">最新記事</h2>
 
-    {% assign all_pages = site.knowledge | concat: site.solio | sort: "date" | reverse | where_exp: "item", "item.published != false and item.sitemap != false" %}
+    {% assign all_pages = site.knowledge | concat: site.solio | sort: "date" | reverse %}
 
     <div class="list-group">
-      {% for page in all_pages limit:6 %}
+      {% assign shown_count = 0 %}
+      {% for page in all_pages%}
+        {% if page.published == false or page.sitemap == false %}
+          {% continue %}
+        {% endif %}
         <a href="{{ page.url | prepend: site.baseurl }}"
           class="list-group-item list-group-item-action">
 
@@ -99,6 +103,10 @@ permalink: /
           </div>
 
         </a>
+        {% assign shown_count = shown_count | plus: 1 %}
+        {% if shown_count >= 6 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
