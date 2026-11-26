@@ -1,9 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4"
-gem "webrick"
+# GitHub Pages 本番環境（Jekyll 3.10.0 / Liquid 4.0.4）とバージョンを揃える
+gem "github-pages", group: :jekyll_plugins
 
-# GitHub Pages系
-gem "jekyll-feed"
-gem "jekyll-sitemap"
-gem "jekyll-seo-tag"
+# Ruby 3.0以降でローカルサーバー（jekyll serve）を動かすために必要
+gem "webrick"

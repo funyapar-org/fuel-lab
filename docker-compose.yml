@@ -9,9 +9,8 @@ services:
       - .:/srv/jekyll
 
     command: >
-      bash -c "
+      sh -c "
+      apk add --no-cache build-base openssl-dev pkgconf &&
       bundle install &&
-      bundle exec jekyll serve
-      --host 0.0.0.0
-      --livereload
+      bundle exec jekyll serve --host 0.0.0.0 --livereload
       "
