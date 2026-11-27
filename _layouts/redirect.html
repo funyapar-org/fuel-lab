@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex, follow">
-  <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
   <title>Redirecting...</title>
   <script>
-    window.location.href = "{{ page.redirect_to | absolute_url }}";
+    (function () {
+      var targetUrl = window.location.origin + "{{ page.redirect_to | relative_url }}";
+      window.location.replace(targetUrl);
+    })();
   </script>
 </head>
 <body>

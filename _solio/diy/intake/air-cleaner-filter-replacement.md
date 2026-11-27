@@ -377,15 +377,15 @@ date: 2026-11-16 05:50:00 +0900
   <section class="mb-5">
     <h2 class="h5 fw-bold mb-3">あわせて読みたい関連記事</h2>
     <div class="list-group">
-      <a href="{{ site.baseurl }}/solio/throttle-cleaning/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
+      <a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
         <span>【ソリオDIY】吸気系リフレッシュの決定版！スロットルバルブ清掃の手順と効果</span>
         <span class="badge bg-secondary rounded-pill">&rarr;</span>
       </a>
-      <a href="{{ site.baseurl }}/knowledge/tire-pressure-fuel-economy/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
+      <a href="{{ site.baseurl }}/knowledge/tire-air-pressure/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
         <span>【車の知識】タイヤ空気圧と燃費の関係｜適正値〜少し高めのメリット・デメリット</span>
         <span class="badge bg-secondary rounded-pill">&rarr;</span>
       </a>
-      <a href="{{ site.baseurl }}/solio/fuel-economy-log/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
+      <a href="{{ site.baseurl }}/solio/solio-fuel-economy-log/" class="list-group-item list-group-item-action bg-body-tertiary border-secondary-subtle d-flex justify-content-between align-items-center">
         <span>【ソリオMA26S】満タン法で記録し続ける実燃費推移とエコ運転の記録</span>
         <span class="badge bg-secondary rounded-pill">&rarr;</span>
       </a>
