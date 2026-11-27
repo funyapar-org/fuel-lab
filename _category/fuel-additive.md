@@ -40,7 +40,7 @@ description: 燃料添加剤の洗浄効果や燃費改善効果は本当にあ�
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="text-decoration-none">
+              <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/" class="text-decoration-none">
                 燃料添加剤(FCR-062)で燃費は改善するのか？実走行検証
               </a>
             </h5>

@@ -233,7 +233,7 @@ tags:
           実際にソリオで使用した体験レビュー。<br>
           アイドリングやレスポンスの変化を詳しくまとめています。
         </p>
-        <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-outline-primary">
+        <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/" class="btn btn-outline-primary">
           ページを見る
         </a>
       </div>

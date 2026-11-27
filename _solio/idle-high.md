@@ -241,7 +241,7 @@ tags:
             実際にソリオで使用した  
             体験レビューをまとめています。
           </p>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-warning fw-bold">
+          <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

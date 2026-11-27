@@ -102,7 +102,7 @@ tags:
 
     <div class="list-group">
 
-      <a href="{{ site.baseurl }}/solio/fcr062-effect/"
+      <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/"
          class="list-group-item list-group-item-action">
         燃料添加剤(FCR-062)投入後の燃費変化検証（ソリオ実測）
       </a>

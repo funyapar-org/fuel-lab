@@ -147,7 +147,7 @@ tags:
     <a href="{{ site.baseurl }}/knowledge/fuel-additive/" class="btn btn-outline-secondary m-1">
       燃料添加剤とは
     </a>
-    <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-outline-primary m-1">
+    <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/" class="btn btn-outline-primary m-1">
       FCR-062 を使ってみた
     </a>
   </div>

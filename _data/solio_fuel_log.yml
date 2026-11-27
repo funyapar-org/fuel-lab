@@ -35,7 +35,7 @@
   fuel: 19.71
   price_per_liter: 160
   note: 添加剤投入後
-  link: /solio/fcr062-effect/
+  link: /solio/diy/fuel/fcr062-effect/
   conditions:
     oil: 5w-30
     tire: eg01
@@ -267,7 +267,7 @@
   fuel: 19.03
   price_per_liter: 153
   note: オイル交換が近いのでFCR-062添加
-  link: /solio/fcr062-effect/
+  link: /solio/diy/fuel/fcr062-effect/
   conditions:
     oil: 5w-30
     tire: eg01

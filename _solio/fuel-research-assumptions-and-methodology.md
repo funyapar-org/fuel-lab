@@ -227,7 +227,7 @@ date: 2026-06-01 09:00:00 +0900
         </li>
 
         <li>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect/">
+          <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/">
             FCR-062効果検証
           </a>
         </li>

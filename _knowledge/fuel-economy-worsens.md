@@ -179,7 +179,7 @@ tags:
             <strong>FCR-062</strong>を使用し、
             燃費やエンジンの変化を実体験ベースでまとめています。
           </p>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect/" class="btn btn-warning fw-bold">
+          <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/" class="btn btn-warning fw-bold">
             体験レビューを見る
           </a>
         </div>

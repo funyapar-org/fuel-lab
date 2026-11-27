@@ -38,7 +38,7 @@ experiment_log:
       - combustion_condition
     cost_score: 0
     fuel_economy_factor_actual: 0.7838
-    link: /solio/fcr062-effect/
+    link: /solio/diy/fuel/fcr062-effect/
 
   - id: engine_recovery
     type: problem
@@ -53,7 +53,7 @@ experiment_log:
     confidence_score: 0.9
     cost_score: 0.1
     caused_by: degradation
-    link: /solio/fcr062-effect/
+    link: /solio/diy/fuel/fcr062-effect/
 
   - id: fcr062_before_engine_oil_change
     type: maintenance
@@ -66,7 +66,7 @@ experiment_log:
       - durability
     confidence_score: 0.9
     cost_score: 0.1
-    link: /solio/fcr062-effect/
+    link: /solio/diy/fuel/fcr062-effect/
 
   - id: increased_idle_ac_usage
     type: environment_change

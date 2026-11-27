@@ -319,7 +319,7 @@ date: 2025-09-06T09:00:00+09:00
       <ul class="mb-0">
 
         <li>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect/">
+          <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/">
             FCR-062投入実験
           </a>
         </li>

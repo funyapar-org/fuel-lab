@@ -149,7 +149,7 @@ date: 2026-02-19 00:00:00 +0900
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/solio/fcr062-effect/">
+          <a href="{{ site.baseurl }}/solio/diy/fuel/fcr062-effect/">
             PEA系燃料添加剤(FCR-062)を使ってみた | 中古車や使い込んだ車におすすめ？簡単に内部洗浄できる燃料添加剤のレビュー
           </a>
         </li>
