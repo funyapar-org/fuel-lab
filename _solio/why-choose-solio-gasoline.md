@@ -141,7 +141,7 @@ tags:
     <h2 class="h5 mb-3">次におすすめの記事</h2>
     <ul class="mb-0">
       <li><a href="{{ site.baseurl }}/solio/solio-engine-characteristics/">ソリオのエンジン特性と燃費傾向</a></li>
-      <li><a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">ソリオのスロットルバルブ清掃DIY</a></li>
+      <li><a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/">ソリオのスロットルバルブ清掃DIY</a></li>
       <li><a href="{{ site.baseurl }}/knowledge/city-driving-fuel-saving/">街乗りでも燃費を諦めないための考え方</a></li>
     </ul>
   </section>

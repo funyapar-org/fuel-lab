@@ -247,7 +247,7 @@ tags:
         <p class="card-text">
           アイドリングや発進時の違和感を感じたときに行ったDIY清掃の記録です。
         </p>
-        <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/" class="btn btn-outline-secondary">
+        <a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/" class="btn btn-outline-secondary">
           ページを見る
         </a>
       </div>

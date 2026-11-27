@@ -72,7 +72,7 @@ tags:
 
   <div class="alert alert-secondary">
     関連記事：
-    <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">
+    <a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/">
       スロットルバルブ清掃で発進時のレスポンスが改善した実例
     </a>
   </div>
@@ -146,7 +146,7 @@ tags:
   <div class="alert alert-primary mt-4">
     次に読むおすすめ：
     <ul class="mb-0">
-      <li><a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">スロットルバルブ清掃の実例</a></li>
+      <li><a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/">スロットルバルブ清掃の実例</a></li>
       <li><a href="{{ site.baseurl }}/knowledge/winter-fuel-economy/">冬に燃費が下がる理由</a></li>
     </ul>
   </div>

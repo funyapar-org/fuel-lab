@@ -166,7 +166,7 @@ tags:
         <a href="{{ site.baseurl }}/knowledge/fuel-additive/" class="btn btn-sm btn-outline-warning">
           燃料添加剤とは？
         </a>
-        <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/" class="btn btn-sm btn-outline-warning">
+        <a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/" class="btn btn-sm btn-outline-warning">
           ソリオのスロットルバルブ清掃
         </a>
       </div>

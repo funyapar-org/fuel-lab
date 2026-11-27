@@ -167,7 +167,7 @@ tags:
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/solio/solio-throttle-body-cleaning/">
+      <a href="{{ site.baseurl }}/solio/diy/intake/solio-throttle-body-cleaning/">
         スロットル清掃の影響検証
       </a>
     </li>
