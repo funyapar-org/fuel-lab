@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+  <div class="container-fluid flex-nowrap">
 
-    <div class="container d-flex align-items-center justify-content-between flex-nowrap">
-      <a class="navbar-brand text-wrap lh-sm me-2" href="{{ site.baseurl }}/" style="flex: 1 1 auto; min-width: 0; font-size: clamp(0.95rem, 3.8vw, 1.25rem);">
+    <div class="d-flex align-items-center justify-content-between flex-nowrap" style="min-width: 0;">
+      <a class="navbar-brand lh-sm me-2 text-lg-nowrap" href="{{ site.baseurl }}/" style="min-width: 0; font-size: clamp(0.95rem, 1.3vw, 1.2rem);">
         🚗 {{ site.title }}
       </a>
 
@@ -12,17 +12,17 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">
+          <a class="nav-link text-nowrap" href="{{ site.baseurl }}/solio/solio-fuel-economy-log/">
             ソリオ実燃費ログ
           </a>
         </li>
 
         <!-- 燃費研究はドロップダウン -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle text-nowrap" href="#" data-bs-toggle="dropdown">
             燃費研究
           </a>
 
@@ -50,7 +50,7 @@
 
         <!-- 維持費研究はドロップダウン -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle text-nowrap" href="#" data-bs-toggle="dropdown">
             維持費研究
           </a>
 
@@ -72,27 +72,27 @@
         </li>
 
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-light" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-tools me-1"></i>連載企画
-        </a>
-        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end border-secondary" aria-labelledby="projectDropdown">
-          {% assign projects = site.knowledge | concat: site.solio | where: "is_project_top", true %}
-          {% for project in projects %}
-            <li>
-              <a class="dropdown-item" href="{{ project.url | relative_url }}">
-                {% if project.project_icon %}
-                  <i class="bi {{ project.project_icon }} me-2 text-warning"></i>
-                {% endif %}
-                {{ project.nav_title | default: project.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
+          <a class="nav-link dropdown-toggle text-light text-nowrap" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-tools me-1"></i>連載企画
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end border-secondary" aria-labelledby="projectDropdown">
+            {% assign projects = site.knowledge | concat: site.solio | where: "is_project_top", true %}
+            {% for project in projects %}
+              <li>
+                <a class="dropdown-item" href="{{ project.url | relative_url }}">
+                  {% if project.project_icon %}
+                    <i class="bi {{ project.project_icon }} me-2 text-warning"></i>
+                  {% endif %}
+                  {{ project.nav_title | default: project.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
 
         <!-- 車の知識はドロップダウン -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle text-nowrap" href="#" data-bs-toggle="dropdown">
             車の知識
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
@@ -136,7 +136,7 @@
 
         <!-- ツールもドロップダウン -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle text-nowrap" href="#" data-bs-toggle="dropdown">
             ツール
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
